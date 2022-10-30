@@ -23,6 +23,8 @@
 		34B9C468290A66FF00015341 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B9C467290A66FF00015341 /* User.swift */; };
 		34B9C46A290A67BA00015341 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B9C469290A67BA00015341 /* UserRepository.swift */; };
 		34B9C46C290AF06900015341 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B9C46B290AF06900015341 /* AppView.swift */; };
+		97AD44C3290EFD8C000678E0 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AD44C2290EFD8C000678E0 /* ViewModel.swift */; };
+		97AD44C5290EFD9D000678E0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AD44C4290EFD9D000678E0 /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,8 @@
 		34B9C469290A67BA00015341 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		34B9C46B290AF06900015341 /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
 		97AD44BE290EF735000678E0 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		97AD44C2290EFD8C000678E0 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		97AD44C4290EFD9D000678E0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +80,9 @@
 		34B9C442290A65D000015341 /* ToGather */ = {
 			isa = PBXGroup;
 			children = (
+				97AD44C1290EFC30000678E0 /* ViewModels */,
+				97AD44C0290EFC24000678E0 /* Views */,
+				97AD44BF290EFC18000678E0 /* Models */,
 				34B9C443290A65D000015341 /* ToGatherApp.swift */,
 				34B9C447290A65D100015341 /* Assets.xcassets */,
 				34B9C44C290A65D100015341 /* Persistence.swift */,
@@ -96,6 +103,29 @@
 				34B9C44A290A65D100015341 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		97AD44BF290EFC18000678E0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		97AD44C0290EFC24000678E0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				97AD44C4290EFD9D000678E0 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		97AD44C1290EFC30000678E0 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				97AD44C2290EFD8C000678E0 /* ViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,10 +213,12 @@
 			files = (
 				34B9C44D290A65D100015341 /* Persistence.swift in Sources */,
 				34B9C46A290A67BA00015341 /* UserRepository.swift in Sources */,
+				97AD44C5290EFD9D000678E0 /* ContentView.swift in Sources */,
 				34B9C46C290AF06900015341 /* AppView.swift in Sources */,
 				34B9C444290A65D000015341 /* ToGatherApp.swift in Sources */,
 				34B9C468290A66FF00015341 /* User.swift in Sources */,
 				34B9C450290A65D100015341 /* ToGather.xcdatamodeld in Sources */,
+				97AD44C3290EFD8C000678E0 /* ViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
