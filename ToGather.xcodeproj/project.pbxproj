@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		344B927B2911D7130030547F /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344B927A2911D7130030547F /* Trip.swift */; };
+		344B927D2911D7240030547F /* Proposal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344B927C2911D7240030547F /* Proposal.swift */; };
+		344B927F2911D7290030547F /* TripDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344B927E2911D7290030547F /* TripDay.swift */; };
+		344B92812911D72F0030547F /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344B92802911D72F0030547F /* Event.swift */; };
+		344B92832911D7390030547F /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344B92822911D7390030547F /* Task.swift */; };
+		344B92852911D73F0030547F /* Reply.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344B92842911D73F0030547F /* Reply.swift */; };
 		34B9C444290A65D000015341 /* ToGatherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B9C443290A65D000015341 /* ToGatherApp.swift */; };
 		34B9C448290A65D100015341 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34B9C447290A65D100015341 /* Assets.xcassets */; };
 		34B9C44B290A65D100015341 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34B9C44A290A65D100015341 /* Preview Assets.xcassets */; };
@@ -28,6 +34,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		344B927A2911D7130030547F /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
+		344B927C2911D7240030547F /* Proposal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Proposal.swift; sourceTree = "<group>"; };
+		344B927E2911D7290030547F /* TripDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDay.swift; sourceTree = "<group>"; };
+		344B92802911D72F0030547F /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		344B92822911D7390030547F /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		344B92842911D73F0030547F /* Reply.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reply.swift; sourceTree = "<group>"; };
 		34B9C440290A65D000015341 /* ToGather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToGather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34B9C443290A65D000015341 /* ToGatherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToGatherApp.swift; sourceTree = "<group>"; };
 		34B9C447290A65D100015341 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -35,7 +47,7 @@
 		34B9C44C290A65D100015341 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		34B9C44F290A65D100015341 /* ToGather.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ToGather.xcdatamodel; sourceTree = "<group>"; };
 		34B9C456290A662800015341 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		34B9C467290A66FF00015341 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		34B9C467290A66FF00015341 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = User.swift; path = ../User.swift; sourceTree = "<group>"; };
 		34B9C469290A67BA00015341 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		34B9C46B290AF06900015341 /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
 		97AD44BE290EF735000678E0 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -89,7 +101,6 @@
 				34B9C44E290A65D100015341 /* ToGather.xcdatamodeld */,
 				34B9C456290A662800015341 /* GoogleService-Info.plist */,
 				34B9C449290A65D100015341 /* Preview Content */,
-				34B9C467290A66FF00015341 /* User.swift */,
 				34B9C469290A67BA00015341 /* UserRepository.swift */,
 				34B9C46B290AF06900015341 /* AppView.swift */,
 				97AD44BE290EF735000678E0 /* README.md */,
@@ -108,6 +119,13 @@
 		97AD44BF290EFC18000678E0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				34B9C467290A66FF00015341 /* User.swift */,
+				344B927A2911D7130030547F /* Trip.swift */,
+				344B927C2911D7240030547F /* Proposal.swift */,
+				344B927E2911D7290030547F /* TripDay.swift */,
+				344B92802911D72F0030547F /* Event.swift */,
+				344B92822911D7390030547F /* Task.swift */,
+				344B92842911D73F0030547F /* Reply.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -212,9 +230,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				34B9C44D290A65D100015341 /* Persistence.swift in Sources */,
+				344B927D2911D7240030547F /* Proposal.swift in Sources */,
 				34B9C46A290A67BA00015341 /* UserRepository.swift in Sources */,
 				97AD44C5290EFD9D000678E0 /* ContentView.swift in Sources */,
+				344B92812911D72F0030547F /* Event.swift in Sources */,
+				344B927F2911D7290030547F /* TripDay.swift in Sources */,
+				344B92852911D73F0030547F /* Reply.swift in Sources */,
+				344B927B2911D7130030547F /* Trip.swift in Sources */,
 				34B9C46C290AF06900015341 /* AppView.swift in Sources */,
+				344B92832911D7390030547F /* Task.swift in Sources */,
 				34B9C444290A65D000015341 /* ToGatherApp.swift in Sources */,
 				34B9C468290A66FF00015341 /* User.swift in Sources */,
 				34B9C450290A65D100015341 /* ToGather.xcdatamodeld in Sources */,
