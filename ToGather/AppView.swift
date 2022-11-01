@@ -11,13 +11,8 @@ struct AppView: View {
   var body: some View {
     VStack {
       Text(userRepo.user.name)
-      Text(userRepo.user.handle ?? "")
-      Text(userRepo.user.phone ?? "")
-      List {
-        ForEach(userRepo.trips) { trip in
-          Text(trip.name)
-        }
-      }
+      Text(userRepo.user.handle)
+      Text(userRepo.user.phone)
     }
   }
 }
