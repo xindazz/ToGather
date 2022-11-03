@@ -32,16 +32,42 @@ struct DashboardView: View {
 //      Text("[SkyScanner](https://www.skyscanner.com/)")
     
     VStack (alignment: .leading) {
-      Spacer()
-      Text("Members")
-      Spacer()
-      Text("Trip Details")
-      Text("Travel")
+      Text("NYC Trip")
+        .font(.largeTitle)
+        .padding(EdgeInsets(top: 10, leading: 20, bottom: 0, trailing: 0))
+      Text("September 10-14, 2022")
+        .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 0))
+      
+      Divider()
+      
+      VStack (alignment: .leading){
+        Text("Members").font(.headline)
+          .padding(EdgeInsets(top: 10, leading: 20, bottom: 0, trailing: 0))
+        HStack {
+          Image("ben-den-engelsen-unsplash")
+            .resizable()
+            .scaledToFit()
+            .clipShape(Circle())
+            .frame(width: 150, height: 150)
+        }//end hstack
+        .padding()
+        Spacer()
+        Text("Trip Details")
+        Text("Travel")
+      } // end vstack
+      
      
       Button(action: {}) {
-          Label("Add Trip Details", systemImage: "plus.circle")
-          .buttonStyle(.bordered)
+         Spacer()
+        Label("Add Trip Details", systemImage: "plus.circle")
+             .font(.headline)
+             .padding()
+             .foregroundColor(.white)
+         Spacer()
       }
+       .background(Color(UIColor.systemBlue))
+       .clipShape(RoundedRectangle(cornerRadius: 12))
+       .padding()
 
       Spacer()
       Spacer()
