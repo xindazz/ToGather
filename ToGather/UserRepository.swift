@@ -6,42 +6,82 @@
 //
 
 import Combine
-// import Firebase modules here
+import CoreData
+import Foundation
 import Firebase
 import FirebaseFirestore
 import FirebaseFirestoreSwift
 
-
 class UserRepository: ObservableObject {
   // Set up properties here
   private let path: String = "User"
-  private let store = Firestore.firestore()
-  private var userId: String = "XO7vnm5hVStXqBYLUdQW" // Demo only
+  private let db = Firestore.firestore()
+  private var userId: String = "SIHsxbJlAHG4yJLoIeZS" // Demo only
 
-  @Published var user: User = User(name: "", handle: "", phone: "")
+  @Published var user: User = User(name: "")
+  @Published var trips: [Trip] = []
   private var errorMessage: String = ""
   private var cancellables: Set<AnyCancellable> = []
   
   
   init() {
-    getUser(userId: self.userId)
+//    userId = setUser(name: "Bob", handle: "@12345")
+    getUser(userId: userId)
   }
-
+  
   func getUser(userId: String) {
     // Complete this function
-    let docRef = store.collection(path).document(userId)
-
+    let docRef = db.collection(path).document(userId)
     docRef.getDocument { document, error in
       if let error = error as NSError? {
-        self.errorMessage = "Error getting document: \(error.localizedDescription)"
+        self.errorMessage = "Error getting user document: \(error.localizedDescription)"
       }
       else {
         if let document = document {
           do {
             self.user = try document.data(as: User.self)
+            self.getTrips(tripRefs: self.user.trips ?? [])
           }
           catch {
-            print(error)
+            print("Error decoding user \(error)")
+          }
+        }
+      }
+    }
+  }
+  
+  func setUser(name: String, handle: String?) -> String {
+    // Add a new document with a generated id.
+    var ref: DocumentReference? = nil
+    ref = db.collection(path).addDocument(data: [
+        "name": name,
+        "handle": handle ?? ""
+    ]) { err in
+        if let err = err {
+            print("Error adding user: \(err)")
+        } else {
+            print("User added with ID: \(ref!.documentID)")
+        }
+    }
+    return ref!.documentID
+  }
+  
+  func getTrips(tripRefs: [DocumentReference]) {
+    for tripRef in tripRefs {
+      tripRef.getDocument { document, error in
+        if let error = error as NSError? {
+          self.errorMessage = "Error getting document: \(error.localizedDescription)"
+        }
+        else {
+          if let document = document {
+            do {
+              let trip = try document.data(as: Trip.self)
+              self.trips.append(trip)
+              print("Got trip \(trip.name)")
+            }
+            catch {
+              print("Error decoding trip data: \(error)")
+            }
           }
         }
       }

@@ -6,17 +6,18 @@
 //
 
 import Foundation
-
 import SwiftUI
+import Firebase
+import FirebaseFirestore
 import FirebaseFirestoreSwift
 
 struct User: Codable {
   
-//  var id: String
   @DocumentID var id: String?
   var name: String
-  var handle: String
-  var phone: String
+  var handle: String?
+  var phone: String?
+  var trips: [DocumentReference]?
   
   // To conform to Codable protocol
   enum CodingKeys: String, CodingKey {
@@ -24,9 +25,7 @@ struct User: Codable {
     case name
     case handle
     case phone
+    case trips
   }
-  
-  // MARK: Example for SwiftUI
-  static let example = User(name: "Bob", handle: "", phone: "")
   
 }
