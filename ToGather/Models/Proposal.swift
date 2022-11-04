@@ -24,4 +24,7 @@ struct Proposal: Codable {
     case replies
   }
   
+  mutating func addReply(reply: Reply) {
+    replies.append(reply)
+  }
 }

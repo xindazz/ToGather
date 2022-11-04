@@ -17,7 +17,7 @@ struct User: Codable {
   var name: String
   var handle: String?
   var phone: String?
-  var trips: [DocumentReference]?
+  var trips: [DocumentReference] = []
   
   // To conform to Codable protocol
   enum CodingKeys: String, CodingKey {

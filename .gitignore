@@ -1,2 +1,2 @@
-.DS_Store
-ToGather.xcodeproj/project.xcworkspace/xcuserdata/
+*.DS_Store
+*xcuserdata/

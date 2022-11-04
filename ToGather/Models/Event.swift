@@ -15,7 +15,8 @@ import FirebaseFirestoreSwift
 
 struct Event: Codable {
   
-  @DocumentID var id: String?
+//  @DocumentID var id: String?
+  var id: UUID
   var name: String
   var type: String?
   var location: String?

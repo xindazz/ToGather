@@ -14,7 +14,6 @@ import FirebaseFirestoreSwift
 
 class UserRepository: ObservableObject {
   // Set up properties here
-  private let path: String = "User"
   private let db = Firestore.firestore()
   private var userId: String = "SIHsxbJlAHG4yJLoIeZS" // Demo only
 
@@ -31,7 +30,7 @@ class UserRepository: ObservableObject {
   
   func getUser(userId: String) {
     // Complete this function
-    let docRef = db.collection(path).document(userId)
+    let docRef = db.collection("User").document(userId)
     docRef.getDocument { document, error in
       if let error = error as NSError? {
         self.errorMessage = "Error getting user document: \(error.localizedDescription)"
@@ -40,7 +39,7 @@ class UserRepository: ObservableObject {
         if let document = document {
           do {
             self.user = try document.data(as: User.self)
-            self.getTrips(tripRefs: self.user.trips ?? [])
+            self.getTrips(tripRefs: self.user.trips)
           }
           catch {
             print("Error decoding user \(error)")
@@ -53,7 +52,7 @@ class UserRepository: ObservableObject {
   func setUser(name: String, handle: String?) -> String {
     // Add a new document with a generated id.
     var ref: DocumentReference? = nil
-    ref = db.collection(path).addDocument(data: [
+    ref = db.collection("User").addDocument(data: [
         "name": name,
         "handle": handle ?? ""
     ]) { err in
@@ -84,6 +83,30 @@ class UserRepository: ObservableObject {
             }
           }
         }
+      }
+    }
+  }
+  
+  func createTrip(trip: Trip) {
+    let collectionRef = db.collection("Trip")
+      do {
+        let ref = try collectionRef.addDocument(from: trip)
+        print("Successfully added new trip \(trip.name)")
+        self.user.trips.append(ref)
+      }
+      catch {
+        print("Error adding new trip \(error)")
+      }
+  }
+  
+  func updateTrip(trip: Trip) {
+    if let id = trip.id {
+      let ref = db.collection("Trip").document(id)
+      do {
+        try ref.setData(from: trip)
+      }
+      catch {
+        print(error)
       }
     }
   }

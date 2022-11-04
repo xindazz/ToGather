@@ -6,17 +6,27 @@
 import SwiftUI
 
 struct AppView: View {
-  @ObservedObject var userRepo = UserRepository()
+  @ObservedObject var repo = UserRepository()
+  @State private var name: String = "Bob"
+  @State private var destination: String = "LA"
   
   var body: some View {
     VStack {
-      Text(userRepo.user.name)
-      Text(userRepo.user.handle ?? "")
-      Text(userRepo.user.phone ?? "")
+      Text(repo.user.name)
+      Text(repo.user.handle ?? "")
+      Text(repo.user.phone ?? "")
       List {
-        ForEach(userRepo.trips) { trip in
+        ForEach(repo.trips) { trip in
           Text(trip.name)
         }
+      }
+      TextField("Enter trip name", text: $name)
+      TextField("Enter trip destination", text: $destination)
+      Button(action: {
+        let trip = Trip(name: name, owner: repo.user, destination: destination)
+        repo.createTrip(trip: trip)
+        }) {
+        Text("Create trip")
       }
     }
   }

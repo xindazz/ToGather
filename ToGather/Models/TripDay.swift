@@ -11,10 +11,11 @@ import FirebaseFirestoreSwift
 
 struct TripDay: Codable {
   
-  @DocumentID var id: String?
+//  @DocumentID var id: String?
+  var id: UUID
   var date: Date?
-  var dayNum: Int
-  var events: [Event]
+  var dayNum: Int?
+  var events: [Event] = []
   
   // To conform to Codable protocol
   enum CodingKeys: String, CodingKey {
@@ -24,4 +25,7 @@ struct TripDay: Codable {
     case events
   }
   
+  mutating func addEvent(event: Event) {
+    events.append(event)
+  }
 }
