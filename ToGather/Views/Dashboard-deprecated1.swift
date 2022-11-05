@@ -1,20 +1,23 @@
 //
-//  TestDashboardView.swift
+//  Dashboard.swift
 //  ToGather
 //
 //  Created by Lisa Leung on 11/3/22.
 //
+//  Deprecated by Lisa Leung on 11/4/22.
 
 import SwiftUI
 
-struct TestDashboardView: View {
+// MARK: Deprecated
+// MARK: used for TestDashboard MVVM
+struct DashboardViewDeprecated1: View {
 //  using code from SwiftRepos - 443 lab - to start
-  var trip: TestTrips
   
   var body: some View {
 //    trip header and nav
-//    MARK: this uses older dashboard ui for the sake of example
-    
+//    MARK: UI-SPECIFIC: use this
+//    MARK: break down everything below into sub-files later
+
 // MARK: trip header
     VStack (alignment: .leading) {
       Spacer()
@@ -74,26 +77,27 @@ struct TestDashboardView: View {
          .clipShape(RoundedRectangle(cornerRadius: 12))
          .padding()
 
-        Text(trip.category).font(.title2)
+        Text("Travel").font(.title2)
           .padding(EdgeInsets(top: 10, leading: 20, bottom: 0, trailing: 0))
         Spacer()
         Spacer()
         VStack (alignment: .leading, spacing: 20){
-//          MARK: make sure to split into start date and end date to prevent UI issues!!!!
-          Text(trip.whenActivity ?? "").font(.headline)
-          
-          Text(trip.whatActivity).font(.subheadline)
-          Text(trip.category).font(.subheadline)
-          Text(trip.whereActivity ?? "")
-          Text(trip.whoActivity ?? "")
-          Text(trip.howActivity ?? "")
-          // iterate through a list of links
-          Text(trip.linkActivity ?? "")
-          // iterate through a list of images (somehow)
+          Text("Tuesday, November 1 at 12:00pm to")
+            .font(.headline)
+            .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+          Text("Friday, November 11 at 11:00am")
+            .font(.headline)
+            .padding(EdgeInsets(top: -10, leading: 0, bottom: 0, trailing: 0))
+          Text("WHAT: Fly to LAX from LGA").font(.subheadline)
+          Text("Category: Travel").font(.subheadline)
+          Text("WHERE: 1 World Way, Los Angeles, CA 90045")
+          Text("WHO: All group members")
+          Text("HOW-MUCH: $300 - $500 per round-trip ticket")
+          Text("WHY: Cheapest flight on Skyscanner with Spirit Airlines")
+          Text("[SkyScanner](https://www.skyscanner.com/)")
           Image("skyscanner-lax-to-lga")
             .resizable()
             .scaledToFit()
-          Spacer()
         } // end VStack
         .padding(.leading, 20)
         
@@ -106,8 +110,16 @@ struct TestDashboardView: View {
  
 } //end struct
 
-struct TestDashboardView_Previews: PreviewProvider {
+struct DashboardViewDeprecated1_Previews: PreviewProvider {
   static var previews: some View {
-    TestDashboardView(trip: TestTrips.example)
+    DashboardViewDeprecated1()
   }
 }
+//
+//  Dashboard-deprecated1.swift
+//  ToGather
+//
+//  Created by Lisa Leung on 11/4/22.
+//
+
+import Foundation

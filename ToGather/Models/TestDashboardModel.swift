@@ -5,8 +5,9 @@
 //  Created by Lisa Leung on 11/3/22.
 //
 
-// MARK: FOR TESTING PURPOSES ONLY - based off of SwiftRepos Lab
+// MARK: FOR TESTING PURPOSES ONLY - based off of PriceCheck_Solution
 import SwiftUI
+// from 443 - Swift Repos
 //struct Dashboard: Codable {
 //  let items: [TestTrips]
 //

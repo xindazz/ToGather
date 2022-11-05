@@ -12,6 +12,7 @@ struct DashboardView: View {
   
   var body: some View {
 //    trip header and nav
+//    MARK: UI-SPECIFIC: use this
 //    MARK: break down everything below into sub-files later
 
 // MARK: trip header
@@ -78,8 +79,12 @@ struct DashboardView: View {
         Spacer()
         Spacer()
         VStack (alignment: .leading, spacing: 20){
-          Text("Tuesday, November 1 at 12:00pm to Friday, November 11 at 11:00am" ).font(.headline)
-          
+          Text("Tuesday, November 1 at 12:00pm to")
+            .font(.headline)
+            .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+          Text("Friday, November 11 at 11:00am")
+            .font(.headline)
+            .padding(EdgeInsets(top: -10, leading: 0, bottom: 0, trailing: 0))
           Text("WHAT: Fly to LAX from LGA").font(.subheadline)
           Text("Category: Travel").font(.subheadline)
           Text("WHERE: 1 World Way, Los Angeles, CA 90045")
@@ -90,7 +95,6 @@ struct DashboardView: View {
           Image("skyscanner-lax-to-lga")
             .resizable()
             .scaledToFit()
-          Spacer()
         } // end VStack
         .padding(.leading, 20)
         
