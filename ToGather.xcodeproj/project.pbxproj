@@ -29,8 +29,22 @@
 		34B9C468290A66FF00015341 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B9C467290A66FF00015341 /* User.swift */; };
 		34B9C46A290A67BA00015341 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B9C469290A67BA00015341 /* UserRepository.swift */; };
 		34B9C46C290AF06900015341 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B9C46B290AF06900015341 /* AppView.swift */; };
+		975EDF902915CE5900680AAD /* TestTripDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975EDF8F2915CE5900680AAD /* TestTripDetailsModel.swift */; };
+		975EDF922915CE6A00680AAD /* TestTripDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975EDF912915CE6A00680AAD /* TestTripDetailsViewModel.swift */; };
+		975EDF942915CE7500680AAD /* TestTripDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975EDF932915CE7500680AAD /* TestTripDetailsView.swift */; };
+		975EDF962915CE8800680AAD /* TestTripDetailsRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975EDF952915CE8800680AAD /* TestTripDetailsRowView.swift */; };
+		975EDF992915D10200680AAD /* Dashboard-deprecated1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975EDF982915D10200680AAD /* Dashboard-deprecated1.swift */; };
+		975EDF9B2915D74700680AAD /* TestTripDetailsRowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975EDF9A2915D74700680AAD /* TestTripDetailsRowModel.swift */; };
 		97AD44C3290EFD8C000678E0 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AD44C2290EFD8C000678E0 /* ViewModel.swift */; };
 		97AD44C5290EFD9D000678E0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AD44C4290EFD9D000678E0 /* ContentView.swift */; };
+		97AD4509291427CC000678E0 /* Dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AD4508291427CC000678E0 /* Dashboard.swift */; };
+		97AD450B29142DFC000678E0 /* TripDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AD450A29142DFC000678E0 /* TripDetail.swift */; };
+		97AD450E291435D5000678E0 /* DesignSystemComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AD450D291435D5000678E0 /* DesignSystemComponents.swift */; };
+		97AD45102914367A000678E0 /* TripDetailCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AD450F2914367A000678E0 /* TripDetailCard.swift */; };
+		97AD4512291440AE000678E0 /* Experiment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AD4511291440AE000678E0 /* Experiment.swift */; };
+		97AD45142914644C000678E0 /* TestDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AD45132914644C000678E0 /* TestDashboardView.swift */; };
+		97AD451629146475000678E0 /* TestDashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AD451529146475000678E0 /* TestDashboardViewModel.swift */; };
+		97AD451829146482000678E0 /* TestDashboardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AD451729146482000678E0 /* TestDashboardModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,9 +64,24 @@
 		34B9C467290A66FF00015341 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = User.swift; path = ../User.swift; sourceTree = "<group>"; };
 		34B9C469290A67BA00015341 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		34B9C46B290AF06900015341 /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
+		975EDF8F2915CE5900680AAD /* TestTripDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTripDetailsModel.swift; sourceTree = "<group>"; };
+		975EDF912915CE6A00680AAD /* TestTripDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTripDetailsViewModel.swift; sourceTree = "<group>"; };
+		975EDF932915CE7500680AAD /* TestTripDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTripDetailsView.swift; sourceTree = "<group>"; };
+		975EDF952915CE8800680AAD /* TestTripDetailsRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTripDetailsRowView.swift; sourceTree = "<group>"; };
+		975EDF972915CEA800680AAD /* lisa-dev-2-branch-docs.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "lisa-dev-2-branch-docs.md"; sourceTree = "<group>"; };
+		975EDF982915D10200680AAD /* Dashboard-deprecated1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dashboard-deprecated1.swift"; sourceTree = "<group>"; };
+		975EDF9A2915D74700680AAD /* TestTripDetailsRowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTripDetailsRowModel.swift; sourceTree = "<group>"; };
 		97AD44BE290EF735000678E0 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		97AD44C2290EFD8C000678E0 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		97AD44C4290EFD9D000678E0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		97AD4508291427CC000678E0 /* Dashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dashboard.swift; sourceTree = "<group>"; };
+		97AD450A29142DFC000678E0 /* TripDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetail.swift; sourceTree = "<group>"; };
+		97AD450D291435D5000678E0 /* DesignSystemComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystemComponents.swift; sourceTree = "<group>"; };
+		97AD450F2914367A000678E0 /* TripDetailCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetailCard.swift; sourceTree = "<group>"; };
+		97AD4511291440AE000678E0 /* Experiment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Experiment.swift; sourceTree = "<group>"; };
+		97AD45132914644C000678E0 /* TestDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDashboardView.swift; sourceTree = "<group>"; };
+		97AD451529146475000678E0 /* TestDashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDashboardViewModel.swift; sourceTree = "<group>"; };
+		97AD451729146482000678E0 /* TestDashboardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDashboardModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,9 +121,10 @@
 		34B9C442290A65D000015341 /* ToGather */ = {
 			isa = PBXGroup;
 			children = (
+				975EDF972915CEA800680AAD /* lisa-dev-2-branch-docs.md */,
+				97AD44BF290EFC18000678E0 /* Models */,
 				97AD44C1290EFC30000678E0 /* ViewModels */,
 				97AD44C0290EFC24000678E0 /* Views */,
-				97AD44BF290EFC18000678E0 /* Models */,
 				34B9C443290A65D000015341 /* ToGatherApp.swift */,
 				34B9C447290A65D100015341 /* Assets.xcassets */,
 				34B9C44C290A65D100015341 /* Persistence.swift */,
@@ -126,6 +156,9 @@
 				344B92802911D72F0030547F /* Event.swift */,
 				344B92822911D7390030547F /* Task.swift */,
 				344B92842911D73F0030547F /* Reply.swift */,
+				97AD451729146482000678E0 /* TestDashboardModel.swift */,
+				975EDF8F2915CE5900680AAD /* TestTripDetailsModel.swift */,
+				975EDF9A2915D74700680AAD /* TestTripDetailsRowModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -134,6 +167,15 @@
 			isa = PBXGroup;
 			children = (
 				97AD44C4290EFD9D000678E0 /* ContentView.swift */,
+				97AD4508291427CC000678E0 /* Dashboard.swift */,
+				975EDF982915D10200680AAD /* Dashboard-deprecated1.swift */,
+				97AD450A29142DFC000678E0 /* TripDetail.swift */,
+				97AD450D291435D5000678E0 /* DesignSystemComponents.swift */,
+				97AD450F2914367A000678E0 /* TripDetailCard.swift */,
+				97AD4511291440AE000678E0 /* Experiment.swift */,
+				97AD45132914644C000678E0 /* TestDashboardView.swift */,
+				975EDF932915CE7500680AAD /* TestTripDetailsView.swift */,
+				975EDF952915CE8800680AAD /* TestTripDetailsRowView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -142,6 +184,8 @@
 			isa = PBXGroup;
 			children = (
 				97AD44C2290EFD8C000678E0 /* ViewModel.swift */,
+				97AD451529146475000678E0 /* TestDashboardViewModel.swift */,
+				975EDF912915CE6A00680AAD /* TestTripDetailsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -229,20 +273,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97AD450E291435D5000678E0 /* DesignSystemComponents.swift in Sources */,
 				34B9C44D290A65D100015341 /* Persistence.swift in Sources */,
 				344B927D2911D7240030547F /* Proposal.swift in Sources */,
 				34B9C46A290A67BA00015341 /* UserRepository.swift in Sources */,
 				97AD44C5290EFD9D000678E0 /* ContentView.swift in Sources */,
+				975EDF942915CE7500680AAD /* TestTripDetailsView.swift in Sources */,
+				975EDF9B2915D74700680AAD /* TestTripDetailsRowModel.swift in Sources */,
 				344B92812911D72F0030547F /* Event.swift in Sources */,
 				344B927F2911D7290030547F /* TripDay.swift in Sources */,
+				97AD451629146475000678E0 /* TestDashboardViewModel.swift in Sources */,
+				97AD451829146482000678E0 /* TestDashboardModel.swift in Sources */,
 				344B92852911D73F0030547F /* Reply.swift in Sources */,
+				97AD4509291427CC000678E0 /* Dashboard.swift in Sources */,
 				344B927B2911D7130030547F /* Trip.swift in Sources */,
+				975EDF962915CE8800680AAD /* TestTripDetailsRowView.swift in Sources */,
 				34B9C46C290AF06900015341 /* AppView.swift in Sources */,
 				344B92832911D7390030547F /* Task.swift in Sources */,
 				34B9C444290A65D000015341 /* ToGatherApp.swift in Sources */,
 				34B9C468290A66FF00015341 /* User.swift in Sources */,
+				975EDF992915D10200680AAD /* Dashboard-deprecated1.swift in Sources */,
+				97AD450B29142DFC000678E0 /* TripDetail.swift in Sources */,
 				34B9C450290A65D100015341 /* ToGather.xcdatamodeld in Sources */,
+				975EDF922915CE6A00680AAD /* TestTripDetailsViewModel.swift in Sources */,
+				97AD4512291440AE000678E0 /* Experiment.swift in Sources */,
+				97AD45142914644C000678E0 /* TestDashboardView.swift in Sources */,
 				97AD44C3290EFD8C000678E0 /* ViewModel.swift in Sources */,
+				97AD45102914367A000678E0 /* TripDetailCard.swift in Sources */,
+				975EDF902915CE5900680AAD /* TestTripDetailsModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
