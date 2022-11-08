@@ -14,24 +14,24 @@ struct TestUI: View {
 //    MARK: UI-SPECIFIC: use this
 //    MARK: break down everything below into sub-files later
 
-//  MARK: wide buttons
-//      VStack {
-//        Button(action: {}) {
-//           Spacer()
-//          Label("Add Trip Details", systemImage: "plus.circle")
-//               .font(.headline)
-//               .padding()
-//               .foregroundColor(.white)
-//           Spacer()
-//        }.frame(width: 300, height:200)
-//         .background(Color(UIColor.systemBlue))
-//         .clipShape(RoundedRectangle(cornerRadius: 12))
-//         .padding()
-//
-//      } //end Vstack
-//
+
     ScrollView {     
-       
+//    MARK: wide buttons
+      VStack {
+        Button(action: {}) {
+           Spacer()
+          Label("Add Trip Details", systemImage: "plus.circle")
+               .font(.headline)
+               .padding()
+               .foregroundColor(.white)
+           Spacer()
+        }.frame(width: 300, height:200)
+         .background(Color(UIColor.systemBlue))
+         .clipShape(RoundedRectangle(cornerRadius: 12))
+         .padding()
+
+      } //end Vstack
+
 // MARK: template card + replies
       VStack (alignment: .leading) {
         VStack (alignment: .leading, spacing: 20) {

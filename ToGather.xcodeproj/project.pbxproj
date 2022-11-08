@@ -39,6 +39,8 @@
 		34B9C468290A66FF00015341 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B9C467290A66FF00015341 /* User.swift */; };
 		34B9C46A290A67BA00015341 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B9C469290A67BA00015341 /* UserRepository.swift */; };
 		34B9C46C290AF06900015341 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B9C46B290AF06900015341 /* AppView.swift */; };
+		972A2DFF291ACA5000B30260 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972A2DFE291ACA5000B30260 /* Home.swift */; };
+		972A2E02291ACBF800B30260 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972A2E01291ACBF800B30260 /* Buttons.swift */; };
 		975EDF902915CE5900680AAD /* TestTripDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975EDF8F2915CE5900680AAD /* TestTripDetailsModel.swift */; };
 		975EDF922915CE6A00680AAD /* TestTripDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975EDF912915CE6A00680AAD /* TestTripDetailsViewModel.swift */; };
 		975EDF942915CE7500680AAD /* TestTripDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975EDF932915CE7500680AAD /* TestTripDetailsView.swift */; };
@@ -86,6 +88,8 @@
 		34B9C467290A66FF00015341 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = User.swift; path = ../User.swift; sourceTree = "<group>"; };
 		34B9C469290A67BA00015341 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		34B9C46B290AF06900015341 /* AppView.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; tabWidth = 2; usesTabs = 0; };
+		972A2DFE291ACA5000B30260 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		972A2E01291ACBF800B30260 /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
 		975EDF8F2915CE5900680AAD /* TestTripDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTripDetailsModel.swift; sourceTree = "<group>"; };
 		975EDF912915CE6A00680AAD /* TestTripDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTripDetailsViewModel.swift; sourceTree = "<group>"; };
 		975EDF932915CE7500680AAD /* TestTripDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTripDetailsView.swift; sourceTree = "<group>"; };
@@ -170,6 +174,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		972A2DFB291ACA3100B30260 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				972A2DFE291ACA5000B30260 /* Home.swift */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
 		97AD44BF290EFC18000678E0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -190,6 +202,7 @@
 		97AD44C0290EFC24000678E0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				972A2DFB291ACA3100B30260 /* Pages */,
 				97C793AE291AB10F0009BCF6 /* Components */,
 				97AD44C4290EFD9D000678E0 /* ContentView.swift */,
 				97AD4508291427CC000678E0 /* Dashboard.swift */,
@@ -230,6 +243,7 @@
 			children = (
 				97C793AF291AB1230009BCF6 /* ProposalCard.swift */,
 				97C793B1291AB13E0009BCF6 /* TestUI.swift */,
+				972A2E01291ACBF800B30260 /* Buttons.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -317,6 +331,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				972A2E02291ACBF800B30260 /* Buttons.swift in Sources */,
 				97AD450E291435D5000678E0 /* DesignSystemComponents.swift in Sources */,
 				191FC37229183E650083C4E7 /* OnboardingFour.swift in Sources */,
 				34B9C44D290A65D100015341 /* Persistence.swift in Sources */,
@@ -331,6 +346,7 @@
 				97AD451629146475000678E0 /* TestDashboardViewModel.swift in Sources */,
 				97AD451829146482000678E0 /* TestDashboardModel.swift in Sources */,
 				344B92852911D73F0030547F /* Reply.swift in Sources */,
+				972A2DFF291ACA5000B30260 /* Home.swift in Sources */,
 				97AD4509291427CC000678E0 /* Dashboard.swift in Sources */,
 				191FC37429183E730083C4E7 /* ChecklistOne.swift in Sources */,
 				344B92812911D72F0030547F /* Event.swift in Sources */,
