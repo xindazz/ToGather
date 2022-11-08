@@ -56,6 +56,10 @@ struct AppView: View {
              NavigationLink(destination: OnboardingThree(repo: repo)) {
                Text("Create Trip")
              }
+             
+             NavigationLink(destination: JoinTripView(repo: repo)) {
+               Text("Join Existing Trip")
+             }
            }
          }
          

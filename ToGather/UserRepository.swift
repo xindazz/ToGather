@@ -26,7 +26,7 @@ class UserRepository: ObservableObject {
 
   @MainActor
   init() {
-//    userId = setUser(name: "Bob", handle: "@12345")
+    userId = setUser(name: "Tester2", handle: "@12345")
 //    getUser(userId: userId)
     load()
   }
@@ -41,43 +41,36 @@ class UserRepository: ObservableObject {
         print("Cannot get user with id \(userId)")
       }
       self.trips = []
-      for tripRef in self.user.trips {
+      for tripDocId in self.user.trips {
         async {
-          let trip = await fetchTrip(ref: tripRef)
+          let trip = await fetchTrip(tripDocId: tripDocId)
           if trip != nil {
             self.trips.append(trip!)
           } else {
-            print("Cannot get trip with ref id \(tripRef.documentID)")
+            print("Cannot get trip with id \(tripDocId)")
           }
         }
       }
     }
-    if self.trips.count > 0 && self.curr_trip_idx < self.trips.count {
-      print("Curr trip has \(self.trips[self.curr_trip_idx].members.count) members")
-    }
   }
   
   func fetchUser(userId: String) async -> User? {
-    // Complete this function
     let document = try? await db.collection("User").document(userId).getDocument()
-    
     return try? document?.data(as: User.self)
   }
   
   func setUser(name: String, handle: String?) -> String {
     // Add a new document with a generated id.
-    var ref: DocumentReference? = nil
-    ref = db.collection("User").addDocument(data: [
-        "name": name,
-        "handle": handle ?? ""
-    ]) { err in
-        if let err = err {
-            print("Error adding user: \(err)")
-        } else {
-            print("User added with ID: \(ref!.documentID)")
-        }
+    let newUser = User(name: name, handle: handle ?? "")
+    do {
+      let ref = try db.collection("User").addDocument(from: newUser)
+      print("Successfully added new user \(newUser.name)")
+      return ref.documentID
     }
-    return ref!.documentID
+    catch {
+      print("Error adding new user: \(error)")
+      return ""
+    }
   }
   
   func updateUser(user: User) {
@@ -92,9 +85,14 @@ class UserRepository: ObservableObject {
     }
   }
 
-  func fetchTrip(ref: DocumentReference) async -> Trip? {
-    let document = try? await ref.getDocument()
+  func fetchTrip(tripDocId: String) async -> Trip? {
+    let document = try? await db.collection("Trip").document(tripDocId).getDocument()
     return try? document?.data(as: Trip.self)
+  }
+  
+  func fetchAllTrips() async throws -> [Trip] {
+    let snapshot = try await db.collection("Trip").getDocuments()
+    return snapshot.documents.compactMap { document in try? document.data(as: Trip.self) }
   }
   
   func fetchAllUniqueCodes() async throws -> [String] {
@@ -127,7 +125,7 @@ class UserRepository: ObservableObject {
       do {
         let ref = try collectionRef.addDocument(from: newTrip)
         print("Successfully added new trip \(trip.name)")
-        self.user.trips.append(ref)
+        self.user.trips.append(ref.documentID)
         self.updateUser(user: self.user)
       }
       catch {
@@ -147,6 +145,31 @@ class UserRepository: ObservableObject {
         print(error)
       }
     }
+  }
+  
+  @MainActor
+  func joinTrip(code: String) {
+    async {
+      if let trips = try? await fetchAllTrips() {
+        let filtered = trips.filter { trip in trip.uniqueCode == code }
+        if filtered.count == 1 {
+          var trip = filtered[0]
+          if (trip.owner.id == self.user.id || (trip.members.filter {member in member.id == self.user.id}).count > 0) {
+            print("Error: trip \(trip.id ?? "") already has user \(self.user.name) as owner or member")
+            return
+          }
+          print("Adding member")
+          trip.addMember(user: self.user)
+          self.user.addTrip(tripId: trip.id ?? "")
+          self.updateTrip(trip: trip)
+          self.updateUser(user: self.user)
+        } else {
+          print("Error: \(filtered.count) trips with unique code \(code)")
+        }
+      }
+      self.load()
+    }
+//    self.load()
   }
   
   //  func getTrips(tripRefs: [DocumentReference]) {

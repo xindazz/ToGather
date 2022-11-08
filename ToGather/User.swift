@@ -18,7 +18,7 @@ struct User: Codable, Identifiable {
   var name: String
   var handle: String?
   var phone: String?
-  var trips: [DocumentReference] = []
+  var trips: [String] = []
   
   // To conform to Codable protocol
   enum CodingKeys: String, CodingKey {
@@ -28,6 +28,10 @@ struct User: Codable, Identifiable {
     case handle
     case phone
     case trips
+  }
+  
+  mutating func addTrip(tripId: String) {
+    trips.append(tripId)
   }
   
 }
