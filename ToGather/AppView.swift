@@ -41,8 +41,15 @@ struct AppView: View {
            .fontWeight(.heavy)
            .multilineTextAlignment(.center)
            .font(.headline)
+         
+//         NavigationLink (destination: Home(repo:repo) {
+//           Text("Is this you? Log In.")
+//             .font(.caption)
+//             .foregroundColor(.blue)
+//         }
+         
 
-         Spacer()
+                        label: Spacer()
          // MARK: add background color to the tab view
              TabView {
              
