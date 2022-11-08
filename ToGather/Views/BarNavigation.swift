@@ -19,8 +19,7 @@ struct BarNavigation: View {
 // MARK: add background color to the tab view
     TabView {
     
-// MARK: this dashboardview is a placeholder => it is not yet connected to the database
-    
+    // MARK: this dashboardview is a placeholder => it is not yet connected to the database
       DashboardView()
       .tabItem {
           Image(systemName: "airplane.departure")
