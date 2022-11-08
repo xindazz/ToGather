@@ -52,11 +52,17 @@ struct AppView: View {
              }.navigationBarTitle("Your Trips")
              
              Spacer()
-             
+// MARK: tackle log-in next sprint
+             NavigationLink(destination: JoinTripView(repo: repo)) {
+               Text("Create Account")
+             }
              NavigationLink(destination: OnboardingThree(repo: repo)) {
                Text("Create Trip")
              }
              
+             NavigationLink(destination: JoinTripView(repo: repo)) {
+               Text("SHORTCUT: View Sample Trip Dash ")
+             }
              NavigationLink(destination: JoinTripView(repo: repo)) {
                Text("Join Existing Trip")
              }
