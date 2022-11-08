@@ -26,6 +26,23 @@ struct DashboardView: View {
       
       Divider()
 //    MARK: members block
+      VStack {
+        Button(action: {}) {
+           Spacer()
+          Label("Add Trip Details", systemImage: "plus.circle")
+               .font(.headline)
+               .padding()
+               .foregroundColor(.white)
+           Spacer()
+        }.frame(width: 200, height:600)
+         .background(Color(UIColor.systemBlue))
+         .clipShape(RoundedRectangle(cornerRadius: 12))
+         .padding()
+        
+      }
+      
+      
+      
       VStack (alignment: .leading){
         Text("Members").font(.headline)
           .padding(EdgeInsets(top: 10, leading: 20, bottom: 0, trailing: 0))
@@ -73,6 +90,8 @@ struct DashboardView: View {
          .background(Color(UIColor.systemBlue))
          .clipShape(RoundedRectangle(cornerRadius: 12))
          .padding()
+        
+        
 
         Text("Travel").font(.title2)
           .padding(EdgeInsets(top: 10, leading: 20, bottom: 0, trailing: 0))
@@ -101,6 +120,7 @@ struct DashboardView: View {
       } // end VStack
       
     } //end vstack
+    
     
   } //end body
   
