@@ -44,7 +44,6 @@
 		972A2E04291ACF9400B30260 /* NavigationLinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972A2E03291ACF9400B30260 /* NavigationLinks.swift */; };
 		972A2E06291AD9DE00B30260 /* BarNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972A2E05291AD9DE00B30260 /* BarNavigation.swift */; };
 		972A2E08291ADD7700B30260 /* UserTrips.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972A2E07291ADD7700B30260 /* UserTrips.swift */; };
-		972A2E0B291AE0D900B30260 /* TestTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972A2E0A291AE0D900B30260 /* TestTabView.swift */; };
 		975EDF902915CE5900680AAD /* TestTripDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975EDF8F2915CE5900680AAD /* TestTripDetailsModel.swift */; };
 		975EDF922915CE6A00680AAD /* TestTripDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975EDF912915CE6A00680AAD /* TestTripDetailsViewModel.swift */; };
 		975EDF942915CE7500680AAD /* TestTripDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975EDF932915CE7500680AAD /* TestTripDetailsView.swift */; };
@@ -97,7 +96,6 @@
 		972A2E03291ACF9400B30260 /* NavigationLinks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationLinks.swift; sourceTree = "<group>"; };
 		972A2E05291AD9DE00B30260 /* BarNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarNavigation.swift; sourceTree = "<group>"; };
 		972A2E07291ADD7700B30260 /* UserTrips.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTrips.swift; sourceTree = "<group>"; };
-		972A2E0A291AE0D900B30260 /* TestTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTabView.swift; sourceTree = "<group>"; };
 		975EDF8F2915CE5900680AAD /* TestTripDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTripDetailsModel.swift; sourceTree = "<group>"; };
 		975EDF912915CE6A00680AAD /* TestTripDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTripDetailsViewModel.swift; sourceTree = "<group>"; };
 		975EDF932915CE7500680AAD /* TestTripDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTripDetailsView.swift; sourceTree = "<group>"; };
@@ -242,7 +240,6 @@
 				191FC37929183EAB0083C4E7 /* ChecklistFour.swift */,
 				345BEF1F291A1A640093BE5B /* JoinTripView.swift */,
 				972A2E05291AD9DE00B30260 /* BarNavigation.swift */,
-				972A2E0A291AE0D900B30260 /* TestTabView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -387,7 +384,6 @@
 				34B9C444290A65D000015341 /* ToGatherApp.swift in Sources */,
 				34B9C468290A66FF00015341 /* User.swift in Sources */,
 				975EDF992915D10200680AAD /* Dashboard-deprecated1.swift in Sources */,
-				972A2E0B291AE0D900B30260 /* TestTabView.swift in Sources */,
 				97AD450B29142DFC000678E0 /* TripDetail.swift in Sources */,
 				191FC37629183E870083C4E7 /* ChecklistTwo.swift in Sources */,
 				34B9C450290A65D100015341 /* ToGather.xcdatamodeld in Sources */,

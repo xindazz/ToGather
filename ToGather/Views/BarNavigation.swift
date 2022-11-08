@@ -16,32 +16,30 @@ struct BarNavigation: View {
 //    MARK: UI-SPECIFIC: use this
 //    MARK: break down everything below into sub-files later
 
-
-//    VStack {
-//      Text("Placeholder for tab views")
-//    }
+// MARK: add background color to the tab view
     TabView {
-     
+    
 // MARK: this dashboardview is a placeholder => it is not yet connected to the database
+    
       DashboardView()
       .tabItem {
-          Image(systemName: "barcode")
-          Text("Scan Price")
+          Image(systemName: "airplane.departure")
+          Text("Your Trips")
       }
 
       UserTripsView()
       .tabItem {
-          Image(systemName: "list.dash")
-          Text("Saved Scans")
+          Image(systemName: "text.bubble.fill")
+          Text("Your Proposals")
       }
       ChecklistOne()
       .tabItem {
-          Image(systemName: "barcode")
-          Text("Scan Price")
+          Image(systemName: "list.bullet.rectangle")
+          Text("Your Checklists")
       }
       
     } // end TabView
-    .background(Color(UIColor.black))
+        
 
   } //end body
   
