@@ -8,20 +8,20 @@
 import Foundation
 
 import SwiftUI
-MARK:- Radio Button Field
+//MARK:- Radio Button Field
 
 
-struct Task: Identifiable {
+struct TestTask: Identifiable {
     let id = UUID()
     let name: String
     var isCompleted: Bool
 }
 
 
-struct CheckListTwo: View {
+struct CheckListFour: View {
     
     
-    @State private var tasks = [Task(name: "Purchase plane tickets to NYC by you, as of September 1", isCompleted: false), Task(name:"Reserve Freeman Hotel by Diana, as of August 1", isCompleted: false), Task(name:"Purchase plane ticketes by Brandon, as of August 1 ", isCompleted: false), Task(name:"Reserve Freeman Hotel by Diana, as of August 11", isCompleted: false), Task(name:"Reserve Cote by Diana, as of August 21", isCompleted: false)]
+    @State private var tasks = [TestTask(name: "Purchase plane tickets to NYC by you, as of September 1", isCompleted: false), TestTask(name:"Reserve Freeman Hotel by Diana, as of August 1", isCompleted: false), TestTask(name:"Purchase plane ticketes by Brandon, as of August 1 ", isCompleted: false), TestTask(name:"Reserve Freeman Hotel by Diana, as of August 11", isCompleted: false), TestTask(name:"Reserve Cote by Diana, as of August 21", isCompleted: false)]
     
     @State private var checked = true
     

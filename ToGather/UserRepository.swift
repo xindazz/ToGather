@@ -39,6 +39,7 @@ class UserRepository: ObservableObject {
       } else {
         print("Cannot get user with id \(userId)")
       }
+      self.trips = []
       for tripRef in self.user.trips {
         async {
           let trip = await fetchTrip(ref: tripRef)
@@ -95,6 +96,7 @@ class UserRepository: ObservableObject {
     return try? document?.data(as: Trip.self)
   }
   
+  @MainActor
   func createTrip(trip: Trip) {
     let collectionRef = db.collection("Trip")
       do {
@@ -106,6 +108,7 @@ class UserRepository: ObservableObject {
       catch {
         print("Error adding new trip \(error)")
       }
+    self.load()
   }
   
   func updateTrip(trip: Trip) {

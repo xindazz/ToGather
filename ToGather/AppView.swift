@@ -42,13 +42,21 @@ struct AppView: View {
          Spacer()
          
          NavigationView {
-           List{
-             ForEach(repo.trips) { trip in
-               NavigationLink(destination: TestDashboardIntegratedView(trip: trip)) {
-                 Text("\(trip.name)")
+           VStack {
+             List{
+               ForEach(repo.trips) { trip in
+                 NavigationLink(destination: TestDashboardIntegratedView(trip: trip)) {
+                   Text("\(trip.name)")
+                 }
                }
+             }.navigationBarTitle("Your Trips")
+             
+             Spacer()
+             
+             NavigationLink(destination: OnboardingThree(repo: repo)) {
+               Text("Create Trip")
              }
-           }.navigationBarTitle("Your Trips")
+           }
          }
          
          Spacer()

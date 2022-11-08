@@ -61,7 +61,7 @@ struct RadioButtonField: View {
 struct OnboardingOne: View {
 
 
-    @ObservedObject var viewController = ViewController()
+//    @ObservedObject var viewController = ViewController()
     @State var inputTemp: String = ""
     
     @State private var textFieldContent = ""
