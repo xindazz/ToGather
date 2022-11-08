@@ -51,7 +51,8 @@ struct Home: View {
              Text("Welcome to ToGather!")
                .font(.title)
              Text("Let's go on a trip together")
-               .font(.subheadline)//             List{
+               .font(.subheadline)
+             //             List{
 //               ForEach(repo.trips) { trip in
 //                 NavigationLink(destination: TestDashboardIntegratedView(trip: trip)) {
 //                   Text("\(trip.name)")
