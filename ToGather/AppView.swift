@@ -7,6 +7,9 @@ import SwiftUI
 
 struct AppView: View {
   @ObservedObject var repo = UserRepository()
+//  MARK: can't show the dash yet because of this
+//  @ObservedObject var trip = Trip()
+  
   @State private var name: String = "Bob"
   @State private var destination: String = "LA"
   
@@ -87,8 +90,23 @@ struct AppView: View {
                 .clipShape(RoundedRectangle(cornerRadius: 12))
                 .padding(10)
 //               } // end navlink
-             
-             NavigationLink(destination: JoinTripView(repo: repo)) {
+             // MARK: CORRECT BUTTON
+//             NavigationLink(destination: TestDashboardIntegratedView(trip:trip)) {
+//               Button(action: {}) {
+//                  Spacer()
+//                 Text("SHORTCUT: View a Pre-Existing Trip (Proposal Feature)")
+//                      .font(.headline)
+//                      .padding()
+//                      .foregroundColor(.white)
+//                  Spacer()
+//               } // end button
+//                .frame(width: 300, height:150)
+//                .background(Color(UIColor.systemBlue))
+//                .clipShape(RoundedRectangle(cornerRadius: 12))
+//                .padding(10)
+//             } // end navlink
+             // MARK: PLACEHOLDER
+             NavigationLink(destination: DashboardView()) {
                Button(action: {}) {
                   Spacer()
                  Text("SHORTCUT: View a Pre-Existing Trip (Proposal Feature)")

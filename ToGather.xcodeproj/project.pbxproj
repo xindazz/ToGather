@@ -180,6 +180,8 @@
 			isa = PBXGroup;
 			children = (
 				972A2DFE291ACA5000B30260 /* Home.swift */,
+				97AD4508291427CC000678E0 /* Dashboard.swift */,
+				3436241129197BF1007A8FC6 /* TestDashboardIntegratedView.swift */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -207,7 +209,6 @@
 				972A2DFB291ACA3100B30260 /* Pages */,
 				97C793AE291AB10F0009BCF6 /* Components */,
 				97AD44C4290EFD9D000678E0 /* ContentView.swift */,
-				97AD4508291427CC000678E0 /* Dashboard.swift */,
 				975EDF982915D10200680AAD /* Dashboard-deprecated1.swift */,
 				97AD450A29142DFC000678E0 /* TripDetail.swift */,
 				97AD450D291435D5000678E0 /* DesignSystemComponents.swift */,
@@ -216,7 +217,6 @@
 				97AD45132914644C000678E0 /* TestDashboardView.swift */,
 				975EDF932915CE7500680AAD /* TestTripDetailsView.swift */,
 				975EDF952915CE8800680AAD /* TestTripDetailsRowView.swift */,
-				3436241129197BF1007A8FC6 /* TestDashboardIntegratedView.swift */,
 				191FC36B29183D910083C4E7 /* OnboardingOne.swift */,
 				191FC36D29183DAE0083C4E7 /* OnboardingTwo.swift */,
 				191FC36F29183DC00083C4E7 /* OnboardingThree.swift */,

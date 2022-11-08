@@ -95,7 +95,6 @@ struct TestDashboardView: View {
             .scaledToFit()
           Spacer()
         } // end VStack
-        .padding(.leading, 20)
         
       } // end VStack
       
