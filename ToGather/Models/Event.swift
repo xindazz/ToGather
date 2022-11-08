@@ -13,15 +13,17 @@ import FirebaseFirestoreSwift
 //  case lodging, travel, activity
 //}
 
-struct Event: Codable {
+struct Event: Codable, Identifiable {
   
-  @DocumentID var id: String?
+//  @DocumentID var id: String?
+  var id: UUID
   var name: String
-  var type: String?
+  var category: String
   var location: String?
   var from: Date?
   var to: Date?
   var detail: String?
+  var link: String?
   var price: Float?
   var photo: String?
   
@@ -30,11 +32,12 @@ struct Event: Codable {
   enum CodingKeys: String, CodingKey {
     case id
     case name
-    case type
+    case category
     case location
     case from
     case to
     case detail
+    case link
     case price
     case photo
   }

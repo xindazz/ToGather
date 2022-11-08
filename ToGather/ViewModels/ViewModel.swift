@@ -6,12 +6,12 @@
 //
 
 import Foundation
+import SwiftUI
 
 
 
 class ViewModel: ObservableObject {
 // MARK: this includes....
-  
 }
 // MARK: uncomment the below + add to the ViewModel class for search :), based off of SwiftRepos Lab
 // fields

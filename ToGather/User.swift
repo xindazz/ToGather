@@ -11,16 +11,18 @@ import Firebase
 import FirebaseFirestore
 import FirebaseFirestoreSwift
 
-struct User: Codable {
+struct User: Codable, Identifiable {
   
-  @DocumentID var id: String?
+  @DocumentID var docId: String?
+  var id: UUID? = UUID()
   var name: String
   var handle: String?
   var phone: String?
-  var trips: [DocumentReference]?
+  var trips: [DocumentReference] = []
   
   // To conform to Codable protocol
   enum CodingKeys: String, CodingKey {
+    case docId
     case id
     case name
     case handle
