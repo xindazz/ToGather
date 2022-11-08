@@ -48,18 +48,63 @@ struct Home: View {
   // MARK: tackle log-in next sprint
                
                NavigationLink(destination: JoinTripView(repo: repo)) {
-                 Text("Create Account")
-               }
-               NavigationLink(destination: OnboardingThree(repo: repo)) {
-                 Text("Create Trip")
-               }
+                 Button(action: {}) {
+                    Spacer()
+                   Text("Create an Account")
+                        .font(.headline)
+                        .padding()
+                        .foregroundColor(.white)
+                    Spacer()
+                 } // end button
+                  .frame(width: 300, height:150)
+                  .background(Color(UIColor.systemBlue))
+                  .clipShape(RoundedRectangle(cornerRadius: 12))
+                  .padding(10)
+               } //end navlink
+               
+//               NavigationLink({}) {
+                 Button(action: {}) {
+                    Spacer()
+                   Text("Log In [in-development]")
+                        .font(.headline)
+                        .padding()
+                        .foregroundColor(.white)
+                    Spacer()
+                 } // end button
+                  .frame(width: 300, height:150)
+                  .background(Color(UIColor.systemBlue))
+                  .clipShape(RoundedRectangle(cornerRadius: 12))
+                  .padding(10)
+//               } // end navlink
                
                NavigationLink(destination: JoinTripView(repo: repo)) {
-                 Text("SHORTCUT: Proposal Feature ")
-               }
+                 Button(action: {}) {
+                    Spacer()
+                   Text("SHORTCUT: View a Pre-Existing Trip (Proposal Feature)")
+                        .font(.headline)
+                        .padding()
+                        .foregroundColor(.white)
+                    Spacer()
+                 } // end button
+                  .frame(width: 300, height:150)
+                  .background(Color(UIColor.systemBlue))
+                  .clipShape(RoundedRectangle(cornerRadius: 12))
+                  .padding(10)
+               } // end navlink
                NavigationLink(destination: JoinTripView(repo: repo)) {
-                 Text("Join Existing Trip")
-               }
+                     Button(action: {}) {
+                        Spacer()
+                       Text("Join an Existing Trip")
+                            .font(.headline)
+                            .padding()
+                            .foregroundColor(.white)
+                        Spacer()
+                     } // end button
+                      .frame(width: 300, height:150)
+                      .background(Color(UIColor.systemBlue))
+                      .clipShape(RoundedRectangle(cornerRadius: 12))
+                      .padding(10)
+               } // end navlink
              }
            }
            

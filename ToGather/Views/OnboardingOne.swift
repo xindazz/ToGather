@@ -168,3 +168,8 @@ struct OnboardingOne: View {
             }
         }
 
+struct OnboardingOne_Previews: PreviewProvider {
+  static var previews: some View {
+    OnboardingOne()
+  }
+}

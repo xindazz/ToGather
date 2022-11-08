@@ -43,8 +43,11 @@ struct AppView: View {
          
          NavigationView {
            VStack {
-             Text("Welcome to ToGather!").font(.title)
-//             List{
+             Spacer()
+             Text("Welcome to ToGather!")
+               .font(.title)
+             Text("Let's go on a trip together")
+               .font(.subheadline)//             List{
 //               ForEach(repo.trips) { trip in
 //                 NavigationLink(destination: TestDashboardIntegratedView(trip: trip)) {
 //                   Text("\(trip.name)")
@@ -52,24 +55,69 @@ struct AppView: View {
 //               }
 //             }
 //             .navigationBarTitle("Your Trips")
-             
-             Spacer()
 // MARK: tackle log-in next sprint
-             NavigationLink(destination: JoinTripView(repo: repo)) {
-               Text("Create Account")
-             }
-             NavigationLink(destination: OnboardingThree(repo: repo)) {
-               Text("Create Trip")
-             }
+
+             Spacer()
+             NavigationLink(destination: OnboardingOne()) {
+               Button(action: {}) {
+                  Spacer()
+                 Text("Create an Account")
+                      .font(.headline)
+                      .padding()
+                      .foregroundColor(.white)
+                  Spacer()
+               } // end button
+                .frame(width: 300, height:150)
+                .background(Color(UIColor.systemBlue))
+                .clipShape(RoundedRectangle(cornerRadius: 12))
+                .padding(10)
+             } //end navlink
+             
+//               NavigationLink({}) {
+               Button(action: {}) {
+                  Spacer()
+                 Text("Log In [in-development]")
+                      .font(.headline)
+                      .padding()
+                      .foregroundColor(.white)
+                  Spacer()
+               } // end button
+                .frame(width: 300, height:150)
+                .background(Color(UIColor.systemBlue))
+                .clipShape(RoundedRectangle(cornerRadius: 12))
+                .padding(10)
+//               } // end navlink
              
              NavigationLink(destination: JoinTripView(repo: repo)) {
-               Text("SHORTCUT: Proposal Feature ")
-             }
-             NavigationLink(destination: JoinTripView(repo: repo)) {
-               Text("Join Existing Trip")
-             }
-           }
-         }
+               Button(action: {}) {
+                  Spacer()
+                 Text("SHORTCUT: View a Pre-Existing Trip (Proposal Feature)")
+                      .font(.headline)
+                      .padding()
+                      .foregroundColor(.white)
+                  Spacer()
+               } // end button
+                .frame(width: 300, height:150)
+                .background(Color(UIColor.systemBlue))
+                .clipShape(RoundedRectangle(cornerRadius: 12))
+                .padding(10)
+             } // end navlink
+             
+//             NavigationLink(destination: JoinTripView(repo: repo)) {
+//               Text("Create Account")
+//             }
+//             NavigationLink(destination: OnboardingThree(repo: repo)) {
+//               Text("Create Trip")
+//             }
+//
+//             NavigationLink(destination: JoinTripView(repo: repo)) {
+//               Text("SHORTCUT: Proposal Feature ")
+//             }
+//             NavigationLink(destination: JoinTripView(repo: repo)) {
+//               Text("Join Existing Trip")
+//             }
+           } //  end vstack
+         } // end navigation view
          
          Spacer()
        }

@@ -18,6 +18,7 @@ struct Buttons: View {
     ScrollView {
 //    MARK: wide buttons
       VStack {
+        // wide button
         Button(action: {}) {
            Spacer()
           Label("Add Trip Details", systemImage: "plus.circle")
@@ -29,7 +30,31 @@ struct Buttons: View {
          .background(Color(UIColor.systemBlue))
          .clipShape(RoundedRectangle(cornerRadius: 12))
          .padding()
+//        wide button #2 
+        Button(action: {}) {
+           Spacer()
+          Label("Add Trip Details", systemImage: "plus.circle")
+               .font(.headline)
+               .padding()
+               .foregroundColor(.white)
+           Spacer()
+        }.frame(width: 350, height: 90)
+         .background(Color(UIColor.systemBlue))
+         .clipShape(RoundedRectangle(cornerRadius: 12))
+         .padding()
 
+// normal button
+        Button(action: {}) {
+           Spacer()
+          Label("Add Trip Details", systemImage: "plus.circle")
+               .font(.headline)
+               .padding()
+               .foregroundColor(.white)
+           Spacer()
+        }
+         .background(Color(UIColor.systemBlue))
+         .clipShape(RoundedRectangle(cornerRadius: 12))
+         .padding()
       } //end Vstack
 
 
