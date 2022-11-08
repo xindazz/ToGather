@@ -171,6 +171,9 @@ struct ProposalCard: View {
         .padding(EdgeInsets(top: 0, leading: 20, bottom: 20, trailing: 0))
         
       } //end vstack
+      .background(Color(UIColor.systemGray))
+      .clipShape(RoundedRectangle(cornerRadius: 12))
+      .padding(EdgeInsets(top: 10, leading: 15, bottom: 20, trailing: 15))
 // MARK: exploring the replies
     } //end scroll view
     

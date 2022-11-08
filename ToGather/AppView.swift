@@ -30,7 +30,7 @@ struct AppView: View {
 //        Text("Create trip")
 //      }
 //    }
-    
+//    MARK: Changed this a default log-in page with shortcuts :)
     ZStack {
 
        VStack {
@@ -43,13 +43,15 @@ struct AppView: View {
          
          NavigationView {
            VStack {
-             List{
-               ForEach(repo.trips) { trip in
-                 NavigationLink(destination: TestDashboardIntegratedView(trip: trip)) {
-                   Text("\(trip.name)")
-                 }
-               }
-             }.navigationBarTitle("Your Trips")
+             Text("Welcome to ToGather!").font(.title)
+//             List{
+//               ForEach(repo.trips) { trip in
+//                 NavigationLink(destination: TestDashboardIntegratedView(trip: trip)) {
+//                   Text("\(trip.name)")
+//                 }
+//               }
+//             }
+//             .navigationBarTitle("Your Trips")
              
              Spacer()
 // MARK: tackle log-in next sprint
@@ -61,7 +63,7 @@ struct AppView: View {
              }
              
              NavigationLink(destination: JoinTripView(repo: repo)) {
-               Text("SHORTCUT: View Sample Trip Dash ")
+               Text("SHORTCUT: Proposal Feature ")
              }
              NavigationLink(destination: JoinTripView(repo: repo)) {
                Text("Join Existing Trip")
