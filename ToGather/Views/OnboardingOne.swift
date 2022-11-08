@@ -149,16 +149,31 @@ struct OnboardingOne: View {
                     TextField("@discord", text: $textFieldContent2)
                         .textContentType(.givenName).border(Color.gray.opacity(0.5))
   
-                
-                    Button {
-                    } label: {
-                      Text("Get Started")
-                            .font(.title)
-                            .padding()
-                            .foregroundColor(.white)
-                            .background(Color.blue)
-                            .cornerRadius(30)
-                    }
+//// old button
+//                    Button {
+//                    } label: {
+//                      Text("Get Started")
+//                            .font(.title)
+//                            .padding()
+//                            .foregroundColor(.white)
+//                            .background(Color.blue)
+//                            .cornerRadius(30)
+//                    }
+                  
+                  NavigationLink(destination: OnboardingTwo()) {
+                    Button(action: {}) {
+                       Spacer()
+                       Text("Get Started")
+                           .font(.headline)
+                           .padding()
+                           .foregroundColor(.white)
+                       Spacer()
+                    } // end button
+                     .background(Color(UIColor.systemBlue))
+                     .clipShape(RoundedRectangle(cornerRadius: 12))
+                     .padding()
+                  } //end navlink
+                  
                 }
                     Spacer()
         

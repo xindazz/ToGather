@@ -35,7 +35,23 @@ struct NavigationLinks: View {
                   .clipShape(RoundedRectangle(cornerRadius: 12))
                   .padding(10)
                } //end navlink
+          
+           
+           NavigationLink(destination: JoinTripView(repo: repo)) {
+             Button(action: {}) {
+                Spacer()
+                Text("some text")
+                    .font(.headline)
+                    .padding()
+                    .foregroundColor(.white)
+                Spacer()
+             } // end button
+              .background(Color(UIColor.systemBlue))
+              .clipShape(RoundedRectangle(cornerRadius: 12))
+              .padding()
+           } //end navlink
                
+           
          }
      } // end ztack
       

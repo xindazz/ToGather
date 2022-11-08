@@ -1,13 +1,13 @@
 //
-//  Dashboard.swift
+//  UserTrips.swift
 //  ToGather
 //
-//  Created by Lisa Leung on 11/3/22.
+//  Created by Lisa Leung on 11/8/22.
 //
 
 import SwiftUI
 
-struct DashboardView: View {
+struct UserTripsView: View {
 //  using code from SwiftRepos - 443 lab - to start
   
   var body: some View {
@@ -18,11 +18,9 @@ struct DashboardView: View {
 // MARK: trip header
     VStack (alignment: .leading) {
       VStack (alignment: .leading){
-        Text("NYC Trip")
+        Text("View all Trips")
           .font(.largeTitle)
           .padding(EdgeInsets(top: 10, leading: 80, bottom: 0, trailing: 0))
-        Text("September 10-14, 2022")
-          .padding(EdgeInsets(top: 0, leading: 80, bottom: 0, trailing: 0))
 
         Divider()
       }
@@ -80,7 +78,7 @@ struct DashboardView: View {
           Text("Travel").font(.title2)
             .padding(EdgeInsets(top: 10, leading: 20, bottom: 0, trailing: 0))
           Spacer()
-          Spacer()          
+          Spacer()
           VStack (alignment: .leading) {
             VStack (alignment: .leading, spacing: 20) {
               Text("Tuesday, November 1 at 12:00pm to")
@@ -128,8 +126,8 @@ struct DashboardView: View {
  
 } //end struct
 
-struct DashboardView_Previews: PreviewProvider {
+struct UserTripsView_Previews: PreviewProvider {
   static var previews: some View {
-    DashboardView()
+    UserTripsView()
   }
 }
