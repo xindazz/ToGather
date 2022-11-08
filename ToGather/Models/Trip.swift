@@ -16,21 +16,21 @@ struct Trip: Codable, Identifiable {
 //  var id: String
   @DocumentID var id: String?
   var name: String
-  var unique_code: String?
-  var owner: DocumentReference
-  var members: [User]?
+  var uniqueCode: String
+  var owner: User
+  var members: [User] = []
   var destination: String?
   var from: Date?
   var to: Date?
-  var itinerary: [TripDay]?
-  var proposals: [Proposal]?
-  var tasks: [Task]?
+  var itinerary: [TripDay] = []
+  var proposals: [Proposal] = []
+  var tasks: [Task] = []
   
   // To conform to Codable protocol
   enum CodingKeys: String, CodingKey {
     case id
     case name
-    case unique_code
+    case uniqueCode
     case owner
     case members
     case destination
@@ -41,5 +41,24 @@ struct Trip: Codable, Identifiable {
     case tasks
   }
   
+  mutating func setUniqueCode(code: String) {
+    uniqueCode = code
+  }
+  
+  mutating func addMember(user: User) {
+    members.append(user)
+  }
+  
+  mutating func addItinerary(tripDay: TripDay) {
+    itinerary.append(tripDay)
+  }
+  
+  mutating func addProposal(proposal: Proposal) {
+    proposals.append(proposal)
+  }
+  
+  mutating func addTask(task: Task) {
+    tasks.append(task)
+  }
 }
 

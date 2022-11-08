@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 import FirebaseFirestoreSwift
 
-struct Task: Codable {
+struct Task: Codable, Identifiable {
   
   @DocumentID var id: String?
   var name: String?
