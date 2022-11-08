@@ -1,10 +1,9 @@
 //
 //  OnboardingThree.swift
-//  ToGather
+//  testing
 //
-//  Created by Yi  on 11/6/22.
+//  Created by Yi  on 11/1/22.
 //
-
 
 import Foundation
 
@@ -23,7 +22,7 @@ struct OnboardingThree: View {
         
         ZStack {
             
-            VStack{
+            VStack (spacing:20){
                 
                 
                 Text("Create a trip")
@@ -39,56 +38,75 @@ struct OnboardingThree: View {
                     .font(.title)
                     .fontWeight(.bold)
                     .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 10))
                 
                 
                 TextField("Graduation!", text: $textFieldContent)
                     .textContentType(.givenName).border(Color.gray.opacity(0.5))
+                    .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 10))
                 
                 
                 Text("Destination")
                     .font(.title)
                     .fontWeight(.bold)
                     .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 10))
                 
                 
                 TextField("New York", text: $textFieldContent2)
                     .textContentType(.givenName).border(Color.gray.opacity(0.5))
+                    .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 10))
                 
                 
                 Text("Dates")
                     .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 10))
                 
-                DatePicker(selection: /*@START_MENU_TOKEN@*/.constant(Date())/*@END_MENU_TOKEN@*/, label: { Text("Choose Date") })
+                DatePicker(selection: .constant(Date()), label: { Text("From") })
+                    .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 10))
+                
+                DatePicker(selection: .constant(Date()), label: { Text("To") })
+                    .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 10))
                 
                 
-                Spacer()
                 
                 
-                    Button {
-                    } label: {
-                        Text("Invite Friends")
-                            .font(.title)
-                            .padding()
-                            .foregroundColor(.white)
-                            .background(Color.blue)
-                            .cornerRadius(30)
-                    }
+                VStack{
                     
-                }
-                Button {
-                } label: {
-                    Text("Create Trip")
+                    
+                    NavigationLink("Invite Friends", destination: OnboardingFive())
                         .font(.title)
                         .padding()
                         .foregroundColor(.white)
+                        .frame(width: 350, height: 80)
+                    
                         .background(Color.blue)
-                        .cornerRadius(30)
+                    
+                        .clipShape(RoundedRectangle(cornerRadius: 12))
+                               
+                    
+                    
+                    NavigationLink("Create Trip", destination: OnboardingFour())
+                        .font(.title)
+                        .padding()
+                        .foregroundColor(.white)
+                        .frame(width: 350, height: 80)
+                    
+                        .background(Color.blue)
+                    
+                        .clipShape(RoundedRectangle(cornerRadius: 12))
+                    
                 }
+                
             }
-        
             
-            Spacer()
-        
+            
+           
+            
+            
         }
     }
+}
+
+
 

@@ -15,6 +15,7 @@
 		191FC37629183E870083C4E7 /* ChecklistTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191FC37529183E870083C4E7 /* ChecklistTwo.swift */; };
 		191FC37829183E9C0083C4E7 /* ChecklistThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191FC37729183E9C0083C4E7 /* ChecklistThree.swift */; };
 		191FC37A29183EAB0083C4E7 /* ChecklistFour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191FC37929183EAB0083C4E7 /* ChecklistFour.swift */; };
+		191FC37E29189F340083C4E7 /* OnboardingFive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191FC37D29189F340083C4E7 /* OnboardingFive.swift */; };
 		344B927B2911D7130030547F /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344B927A2911D7130030547F /* Trip.swift */; };
 		344B927D2911D7240030547F /* Proposal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344B927C2911D7240030547F /* Proposal.swift */; };
 		344B927F2911D7290030547F /* TripDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344B927E2911D7290030547F /* TripDay.swift */; };
@@ -50,6 +51,7 @@
 		191FC37529183E870083C4E7 /* ChecklistTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistTwo.swift; sourceTree = "<group>"; };
 		191FC37729183E9C0083C4E7 /* ChecklistThree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistThree.swift; sourceTree = "<group>"; };
 		191FC37929183EAB0083C4E7 /* ChecklistFour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistFour.swift; sourceTree = "<group>"; };
+		191FC37D29189F340083C4E7 /* OnboardingFive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingFive.swift; sourceTree = "<group>"; };
 		344B927A2911D7130030547F /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
 		344B927C2911D7240030547F /* Proposal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Proposal.swift; sourceTree = "<group>"; };
 		344B927E2911D7290030547F /* TripDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDay.swift; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 				191FC37529183E870083C4E7 /* ChecklistTwo.swift */,
 				191FC37729183E9C0083C4E7 /* ChecklistThree.swift */,
 				191FC37929183EAB0083C4E7 /* ChecklistFour.swift */,
+				191FC37D29189F340083C4E7 /* OnboardingFive.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 				191FC36C29183D910083C4E7 /* OnboardingOne.swift in Sources */,
 				344B927B2911D7130030547F /* Trip.swift in Sources */,
 				34B9C46C290AF06900015341 /* AppView.swift in Sources */,
+				191FC37E29189F340083C4E7 /* OnboardingFive.swift in Sources */,
 				191FC37029183DC00083C4E7 /* OnboardingThree.swift in Sources */,
 				344B92832911D7390030547F /* Task.swift in Sources */,
 				191FC36E29183DAE0083C4E7 /* OnboardingTwo.swift in Sources */,
