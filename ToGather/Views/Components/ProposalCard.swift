@@ -12,6 +12,30 @@ struct ProposalCard: View {
 //  MARK: colors have not been configured to the design system
   var body: some View {
     ScrollView {
+// MARK: replies [in-development]
+      VStack (alignment: .leading){
+        VStack (alignment: .leading){
+//          Text("Sender: Brandon Woo")
+          Label("Sender: Brandon Woo", systemImage: "arrowshape.turn.up.left")
+
+          Divider()
+        }
+        .padding(EdgeInsets(top: 10, leading: 15, bottom: 0, trailing: 15))
+        VStack (alignment: .leading, spacing: 10){
+          Text("Category: WHAT")
+            .font(.headline)
+          Text("Fly from DCA to LAX")
+          Text("Category: Comment")
+            .font(.headline)
+          Text("Cheaper than flying from LGA in NYC ")
+        }
+        .padding(EdgeInsets(top: 10, leading: 15, bottom: 20, trailing: 15))
+       
+      }
+      .frame(width: 300, height: .infinity)
+      .background(Color(UIColor.systemGreen))
+      .clipShape(RoundedRectangle(cornerRadius: 12))
+      .padding(EdgeInsets(top: 10, leading: 90, bottom: 20, trailing: 15))
 // MARK: card template
       VStack (alignment: .leading) {
         VStack (alignment: .leading, spacing: 20) {
