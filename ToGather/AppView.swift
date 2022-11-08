@@ -30,11 +30,30 @@ struct AppView: View {
 //        Text("Create trip")
 //      }
 //    }
-    if repo.trips.count > 0 && repo.curr_trip_idx < repo.trips.count {
-      TestDashboardIntegratedView(trip: repo.trips[repo.curr_trip_idx]).task {
-        print("Curr trip has \(repo.trips[repo.curr_trip_idx].members.count) members")
-      }
-    }
+    
+    ZStack {
+
+       VStack {
+         Text("Welcome, \(repo.user.name)!")
+           .fontWeight(.heavy)
+           .multilineTextAlignment(.center)
+           .font(.headline)
+
+         Spacer()
+         
+         NavigationView {
+           List{
+             ForEach(repo.trips) { trip in
+               NavigationLink(destination: TestDashboardIntegratedView(trip: trip)) {
+                 Text("\(trip.name)")
+               }
+             }
+           }.navigationBarTitle("Your Trips")
+         }
+         
+         Spacer()
+       }
+   }
       
   }
 }
