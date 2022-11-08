@@ -9,12 +9,12 @@ import Foundation
 import SwiftUI
 import FirebaseFirestoreSwift
 
-struct TripDay: Codable {
+struct TripDay: Codable, Identifiable {
   
 //  @DocumentID var id: String?
   var id: UUID
-  var date: Date?
-  var dayNum: Int?
+  var date: Date
+  var dayNum: Int
   var events: [Event] = []
   
   // To conform to Codable protocol

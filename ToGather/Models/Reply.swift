@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 import FirebaseFirestoreSwift
 
-struct Reply: Codable {
+struct Reply: Codable, Identifiable {
   
   @DocumentID var id: String?
   var replier: User

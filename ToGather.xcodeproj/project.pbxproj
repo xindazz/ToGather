@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3436241229197BF1007A8FC6 /* TestDashboardIntegratedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3436241129197BF1007A8FC6 /* TestDashboardIntegratedView.swift */; };
 		344B927B2911D7130030547F /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344B927A2911D7130030547F /* Trip.swift */; };
 		344B927D2911D7240030547F /* Proposal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344B927C2911D7240030547F /* Proposal.swift */; };
 		344B927F2911D7290030547F /* TripDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344B927E2911D7290030547F /* TripDay.swift */; };
@@ -48,6 +49,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3436241129197BF1007A8FC6 /* TestDashboardIntegratedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDashboardIntegratedView.swift; sourceTree = "<group>"; };
 		344B927A2911D7130030547F /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
 		344B927C2911D7240030547F /* Proposal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Proposal.swift; sourceTree = "<group>"; };
 		344B927E2911D7290030547F /* TripDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDay.swift; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 				97AD45132914644C000678E0 /* TestDashboardView.swift */,
 				975EDF932915CE7500680AAD /* TestTripDetailsView.swift */,
 				975EDF952915CE8800680AAD /* TestTripDetailsRowView.swift */,
+				3436241129197BF1007A8FC6 /* TestDashboardIntegratedView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 				975EDF992915D10200680AAD /* Dashboard-deprecated1.swift in Sources */,
 				97AD450B29142DFC000678E0 /* TripDetail.swift in Sources */,
 				34B9C450290A65D100015341 /* ToGather.xcdatamodeld in Sources */,
+				3436241229197BF1007A8FC6 /* TestDashboardIntegratedView.swift in Sources */,
 				975EDF922915CE6A00680AAD /* TestTripDetailsViewModel.swift in Sources */,
 				97AD4512291440AE000678E0 /* Experiment.swift in Sources */,
 				97AD45142914644C000678E0 /* TestDashboardView.swift in Sources */,

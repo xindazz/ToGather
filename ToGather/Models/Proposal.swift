@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 import FirebaseFirestoreSwift
 
-struct Proposal: Codable {
+struct Proposal: Codable, Identifiable {
   
   @DocumentID var id: String?
   var day: TripDay
