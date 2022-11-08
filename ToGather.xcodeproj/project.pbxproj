@@ -55,6 +55,8 @@
 		97AD45142914644C000678E0 /* TestDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AD45132914644C000678E0 /* TestDashboardView.swift */; };
 		97AD451629146475000678E0 /* TestDashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AD451529146475000678E0 /* TestDashboardViewModel.swift */; };
 		97AD451829146482000678E0 /* TestDashboardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AD451729146482000678E0 /* TestDashboardModel.swift */; };
+		97C793B0291AB1230009BCF6 /* ProposalCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C793AF291AB1230009BCF6 /* ProposalCard.swift */; };
+		97C793B2291AB13E0009BCF6 /* TestUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C793B1291AB13E0009BCF6 /* TestUI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -102,6 +104,8 @@
 		97AD45132914644C000678E0 /* TestDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDashboardView.swift; sourceTree = "<group>"; };
 		97AD451529146475000678E0 /* TestDashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDashboardViewModel.swift; sourceTree = "<group>"; };
 		97AD451729146482000678E0 /* TestDashboardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDashboardModel.swift; sourceTree = "<group>"; };
+		97C793AF291AB1230009BCF6 /* ProposalCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProposalCard.swift; sourceTree = "<group>"; };
+		97C793B1291AB13E0009BCF6 /* TestUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +190,7 @@
 		97AD44C0290EFC24000678E0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				97C793AE291AB10F0009BCF6 /* Components */,
 				97AD44C4290EFD9D000678E0 /* ContentView.swift */,
 				97AD4508291427CC000678E0 /* Dashboard.swift */,
 				975EDF982915D10200680AAD /* Dashboard-deprecated1.swift */,
@@ -218,6 +223,15 @@
 				975EDF912915CE6A00680AAD /* TestTripDetailsViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		97C793AE291AB10F0009BCF6 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				97C793AF291AB1230009BCF6 /* ProposalCard.swift */,
+				97C793B1291AB13E0009BCF6 /* TestUI.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,6 +322,7 @@
 				34B9C44D290A65D100015341 /* Persistence.swift in Sources */,
 				344B927D2911D7240030547F /* Proposal.swift in Sources */,
 				34B9C46A290A67BA00015341 /* UserRepository.swift in Sources */,
+				97C793B0291AB1230009BCF6 /* ProposalCard.swift in Sources */,
 				97AD44C5290EFD9D000678E0 /* ContentView.swift in Sources */,
 				975EDF942915CE7500680AAD /* TestTripDetailsView.swift in Sources */,
 				975EDF9B2915D74700680AAD /* TestTripDetailsRowModel.swift in Sources */,
@@ -343,6 +358,7 @@
 				97AD45142914644C000678E0 /* TestDashboardView.swift in Sources */,
 				97AD44C3290EFD8C000678E0 /* ViewModel.swift in Sources */,
 				97AD45102914367A000678E0 /* TripDetailCard.swift in Sources */,
+				97C793B2291AB13E0009BCF6 /* TestUI.swift in Sources */,
 				975EDF902915CE5900680AAD /* TestTripDetailsModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
