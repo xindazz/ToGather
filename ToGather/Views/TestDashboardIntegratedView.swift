@@ -24,7 +24,13 @@ struct TestDashboardIntegratedView: View {
         Text(trip.name)
           .font(.largeTitle)
           .padding(EdgeInsets(top: 10, leading: 20, bottom: 0, trailing: 0))
-        Text(dateFormatter.string(from: trip.from ?? Date()))
+        HStack {
+          Text(trip.from ?? Date(), style: .date)
+          Text(" - ")
+          Text(trip.to ?? Date(), style: .date)
+        }.padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 0))
+        
+        Text("Unique code: \(trip.uniqueCode)")
           .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 0))
         
         Divider()

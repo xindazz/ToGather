@@ -22,6 +22,7 @@ class UserRepository: ObservableObject {
   @Published var curr_trip_idx: Int = 0
   private var errorMessage: String = ""
   private var cancellables: Set<AnyCancellable> = []
+  private var randInt: Int = 0
 
   @MainActor
   init() {
@@ -96,11 +97,35 @@ class UserRepository: ObservableObject {
     return try? document?.data(as: Trip.self)
   }
   
+  func fetchAllUniqueCodes() async throws -> [String] {
+    let snapshot = try await db.collection("Trip").getDocuments()
+    return snapshot.documents.compactMap { document in try? document.data(as: Trip.self).uniqueCode }
+  }
+  
+  
   @MainActor
   func createTrip(trip: Trip) {
-    let collectionRef = db.collection("Trip")
+    async {
+      if let allUniqueCodes = try? await self.fetchAllUniqueCodes() {
+        self.randInt = Int.random(in: 1..<1000000)
+        while allUniqueCodes.contains(String(self.randInt)) {
+          self.randInt = Int.random(in: 0..<1000000)
+        }
+      }
+      let code = String(format: "%06d", self.randInt)
+      let newTrip = Trip(name: trip.name,
+                         uniqueCode: code,
+                         owner: trip.owner,
+                         members: trip.members,
+                         destination: trip.destination,
+                         from: trip.from,
+                         to: trip.to,
+                         itinerary: trip.itinerary,
+                         proposals: trip.proposals,
+                         tasks: trip.tasks)
+      let collectionRef = db.collection("Trip")
       do {
-        let ref = try collectionRef.addDocument(from: trip)
+        let ref = try collectionRef.addDocument(from: newTrip)
         print("Successfully added new trip \(trip.name)")
         self.user.trips.append(ref)
         self.updateUser(user: self.user)
@@ -108,7 +133,8 @@ class UserRepository: ObservableObject {
       catch {
         print("Error adding new trip \(error)")
       }
-    self.load()
+      self.load()
+    }
   }
   
   func updateTrip(trip: Trip) {

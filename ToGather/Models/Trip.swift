@@ -16,7 +16,7 @@ struct Trip: Codable, Identifiable {
 //  var id: String
   @DocumentID var id: String?
   var name: String
-  var unique_code: String?
+  var uniqueCode: String
   var owner: User
   var members: [User] = []
   var destination: String?
@@ -30,7 +30,7 @@ struct Trip: Codable, Identifiable {
   enum CodingKeys: String, CodingKey {
     case id
     case name
-    case unique_code
+    case uniqueCode
     case owner
     case members
     case destination
@@ -39,6 +39,10 @@ struct Trip: Codable, Identifiable {
     case itinerary
     case proposals
     case tasks
+  }
+  
+  mutating func setUniqueCode(code: String) {
+    uniqueCode = code
   }
   
   mutating func addMember(user: User) {

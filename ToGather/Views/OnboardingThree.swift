@@ -58,7 +58,8 @@ struct OnboardingThree: View {
       } // end VStack
       
       Button {
-        repo.createTrip(trip: Trip(name: name, owner: repo.user, destination: destination, from: startDate, to: endDate))
+//        let uniqueCode = repo.getUniqueCode()
+        repo.createTrip(trip: Trip(name: name, uniqueCode: "", owner: repo.user, destination: destination, from: startDate, to: endDate))
       } label: {
         Text("Create Trip")
           .font(.title)
