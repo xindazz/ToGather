@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct BarNavigation: View {
-//  using code from BigMountainStudio for background
-// https://www.bigmountainstudio.com/community/public/posts/86559-how-to-customize-the-tabview-in-swiftui
+
   
   var body: some View {
 //    trip header and nav

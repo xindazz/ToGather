@@ -20,14 +20,12 @@ struct UserTripsView: View {
       
       VStack (alignment: .leading) {
         VStack {
-  // MARK: this page should be the buttons for trips
+          // MARK: this page should be the buttons for trips
           Text("Proposal")
             .font(.largeTitle)
             .padding()
           Divider()
         } // end vstack
-
-    //    MARK: trip details block
         VStack (alignment: .leading) {
           VStack (alignment: .leading, spacing: 20) {
             Text("Tuesday, November 1 at 12:00pm to")
@@ -39,7 +37,8 @@ struct UserTripsView: View {
             Divider()
           } // end vstack
           .background(Color(UIColor.systemBlue))
-
+          .foregroundColor(.white)
+          
           VStack (alignment: .leading, spacing: 10){
             Text("WHAT: Fly to LAX from LGA")
               .font(.headline)
@@ -56,7 +55,7 @@ struct UserTripsView: View {
               .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 20))
             
           }
-          .padding(.leading, 20)
+          .padding(EdgeInsets(top: 0, leading: 20, bottom: 20, trailing: 10))
           
           HStack {
             Button(action: {}) {
@@ -73,17 +72,19 @@ struct UserTripsView: View {
           } //end HStack
           .padding()
           
-        } // end VStack
-        .background(Color(UIColor.systemGray))
+        } //end vstack
+        .background(Color(UIColor.lightGray))
         .clipShape(RoundedRectangle(cornerRadius: 12))
         .padding(EdgeInsets(top: 10, leading: 15, bottom: 20, trailing: 15))
         
+      } // end VStack
+      
         // MARK: insert replies
         VStack (alignment: .leading){
           VStack (alignment: .leading){
-  //          Text("Sender: Brandon Woo")
+            //          Text("Sender: Brandon Woo")
             Label("Sender: Brandon Woo", systemImage: "arrowshape.turn.up.left")
-
+            
             Divider()
           }
           .padding(EdgeInsets(top: 10, leading: 15, bottom: 0, trailing: 15))
@@ -96,13 +97,12 @@ struct UserTripsView: View {
             Text("Cheaper than flying from LGA in NYC ")
           }
           .padding(EdgeInsets(top: 10, leading: 15, bottom: 20, trailing: 15))
-         
+          
         }
         .frame(width: 300, height: .infinity)
         .background(Color(UIColor.systemGreen))
         .clipShape(RoundedRectangle(cornerRadius: 12))
         .padding(EdgeInsets(top: 10, leading: 90, bottom: 20, trailing: 15))
-        
         
       } //end vstack
       
@@ -112,7 +112,7 @@ struct UserTripsView: View {
   } //end body
   
  
-} //end struct
+//} //end struct
 
 struct UserTripsView_Previews: PreviewProvider {
   static var previews: some View {

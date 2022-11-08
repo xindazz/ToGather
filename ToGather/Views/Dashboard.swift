@@ -81,7 +81,8 @@ struct DashboardView: View {
           Text("Travel").font(.title2)
             .padding(EdgeInsets(top: 10, leading: 20, bottom: 0, trailing: 0))
           Spacer()
-          Spacer()          
+          Spacer()
+          // MARK: hard-coded card
           VStack (alignment: .leading) {
             VStack (alignment: .leading, spacing: 20) {
               Text("Tuesday, November 1 at 12:00pm to")

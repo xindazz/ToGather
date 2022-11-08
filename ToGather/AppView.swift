@@ -43,103 +43,32 @@ struct AppView: View {
            .font(.headline)
 
          Spacer()
-         
-         NavigationView {
-           VStack {
-             Spacer()
-             Text("Welcome to ToGather!")
-               .font(.title)
-             Text("Let's go on a trip together")
-               .font(.subheadline)//             List{
-//               ForEach(repo.trips) { trip in
-//                 NavigationLink(destination: TestDashboardIntegratedView(trip: trip)) {
-//                   Text("\(trip.name)")
-//                 }
-//               }
-//             }
-//             .navigationBarTitle("Your Trips")
-// MARK: tackle log-in next sprint
+         // MARK: add background color to the tab view
+             TabView {
+             
+             // MARK: this dashboardview is a placeholder => it is not yet connected to the database
+               DashboardView()
+               .tabItem {
+                   Image(systemName: "airplane.departure")
+                   Text("Your Trips")
+               }
 
-             Spacer()
-             NavigationLink(destination: OnboardingOne()) {
-               Button(action: {}) {
-                  Spacer()
-                 Text("Create an Account")
-                      .font(.headline)
-                      .padding()
-                      .foregroundColor(.white)
-                  Spacer()
-               } // end button
-                .frame(width: 300, height:150)
-                .background(Color(UIColor.systemBlue))
-                .clipShape(RoundedRectangle(cornerRadius: 12))
-                .padding(10)
-             } //end navlink
-             
-//               NavigationLink({}) {
-               Button(action: {}) {
-                  Spacer()
-                 Text("Log In [in-development]")
-                      .font(.headline)
-                      .padding()
-                      .foregroundColor(.white)
-                  Spacer()
-               } // end button
-                .frame(width: 300, height:150)
-                .background(Color(UIColor.systemBlue))
-                .clipShape(RoundedRectangle(cornerRadius: 12))
-                .padding(10)
-//               } // end navlink
-             // MARK: CORRECT BUTTON
-//             NavigationLink(destination: TestDashboardIntegratedView(trip:trip)) {
-//               Button(action: {}) {
-//                  Spacer()
-//                 Text("SHORTCUT: View a Pre-Existing Trip (Proposal Feature)")
-//                      .font(.headline)
-//                      .padding()
-//                      .foregroundColor(.white)
-//                  Spacer()
-//               } // end button
-//                .frame(width: 300, height:150)
-//                .background(Color(UIColor.systemBlue))
-//                .clipShape(RoundedRectangle(cornerRadius: 12))
-//                .padding(10)
-//             } // end navlink
-             // MARK: PLACEHOLDER
-             NavigationLink(destination: DashboardView()) {
-               Button(action: {}) {
-                  Spacer()
-                 Text("SHORTCUT: View a Pre-Existing Trip (Proposal Feature)")
-                      .font(.headline)
-                      .padding()
-                      .foregroundColor(.white)
-                  Spacer()
-               } // end button
-                .frame(width: 300, height:150)
-                .background(Color(UIColor.systemBlue))
-                .clipShape(RoundedRectangle(cornerRadius: 12))
-                .padding(10)
-             } // end navlink
-             
-//             NavigationLink(destination: JoinTripView(repo: repo)) {
-//               Text("Create Account")
-//             }
-//             NavigationLink(destination: OnboardingThree(repo: repo)) {
-//               Text("Create Trip")
-//             }
-//
-//             NavigationLink(destination: JoinTripView(repo: repo)) {
-//               Text("SHORTCUT: Proposal Feature ")
-//             }
-//             NavigationLink(destination: JoinTripView(repo: repo)) {
-//               Text("Join Existing Trip")
-//             }
-           } //  end vstack
-         } // end navigation view
+               UserTripsView()
+               .tabItem {
+                   Image(systemName: "text.bubble.fill")
+                   Text("Your Proposals")
+               }
+               ChecklistOne()
+               .tabItem {
+                   Image(systemName: "list.bullet.rectangle")
+                   Text("Your Checklists")
+               }
+               
+             } // end TabView
          
          Spacer()
-       }
-   }
+       } //  end Vstack
+   } //end ZStack
       
   }
 }
