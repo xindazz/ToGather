@@ -26,11 +26,11 @@ struct YourTripsView: View {
           VStack{
             Text("New York City")
              .font(.headline)
-             .padding()
+             .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 0))
              .foregroundColor(.white)
             Text("September 10-24, 2022")
             .font(.subheadline)
-            .padding()
+            .padding(EdgeInsets(top: 10, leading: 20, bottom: 0, trailing: 0))
             .foregroundColor(.white)
           }//end vstack
 //           Spacer()
