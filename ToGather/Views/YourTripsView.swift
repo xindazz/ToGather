@@ -27,7 +27,7 @@ struct YourTripsView: View {
             Text("New York City")
              .font(.headline)
              .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 0))
-             .foregroundColor(.white) 
+             .foregroundColor(.white)
             Text("September 10-24, 2022")
             .font(.subheadline)
             .padding(EdgeInsets(top: 10, leading: 20, bottom: 0, trailing: 0))
