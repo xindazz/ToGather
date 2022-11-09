@@ -50,6 +50,9 @@
 		97A005FC291B468800F0FE26 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 97A005FB291B468800F0FE26 /* FirebaseFirestoreSwift */; };
 		97A005FE291B468800F0FE26 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 97A005FD291B468800F0FE26 /* FirebaseMessaging */; };
 		97A00600291B468800F0FE26 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 97A005FF291B468800F0FE26 /* FirebaseStorage */; };
+		97A00602291C3FC800F0FE26 /* YourTripsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A00601291C3FC800F0FE26 /* YourTripsView.swift */; };
+		97A00604291C461600F0FE26 /* YourProposalsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A00603291C461600F0FE26 /* YourProposalsView.swift */; };
+		97A00606291C464500F0FE26 /* YourChecklists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A00605291C464500F0FE26 /* YourChecklists.swift */; };
 		97AD44C3290EFD8C000678E0 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AD44C2290EFD8C000678E0 /* ViewModel.swift */; };
 		97AD44C5290EFD9D000678E0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AD44C4290EFD9D000678E0 /* ContentView.swift */; };
 		97AD4509291427CC000678E0 /* Dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AD4508291427CC000678E0 /* Dashboard.swift */; };
@@ -103,6 +106,9 @@
 		975EDF972915CEA800680AAD /* lisa-dev-2-branch-docs.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "lisa-dev-2-branch-docs.md"; sourceTree = "<group>"; };
 		975EDF982915D10200680AAD /* Dashboard-deprecated1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dashboard-deprecated1.swift"; sourceTree = "<group>"; };
 		975EDF9A2915D74700680AAD /* TestTripDetailsRowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTripDetailsRowModel.swift; sourceTree = "<group>"; };
+		97A00601291C3FC800F0FE26 /* YourTripsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourTripsView.swift; sourceTree = "<group>"; };
+		97A00603291C461600F0FE26 /* YourProposalsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourProposalsView.swift; sourceTree = "<group>"; };
+		97A00605291C464500F0FE26 /* YourChecklists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourChecklists.swift; sourceTree = "<group>"; };
 		97AD44BE290EF735000678E0 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		97AD44C2290EFD8C000678E0 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		97AD44C4290EFD9D000678E0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -240,6 +246,9 @@
 				191FC37929183EAB0083C4E7 /* ChecklistFour.swift */,
 				345BEF1F291A1A640093BE5B /* JoinTripView.swift */,
 				972A2E05291AD9DE00B30260 /* BarNavigation.swift */,
+				97A00601291C3FC800F0FE26 /* YourTripsView.swift */,
+				97A00603291C461600F0FE26 /* YourProposalsView.swift */,
+				97A00605291C464500F0FE26 /* YourChecklists.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -370,11 +379,13 @@
 				344B92812911D72F0030547F /* Event.swift in Sources */,
 				344B927F2911D7290030547F /* TripDay.swift in Sources */,
 				191FC37A29183EAB0083C4E7 /* ChecklistFour.swift in Sources */,
+				97A00606291C464500F0FE26 /* YourChecklists.swift in Sources */,
 				344B92852911D73F0030547F /* Reply.swift in Sources */,
 				191FC36C29183D910083C4E7 /* OnboardingOne.swift in Sources */,
 				344B927B2911D7130030547F /* Trip.swift in Sources */,
 				975EDF962915CE8800680AAD /* TestTripDetailsRowView.swift in Sources */,
 				345BEF20291A1A640093BE5B /* JoinTripView.swift in Sources */,
+				97A00604291C461600F0FE26 /* YourProposalsView.swift in Sources */,
 				34B9C46C290AF06900015341 /* AppView.swift in Sources */,
 				191FC37029183DC00083C4E7 /* OnboardingThree.swift in Sources */,
 				344B92832911D7390030547F /* Task.swift in Sources */,
@@ -393,6 +404,7 @@
 				97AD45142914644C000678E0 /* TestDashboardView.swift in Sources */,
 				972A2E08291ADD7700B30260 /* UserTrips.swift in Sources */,
 				97AD44C3290EFD8C000678E0 /* ViewModel.swift in Sources */,
+				97A00602291C3FC800F0FE26 /* YourTripsView.swift in Sources */,
 				97AD45102914367A000678E0 /* TripDetailCard.swift in Sources */,
 				97C793B2291AB13E0009BCF6 /* TestUI.swift in Sources */,
 				975EDF902915CE5900680AAD /* TestTripDetailsModel.swift in Sources */,

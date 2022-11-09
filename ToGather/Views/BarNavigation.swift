@@ -19,18 +19,18 @@ struct BarNavigation: View {
     TabView {
     
     // MARK: this dashboardview is a placeholder => it is not yet connected to the database
-      DashboardView()
+      YourTripsView()
       .tabItem {
           Image(systemName: "airplane.departure")
           Text("Your Trips")
       }
 
-      UserTripsView()
+      YourProposalsView()
       .tabItem {
           Image(systemName: "text.bubble.fill")
           Text("Your Proposals")
       }
-      ChecklistOne()
+      YourChecklistsView()
       .tabItem {
           Image(systemName: "list.bullet.rectangle")
           Text("Your Checklists")
