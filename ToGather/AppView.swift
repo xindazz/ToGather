@@ -49,7 +49,7 @@ struct AppView: View {
 //         }
          
 
-                        label: Spacer()
+//                        label: Spacer()
          // MARK: add background color to the tab view
              TabView {
              
