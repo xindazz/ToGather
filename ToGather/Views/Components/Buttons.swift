@@ -16,8 +16,28 @@ struct Buttons: View {
 
 
     ScrollView {
-//    MARK: wide buttons
       VStack {
+        // MARK: trip selection button
+        Button(action: {}) {
+//          Spacer()
+          VStack{
+            Text("New York City")
+             .font(.headline)
+             .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 0))
+             .foregroundColor(.white)
+            Text("September 10-24, 2022")
+            .font(.subheadline)
+            .padding(EdgeInsets(top: 10, leading: 20, bottom: 0, trailing: 0))
+            .foregroundColor(.white)
+          }//end vstack
+//           Spacer()
+        } // end button
+         .frame(width: 300, height:150)
+         .background(Color(UIColor.systemBlue))
+         .clipShape(RoundedRectangle(cornerRadius: 12))
+         .padding(10)
+        //    MARK: wide buttons
+
         // wide button
         Button(action: {}) {
            Spacer()
