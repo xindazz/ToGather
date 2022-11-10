@@ -62,7 +62,7 @@ struct RadioButtonField: View {
 
 struct OnboardingOne: View {
 
-    @ObservedObject var repo: UserRepository
+//    @ObservedObject var repo: UserRepository
 
 //    @ObservedObject var viewController = ViewController()
     @State var inputTemp: String = ""

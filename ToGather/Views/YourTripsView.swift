@@ -51,7 +51,7 @@ struct YourTripsView: View {
             } //end vstack
           } //end ScrollView
           
-          HStack {
+          HStack (spacing: 50){
             
             NavigationLink(destination: OnboardingThree(repo: repo)) {
               Button(action: {}) {
@@ -77,19 +77,20 @@ struct YourTripsView: View {
               .padding(10)
             } //end navlink
           } // hstack
-          HStack {
-            NavigationLink(destination: OnboardingOne()) {
-              Button(action: {}) {
-                Text("Create an Account [demo]").font(.headline)
-                  .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
-                  .foregroundColor(.white)
-              } // end button
-              .frame(width: 300, height: 60)
-              .background(Color(UIColor.systemGreen))
-              .clipShape(RoundedRectangle(cornerRadius: 12))
-              .padding(10)
-            } //end navlink
-          } // end hstack
+//          MARK: button in case the cheat link doesn't work
+//          HStack {
+//            NavigationLink(destination: OnboardingOne(repo:UserRepository())) {
+//              Button(action: {}) {
+//                Text("Create an Account [demo]").font(.headline)
+//                  .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+//                  .foregroundColor(.white)
+//              } // end button
+//              .frame(width: 300, height: 60)
+//              .background(Color(UIColor.systemGreen))
+//              .clipShape(RoundedRectangle(cornerRadius: 12))
+//              .padding(10)
+//            } //end navlink
+//          } // end hstack
         }
         
       } //end NavView
@@ -109,8 +110,8 @@ struct YourTripsView: View {
  
 } //end struct
 
-//struct YourTripsView_Previews: PreviewProvider {
-//  static var previews: some View {
-//    YourTripsView(repo: UserRepository())
-//  }
-//}
+struct YourTripsView_Previews: PreviewProvider {
+  static var previews: some View {
+    YourTripsView(repo: UserRepository())
+  }
+}
