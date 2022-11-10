@@ -25,9 +25,9 @@ struct YourProposalsView: View {
       
       VStack {
         VStack (alignment: .leading){
-          Text("Your Proposals for NYC Trip")
-            .font(.largeTitle)
-          Text("September 10-14, 2022")
+          Text("Your Proposals for \(trip.name ?? "Some Trip")")
+            .font(.title)
+//          Text("September 10-14, 2022")
           Divider()
         }
                 
