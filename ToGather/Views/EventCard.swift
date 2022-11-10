@@ -32,6 +32,8 @@ struct EventCard: View {
         Text("\(event.category)")
           .font(.subheadline)
         Text("\(event.location ?? "")")
+        Text("\(event.detail ?? "")")
+        Text("\(event.link ?? "")")
 //        Text("WHAT: \(event.name)")
 //          .font(.headline)
 //        Text("CATEGORY: \(event.category)")
