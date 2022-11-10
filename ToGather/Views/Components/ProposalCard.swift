@@ -200,7 +200,6 @@ struct ProposalCard: View {
       .padding(EdgeInsets(top: 10, leading: 15, bottom: 20, trailing: 15))
 // MARK: exploring the replies
     } //end scroll view
-    
         
     
   } //end body
