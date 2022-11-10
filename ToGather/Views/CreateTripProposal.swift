@@ -5,13 +5,13 @@
 //  Created by Lisa Leung on 11/9/22.
 //
 
-// MARK: based off of Susan Song's code for OnboardingOne(through Four).swift
+// MARK: based off of Susan Song's code for OnboardingThree.swift
 
 
 import SwiftUI
 
 
-struct OnboardingThree: View {
+struct CreateTripProposal: View {
   
   @ObservedObject var repo: UserRepository
   
@@ -25,37 +25,57 @@ struct OnboardingThree: View {
     VStack {
       
       VStack{
-        
-        Text("Create a trip")
-          .fontWeight(.heavy)
-          .multilineTextAlignment(.center)
-          .font(.headline)
-        
-        Text("Add whatever details you've figured out (you can go back and change this later)")
-        
-        Text("Trip Name")
-          .font(.title)
-          .fontWeight(.bold)
-          .frame(maxWidth: .infinity, alignment: .leading)
-        
-        TextField("Graduation!", text: $name)
-          .textContentType(.givenName).border(Color.gray.opacity(0.5))
-        
-        Text("Destination")
-          .font(.title)
-          .fontWeight(.bold)
-          .frame(maxWidth: .infinity, alignment: .leading)
-        
-        TextField("New York", text: $destination)
-          .textContentType(.givenName).border(Color.gray.opacity(0.5))
-        
-        Text("Dates")
-          .frame(maxWidth: .infinity, alignment: .leading)
-        
-        DatePicker(selection: $startDate, label: { Text("Start Date") })
-        
-        DatePicker(selection: $endDate, label: { Text("End Date") })
-        
+//        MARK: Trip header
+        VStack (alignment: .leading){
+          Text("NYC Trip")
+            .font(.largeTitle)
+          Text("September 10-14, 2022")
+
+          Divider()
+        } //end Vstack
+//      signifies that this is the create trip proposal page
+        VStack {
+          Text("Add Trip Proposal")
+            .font(.title)
+            .padding()
+          
+          Text("Add an item on your trip's itinerary! Input what you can for now–you can build on it later with your group.")
+            .font(.subheadline)
+            .padding()
+        } // end Vstack
+// MARK: form stack (sorry for the obnoxious number of stacks, this is to avoid the stack capacity issue
+        VStack{
+          //        MARK: text input for now, should *DEFINITELY* be a dropdown later for data integrity
+                  Text("Category")
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+          //        MARK: @Xinda, replace $name for the (Event)$category field, just left it in comments to avoid compilation issues
+//          filler text
+                  TextField("Activity", text: $name)
+                    .textContentType(.givenName).border(Color.gray.opacity(0.5))
+                  
+                  Text("What")
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                  Text("Example: Street food from Queen's Night Market")
+                    .font(.subheadline)
+                    .padding()
+                  //        MARK: @Xinda, replace $destination for the (Event) $detail field, just left it in comments to avoid compilation issues
+// filler text
+                  TextField("Enter an item on the itinerary", text: $destination)
+                    .textContentType(.givenName).border(Color.gray.opacity(0.5))
+                  
+                  Text("Dates")
+                    .frame(maxWidth: .infinity, alignment: .leading)
+//                  MARK: @Xinda, replace $startData & $endDate the field names (i think it's from and to)
+                  DatePicker(selection: $startDate, label: { Text("Start Date") })
+                  
+                  DatePicker(selection: $endDate, label: { Text("End Date") })
+                  
+        }
+
       } // end VStack
       
       Button {

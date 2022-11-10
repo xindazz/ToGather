@@ -17,6 +17,7 @@ struct DashboardView: View {
 
 // MARK: trip header
     VStack (alignment: .leading) {
+      // MARK: Trip header
       VStack (alignment: .leading){
         Text("NYC Trip")
           .font(.largeTitle)
