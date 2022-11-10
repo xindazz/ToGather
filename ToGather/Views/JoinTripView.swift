@@ -17,29 +17,38 @@ struct JoinTripView: View {
   var body: some View {
     
     VStack {
-      Text("Join a trip")
-        .fontWeight(.heavy)
-        .multilineTextAlignment(.center)
-        .font(.headline)
-      
-      Text("Enter Unique Code")
-        .font(.title)
-        .fontWeight(.bold)
-        .frame(maxWidth: .infinity, alignment: .leading)
-      
-      TextField("123456", text: $code)
-        .textContentType(.givenName).border(Color.gray.opacity(0.5))
+      VStack{
+        Text("Join a trip")
+          .font(.title)
+          .padding()
+      } // end inner vstack
+
+      Spacer()
+      VStack (alignment: .leading){
+        Text("Enter Unique Code")
+          .font(.title2)
         
+        TextField("123456", text: $code)
+          .textContentType(.givenName).border(Color.gray.opacity(0.5))
+          .frame(width: 350, height: 50)
+
+      } //end inner vstack
+      .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 30))
+
+      Spacer()
       Button {
         repo.joinTrip(code: code)
       } label: {
         Text("Join Trip")
-          .font(.title)
-          .padding()
+          .frame(width: 350, height:50)
+          .font(.headline)
           .foregroundColor(.white)
-          .background(Color.blue)
-          .cornerRadius(30)
+          .background(Color(UIColor.systemBlue))
+          .clipShape(RoundedRectangle(cornerRadius: 12))
+          .padding(5)
       }
+
+      
       
     } // end VStack
     
