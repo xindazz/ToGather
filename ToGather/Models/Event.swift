@@ -15,8 +15,7 @@ import FirebaseFirestoreSwift
 
 struct Event: Codable, Identifiable {
   
-//  @DocumentID var id: String?
-  var id: UUID
+  var id: UUID = UUID()
   var name: String
   var category: String
   var location: String?
@@ -41,5 +40,7 @@ struct Event: Codable, Identifiable {
     case price
     case photo
   }
+  
+  static let example = Event(name: "Event1", category: "Food", location: "123 Main St.", from: Date(), to:Date())
   
 }

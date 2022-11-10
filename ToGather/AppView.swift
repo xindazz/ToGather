@@ -34,38 +34,9 @@ struct AppView: View {
     ZStack {
 
        VStack {
-         Text("Welcome, \(repo.user.name)!")
-           .fontWeight(.heavy)
-           .multilineTextAlignment(.center)
-           .font(.headline)
          
+         YourTripsView(repo: repo)
          
-
-//                        label: Spacer()
-         // MARK: add background color to the tab view
-             TabView {
-             
-             // MARK: this dashboardview is a placeholder => it is not yet connected to the database
-               YourTripsView()
-               .tabItem {
-                   Image(systemName: "airplane.departure")
-                   Text("Your Trips")
-               }
-
-               YourProposalsView()
-               .tabItem {
-                   Image(systemName: "text.bubble.fill")
-                   Text("Your Proposals")
-               }
-               YourChecklistsView()
-               .tabItem {
-                   Image(systemName: "list.bullet.rectangle")
-                   Text("Your Checklists")
-               }
-               
-             } // end TabView
-         
-         Spacer()
        } //  end Vstack
    } //end ZStack
       

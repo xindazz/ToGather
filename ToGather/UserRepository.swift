@@ -15,19 +15,18 @@ import FirebaseFirestoreSwift
 class UserRepository: ObservableObject {
 
   private let db = Firestore.firestore()
-  private var userId: String = "SIHsxbJlAHG4yJLoIeZS" // Demo only
+//  private var userId: String = "pESlIAYYx09zWkaNcySl" // Demo only, user Xinda
+  private var userId: String = "ZvTpwqUDv7GD4uVXdxB4" // Demo only, user Tester2
 
   @Published var user: User = User(name: "")
   @Published var trips: [Trip] = []
-  @Published var curr_trip_idx: Int = 0
   private var errorMessage: String = ""
   private var cancellables: Set<AnyCancellable> = []
   private var randInt: Int = 0
 
   @MainActor
   init() {
-    userId = setUser(name: "Tester2", handle: "@12345")
-//    getUser(userId: userId)
+//    userId = setUser(name: "Tester2", handle: "@12345")
     load()
   }
   

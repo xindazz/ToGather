@@ -12,9 +12,9 @@ import FirebaseFirestoreSwift
 struct TripDay: Codable, Identifiable {
   
 //  @DocumentID var id: String?
-  var id: UUID
+  var id: UUID = UUID()
   var date: Date
-  var dayNum: Int
+  var dayNum: Int?
   var events: [Event] = []
   
   // To conform to Codable protocol
@@ -28,4 +28,9 @@ struct TripDay: Codable, Identifiable {
   mutating func addEvent(event: Event) {
     events.append(event)
   }
+  
+  mutating func setDayNum(num: Int) {
+    dayNum = num
+  }
+  
 }

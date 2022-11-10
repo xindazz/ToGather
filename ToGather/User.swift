@@ -34,4 +34,6 @@ struct User: Codable, Identifiable {
     trips.append(tripId)
   }
   
+  static let example = User(name: "User1")
+  
 }

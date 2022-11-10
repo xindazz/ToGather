@@ -11,20 +11,24 @@ import FirebaseFirestoreSwift
 
 struct Proposal: Codable, Identifiable {
   
-  @DocumentID var id: String?
-  var day: TripDay
+  var id: UUID? = UUID()
+  var day: TripDay?
   var newEvent: Event
-  var replies: [Reply]
+  var proposer: User
+  var replies: [Reply] = []
   
   // To conform to Codable protocol
   enum CodingKeys: String, CodingKey {
     case id
     case day
     case newEvent
+    case proposer
     case replies
   }
   
   mutating func addReply(reply: Reply) {
     replies.append(reply)
   }
+  
+  static let example = Proposal(newEvent: Event.example, proposer: User.example)
 }

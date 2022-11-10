@@ -81,23 +81,13 @@ struct TestDashboardIntegratedView: View {
             VStack (alignment: .leading){
               ForEach(trip.itinerary) { day in
                 VStack (alignment: .leading, spacing: 20) {
-                  Text("Day \(day.dayNum)").font(.headline)
+                  Text("Day \(day.dayNum!)").font(.headline)
                   
                   Text(dateFormatter.string(from: day.date)).font(.subheadline)
                   VStack {
                     ForEach(day.events) { event in
                       VStack (alignment: .leading){
-                        Text(event.name).font(.headline)
-                        Text(event.category).font(.subheadline)
-                        Text(event.location ?? "")
-                        Text(event.detail ?? "")
-                        Text(event.link ?? "")
-                        //                      Text((event.price ?? 0).description)
-                        // iterate through a list of images (somehow)
-                        Image("skyscanner-lax-to-lga")
-                          .resizable()
-                          .scaledToFit()
-                        Spacer()
+                        EventCard(event: event)
                       } // end VStack
                     } // end ForEach
                   } // end Vstack

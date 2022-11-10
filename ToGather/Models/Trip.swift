@@ -54,11 +54,56 @@ struct Trip: Codable, Identifiable {
   }
   
   mutating func addProposal(proposal: Proposal) {
-    proposals.append(proposal)
+    let formatter = CustomDateFormatter()
+    
+    var existingDates = itinerary.compactMap { tripDay in formatter.toDate(tripDay.date) }
+    
+    // Add new tripDay to itinerary if doesn't exist
+    if (proposal.newEvent.from != nil && !existingDates.contains(formatter.toDate(proposal.newEvent.from))) {
+      let newTripDay = TripDay(date: proposal.newEvent.from!)
+      itinerary.append(newTripDay)
+      itinerary = itinerary.sorted(by: { $0.date < $1.date })
+      var newItinerary: [TripDay] = []
+      for (i, tripDay) in itinerary.enumerated() {
+        newItinerary.append(TripDay(id: tripDay.id, date: tripDay.date, dayNum: i+1, events: tripDay.events))
+      }
+      itinerary = newItinerary
+    }
+    
+    existingDates = itinerary.compactMap { tripDay in formatter.toDate(tripDay.date) }
+    let dayIndex = existingDates.firstIndex(of: formatter.toDate(proposal.newEvent.from))!
+    let newProposal = Proposal(id: proposal.id, day: itinerary[dayIndex], newEvent: proposal.newEvent, proposer: proposal.proposer, replies: proposal.replies)
+    proposals.append(newProposal)
+  }
+  
+  mutating func updateProposal(proposal: Proposal) {
+    let existingDates = proposals.compactMap { p in p.id! }
+    let idx = existingDates.firstIndex(of: proposal.id!)
+    if idx == nil {
+      print("Error: proposal to update does not exist in trip")
+      return
+    }
+    proposals[idx!] = Proposal(id: proposal.id, day: proposal.day, newEvent: proposal.newEvent, proposer: proposal.proposer, replies: proposal.replies)
+  }
+  
+  mutating func approveProposal(proposal: Proposal) {
+    let existingDates = proposals.compactMap { p in p.id! }
+    let idx = existingDates.firstIndex(of: proposal.id!)
+    if idx == nil {
+      print("Error: proposal to approve does not exist in trip")
+      return
+    }
+    proposals.remove(at: idx!)
+    let tripDay = itinerary[proposal.day!.dayNum! - 1]
+    var newTripDay = TripDay(id: tripDay.id, date: tripDay.date, dayNum: tripDay.dayNum, events: tripDay.events)
+    newTripDay.addEvent(event: proposal.newEvent)
+    itinerary[proposal.day!.dayNum! - 1] = newTripDay
   }
   
   mutating func addTask(task: Task) {
     tasks.append(task)
   }
+  
+  static let example = Trip(name: "Trip1", uniqueCode: "000000", owner: User.example)
 }
 

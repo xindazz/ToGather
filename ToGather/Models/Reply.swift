@@ -9,20 +9,23 @@ import Foundation
 import SwiftUI
 import FirebaseFirestoreSwift
 
+
 struct Reply: Codable, Identifiable {
   
-  @DocumentID var id: String?
+  var id: UUID = UUID()
   var replier: User
-  var newEvent: Event
-  var comment: String?
+  var event: Event?
+  var comment: String
   
   
   // To conform to Codable protocol
   enum CodingKeys: String, CodingKey {
     case id
     case replier
-    case newEvent
+    case event
     case comment
   }
+  
+  static let example = Reply(replier: User.example, comment: "Comment1")
   
 }
