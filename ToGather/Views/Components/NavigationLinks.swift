@@ -20,6 +20,18 @@ struct NavigationLinks: View {
       ZStack {
 
          VStack {
+//           MARK: normal chill button
+           NavigationLink(destination: OnboardingThree(repo: repo)) {
+             Button(action: {}) {
+                 Text("Create Trip")
+                    .font(.headline)
+                    .foregroundColor(.white)
+             }
+              .frame(width: 310, height:50)
+              .background(Color(UIColor.systemMint))
+              .clipShape(RoundedRectangle(cornerRadius: 12))
+              .padding(5)
+           } //end navlink
 //           MARK: wide navigation link buttons for home/onboarding
                NavigationLink(destination: JoinTripView(repo: repo)) {
                  Button(action: {}) {

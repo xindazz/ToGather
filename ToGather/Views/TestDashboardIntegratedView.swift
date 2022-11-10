@@ -64,17 +64,34 @@ struct TestDashboardIntegratedView: View {
         VStack (alignment: .leading){
           Text("Trip Details").font(.title)
             .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 0))
+          
           NavigationLink(destination: CreateProposalView(repo: repo, trip: trip)) {
             Button(action: {}) {
               Text("Create Proposal").font(.headline)
                 .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                 .foregroundColor(.white)
             } // end button
-            .frame(width: 200.0, height:50)
-            .background(Color(UIColor.systemGreen))
+            .frame(width: 300, height:50)
+            .background(Color(UIColor.systemBlue))
             .clipShape(RoundedRectangle(cornerRadius: 12))
-            .padding(10.0)
+            .padding()
           } //end navlink
+          
+//          NavigationLink(destination: CreateProposalView(repo: repo, trip: trip)) {
+//            Button(action: {}) {
+//              Spacer()
+//              Label("Add Trip Details", systemImage: "plus.circle")
+//                .font(.headline)
+//                .padding()
+//                .foregroundColor(.white)
+//              Spacer()
+//            }
+//            .background(Color(UIColor.systemBlue))
+//            .clipShape(RoundedRectangle(cornerRadius: 12))
+//            .padding()
+//          } //end navlink
+          
+          
 //          Button(action: {}) {
 //            Spacer()
 //            Label("Add Trip Details", systemImage: "plus.circle")

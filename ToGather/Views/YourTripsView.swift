@@ -51,30 +51,28 @@ struct YourTripsView: View {
             } //end vstack
           } //end ScrollView
           
-          HStack (spacing: 50){
-            
+          VStack {
             NavigationLink(destination: OnboardingThree(repo: repo)) {
               Button(action: {}) {
-                Text("Create Trip").font(.headline)
-                  .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
-                  .foregroundColor(.white)
-              } // end button
-              .frame(width: 120, height:50)
-              .background(Color(UIColor.systemGreen))
-              .clipShape(RoundedRectangle(cornerRadius: 12))
-              .padding(10)
+                  Text("Create Trip")
+                     .font(.headline)
+                     .foregroundColor(.white)
+              }
+               .frame(width: 310, height:50)
+               .background(Color(UIColor.systemMint))
+               .clipShape(RoundedRectangle(cornerRadius: 12))
+               .padding(5)
             } //end navlink
-            
             NavigationLink(destination: JoinTripView(repo: repo)) {
               Button(action: {}) {
-                Text("Join Trip").font(.headline)
-                  .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
-                  .foregroundColor(.white)
-              } // end button
-              .frame(width: 120, height:50)
-              .background(Color(UIColor.systemGreen))
-              .clipShape(RoundedRectangle(cornerRadius: 12))
-              .padding(10)
+                  Text("Join Trip")
+                     .font(.headline)
+                     .foregroundColor(.white)
+              }
+               .frame(width: 310, height:50)
+               .background(Color(UIColor.systemMint))
+               .clipShape(RoundedRectangle(cornerRadius: 12))
+               .padding(5)
             } //end navlink
           } // hstack
 //          MARK: button in case the cheat link doesn't work

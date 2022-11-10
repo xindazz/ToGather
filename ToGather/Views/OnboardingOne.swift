@@ -82,7 +82,7 @@ struct OnboardingOne: View {
 
         ZStack {
 
-                VStack(spacing: 40) {
+          VStack(alignment: .leading, spacing: 40) {
                     Text("Welcome to ToGather")
                         .fontWeight(.heavy)
                         .multilineTextAlignment(.center)
