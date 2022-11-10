@@ -11,6 +11,8 @@ struct TestDashboardIntegratedView: View {
 //  using code from SwiftRepos - 443 lab - to start
 //  @ObservedObject var repo: UserRepository
 
+//  var trip: Trip
+  var repo: UserRepository
   var trip: Trip
   
   var dateFormatter = DateFormatter()
@@ -62,19 +64,29 @@ struct TestDashboardIntegratedView: View {
         VStack (alignment: .leading){
           Text("Trip Details").font(.title)
             .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 0))
-          
-          Button(action: {}) {
-            Spacer()
-            Label("Add Trip Details", systemImage: "plus.circle")
-              .font(.headline)
-              .padding()
-              .foregroundColor(.white)
-            Spacer()
-          }
-          .background(Color(UIColor.systemBlue))
-          .clipShape(RoundedRectangle(cornerRadius: 12))
-          .padding()
-          
+          NavigationLink(destination: CreateProposalView(repo: repo, trip: trip)) {
+            Button(action: {}) {
+              Text("Create Proposal").font(.headline)
+                .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+                .foregroundColor(.white)
+            } // end button
+            .frame(width: 200.0, height:50)
+            .background(Color(UIColor.systemGreen))
+            .clipShape(RoundedRectangle(cornerRadius: 12))
+            .padding(10.0)
+          } //end navlink
+//          Button(action: {}) {
+//            Spacer()
+//            Label("Add Trip Details", systemImage: "plus.circle")
+//              .font(.headline)
+//              .padding()
+//              .foregroundColor(.white)
+//            Spacer()
+//          }
+//          .background(Color(UIColor.systemBlue))
+//          .clipShape(RoundedRectangle(cornerRadius: 12))
+//          .padding()
+//          
           
           Text("Category").font(.title2)
             .padding(EdgeInsets(top: 10, leading: 20, bottom: 0, trailing: 0))
