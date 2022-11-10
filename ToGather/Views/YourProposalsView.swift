@@ -21,13 +21,21 @@ struct YourProposalsView: View {
     ScrollView{
       
       VStack (alignment: .leading) {
-        VStack {
-          // MARK: this page should be the buttons for trips
-          Text("Your Proposals")
+//      MARK: Trip header
+        VStack (alignment: .leading){
+          Text("Your Proposals for NYC Trip")
             .font(.largeTitle)
-            .padding()
+          Text("September 10-14, 2022")
+
           Divider()
-        } // end vstack
+        }
+//        VStack {
+//          // MARK: this page should be the buttons for trips
+//          Text("Your Proposals")
+//            .font(.largeTitle)
+//            .padding()
+//          Divider()
+//        } // end vstack
         VStack (alignment: .leading) {
           VStack (alignment: .leading, spacing: 20) {
             Text("Tuesday, November 1 at 12:00pm to")
