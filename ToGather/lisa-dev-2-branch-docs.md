@@ -4,6 +4,14 @@ By: Lisa Leung
 Created on: November 4, 2022
 Last Updated: November 4, 2022
 
+#  Components Folder (ToGather/View/Components/)
+## Proposal Card
+
+Base template with yes/no/edit buttons
+
+Includes HStack for alternative button configuations
+- Reply (button only)
+
 #  Test MVVM Files 
 Everything is kept in the same Models/Views/ViewModels folders as needed until it is deprecated (then placed into the Archive)
 

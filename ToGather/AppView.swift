@@ -7,6 +7,9 @@ import SwiftUI
 
 struct AppView: View {
   @ObservedObject var repo = UserRepository()
+//  MARK: can't show the dash yet because of this
+//  @ObservedObject var trip = Trip()
+  
   @State private var name: String = "Bob"
   @State private var destination: String = "LA"
   
@@ -30,7 +33,7 @@ struct AppView: View {
 //        Text("Create trip")
 //      }
 //    }
-    
+//    MARK: Changed this a default log-in page with shortcuts :)
     ZStack {
 
        VStack {
@@ -38,34 +41,41 @@ struct AppView: View {
            .fontWeight(.heavy)
            .multilineTextAlignment(.center)
            .font(.headline)
+         
+//         NavigationLink (destination: Home(repo:repo) {
+//           Text("Is this you? Log In.")
+//             .font(.caption)
+//             .foregroundColor(.blue)
+//         }
+         
 
-         Spacer()
-         
-         NavigationView {
-           VStack {
-             List{
-               ForEach(repo.trips) { trip in
-                 NavigationLink(destination: TestDashboardIntegratedView(trip: trip)) {
-                   Text("\(trip.name)")
-                 }
+//                        label: Spacer()
+         // MARK: add background color to the tab view
+             TabView {
+             
+             // MARK: this dashboardview is a placeholder => it is not yet connected to the database
+               DashboardView()
+               .tabItem {
+                   Image(systemName: "airplane.departure")
+                   Text("Your Trips")
                }
-             }.navigationBarTitle("Your Trips")
-             
-             Spacer()
-             
-             NavigationLink(destination: OnboardingThree(repo: repo)) {
-               Text("Create Trip")
-             }
-             
-             NavigationLink(destination: JoinTripView(repo: repo)) {
-               Text("Join Existing Trip")
-             }
-           }
-         }
+
+               UserTripsView()
+               .tabItem {
+                   Image(systemName: "text.bubble.fill")
+                   Text("Your Proposals")
+               }
+               ChecklistOne()
+               .tabItem {
+                   Image(systemName: "list.bullet.rectangle")
+                   Text("Your Checklists")
+               }
+               
+             } // end TabView
          
          Spacer()
-       }
-   }
+       } //  end Vstack
+   } //end ZStack
       
   }
 }

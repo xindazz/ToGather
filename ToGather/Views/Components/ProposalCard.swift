@@ -11,82 +11,195 @@ struct ProposalCard: View {
 //  using code from SwiftRepos - 443 lab - to start
 //  MARK: colors have not been configured to the design system
   var body: some View {
-    VStack (alignment: .leading) {
-      VStack (alignment: .leading, spacing: 20) {
-        Text("Tuesday, November 1 at 12:00pm to")
-          .font(.subheadline)
-          .padding(EdgeInsets(top: 20, leading: 20, bottom: 0, trailing: 0))
-        Text("Friday, November 11 at 11:00am")
-          .font(.subheadline)
-          .padding(EdgeInsets(top: -10, leading: 20, bottom: 0, trailing: 0))
-        Divider()
-      } // end vstack
-      .background(Color(UIColor.systemBlue))
+    ScrollView {
+// MARK: replies [in-development]
+      VStack (alignment: .leading){
+        VStack (alignment: .leading){
+//          Text("Sender: Brandon Woo")
+          Label("Sender: Brandon Woo", systemImage: "arrowshape.turn.up.left")
 
-      VStack (alignment: .leading, spacing: 10){
-        Text("WHAT: Fly to LAX from LGA")
-          .font(.headline)
-        Text("Category: Travel")
-          .font(.subheadline)
-        Text("WHERE: 1 World Way, Los Angeles, CA 90045")
-        Text("WHO: All group members")
-        Text("HOW-MUCH: $300 - $500 per round-trip ticket")
-        Text("WHY: Cheapest flight on Skyscanner with Spirit Airlines")
-        Text("[SkyScanner](https://www.skyscanner.com/)")
-        Image("skyscanner-lax-to-lga")
-          .resizable()
-          .scaledToFit()
-          .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 20))
-        
+          Divider()
+        }
+        .padding(EdgeInsets(top: 10, leading: 15, bottom: 0, trailing: 15))
+        VStack (alignment: .leading, spacing: 10){
+          Text("Category: WHAT")
+            .font(.headline)
+          Text("Fly from DCA to LAX")
+          Text("Category: Comment")
+            .font(.headline)
+          Text("Cheaper than flying from LGA in NYC ")
+        }
+        .padding(EdgeInsets(top: 10, leading: 15, bottom: 20, trailing: 15))
+       
       }
-      .padding(.leading, 20)
-      
-      HStack {
-        Button(action: {}) {
-          Spacer()
-          Label("Yes", systemImage: "hand.thumbsup")
-            .font(.headline)
-            .padding()
-            .foregroundColor(.white)
-          Spacer()
-        }
-        .frame(width: 105, height: 50)
+      .frame(width: 300, height: .infinity)
+      .background(Color(UIColor.systemGreen))
+      .clipShape(RoundedRectangle(cornerRadius: 12))
+      .padding(EdgeInsets(top: 10, leading: 90, bottom: 20, trailing: 15))
+// MARK: card template
+      VStack (alignment: .leading) {
+        VStack (alignment: .leading, spacing: 20) {
+          Text("Tuesday, November 1 at 12:00pm to")
+            .font(.subheadline)
+            .padding(EdgeInsets(top: 20, leading: 20, bottom: 0, trailing: 0))
+          Text("Friday, November 11 at 11:00am")
+            .font(.subheadline)
+            .padding(EdgeInsets(top: -10, leading: 20, bottom: 0, trailing: 0))
+          Divider()
+        } // end vstack
         .background(Color(UIColor.systemBlue))
-        .clipShape(RoundedRectangle(cornerRadius: 12))
-//        .padding(EdgeInsets(top: 10, leading: 15, bottom: 0, trailing: 0))
-        
-        Button(action: {}) {
-          Spacer()
-          Label("No", systemImage: "hand.thumbsdown")
+
+        VStack (alignment: .leading, spacing: 10){
+          Text("WHAT: Fly to LAX from LGA")
             .font(.headline)
-            .padding()
-            .foregroundColor(.white)
-          Spacer()
+          Text("Category: Travel")
+            .font(.subheadline)
+          Text("WHERE: 1 World Way, Los Angeles, CA 90045")
+          Text("WHO: All group members")
+          Text("HOW-MUCH: $300 - $500 per round-trip ticket")
+          Text("WHY: Cheapest flight on Skyscanner with Spirit Airlines")
+          Text("[SkyScanner](https://www.skyscanner.com/)")
+          Image("skyscanner-lax-to-lga")
+            .resizable()
+            .scaledToFit()
+            .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 20))
+          
         }
-        .frame(width: 105, height: 50)
-        .background(Color(UIColor.systemBlue))
-        .clipShape(RoundedRectangle(cornerRadius: 12))
-//        .padding(EdgeInsets(top: 10, leading: 15, bottom: 0, trailing: 0))
+        .padding(.leading, 20)
         
-        Button(action: {}) {
-          Spacer()
-          Label("Edit", systemImage: "pencil")
+        HStack {
+          Button(action: {}) {
+            Spacer()
+            Label("Yes", systemImage: "hand.thumbsup")
+              .font(.headline)
+              .padding()
+              .foregroundColor(.white)
+            Spacer()
+          }
+          .frame(width: 105, height: 50)
+          .background(Color(UIColor.systemBlue))
+          .clipShape(RoundedRectangle(cornerRadius: 12))
+  //        .padding(EdgeInsets(top: 10, leading: 15, bottom: 0, trailing: 0))
+          
+          Button(action: {}) {
+            Spacer()
+            Label("No", systemImage: "hand.thumbsdown")
+              .font(.headline)
+              .padding()
+              .foregroundColor(.white)
+            Spacer()
+          }
+          .frame(width: 105, height: 50)
+          .background(Color(UIColor.systemBlue))
+          .clipShape(RoundedRectangle(cornerRadius: 12))
+  //        .padding(EdgeInsets(top: 10, leading: 15, bottom: 0, trailing: 0))
+          
+          Button(action: {}) {
+            Spacer()
+            Label("Edit", systemImage: "pencil")
+              .font(.headline)
+              .padding()
+              .foregroundColor(.white)
+            Spacer()
+          }
+          .frame(width: 105, height: 50)
+          .background(Color(UIColor.systemBlue))
+          .clipShape(RoundedRectangle(cornerRadius: 12))
+  //        .padding(EdgeInsets(top: 10, leading: 15, bottom: 0, trailing: 0))
+        } //end HStack
+        .padding(EdgeInsets(top: 10, leading: 15, bottom: 20, trailing: 0))
+          
+      } // end VStack
+      .background(Color(UIColor.systemGray))
+      .clipShape(RoundedRectangle(cornerRadius: 12))
+      .padding(EdgeInsets(top: 10, leading: 15, bottom: 20, trailing: 15))
+// MARK: template card + replies
+      VStack (alignment: .leading) {
+        VStack (alignment: .leading, spacing: 20) {
+          Text("Tuesday, November 1 at 12:00pm to")
+            .font(.subheadline)
+            .padding(EdgeInsets(top: 20, leading: 20, bottom: 0, trailing: 0))
+          Text("Friday, November 11 at 11:00am")
+            .font(.subheadline)
+            .padding(EdgeInsets(top: -10, leading: 20, bottom: 0, trailing: 0))
+          Divider()
+        } // end vstack
+        .background(Color(UIColor.systemBlue))
+
+        VStack (alignment: .leading, spacing: 10){
+          Text("WHAT: Fly to LAX from LGA")
             .font(.headline)
-            .padding()
-            .foregroundColor(.white)
-          Spacer()
+          Text("Category: Travel")
+            .font(.subheadline)
+          Text("WHERE: 1 World Way, Los Angeles, CA 90045")
+          Text("WHO: All group members")
+          Text("HOW-MUCH: $300 - $500 per round-trip ticket")
+          Text("WHY: Cheapest flight on Skyscanner with Spirit Airlines")
+          Text("[SkyScanner](https://www.skyscanner.com/)")
+          Image("skyscanner-lax-to-lga")
+            .resizable()
+            .scaledToFit()
+            .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 20))
+          
         }
-        .frame(width: 105, height: 50)
-        .background(Color(UIColor.systemBlue))
-        .clipShape(RoundedRectangle(cornerRadius: 12))
-//        .padding(EdgeInsets(top: 10, leading: 15, bottom: 0, trailing: 0))
-      } //end HStack
-      .padding(EdgeInsets(top: 10, leading: 15, bottom: 20, trailing: 0))
+        .padding(.leading, 20)
         
-    } // end VStack
-    .background(Color(UIColor.systemGray))
-    .clipShape(RoundedRectangle(cornerRadius: 12))
-    .padding(EdgeInsets(top: 10, leading: 15, bottom: 20, trailing: 15))
+        HStack {
+          Button(action: {}) {
+            Spacer()
+            Label("Reply", systemImage: "arrowshape.turn.up.left")
+              .font(.headline)
+              .padding()
+              .foregroundColor(.white)
+            Spacer()
+          }
+          .frame(width: 325, height: 50)
+          .background(Color(UIColor.systemBlue))
+          .clipShape(RoundedRectangle(cornerRadius: 12))
+        } //end HStack
+        .padding(EdgeInsets(top: 10, leading: 15, bottom: 20, trailing: 15))
+          
+      } // end VStack
+      .background(Color(UIColor.systemGray))
+      .clipShape(RoundedRectangle(cornerRadius: 12))
+      .padding(EdgeInsets(top: 10, leading: 15, bottom: 20, trailing: 15))
+// MARK: published card (no buttons)
+      VStack (alignment: .leading) {
+        VStack (alignment: .leading, spacing: 20) {
+          Text("Tuesday, November 1 at 12:00pm to")
+            .font(.subheadline)
+            .padding(EdgeInsets(top: 20, leading: 20, bottom: 0, trailing: 0))
+          Text("Friday, November 11 at 11:00am")
+            .font(.subheadline)
+            .padding(EdgeInsets(top: -10, leading: 20, bottom: 0, trailing: 0))
+          Divider()
+        } // end vstack
+        .background(Color(UIColor.systemBlue))
+        
+        VStack (alignment: .leading, spacing: 10){
+          Text("WHAT: Fly to LAX from LGA")
+            .font(.headline)
+          Text("Category: Travel")
+            .font(.subheadline)
+          Text("WHERE: 1 World Way, Los Angeles, CA 90045")
+          Text("WHO: All group members")
+          Text("HOW-MUCH: $300 - $500 per round-trip ticket")
+          Text("WHY: Cheapest flight on Skyscanner with Spirit Airlines")
+          Text("[SkyScanner](https://www.skyscanner.com/)")
+          Image("skyscanner-lax-to-lga")
+            .resizable()
+            .scaledToFit()
+            .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 20))
+          
+        }
+        .padding(EdgeInsets(top: 0, leading: 20, bottom: 20, trailing: 0))
+        
+      } //end vstack
+      .background(Color(UIColor.systemGray))
+      .clipShape(RoundedRectangle(cornerRadius: 12))
+      .padding(EdgeInsets(top: 10, leading: 15, bottom: 20, trailing: 15))
+// MARK: exploring the replies
+    } //end scroll view
         
     
   } //end body
