@@ -15,6 +15,11 @@ struct YourTripsView: View {
       Text("Welcome, Jenny!")
         .font(.headline)
         .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 0))
+//      NavigationLink (destination: Home() {
+//        Text("Is this you? Log In.")
+//          .font(.caption)
+//          .foregroundColor(.blue)
+//      }
 
       Text("Your Trips")
         .font(.title)

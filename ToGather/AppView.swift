@@ -39,11 +39,6 @@ struct AppView: View {
            .multilineTextAlignment(.center)
            .font(.headline)
          
-         NavigationLink (destination: Home(repo:repo) {
-           Label("Is this you? Log In.")
-             .font(.caption)
-             .foregroundColor(.blue)
-         }
          
 
 //                        label: Spacer()
