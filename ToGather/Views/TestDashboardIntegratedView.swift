@@ -9,6 +9,8 @@ import SwiftUI
 
 struct TestDashboardIntegratedView: View {
 //  using code from SwiftRepos - 443 lab - to start
+//  @ObservedObject var repo: UserRepository
+
   var trip: Trip
   
   var dateFormatter = DateFormatter()
@@ -109,7 +111,7 @@ struct TestDashboardIntegratedView: View {
 //
 //struct TestDashboardIntegratedView_Previews: PreviewProvider {
 //  static var previews: some View {
-//    TestDashboardIntegratedView(trip: TestTrips.example)
+//    TestDashboardIntegratedView(repo:UserRepository())
 //  }
 //}
-
+//

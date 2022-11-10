@@ -13,50 +13,31 @@ struct YourTripsView: View {
   
   var body: some View {
     VStack (alignment: .leading) {
-      
 
-
-
-      
       NavigationView {
-        VStack {
-          Text("Welcome,  \(repo.user.name)!")
-            .font(.headline)
-            .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 0))
-            NavigationLink(destination: OnboardingOne()) {
-    //          Button(action: {}) {
-                Text("Create an Account [demo]")
-                  .font(.title)
-                  .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 0))
-                  .foregroundColor(.blue)
-    //          } // end button
-    //          .frame(width: 300, height: 60)
-    //          .background(Color(UIColor.systemGreen))
-    //          .clipShape(RoundedRectangle(cornerRadius: 12))
-    //          .padding(10)
-            } //end navlink
+        VStack (alignment: .leading, spacing:10) {
           Text("Welcome, \(repo.user.name)!")
-            .fontWeight(.heavy)
-            .multilineTextAlignment(.center)
             .font(.headline)
-         
+          NavigationLink(destination: OnboardingOne()) {
+              Text("Create an Account [demo]")
+                .font(.title)
+                .foregroundColor(.blue)
+          } //end navlink
                           
           Text("Your Trips")
             .font(.title)
-            .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 0))
+            .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 0))
           ScrollView {
             VStack{
               ForEach(repo.trips) { trip in
                 NavigationLink(destination: TripView(trip: trip, repo: repo)) {
                   Button(action: {}) {
-                    VStack{
+                    VStack (spacing: 10){
                       Text(trip.name)
                         .font(.headline)
-                        .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 0))
                         .foregroundColor(.white)
                       Text(trip.from ?? Date(), style: .date)
                         .font(.subheadline)
-                        .padding(EdgeInsets(top: 10, leading: 20, bottom: 0, trailing: 0))
                         .foregroundColor(.white)
                     }//end vstack
                   } // end button
@@ -128,8 +109,8 @@ struct YourTripsView: View {
  
 } //end struct
 
-struct YourTripsView_Previews: PreviewProvider {
-  static var previews: some View {
-    YourTripsView(repo: UserRepository())
-  }
-}
+//struct YourTripsView_Previews: PreviewProvider {
+//  static var previews: some View {
+//    YourTripsView(repo: UserRepository())
+//  }
+//}

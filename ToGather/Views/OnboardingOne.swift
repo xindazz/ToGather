@@ -11,6 +11,8 @@ import Foundation
 import SwiftUI
 
 struct RadioButtonField: View {
+  
+  
     let id: String
     let label: String
     let size: CGFloat
@@ -60,6 +62,7 @@ struct RadioButtonField: View {
 
 struct OnboardingOne: View {
 
+    @ObservedObject var repo: UserRepository
 
 //    @ObservedObject var viewController = ViewController()
     @State var inputTemp: String = ""
@@ -94,7 +97,8 @@ struct OnboardingOne: View {
                                     .fontWeight(.bold)
                                     .frame(maxWidth: .infinity, alignment: .leading)
                                     
-                    
+                  //                    MARK: could not replace with user model code
+
                     TextField("User name", text: $textFieldContent)
                         .textContentType(.givenName).border(Color.gray.opacity(0.5))
                       
@@ -145,7 +149,7 @@ struct OnboardingOne: View {
                                     .fontWeight(.bold)
                                     .frame(maxWidth: .infinity, alignment: .leading)
                                     
-                    
+//                    MARK: could not replace with user model code
                     TextField("@discord", text: $textFieldContent2)
                         .textContentType(.givenName).border(Color.gray.opacity(0.5))
   
@@ -183,8 +187,8 @@ struct OnboardingOne: View {
             }
         }
 
-struct OnboardingOne_Previews: PreviewProvider {
-  static var previews: some View {
-    OnboardingOne()
-  }
-}
+//struct OnboardingOne_Previews: PreviewProvider {
+//  static var previews: some View {
+//    OnboardingOne()
+//  }
+//}
