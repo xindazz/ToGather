@@ -7,9 +7,6 @@ import SwiftUI
 
 struct AppView: View {
   @ObservedObject var repo = UserRepository()
-//  MARK: can't show the dash yet because of this
-//  @ObservedObject var trip = Trip()
-  
   @State private var name: String = "Bob"
   @State private var destination: String = "LA"
   
@@ -42,11 +39,6 @@ struct AppView: View {
            .multilineTextAlignment(.center)
            .font(.headline)
          
-//         NavigationLink (destination: Home(repo:repo) {
-//           Text("Is this you? Log In.")
-//             .font(.caption)
-//             .foregroundColor(.blue)
-//         }
          
 
 //                        label: Spacer()
@@ -54,18 +46,18 @@ struct AppView: View {
              TabView {
              
              // MARK: this dashboardview is a placeholder => it is not yet connected to the database
-               DashboardView()
+               YourTripsView()
                .tabItem {
                    Image(systemName: "airplane.departure")
                    Text("Your Trips")
                }
 
-               UserTripsView()
+               YourProposalsView()
                .tabItem {
                    Image(systemName: "text.bubble.fill")
                    Text("Your Proposals")
                }
-               ChecklistOne()
+               YourChecklistsView()
                .tabItem {
                    Image(systemName: "list.bullet.rectangle")
                    Text("Your Checklists")
