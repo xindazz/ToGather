@@ -342,11 +342,8 @@
 				975EDF962915CE8800680AAD /* TestTripDetailsRowView.swift in Sources */,
 				345BEF20291A1A640093BE5B /* JoinTripView.swift in Sources */,
 				34B9C46C290AF06900015341 /* AppView.swift in Sources */,
-<<<<<<< HEAD
 				97EEB044291AAB9A00139842 /* ProposalCard.swift in Sources */,
-=======
 				191FC37029183DC00083C4E7 /* OnboardingThree.swift in Sources */,
->>>>>>> 32d52eb99b05f65e8da560237901319ff3939d03
 				344B92832911D7390030547F /* Task.swift in Sources */,
 				191FC36E29183DAE0083C4E7 /* OnboardingTwo.swift in Sources */,
 				191FC37829183E9C0083C4E7 /* ChecklistThree.swift in Sources */,
