@@ -235,7 +235,6 @@
 				972A2E07291ADD7700B30260 /* UserTrips.swift */,
 				97AD4508291427CC000678E0 /* Dashboard.swift */,
 				97EEB040291978BA00139842 /* TestUI.swift */,
-				975EDF982915D10200680AAD /* Dashboard-deprecated1.swift */,
 				97AD450A29142DFC000678E0 /* TripDetail.swift */,
 				3436241129197BF1007A8FC6 /* TestDashboardIntegratedView.swift */,
 				191FC37129183E650083C4E7 /* OnboardingFour.swift */,
