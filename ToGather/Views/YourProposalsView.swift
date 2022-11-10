@@ -28,7 +28,6 @@ struct YourProposalsView: View {
           Text("Your Proposals for NYC Trip")
             .font(.largeTitle)
           Text("September 10-14, 2022")
-          
           Divider()
         }
                 

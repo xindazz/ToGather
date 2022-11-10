@@ -14,21 +14,33 @@ struct YourTripsView: View {
   var body: some View {
     VStack (alignment: .leading) {
       
-//      Text("Welcome, Jenny!")
-//        .font(.headline)
-//        .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 0))
-//      NavigationLink (destination: Home() {
-//        Text("Is this you? Log In.")
-//          .font(.caption)
-//          .foregroundColor(.blue)
-//      }
+
+
+
       
       NavigationView {
         VStack {
+          Text("Welcome,  \(repo.user.name)!")
+            .font(.headline)
+            .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 0))
+            NavigationLink(destination: OnboardingOne()) {
+    //          Button(action: {}) {
+                Text("Create an Account [demo]")
+                  .font(.title)
+                  .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 0))
+                  .foregroundColor(.blue)
+    //          } // end button
+    //          .frame(width: 300, height: 60)
+    //          .background(Color(UIColor.systemGreen))
+    //          .clipShape(RoundedRectangle(cornerRadius: 12))
+    //          .padding(10)
+            } //end navlink
           Text("Welcome, \(repo.user.name)!")
             .fontWeight(.heavy)
             .multilineTextAlignment(.center)
             .font(.headline)
+         
+                          
           Text("Your Trips")
             .font(.title)
             .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 0))
@@ -59,6 +71,7 @@ struct YourTripsView: View {
           } //end ScrollView
           
           HStack {
+            
             NavigationLink(destination: OnboardingThree(repo: repo)) {
               Button(action: {}) {
                 Text("Create Trip").font(.headline)
@@ -82,7 +95,20 @@ struct YourTripsView: View {
               .clipShape(RoundedRectangle(cornerRadius: 12))
               .padding(10)
             } //end navlink
-          }
+          } // hstack
+          HStack {
+            NavigationLink(destination: OnboardingOne()) {
+              Button(action: {}) {
+                Text("Create an Account [demo]").font(.headline)
+                  .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+                  .foregroundColor(.white)
+              } // end button
+              .frame(width: 300, height: 60)
+              .background(Color(UIColor.systemGreen))
+              .clipShape(RoundedRectangle(cornerRadius: 12))
+              .padding(10)
+            } //end navlink
+          } // end hstack
         }
         
       } //end NavView
