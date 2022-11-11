@@ -16,9 +16,9 @@ struct AppView: View {
 //      Text(repo.user.name)
 //      Text(repo.user.handle ?? "")
 //      Text(repo.user.phone ?? "")
-//      List {
-//        ForEach(repo.trips) { trip in
-//          Text(trip.name)
+    //      List {
+    //        ForEach(repo.trips) { trip in
+    //          Text(trip.name)
 //        }
 //      }
 //      TextField("Enter trip name", text: $name)
