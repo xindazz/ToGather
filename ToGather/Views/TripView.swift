@@ -15,7 +15,7 @@ struct TripView: View {
     TabView {
     
     // MARK: this dashboardview is a placeholder => it is not yet connected to the database
-      TestDashboardIntegratedView(trip: trip)
+      TestDashboardIntegratedView(repo: repo, trip: trip)
       .tabItem {
           Image(systemName: "airplane.departure")
           Text("Dashboard")
