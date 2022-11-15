@@ -67,7 +67,9 @@ struct OnboardingThree: View {
       
       Button {
 //        let uniqueCode = repo.getUniqueCode()
-        repo.createTrip(trip: Trip(name: name, uniqueCode: "", owner: repo.user, destination: destination, from: startDate, to: endDate))
+        var newTrip = Trip(name: name, uniqueCode: "", owner: repo.user, destination: destination, from: startDate, to: endDate)
+        newTrip.addMember(user: repo.user)
+        repo.createTrip(trip: newTrip)
       } label: {
         Text("Create Trip")
           .frame(width: 350, height:50)

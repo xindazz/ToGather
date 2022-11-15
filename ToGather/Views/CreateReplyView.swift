@@ -93,10 +93,10 @@ struct CreateReplyView: View {
         let newReply = Reply(replier: repo.user, comment: detail)
         var newProposal = Proposal(id: proposal.id, day: proposal.day, newEvent: proposal.newEvent, proposer: proposal.proposer, replies: proposal.replies)
         newProposal.addReply(reply: newReply)
-        var newTrip = Trip(id: trip.id, name: trip.name, uniqueCode: trip.uniqueCode, owner: trip.owner, members: trip.members, destination: trip.destination, from: trip.from, to: trip.to, itinerary: trip.itinerary, proposals: trip.proposals, tasks: trip.tasks)
+        var newTrip = Trip(id: trip.id, name: trip.name, uniqueCode: trip.uniqueCode, owner: trip.owner, members: trip.members, memberIds: trip.memberIds, destination: trip.destination, from: trip.from, to: trip.to, itinerary: trip.itinerary, proposals: trip.proposals, tasks: trip.tasks)
         newTrip.updateProposal(proposal: newProposal)
         repo.updateTrip(trip: newTrip)
-        repo.load()
+//        repo.load()
       } label: {
         Text("Add Reply")
           .font(.subheadline)
