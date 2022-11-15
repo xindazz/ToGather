@@ -118,6 +118,7 @@ struct CreateProposalView: View {
         newTrip.addProposal(proposal: newProposal)
         repo.updateTrip(trip: newTrip)
         repo.load()
+          
       } label: {
         Text("Create Proposal")
           .font(.title)

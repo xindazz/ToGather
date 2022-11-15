@@ -91,13 +91,16 @@ struct OnboardingOne: View {
                                     .font(.title)
                                     .fontWeight(.bold)
                                     .frame(maxWidth: .infinity, alignment: .leading)
-                                    
+                                    .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 10))
+
                     
                     TextField("User name", text: $textFieldContent)
                         .textContentType(.givenName).border(Color.gray.opacity(0.5))
-                      
+                        .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 10))
+
                     
                     Text("Preferred Mode of Contact").frame(maxWidth: .infinity, alignment: .leading)
+                        .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 10))
 
                     
                     VStack{
@@ -135,17 +138,19 @@ struct OnboardingOne: View {
                             }
                         )
                         
-                        
-                                }
+
+                                }.padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 10))
                     
                     Text("Handle/Number")
                                     .font(.title)
                                     .fontWeight(.bold)
                                     .frame(maxWidth: .infinity, alignment: .leading)
-                                    
+                                    .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 10))
+
                     
                     TextField("@discord", text: $textFieldContent2)
                         .textContentType(.givenName).border(Color.gray.opacity(0.5))
+                        .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 10))
 
                   
                   NavigationLink(destination: OnboardingTwo()) {
@@ -159,15 +164,14 @@ struct OnboardingOne: View {
                     } // end button
                      .background(Color(UIColor.systemBlue))
                      .clipShape(RoundedRectangle(cornerRadius: 12))
-                     .padding()
+                     .cornerRadius(30)
+                     .padding(.bottom)
+                      
                   } //end navlink
                   
                 }
-                    Spacer()
-        
 
             }
-                .padding()
             }
         }
 

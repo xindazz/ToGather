@@ -40,3 +40,17 @@ struct TripView_Previews: PreviewProvider {
     TripView(trip: Trip.example, repo: UserRepository())
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

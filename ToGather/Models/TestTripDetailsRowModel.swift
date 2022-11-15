@@ -95,3 +95,7 @@ struct TestTripActivity: Identifiable, Codable {
                         priceActivity: 550
                         )
 }
+
+
+
+

@@ -53,6 +53,7 @@ struct YourTripsView: View {
                   .clipShape(RoundedRectangle(cornerRadius: 12))
                   .padding(10)
                   
+                    
                 } //end navlink
               } // end ForEach
             } //end vstack
