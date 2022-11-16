@@ -44,3 +44,7 @@ Model code based off of Master branch code from November 1, 2022 by Xinda Zhou
 ** SwiftRepos **
 
 **PriceCheck_Solution **
+
+**Hacking with Swift
+expanding lists: https://www.hackingwithswift.com/quick-start/swiftui/how-to-create-expanding-lists
+selecting items from  lists: https://www.hackingwithswift.com/quick-start/swiftui/how-to-allow-row-selection-in-a-list
