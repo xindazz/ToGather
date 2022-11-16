@@ -5,9 +5,11 @@
 //  Created by Lisa Leung on 11/15/22.
 //
 
+// MARK: working off of yourtripsview
+
 import SwiftUI
 
-struct YourTripsView: View {
+struct TestTripSwitchDropdown: View {
 //  using code from SwiftRepos - 443 lab - to start
   @ObservedObject var repo: UserRepository
   
@@ -27,6 +29,7 @@ struct YourTripsView: View {
           Text("Your Trips")
             .font(.title)
             .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 0))
+          
           ScrollView {
             VStack{
               ForEach(repo.trips) { trip in
@@ -108,8 +111,8 @@ struct YourTripsView: View {
  
 } //end struct
 
-struct YourTripsView_Previews: PreviewProvider {
+struct TestTripSwitchDropdown_Previews: PreviewProvider {
   static var previews: some View {
-    YourTripsView(repo: UserRepository())
+    TestTripSwitchDropdown(repo: UserRepository())
   }
 }

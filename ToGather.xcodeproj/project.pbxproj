@@ -49,6 +49,7 @@
 		975EDF962915CE8800680AAD /* TestTripDetailsRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975EDF952915CE8800680AAD /* TestTripDetailsRowView.swift */; };
 		975EDF992915D10200680AAD /* Dashboard-deprecated1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975EDF982915D10200680AAD /* Dashboard-deprecated1.swift */; };
 		975EDF9B2915D74700680AAD /* TestTripDetailsRowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975EDF9A2915D74700680AAD /* TestTripDetailsRowModel.swift */; };
+		9766F5B9292467390052D38E /* TestAccordionList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9766F5B8292467390052D38E /* TestAccordionList.swift */; };
 		9784D507291C99B4000A4708 /* CreateProposalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9784D506291C99B4000A4708 /* CreateProposalView.swift */; };
 		97A005F4291B468800F0FE26 /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = 97A005F3291B468800F0FE26 /* FirebaseAppCheck */; };
 		97A005F6291B468800F0FE26 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 97A005F5291B468800F0FE26 /* FirebaseAuth */; };
@@ -120,6 +121,7 @@
 		975EDF972915CEA800680AAD /* lisa-dev-2-branch-docs.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "lisa-dev-2-branch-docs.md"; sourceTree = "<group>"; };
 		975EDF982915D10200680AAD /* Dashboard-deprecated1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dashboard-deprecated1.swift"; sourceTree = "<group>"; };
 		975EDF9A2915D74700680AAD /* TestTripDetailsRowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTripDetailsRowModel.swift; sourceTree = "<group>"; };
+		9766F5B8292467390052D38E /* TestAccordionList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAccordionList.swift; sourceTree = "<group>"; };
 		9784D506291C99B4000A4708 /* CreateProposalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProposalView.swift; sourceTree = "<group>"; };
 		97A00601291C3FC800F0FE26 /* YourTripsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourTripsView.swift; sourceTree = "<group>"; };
 		97A00603291C461600F0FE26 /* YourProposalsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourProposalsView.swift; sourceTree = "<group>"; };
@@ -204,7 +206,9 @@
 		972A2DFB291ACA3100B30260 /* Pages-In-Development */ = {
 			isa = PBXGroup;
 			children = (
+				97FD6C47292453960045A208 /* TestTripSwitchDropdown.swift */,
 				972A2DFE291ACA5000B30260 /* Home.swift */,
+				9766F5B8292467390052D38E /* TestAccordionList.swift */,
 			);
 			path = "Pages-In-Development";
 			sourceTree = "<group>";
@@ -262,7 +266,6 @@
 				345BEF1F291A1A640093BE5B /* JoinTripView.swift */,
 				972A2E05291AD9DE00B30260 /* BarNavigation.swift */,
 				97A00601291C3FC800F0FE26 /* YourTripsView.swift */,
-				97FD6C47292453960045A208 /* TestTripSwitchDropdown.swift */,
 				97A00603291C461600F0FE26 /* YourProposalsView.swift */,
 				97A00605291C464500F0FE26 /* YourChecklists.swift */,
 				9784D506291C99B4000A4708 /* CreateProposalView.swift */,
@@ -417,6 +420,7 @@
 				34B9C46C290AF06900015341 /* AppView.swift in Sources */,
 				191FC37029183DC00083C4E7 /* OnboardingThree.swift in Sources */,
 				34B47782291CD11C00EAEC7C /* CustomDateFormatter.swift in Sources */,
+				9766F5B9292467390052D38E /* TestAccordionList.swift in Sources */,
 				344B92832911D7390030547F /* Task.swift in Sources */,
 				972A2E04291ACF9400B30260 /* NavigationLinks.swift in Sources */,
 				191FC36E29183DAE0083C4E7 /* OnboardingTwo.swift in Sources */,
