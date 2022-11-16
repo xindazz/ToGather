@@ -107,3 +107,27 @@ struct Trip: Codable, Identifiable {
   static let example = Trip(name: "Trip1", uniqueCode: "000000", owner: User.example)
 }
 
+//MARK: examples for test trip accordion
+//case id
+//case name
+//case uniqueCode
+//case owner
+//case members
+//case destination
+//case from
+//case to
+//case itinerary
+//case proposals
+//case tasks
+let example1 = Trip(
+                            name: "wonderful test trip No. 1",
+                            uniqueCode: "000111",
+                            owner: User.example,
+                            destination: "New York City"
+                      )
+let example2 = Trip(
+                            name: "wonderful test trip No. 2",
+                            uniqueCode: "000666",
+                            owner: User.example,
+                            destination: "Santa Clara, California"
+                      )
