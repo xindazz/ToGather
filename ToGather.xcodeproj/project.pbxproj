@@ -49,7 +49,6 @@
 		975EDF962915CE8800680AAD /* TestTripDetailsRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975EDF952915CE8800680AAD /* TestTripDetailsRowView.swift */; };
 		975EDF992915D10200680AAD /* Dashboard-deprecated1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975EDF982915D10200680AAD /* Dashboard-deprecated1.swift */; };
 		975EDF9B2915D74700680AAD /* TestTripDetailsRowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975EDF9A2915D74700680AAD /* TestTripDetailsRowModel.swift */; };
-		9766F5B7292462240052D38E /* TripRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9766F5B6292462240052D38E /* TripRepository.swift */; };
 		9784D507291C99B4000A4708 /* CreateProposalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9784D506291C99B4000A4708 /* CreateProposalView.swift */; };
 		97A005F4291B468800F0FE26 /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = 97A005F3291B468800F0FE26 /* FirebaseAppCheck */; };
 		97A005F6291B468800F0FE26 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 97A005F5291B468800F0FE26 /* FirebaseAuth */; };
@@ -121,7 +120,6 @@
 		975EDF972915CEA800680AAD /* lisa-dev-2-branch-docs.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "lisa-dev-2-branch-docs.md"; sourceTree = "<group>"; };
 		975EDF982915D10200680AAD /* Dashboard-deprecated1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dashboard-deprecated1.swift"; sourceTree = "<group>"; };
 		975EDF9A2915D74700680AAD /* TestTripDetailsRowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTripDetailsRowModel.swift; sourceTree = "<group>"; };
-		9766F5B6292462240052D38E /* TripRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripRepository.swift; sourceTree = "<group>"; };
 		9784D506291C99B4000A4708 /* CreateProposalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProposalView.swift; sourceTree = "<group>"; };
 		97A00601291C3FC800F0FE26 /* YourTripsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourTripsView.swift; sourceTree = "<group>"; };
 		97A00603291C461600F0FE26 /* YourProposalsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourProposalsView.swift; sourceTree = "<group>"; };
@@ -281,7 +279,6 @@
 			isa = PBXGroup;
 			children = (
 				34B9C469290A67BA00015341 /* UserRepository.swift */,
-				9766F5B6292462240052D38E /* TripRepository.swift */,
 				97AD44C2290EFD8C000678E0 /* ViewModel.swift */,
 				97AD451529146475000678E0 /* TestDashboardViewModel.swift */,
 				975EDF912915CE6A00680AAD /* TestTripDetailsViewModel.swift */,
@@ -404,7 +401,6 @@
 				34B47784291CD97A00EAEC7C /* CreateReplyView.swift in Sources */,
 				97AD4509291427CC000678E0 /* Dashboard.swift in Sources */,
 				34B47780291CBC1900EAEC7C /* TripView.swift in Sources */,
-				9766F5B7292462240052D38E /* TripRepository.swift in Sources */,
 				191FC37429183E730083C4E7 /* ChecklistOne.swift in Sources */,
 				344B92812911D72F0030547F /* Event.swift in Sources */,
 				344B927F2911D7290030547F /* TripDay.swift in Sources */,
