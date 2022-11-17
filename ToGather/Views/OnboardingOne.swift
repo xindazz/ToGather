@@ -157,6 +157,7 @@ struct OnboardingOne: View {
                         .textContentType(.givenName).border(Color.gray.opacity(0.5))
                         .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 10))
 
+
                   
                   NavigationLink(destination: OnboardingTwo()) {
                     Button(action: {}) {

@@ -19,6 +19,7 @@ struct Trip: Codable, Identifiable {
   var uniqueCode: String
   var owner: User
   var members: [User] = []
+  var memberIds: [String] = []
   var destination: String?
   var from: Date?
   var to: Date?
@@ -33,6 +34,7 @@ struct Trip: Codable, Identifiable {
     case uniqueCode
     case owner
     case members
+    case memberIds
     case destination
     case from
     case to
@@ -47,6 +49,7 @@ struct Trip: Codable, Identifiable {
   
   mutating func addMember(user: User) {
     members.append(user)
+    memberIds.append(user.id!.uuidString)
   }
   
   mutating func addItinerary(tripDay: TripDay) {
