@@ -90,6 +90,20 @@ struct OnboardingThree: View {
 //      } //end navlink
       Spacer()
       
+        
+        
+    NavigationLink("Invite Friends", destination: OnboardingFour(repo: repo))
+                   .font(.title)
+                   .padding()
+                   .foregroundColor(.white)
+                   .frame(width: 350, height: 80)
+               
+                   .background(Color.blue)
+               
+                   .clipShape(RoundedRectangle(cornerRadius: 12))
+    
+    
+        
       Button {
         print("Invite friends button clicked")
 
@@ -105,17 +119,10 @@ struct OnboardingThree: View {
           .padding(5)
       }
       
-//      Button {
-//        print("Invite friends button clicked")
-//      } label: {
-//        Text("Invite Friends")
-//          .font(.title)
-//          .padding()
-//          .foregroundColor(.white)
-//          .background(Color.blue)
-//          .cornerRadius(30)
-//      }
-//      
+        
+        
+        
+        
     } // end VStack
     
     Spacer()

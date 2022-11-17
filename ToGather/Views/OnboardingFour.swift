@@ -13,7 +13,8 @@ import SwiftUI
 struct OnboardingFour: View {
     
     
-    
+    @ObservedObject var repo: UserRepository
+
     @State private var textFieldContent = ""
     @State private var textFieldContent2 = ""
     
@@ -22,61 +23,43 @@ struct OnboardingFour: View {
         
         ZStack {
             
-            VStack{
+            VStack (spacing: 20){
                 
                 
-                Text("Create a trip")
+                Text("Invite Your Trip Members")
                     .fontWeight(.heavy)
                     .multilineTextAlignment(.center)
-                    .font(.body)
+                    .font(.body).padding(20)
                 
                 
-                Text("Add whatever details you've figured out (you can go back and change this later)")
                 
                 
-                Text("Trip Name")
+                
+                Text("Unique Code").padding(40)
+                
+                
+                Text("1 3 6 9 12 15")
                     .font(.title)
                     .fontWeight(.bold)
-                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .frame(maxWidth: .infinity, alignment: .center).padding(40)
                 
                 
-                TextField("Graduation!", text: $textFieldContent)
-                    .textContentType(.givenName).border(Color.gray.opacity(0.5))
                 
-                
-                Text("Destination")
-                    .font(.title)
-                    .fontWeight(.bold)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                
-                
-                TextField("New York", text: $textFieldContent2)
-                    .textContentType(.givenName).border(Color.gray.opacity(0.5))
-                
-                
-                Text("Dates")
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                
-                DatePicker(selection: /*@START_MENU_TOKEN@*/.constant(Date())/*@END_MENU_TOKEN@*/, label: { Text("Choose Date") })
-                
-                
-                Spacer()
-                
-                
-                    Button {
-                    } label: {
-                        Text("Invite Friends")
-                            .font(.title)
-                            .padding()
-                            .foregroundColor(.white)
-                            .background(Color.blue)
-                            .cornerRadius(30)
-                    }
-                    
-                }
                 Button {
                 } label: {
-                    Text("Create Trip")
+                    Text("Share Link With Friends")
+                        .font(.title)
+                        .padding()
+                        .foregroundColor(.white)
+                        .background(Color.blue)
+                        .cornerRadius(30)
+                }
+                
+                
+                Text("Friends added!")
+                Button {
+                } label: {
+                    Text("Start Planning")
                         .font(.title)
                         .padding()
                         .foregroundColor(.white)
@@ -84,10 +67,8 @@ struct OnboardingFour: View {
                         .cornerRadius(30)
                 }
             }
-        
+        }
             
-            Spacer()
         
         }
     }
-

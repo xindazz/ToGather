@@ -94,14 +94,17 @@ struct OnboardingOne: View {
                                     .font(.title)
                                     .fontWeight(.bold)
                                     .frame(maxWidth: .infinity, alignment: .leading)
-                                    
+                                    .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 10))
+
                   //                    MARK: could not replace with user model code
 
                     TextField("User name", text: $textFieldContent)
                         .textContentType(.givenName).border(Color.gray.opacity(0.5))
-                      
+                        .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 10))
+
                     
                     Text("Preferred Mode of Contact").frame(maxWidth: .infinity, alignment: .leading)
+                  .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 10))
 
                     
                     VStack{
@@ -146,10 +149,13 @@ struct OnboardingOne: View {
                                     .font(.title)
                                     .fontWeight(.bold)
                                     .frame(maxWidth: .infinity, alignment: .leading)
-                                    
+                                    .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 10))
+
+              
 //                    MARK: could not replace with user model code
                     TextField("@discord", text: $textFieldContent2)
                         .textContentType(.givenName).border(Color.gray.opacity(0.5))
+                        .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 10))
 
                   
                   NavigationLink(destination: OnboardingTwo()) {
