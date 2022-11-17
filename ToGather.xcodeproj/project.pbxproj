@@ -78,6 +78,7 @@
 		97CDD501292693C200222CC6 /* NewProposalCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CDD500292693C200222CC6 /* NewProposalCard.swift */; };
 		97CDD503292694EB00222CC6 /* TestProposalCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CDD502292694EB00222CC6 /* TestProposalCardView.swift */; };
 		97CDD505292694F300222CC6 /* TestProposalCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CDD504292694F300222CC6 /* TestProposalCard.swift */; };
+		97CDD5072926958A00222CC6 /* NewProposalCardDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CDD5062926958A00222CC6 /* NewProposalCardDetailsView.swift */; };
 		97FD6C48292453960045A208 /* TestTripSwitchDropdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97FD6C47292453960045A208 /* TestTripSwitchDropdown.swift */; };
 /* End PBXBuildFile section */
 
@@ -149,6 +150,7 @@
 		97CDD500292693C200222CC6 /* NewProposalCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProposalCard.swift; sourceTree = "<group>"; };
 		97CDD502292694EB00222CC6 /* TestProposalCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestProposalCardView.swift; sourceTree = "<group>"; };
 		97CDD504292694F300222CC6 /* TestProposalCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestProposalCard.swift; sourceTree = "<group>"; };
+		97CDD5062926958A00222CC6 /* NewProposalCardDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProposalCardDetailsView.swift; sourceTree = "<group>"; };
 		97FD6C47292453960045A208 /* TestTripSwitchDropdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTripSwitchDropdown.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -222,6 +224,7 @@
 				9766F5BA29246A800052D38E /* TestTripAccordion.swift */,
 				97CDD500292693C200222CC6 /* NewProposalCard.swift */,
 				97CDD4FE2926936C00222CC6 /* NewProposalCardView.swift */,
+				97CDD5062926958A00222CC6 /* NewProposalCardDetailsView.swift */,
 				97CDD502292694EB00222CC6 /* TestProposalCardView.swift */,
 				97CDD504292694F300222CC6 /* TestProposalCard.swift */,
 			);
@@ -429,6 +432,7 @@
 				97A00606291C464500F0FE26 /* YourChecklists.swift in Sources */,
 				344B92852911D73F0030547F /* Reply.swift in Sources */,
 				191FC36C29183D910083C4E7 /* OnboardingOne.swift in Sources */,
+				97CDD5072926958A00222CC6 /* NewProposalCardDetailsView.swift in Sources */,
 				34B4777E291CBA5D00EAEC7C /* ReplyCardView.swift in Sources */,
 				344B927B2911D7130030547F /* Trip.swift in Sources */,
 				975EDF962915CE8800680AAD /* TestTripDetailsRowView.swift in Sources */,
