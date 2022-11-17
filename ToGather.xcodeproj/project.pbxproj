@@ -74,6 +74,10 @@
 		97AD451829146482000678E0 /* TestDashboardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AD451729146482000678E0 /* TestDashboardModel.swift */; };
 		97C793B0291AB1230009BCF6 /* ProposalCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C793AF291AB1230009BCF6 /* ProposalCard.swift */; };
 		97C793B2291AB13E0009BCF6 /* TestUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C793B1291AB13E0009BCF6 /* TestUI.swift */; };
+		97CDD4FF2926936C00222CC6 /* NewProposalCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CDD4FE2926936C00222CC6 /* NewProposalCardView.swift */; };
+		97CDD501292693C200222CC6 /* NewProposalCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CDD500292693C200222CC6 /* NewProposalCard.swift */; };
+		97CDD503292694EB00222CC6 /* TestProposalCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CDD502292694EB00222CC6 /* TestProposalCardView.swift */; };
+		97CDD505292694F300222CC6 /* TestProposalCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CDD504292694F300222CC6 /* TestProposalCard.swift */; };
 		97FD6C48292453960045A208 /* TestTripSwitchDropdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97FD6C47292453960045A208 /* TestTripSwitchDropdown.swift */; };
 /* End PBXBuildFile section */
 
@@ -141,6 +145,10 @@
 		97AD451729146482000678E0 /* TestDashboardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDashboardModel.swift; sourceTree = "<group>"; };
 		97C793AF291AB1230009BCF6 /* ProposalCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProposalCard.swift; sourceTree = "<group>"; };
 		97C793B1291AB13E0009BCF6 /* TestUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUI.swift; sourceTree = "<group>"; };
+		97CDD4FE2926936C00222CC6 /* NewProposalCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProposalCardView.swift; sourceTree = "<group>"; };
+		97CDD500292693C200222CC6 /* NewProposalCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProposalCard.swift; sourceTree = "<group>"; };
+		97CDD502292694EB00222CC6 /* TestProposalCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestProposalCardView.swift; sourceTree = "<group>"; };
+		97CDD504292694F300222CC6 /* TestProposalCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestProposalCard.swift; sourceTree = "<group>"; };
 		97FD6C47292453960045A208 /* TestTripSwitchDropdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTripSwitchDropdown.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -212,6 +220,10 @@
 				972A2DFE291ACA5000B30260 /* Home.swift */,
 				9766F5B8292467390052D38E /* TestSampleListExpansion.swift */,
 				9766F5BA29246A800052D38E /* TestTripAccordion.swift */,
+				97CDD500292693C200222CC6 /* NewProposalCard.swift */,
+				97CDD4FE2926936C00222CC6 /* NewProposalCardView.swift */,
+				97CDD502292694EB00222CC6 /* TestProposalCardView.swift */,
+				97CDD504292694F300222CC6 /* TestProposalCard.swift */,
 			);
 			path = "Pages-In-Development";
 			sourceTree = "<group>";
@@ -396,6 +408,7 @@
 				34B9C46A290A67BA00015341 /* UserRepository.swift in Sources */,
 				9766F5BB29246A800052D38E /* TestTripAccordion.swift in Sources */,
 				97C793B0291AB1230009BCF6 /* ProposalCard.swift in Sources */,
+				97CDD505292694F300222CC6 /* TestProposalCard.swift in Sources */,
 				97AD44C5290EFD9D000678E0 /* ContentView.swift in Sources */,
 				975EDF942915CE7500680AAD /* TestTripDetailsView.swift in Sources */,
 				975EDF9B2915D74700680AAD /* TestTripDetailsRowModel.swift in Sources */,
@@ -407,6 +420,7 @@
 				972A2DFF291ACA5000B30260 /* Home.swift in Sources */,
 				34B47784291CD97A00EAEC7C /* CreateReplyView.swift in Sources */,
 				97AD4509291427CC000678E0 /* Dashboard.swift in Sources */,
+				97CDD501292693C200222CC6 /* NewProposalCard.swift in Sources */,
 				34B47780291CBC1900EAEC7C /* TripView.swift in Sources */,
 				191FC37429183E730083C4E7 /* ChecklistOne.swift in Sources */,
 				344B92812911D72F0030547F /* Event.swift in Sources */,
@@ -422,6 +436,7 @@
 				97A00604291C461600F0FE26 /* YourProposalsView.swift in Sources */,
 				34B4777C291CBA2B00EAEC7C /* ProposalCardView.swift in Sources */,
 				34B9C46C290AF06900015341 /* AppView.swift in Sources */,
+				97CDD4FF2926936C00222CC6 /* NewProposalCardView.swift in Sources */,
 				191FC37029183DC00083C4E7 /* OnboardingThree.swift in Sources */,
 				34B47782291CD11C00EAEC7C /* CustomDateFormatter.swift in Sources */,
 				9766F5B9292467390052D38E /* TestSampleListExpansion.swift in Sources */,
@@ -443,6 +458,7 @@
 				97AD45142914644C000678E0 /* TestDashboardView.swift in Sources */,
 				972A2E08291ADD7700B30260 /* UserTrips.swift in Sources */,
 				97AD44C3290EFD8C000678E0 /* ViewModel.swift in Sources */,
+				97CDD503292694EB00222CC6 /* TestProposalCardView.swift in Sources */,
 				97A00602291C3FC800F0FE26 /* YourTripsView.swift in Sources */,
 				97AD45102914367A000678E0 /* TripDetailCard.swift in Sources */,
 				97C793B2291AB13E0009BCF6 /* TestUI.swift in Sources */,
