@@ -25,18 +25,27 @@ struct TripView: View {
           Image(systemName: "text.bubble.fill")
           Text("Your Proposals")
       }
-      YourChecklistsView()
-      .tabItem {
-          Image(systemName: "list.bullet.rectangle")
-          Text("Your Checklists")
-      }
+//      YourChecklistsView(repo: repo, trip: trip)
+//      .tabItem {
+//          Image(systemName: "list.bullet.rectangle")
+//          Text("Your Checklists")
+//      }
       
     } // end TabView
   }
 }
+
+
 
 struct TripView_Previews: PreviewProvider {
   static var previews: some View {
     TripView(trip: Trip.example, repo: UserRepository())
   }
 }
+
+
+
+
+
+
+

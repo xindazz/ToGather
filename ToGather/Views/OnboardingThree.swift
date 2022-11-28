@@ -70,6 +70,9 @@ struct OnboardingThree: View {
         var newTrip = Trip(name: name, uniqueCode: "", owner: repo.user, destination: destination, from: startDate, to: endDate)
         newTrip.addMember(user: repo.user)
         repo.createTrip(trip: newTrip)
+          
+          
+          
       } label: {
         Text("Create Trip")
           .frame(width: 350, height:50)
@@ -106,24 +109,9 @@ struct OnboardingThree: View {
     
     
         
-      Button {
-        print("Invite friends button clicked")
-
-//        let uniqueCode = repo.getUniqueCode()
-        repo.createTrip(trip: Trip(name: name, uniqueCode: "", owner: repo.user, destination: destination, from: startDate, to: endDate))
-      } label: {
-        Text("Invite Friends")
-          .frame(width: 350, height:50)
-          .font(.headline)
-          .foregroundColor(.white)
-          .background(Color(UIColor.systemBlue))
-          .clipShape(RoundedRectangle(cornerRadius: 12))
-          .padding(5)
-      }
+  
       
-        
-        
-        
+
         
     } // end VStack
     

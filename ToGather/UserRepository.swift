@@ -16,8 +16,8 @@ class UserRepository: ObservableObject {
 
   private let db = Firestore.firestore()
 
-  private var userId: String = "pESlIAYYx09zWkaNcySl" // Demo only, user Xinda
-//  private var userId: String = "ZvTpwqUDv7GD4uVXdxB4" // Demo only, user Tester2
+//  private var userId: String = "pESlIAYYx09zWkaNcySl" // Demo only, user Xinda
+  private var userId: String = "ZhmUkc2UnIU9u7EDzLDL" // Demo only, user Tester2
 
   @Published var user: User = User(name: "")
   @Published var trips: [Trip] = []
@@ -27,7 +27,7 @@ class UserRepository: ObservableObject {
 
   @MainActor
   init() {
-    userId = setUser(name: "Tester2", handle: "@12345")
+//    userId = setUser(name: "Tester2", handle: "@12345")
     load()
     addUserListener()
 //    deleteTestTrips()
@@ -147,7 +147,7 @@ class UserRepository: ObservableObject {
         }
       }
       let code = String(format: "%06d", self.randInt)
-      let newTrip = Trip(name: trip.name,
+      var newTrip = Trip(name: trip.name,
                          uniqueCode: code,
                          owner: trip.owner,
                          members: trip.members,
@@ -183,6 +183,8 @@ class UserRepository: ObservableObject {
       }
     }
   }
+
+    
   
   @MainActor
   func joinTrip(code: String) {

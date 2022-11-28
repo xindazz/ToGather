@@ -19,7 +19,6 @@ struct Task: Codable, Identifiable {
   var done: Bool
   var day: TripDay?
   
-  
   // To conform to Codable protocol
   enum CodingKeys: String, CodingKey {
     case id
