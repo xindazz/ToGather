@@ -226,6 +226,28 @@ class UserRepository: ObservableObject {
       }
     }
   }
+//  MARK: drafts for polling functions - DO NOT RUN THIS
+//  based off of Xinda's code - Lisa
+//  func voteYes(){
+//    async {
+//      if let proposals = try? await fetchAllTrips() {
+//        print("Total \(proposals.count) proposals")
+//        let filtered = proposals.filter { proposals in proposals.name != nil && proposals.category != nil}
+////        let filtered = trips.filter { trip in trip.destination != nil && trip.destination! != "LA" && trip.destination! != "NY" }
+////        print("Got \(filtered.count) test trips to delete")
+//        for proposal in filtered {
+////          not sure what to do here, just wanted to increment the vote by 1
+////          db.collection("Trips").document(trip.id!).delete() { err in
+////            if let err = err {
+////              print("Error removing document: \(err)")
+////            } else {
+////              print("Document successfully removed!")
+////            }
+////          }
+//        }
+//      }
+//    }
+//  }
   
 }
 
