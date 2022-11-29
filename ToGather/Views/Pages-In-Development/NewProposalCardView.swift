@@ -86,7 +86,7 @@ struct NewProposalCardView: View {
           HStack{ //yes/no hstack
             Button(action: {}) {
                Spacer()
-              Label("Yes", systemImage: "plus.circle")
+              Label("Yes [10]", systemImage: "hand.thumbsup")
                    .font(.headline)
                    .padding()
                    .foregroundColor(.white)
@@ -98,7 +98,7 @@ struct NewProposalCardView: View {
              .padding()
             Button(action: {}) {
                Spacer()
-              Label("No", systemImage: "plus.circle")
+              Label("No [4]", systemImage: "hand.thumbsdown")
                    .font(.headline)
                    .padding()
                    .foregroundColor(.white)
