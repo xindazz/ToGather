@@ -21,30 +21,56 @@ struct TripDetailCard: View {
         } // end inner vstack
         .foregroundColor(.white)
       
-      HStack {
+      HStack{ //yes/no hstack
         Button(action: {}) {
-            Label("Yes", systemImage: "hand.thumbsup")
-            .buttonStyle(.bordered)
-            .background(.white)
+           Spacer()
+          Label("Yes", systemImage: "hand.thumbsup")
+               .font(.headline)
+               .padding()
+               .foregroundColor(.white)
+           Spacer()
         }
+        .frame(width: 120)
+         .background(Color(UIColor.systemBlue))
+         .clipShape(RoundedRectangle(cornerRadius: 12))
+         .padding()
         Button(action: {}) {
-            Label("No", systemImage: "hand.thumbsdown")
-            .buttonStyle(.bordered)
-            .background(.white)
+           Spacer()
+          Label("No", systemImage: "hand.thumbsdown")
+               .font(.headline)
+               .padding()
+               .foregroundColor(.white)
+           Spacer()
         }
-        Button(action: {}) {
-            Label("Edit", systemImage: "pencil")
-            .buttonStyle(.bordered)
-            .background(.white)
-        }
-      }
+         .frame(width: 120)
+         .background(Color(UIColor.systemBlue))
+         .clipShape(RoundedRectangle(cornerRadius: 12))
+         .padding()
+      } // end hstack
+      
         
     } //end outer vstack
-    .frame(maxWidth: .infinity, alignment: .leading)
-    .padding()
-    .background(.gray)
-    .cornerRadius(16)
-    .shadow(color: .gray, radius: 8, x: 4, y: 4)
+    .padding(EdgeInsets(top: 20, leading: 20, bottom: 0, trailing: 20))
+    .background(
+            Rectangle()
+                .fill(Color.gray)
+                .frame(width: 375)
+                .cornerRadius(12)
+                .shadow(
+                    color: Color.gray.opacity(0.7),
+                    radius: 8,
+                    x: 0,
+                    y: 0
+                )
+      )
+//    .frame(width: 300)
+//
+//    .padding(EdgeInsets(top: 10, leading: 50, bottom: 0, trailing: 50))
+//    .cornerRadius(16)
+//    .background(.gray)
+//    .shadow(color: .gray, radius: 8, x: 4, y: 4)
+    
+    
   } //end body
 
 }
