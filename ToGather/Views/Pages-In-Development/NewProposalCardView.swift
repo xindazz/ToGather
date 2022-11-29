@@ -7,6 +7,9 @@
 
 //MARK: made with Paul Hudson's single card view example https://www.hackingwithswift.com/books/ios-swiftui/designing-a-single-card-view
 
+// MARK: made with Jayesh Kawli's shadow tutorial https://jayeshkawli.ghost.io/adding-shadows-to-swiftui-views/
+
+
 //MARK: experimenting with hiding field values and the replies for trip plan/proposals
 import SwiftUI
 struct NewProposalCardView: View {
@@ -62,11 +65,6 @@ struct NewProposalCardView: View {
               .padding(EdgeInsets(top: 20, leading: 20, bottom: 0, trailing: 0))
             Divider()
           }
-            .background(Color(UIColor.systemBlue))
-            .foregroundColor(.white)
-          
-          
-          
           VStack (alignment: .leading, spacing: 20) {
             Text("\(formatter.toDateTimeDay(proposal.newEvent.from)) to")
               .font(.subheadline)
@@ -76,13 +74,12 @@ struct NewProposalCardView: View {
               .padding(EdgeInsets(top: -10, leading: 20, bottom: 0, trailing: 0))
             Divider()
           } // end vstack
-//          .background(Color(UIColor.systemBlue))
-//          .foregroundColor(.white)
-          
+          //          removed ?? "" from lines 61 and 63 (following two text lines) to deal with compilation error raised)
+
           VStack (alignment: .leading, spacing: 10){
-            Text("\(proposal.newEvent.name ?? "")")
+            Text("\(proposal.newEvent.name)")
               .font(.headline)
-            Text("\(proposal.newEvent.category ?? "Activity")")
+            Text("\(proposal.newEvent.category)")
               .font(.subheadline)
             Text("\(proposal.newEvent.location ?? "")")
             Text("\(proposal.newEvent.detail ?? "")")
@@ -118,9 +115,21 @@ struct NewProposalCardView: View {
           }
           
         } //end vstack
-        .background(Color(UIColor.lightGray))
-        .clipShape(RoundedRectangle(cornerRadius: 12))
-        .padding(EdgeInsets(top: 10, leading: 15, bottom: 0, trailing: 15))
+//        .background(Color(UIColor.lightGray))
+//        .clipShape(RoundedRectangle(cornerRadius: 12))
+        .padding(EdgeInsets(top: 10, leading: 30, bottom: 0, trailing: 30))
+        .background(
+                Rectangle()
+                    .fill(Color.white)
+                    .frame(width: 400)
+                    .cornerRadius(12)
+                    .shadow(
+                        color: Color.gray.opacity(0.7),
+                        radius: 8,
+                        x: 0,
+                        y: 0
+                    )
+        )
       } //end scrollview
     } // end body
 } // end struct

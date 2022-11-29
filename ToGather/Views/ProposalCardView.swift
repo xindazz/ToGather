@@ -57,9 +57,10 @@ struct ProposalCardView: View {
         .foregroundColor(.white)
         
         VStack (alignment: .leading, spacing: 10){
-          Text("\(proposal.newEvent.name ?? "")")
+//          removed ?? "" from lines 61 and 63 (following two text lines) to deal with compilation error raised)
+          Text("\(proposal.newEvent.name )")
             .font(.headline)
-          Text("\(proposal.newEvent.category ?? "Activity")")
+          Text("\(proposal.newEvent.category )")
             .font(.subheadline)
           Text("\(proposal.newEvent.location ?? "")")
           Text("\(proposal.newEvent.detail ?? "")")

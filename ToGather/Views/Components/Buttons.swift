@@ -17,6 +17,33 @@ struct Buttons: View {
 
     ScrollView {
       VStack {
+//        MARK: small poll buttons
+        // half-sized button
+        Button(action: {}) {
+           Spacer()
+          Label("Add Trip Details", systemImage: "plus.circle")
+               .font(.headline)
+               .padding()
+               .foregroundColor(.white)
+           Spacer()
+        }
+//        .frame(width: 300, height:200)
+         .background(Color(UIColor.systemBlue))
+         .clipShape(RoundedRectangle(cornerRadius: 12))
+         .padding()
+        
+        Button(action: {}) {
+           Spacer()
+          Label("Yes", systemImage: "plus.circle")
+               .font(.headline)
+               .padding()
+               .foregroundColor(.white)
+           Spacer()
+        }
+        .frame(width: 100)
+         .background(Color(UIColor.systemBlue))
+         .clipShape(RoundedRectangle(cornerRadius: 12))
+         .padding()
         // MARK: trip selection button
         Button(action: {}) {
 //          Spacer()
