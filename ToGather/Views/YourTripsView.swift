@@ -99,6 +99,12 @@ struct YourTripsView: View {
         } label: {
           Text("Refresh")
         }.frame(maxWidth: .infinity, alignment: .center)
+        
+        Button {
+          repo.signOut()
+        } label: {
+          Text("Sign Out")
+        }.frame(maxWidth: .infinity, alignment: .center)
       }
       
     } //end vstack

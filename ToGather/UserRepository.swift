@@ -15,21 +15,31 @@ import FirebaseFirestoreSwift
 class UserRepository: ObservableObject {
 
   private let db = Firestore.firestore()
-//  private var userId: String = "pESlIAYYx09zWkaNcySl" // Demo only, user Xinda
-  private var userId: String = "HCI9cWMaboZPolLTtBmZ" // Demo only, user Tester2
+//  private var userId: String = "MTbSP44irsQ9Kt2GPJRI" // Demo only, user Xinda
+//  private var userId: String = "HCI9cWMaboZPolLTtBmZ" // Demo only, user Tester2
 
-  @Published var user: User = User(name: "")
+  @Published var userId: String = ""
+  @Published var user: User = User(name: "", email: "")
   @Published var trips: [Trip] = []
   private var errorMessage: String = ""
   private var cancellables: Set<AnyCancellable> = []
   private var randInt: Int = 0
+  
+  @Published var signedIn = false
 
   @MainActor
   init() {
 //    userId = setUser(name: "Tester2", handle: "@12345")
+    if signedIn {
+      loadUser()
+      //    deleteTestTrips()
+    }
+  }
+  
+  @MainActor
+  func loadUser() {
     load()
     addUserListener()
-//    deleteTestTrips()
   }
   
   func addUserListener() {
@@ -94,9 +104,9 @@ class UserRepository: ObservableObject {
     return try? document?.data(as: User.self)
   }
   
-  func setUser(name: String, handle: String?) -> String {
+  func setUser(name: String, email: String) -> String {
     // Add a new document with a generated id.
-    let newUser = User(name: name, handle: handle ?? "")
+    let newUser = User(name: name, email: email)
     do {
       let ref = try db.collection("User").addDocument(from: newUser)
       print("Successfully added new user \(newUser.name)")
@@ -106,6 +116,24 @@ class UserRepository: ObservableObject {
       print("Error adding new user: \(error)")
       return ""
     }
+  }
+  
+  func setUserWithID(id: String, name: String, email: String) {
+    let newUser = User(name: name, email: email)
+    do {
+      try db.collection("User").document(id).setData(from: newUser)
+      self.user = newUser
+      self.userId = id
+      print("Successfully added new user \(newUser.name) with id \(id)")
+    }
+    catch {
+      print("Error adding new user \(newUser.name) with id \(id): \(error)")
+    }
+  }
+  
+  func signOut() {
+    self.signedIn = false
+    self.userId = ""
   }
   
   func updateUser(user: User) {

@@ -20,7 +20,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 @main
 struct ToGatherApp: App {
   @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
-
+  
   var body: some Scene {
     WindowGroup {
       AppView()
