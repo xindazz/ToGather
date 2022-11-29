@@ -79,6 +79,8 @@
 		97CDD503292694EB00222CC6 /* TestProposalCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CDD502292694EB00222CC6 /* TestProposalCardView.swift */; };
 		97CDD505292694F300222CC6 /* TestProposalCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CDD504292694F300222CC6 /* TestProposalCard.swift */; };
 		97CDD5072926958A00222CC6 /* NewProposalCardDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CDD5062926958A00222CC6 /* NewProposalCardDetailsView.swift */; };
+		97F09B8E293691760059E48B /* TestMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F09B8D293691760059E48B /* TestMessages.swift */; };
+		97F09B902936925B0059E48B /* TestMessagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F09B8F2936925B0059E48B /* TestMessagesView.swift */; };
 		97FD6C48292453960045A208 /* TestTripSwitchDropdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97FD6C47292453960045A208 /* TestTripSwitchDropdown.swift */; };
 /* End PBXBuildFile section */
 
@@ -151,6 +153,8 @@
 		97CDD502292694EB00222CC6 /* TestProposalCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestProposalCardView.swift; sourceTree = "<group>"; };
 		97CDD504292694F300222CC6 /* TestProposalCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestProposalCard.swift; sourceTree = "<group>"; };
 		97CDD5062926958A00222CC6 /* NewProposalCardDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProposalCardDetailsView.swift; sourceTree = "<group>"; };
+		97F09B8D293691760059E48B /* TestMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TestMessages.swift; path = ToGather/TestMessages.swift; sourceTree = SOURCE_ROOT; };
+		97F09B8F2936925B0059E48B /* TestMessagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMessagesView.swift; sourceTree = "<group>"; };
 		97FD6C47292453960045A208 /* TestTripSwitchDropdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTripSwitchDropdown.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -192,6 +196,8 @@
 			isa = PBXGroup;
 			children = (
 				975EDF972915CEA800680AAD /* lisa-dev-2-branch-docs.md */,
+				97F09B8F2936925B0059E48B /* TestMessagesView.swift */,
+				97F09B8D293691760059E48B /* TestMessages.swift */,
 				97AD44BF290EFC18000678E0 /* Models */,
 				97AD44C1290EFC30000678E0 /* ViewModels */,
 				97AD44C0290EFC24000678E0 /* Views */,
@@ -414,6 +420,7 @@
 				97CDD505292694F300222CC6 /* TestProposalCard.swift in Sources */,
 				97AD44C5290EFD9D000678E0 /* ContentView.swift in Sources */,
 				975EDF942915CE7500680AAD /* TestTripDetailsView.swift in Sources */,
+				97F09B902936925B0059E48B /* TestMessagesView.swift in Sources */,
 				975EDF9B2915D74700680AAD /* TestTripDetailsRowModel.swift in Sources */,
 				344B92812911D72F0030547F /* Event.swift in Sources */,
 				344B927F2911D7290030547F /* TripDay.swift in Sources */,
@@ -422,6 +429,7 @@
 				344B92852911D73F0030547F /* Reply.swift in Sources */,
 				972A2DFF291ACA5000B30260 /* Home.swift in Sources */,
 				34B47784291CD97A00EAEC7C /* CreateReplyView.swift in Sources */,
+				97F09B8E293691760059E48B /* TestMessages.swift in Sources */,
 				97AD4509291427CC000678E0 /* Dashboard.swift in Sources */,
 				97CDD501292693C200222CC6 /* NewProposalCard.swift in Sources */,
 				34B47780291CBC1900EAEC7C /* TripView.swift in Sources */,
