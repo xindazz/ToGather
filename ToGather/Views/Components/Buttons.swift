@@ -31,19 +31,33 @@ struct Buttons: View {
          .background(Color(UIColor.systemBlue))
          .clipShape(RoundedRectangle(cornerRadius: 12))
          .padding()
-        
-        Button(action: {}) {
-           Spacer()
-          Label("Yes", systemImage: "plus.circle")
-               .font(.headline)
-               .padding()
-               .foregroundColor(.white)
-           Spacer()
+        HStack{
+          Button(action: {}) {
+             Spacer()
+            Label("Yes", systemImage: "plus.circle")
+                 .font(.headline)
+                 .padding()
+                 .foregroundColor(.white)
+             Spacer()
+          }
+          .frame(width: 160)
+           .background(Color(UIColor.systemBlue))
+           .clipShape(RoundedRectangle(cornerRadius: 12))
+           .padding()
+          Button(action: {}) {
+             Spacer()
+            Label("No", systemImage: "plus.circle")
+                 .font(.headline)
+                 .padding()
+                 .foregroundColor(.white)
+             Spacer()
+          }
+          .frame(width: 160)
+           .background(Color(UIColor.systemBlue))
+           .clipShape(RoundedRectangle(cornerRadius: 12))
+           .padding()
         }
-        .frame(width: 100)
-         .background(Color(UIColor.systemBlue))
-         .clipShape(RoundedRectangle(cornerRadius: 12))
-         .padding()
+        
         // MARK: trip selection button
         Button(action: {}) {
 //          Spacer()
