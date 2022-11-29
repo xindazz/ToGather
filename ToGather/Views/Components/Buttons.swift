@@ -31,7 +31,7 @@ struct Buttons: View {
          .background(Color(UIColor.systemBlue))
          .clipShape(RoundedRectangle(cornerRadius: 12))
          .padding()
-        HStack{
+        HStack{ //yes/no hstack
           Button(action: {}) {
              Spacer()
             Label("Yes", systemImage: "plus.circle")
@@ -56,7 +56,7 @@ struct Buttons: View {
            .background(Color(UIColor.systemBlue))
            .clipShape(RoundedRectangle(cornerRadius: 12))
            .padding()
-        }
+        } // end hstack
         
         // MARK: trip selection button
         Button(action: {}) {

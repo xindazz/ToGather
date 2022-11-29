@@ -23,48 +23,42 @@ struct NewProposalCardView: View {
 
     var body: some View {
       ScrollView{
-        
-        ZStack {
-          RoundedRectangle(cornerRadius: 10, style: .continuous)
-            .fill(.white)
-            .shadow(radius: 10)
-          
-          VStack (alignment: .leading) {
-            Text("Proposed by: \(proposal.proposer.name)")
-              .font(.headline)
-            
-            VStack (alignment: .leading, spacing: 20) {
-              Text("\(formatter.toDateTimeDay(proposal.newEvent.from)) to")
-                .font(.subheadline)
-              Text("\(formatter.toDateTimeDay(proposal.newEvent.to))")
-                .font(.subheadline)
-              Divider()
-            } // end vstack
-            .background(Color(UIColor.systemBlue))
-            .foregroundColor(.white)
-            
-            if isShowingAnswer {
-              Text(card.answer)
-                .font(.title)
-                .foregroundColor(.gray)
-            }
-          }// end vstack
-          .padding(20)
-          .multilineTextAlignment(.center)
-        
-        } // end zstack
-        .frame(width: 375, height: 250)
-        .onTapGesture {
-          isShowingAnswer.toggle()
-        } // end tapgesture
-        
+//        MARK: adapted sample
+//        ZStack {
+//          RoundedRectangle(cornerRadius: 10, style: .continuous)
+//            .fill(.white)
+//            .shadow(radius: 10)
+//
+//          VStack (alignment: .leading) {
+//            Text("Proposed by: \(proposal.proposer.name)")
+//              .font(.headline)
+//
+//            VStack (alignment: .leading, spacing: 20) {
+//              Text("\(formatter.toDateTimeDay(proposal.newEvent.from)) to")
+//                .font(.subheadline)
+//              Text("\(formatter.toDateTimeDay(proposal.newEvent.to))")
+//                .font(.subheadline)
+////              Divider()
+//            } // end vstack
+//            .background(Color(UIColor.systemBlue))
+//            .foregroundColor(.white)
+//
+//            if isShowingAnswer {
+//              Text(card.answer)
+//                .font(.title)
+//                .foregroundColor(.gray)
+//            }
+//          }// end vstack
+//          .padding(20)
+//          .multilineTextAlignment(.center)
+//
+//        } // end zstack
+//        .frame(width: 375, height: 250)
+//        .onTapGesture {
+//          isShowingAnswer.toggle()
+//        } // end tapgesture
+//        MARK: in-progress new card
         VStack (alignment: .leading) {
-          VStack (alignment: .leading){
-            Text("Proposed by: \(proposal.proposer.name)")
-              .font(.headline)
-              .padding(EdgeInsets(top: 20, leading: 20, bottom: 0, trailing: 0))
-            Divider()
-          }
           VStack (alignment: .leading, spacing: 20) {
             Text("\(formatter.toDateTimeDay(proposal.newEvent.from)) to")
               .font(.subheadline)
@@ -72,20 +66,49 @@ struct NewProposalCardView: View {
             Text("\(formatter.toDateTimeDay(proposal.newEvent.to))")
               .font(.subheadline)
               .padding(EdgeInsets(top: -10, leading: 20, bottom: 0, trailing: 0))
-            Divider()
+//            Divider()
           } // end vstack
-          //          removed ?? "" from lines 61 and 63 (following two text lines) to deal with compilation error raised)
-
+          
+//          removed ?? "" from lines 61 and 63 (following two text lines) to deal with compilation error raised)
           VStack (alignment: .leading, spacing: 10){
             Text("\(proposal.newEvent.name)")
               .font(.headline)
             Text("\(proposal.newEvent.category)")
               .font(.subheadline)
+            
             Text("\(proposal.newEvent.location ?? "")")
             Text("\(proposal.newEvent.detail ?? "")")
             Text("\(proposal.newEvent.link ?? "")")
+            Text("Proposed by: \(proposal.proposer.name)")
+              .fontWeight(.light)
           }
-          .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 10))
+          .padding(EdgeInsets(top: 30, leading: 20, bottom: 0, trailing: 10))
+          HStack{ //yes/no hstack
+            Button(action: {}) {
+               Spacer()
+              Label("Yes", systemImage: "plus.circle")
+                   .font(.headline)
+                   .padding()
+                   .foregroundColor(.white)
+               Spacer()
+            }
+            .frame(width: 160)
+             .background(Color(UIColor.systemBlue))
+             .clipShape(RoundedRectangle(cornerRadius: 12))
+             .padding()
+            Button(action: {}) {
+               Spacer()
+              Label("No", systemImage: "plus.circle")
+                   .font(.headline)
+                   .padding()
+                   .foregroundColor(.white)
+               Spacer()
+            }
+            .frame(width: 160)
+             .background(Color(UIColor.systemBlue))
+             .clipShape(RoundedRectangle(cornerRadius: 12))
+             .padding()
+          } // end hstack
           
           NavigationLink(destination: CreateReplyView(repo: repo, trip: trip, proposal: proposal)) {
             Label("Add Reply", systemImage: "arrowshape.turn.up.left")
@@ -117,11 +140,11 @@ struct NewProposalCardView: View {
         } //end vstack
 //        .background(Color(UIColor.lightGray))
 //        .clipShape(RoundedRectangle(cornerRadius: 12))
-        .padding(EdgeInsets(top: 10, leading: 30, bottom: 0, trailing: 30))
+        .padding(EdgeInsets(top: 10, leading: 50, bottom: 0, trailing: 50))
         .background(
                 Rectangle()
                     .fill(Color.white)
-                    .frame(width: 400)
+                    .frame(width: 375)
                     .cornerRadius(12)
                     .shadow(
                         color: Color.gray.opacity(0.7),
