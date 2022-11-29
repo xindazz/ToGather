@@ -16,7 +16,7 @@ class UserRepository: ObservableObject {
 
   private let db = Firestore.firestore()
 //  private var userId: String = "pESlIAYYx09zWkaNcySl" // Demo only, user Xinda
-  private var userId: String = "HCI9cWMaboZPolLTtBmZ" // Demo only, user Tester2
+  private var userId: String = "MTbSP44irsQ9Kt2GPJRI" // Demo only, user Tester2
 
   @Published var user: User = User(name: "")
   @Published var trips: [Trip] = []
