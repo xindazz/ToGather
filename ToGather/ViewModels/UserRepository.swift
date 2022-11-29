@@ -16,7 +16,7 @@ class UserRepository: ObservableObject {
 
   private let db = Firestore.firestore()
 //  private var userId: String = "pESlIAYYx09zWkaNcySl" // Demo only, user Xinda
-  private var userId: String = "ZvTpwqUDv7GD4uVXdxB4" // Demo only, user Tester2
+  private var userId: String = "HCI9cWMaboZPolLTtBmZ" // Demo only, user Tester2
 
   @Published var user: User = User(name: "")
   @Published var trips: [Trip] = []
@@ -28,6 +28,42 @@ class UserRepository: ObservableObject {
   init() {
 //    userId = setUser(name: "Tester2", handle: "@12345")
     load()
+    addUserListener()
+//    deleteTestTrips()
+  }
+  
+  func addUserListener() {
+    db.collection("User").document(self.userId)
+      .addSnapshotListener { documentSnapshot, error in
+        guard let document = documentSnapshot else {
+            print("Error fetching document: \(error!)")
+            return
+        }
+        do {
+          let user = try document.data(as: User.self)
+          self.user = user
+          print("Updated User")
+          self.addTripListener(self.user.id!)
+        }
+        catch {
+          print("Error decoding user data")
+        }
+      }
+  }
+  
+  func addTripListener(_ userId: UUID) {
+    db.collection("Trip").whereField("memberIds", arrayContains: userId.uuidString)
+      .addSnapshotListener { querySnapshot, error in
+        if let error = error {
+          print("Error getting books: \(error.localizedDescription)")
+          return
+        }
+
+        self.trips = querySnapshot?.documents.compactMap { document in
+          try? document.data(as: Trip.self)
+        } ?? []
+        print("Updated trips")
+      }
   }
   
   @MainActor
@@ -114,6 +150,7 @@ class UserRepository: ObservableObject {
                          uniqueCode: code,
                          owner: trip.owner,
                          members: trip.members,
+                         memberIds: trip.memberIds,
                          destination: trip.destination,
                          from: trip.from,
                          to: trip.to,
@@ -130,7 +167,7 @@ class UserRepository: ObservableObject {
       catch {
         print("Error adding new trip \(error)")
       }
-      self.load()
+//      self.load()
     }
   }
   
@@ -153,7 +190,7 @@ class UserRepository: ObservableObject {
         let filtered = trips.filter { trip in trip.uniqueCode == code }
         if filtered.count == 1 {
           var trip = filtered[0]
-          if (trip.owner.id == self.user.id || (trip.members.filter {member in member.id == self.user.id}).count > 0) {
+          if (trip.owner.id == self.user.id || (trip.members.filter {member in member.id!.uuidString == self.user.id!.uuidString}).count > 0) {
             print("Error: trip \(trip.id ?? "") already has user \(self.user.name) as owner or member")
             return
           }
@@ -166,31 +203,29 @@ class UserRepository: ObservableObject {
           print("Error: \(filtered.count) trips with unique code \(code)")
         }
       }
-      self.load()
+//      self.load()
     }
-//    self.load()
   }
   
-  //  func getTrips(tripRefs: [DocumentReference]) {
-  //    for tripRef in tripRefs {
-  //      tripRef.getDocument { document, error in
-  //        if let error = error as NSError? {
-  //          self.errorMessage = "Error getting document: \(error.localizedDescription)"
-  //        }
-  //        else {
-  //          if let document = document {
-  //            do {
-  //              let trip = try document.data(as: Trip.self)
-  //              self.trips.append(trip)
-  //              print("Got trip \(trip.name)")
-  //            }
-  //            catch {
-  //              print("Error decoding trip data: \(error)")
-  //            }
-  //          }
-  //        }
-  //      }
-  //    }
-  //  }
+  @MainActor
+  func deleteTestTrips() {
+    async {
+      if let trips = try? await fetchAllTrips() {
+        print("Total \(trips.count) trips")
+        let filtered = trips.filter { trip in trip.destination != nil && trip.destination! != "LA" && trip.destination! != "NY" }
+        print("Got \(filtered.count) test trips to delete")
+        for trip in filtered {
+          db.collection("Trip").document(trip.id!).delete() { err in
+            if let err = err {
+              print("Error removing document: \(err)")
+            } else {
+              print("Document successfully removed!")
+            }
+          }
+        }
+      }
+    }
+  }
+  
 }
 
