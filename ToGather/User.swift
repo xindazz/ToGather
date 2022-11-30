@@ -16,17 +16,17 @@ struct User: Codable, Identifiable {
   @DocumentID var docId: String?
   var id: UUID? = UUID()
   var name: String
-  var handle: String?
-  var phone: String?
-  var trips: [String] = []
-  
+    var email: String
+    var trips: [String] = []
+    
+    
+    
   // To conform to Codable protocol
   enum CodingKeys: String, CodingKey {
     case docId
     case id
     case name
-    case handle
-    case phone
+    case email
     case trips
   }
   
@@ -34,6 +34,6 @@ struct User: Codable, Identifiable {
     trips.append(tripId)
   }
   
-  static let example = User(name: "User1")
-  
+    static let example = User(name: "User1", email: "123@gmail.com")
+
 }

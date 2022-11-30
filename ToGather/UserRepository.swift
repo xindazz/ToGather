@@ -17,23 +17,51 @@ class UserRepository: ObservableObject {
   private let db = Firestore.firestore()
 
 //  private var userId: String = "pESlIAYYx09zWkaNcySl" // Demo only, user Xinda
-  private var userId: String = "ZhmUkc2UnIU9u7EDzLDL" // Demo only, user Tester2
+//  private var userId: String = "ZhmUkc2UnIU9u7EDzLDL" // Demo only, user Tester2
+    
+//
+//      private var userId: String = "MTbSP44irsQ9Kt2GPJRI" // Demo only, user Xinda
+//      private var userId: String = "HCI9cWMaboZPolLTtBmZ" // Demo only, user Tester2
 
-  @Published var user: User = User(name: "")
+
+//  @Published var user: User = User(name: "")
+  
+    @Published var userId: String = ""
+    @Published var user: User = User(name: "", email: "")
+    
   @Published var trips: [Trip] = []
   private var errorMessage: String = ""
   private var cancellables: Set<AnyCancellable> = []
   private var randInt: Int = 0
 
+    @Published var signedIn = false
+
+    
   @MainActor
   init() {
 //    userId = setUser(name: "Tester2", handle: "@12345")
+      
+      
+      if signedIn {
+            loadUser()
+            //    deleteTestTrips()
+          }
+        }
+
+        @MainActor
+        func loadUser() {
+            
     load()
     addUserListener()
-//    deleteTestTrips()
+
+
+
+
   }
   
   func addUserListener() {
+      
+      
     db.collection("User").document(self.userId)
       .addSnapshotListener { documentSnapshot, error in
         guard let document = documentSnapshot else {
@@ -94,11 +122,14 @@ class UserRepository: ObservableObject {
     let document = try? await db.collection("User").document(userId).getDocument()
     return try? document?.data(as: User.self)
   }
-  
-  func setUser(name: String, handle: String?) -> String {
-    // Add a new document with a generated id.
-    let newUser = User(name: name, handle: handle ?? "")
-    do {
+    
+    
+    
+    
+    func setUser(name: String, email: String) -> String {
+        // Add a new document with a generated id.
+        let newUser = User(name: name, handle: handle ?? "")
+        let newUser = User(name: name, email: email)    do {
       let ref = try db.collection("User").addDocument(from: newUser)
       print("Successfully added new user \(newUser.name)")
       return ref.documentID
