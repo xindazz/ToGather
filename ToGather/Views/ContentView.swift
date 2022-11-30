@@ -25,3 +25,12 @@ struct ContentView_Previews: PreviewProvider {
 }
 
 
+extension Color {
+    static let ui = Color.UI()
+    
+    struct UI {
+         let blue = Color("blue")
+    }
+}
+
+
