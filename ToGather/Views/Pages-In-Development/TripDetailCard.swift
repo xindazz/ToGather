@@ -14,14 +14,17 @@ import SwiftUI
 
 struct TripDetailCard: View {
   var body: some View {
+    //    template
     VStack(alignment: .leading, spacing: 32) {
-        VStack(alignment: .leading) {
+      VStack(alignment: .leading) {
             Text("Fly to LAX from LGA")
                 .font(.largeTitle.bold())
             Text("Travel")
                 .font(.subheadline)
+            Text("Nov 19, 2022 12:59pm to")
+            Text("Nov 20, 2022 12:59pm")
         } // end inner vstack
-        .foregroundColor(.white)
+        .foregroundColor(.black)
       
       HStack{ //yes/no hstack
         Button(action: {}) {
@@ -54,17 +57,29 @@ struct TripDetailCard: View {
     } //end outer vstack
     .padding(EdgeInsets(top: 20, leading: 20, bottom: 0, trailing: 20))
     .background(
-            Rectangle()
-                .fill(Color.gray)
-                .frame(width: 375)
-                .cornerRadius(12)
-                .shadow(
-                    color: Color.gray.opacity(0.7),
-                    radius: 8,
-                    x: 0,
-                    y: 0
-                )
+            Image("[london]marcin-nowak-iXqTqC-f6jI-unsplash")
+              .resizable()
+              .frame(width: 375)
+              .cornerRadius(12)
+              .shadow(
+                  color: Color.gray.opacity(0.7),
+                  radius: 8,
+                  x: 0,
+                  y: 0
+              )
       )
+//    .background(
+//            Rectangle()
+//                .fill(Color.gray)
+//                .frame(width: 375)
+//                .cornerRadius(12)
+//                .shadow(
+//                    color: Color.gray.opacity(0.7),
+//                    radius: 8,
+//                    x: 0,
+//                    y: 0
+//                )
+//      )
     ScrollView{
       
       VStack(alignment: .leading, spacing: 32) {

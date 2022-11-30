@@ -220,6 +220,7 @@
 		972A2DFB291ACA3100B30260 /* Pages-In-Development */ = {
 			isa = PBXGroup;
 			children = (
+				97AD450F2914367A000678E0 /* TripDetailCard.swift */,
 				97CDD500292693C200222CC6 /* NewProposalCard.swift */,
 				97CDD4FE2926936C00222CC6 /* NewProposalCardView.swift */,
 				976AA4152936E719001A9657 /* ReviewDetails.swift */,
@@ -242,7 +243,6 @@
 				97AD450D291435D5000678E0 /* DesignSystemComponents.swift */,
 				97AD4511291440AE000678E0 /* Experiment.swift */,
 				97AD45132914644C000678E0 /* TestDashboardView.swift */,
-				97AD450F2914367A000678E0 /* TripDetailCard.swift */,
 				975EDF932915CE7500680AAD /* TestTripDetailsView.swift */,
 				975EDF952915CE8800680AAD /* TestTripDetailsRowView.swift */,
 				34B4777B291CBA2B00EAEC7C /* ProposalCardView.swift */,
