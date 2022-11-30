@@ -44,13 +44,13 @@
 		972A2E06291AD9DE00B30260 /* BarNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972A2E05291AD9DE00B30260 /* BarNavigation.swift */; };
 		972A2E08291ADD7700B30260 /* UserTrips.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972A2E07291ADD7700B30260 /* UserTrips.swift */; };
 		975EDF902915CE5900680AAD /* TestTripDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975EDF8F2915CE5900680AAD /* TestTripDetailsModel.swift */; };
-		975EDF922915CE6A00680AAD /* TestTripDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975EDF912915CE6A00680AAD /* TestTripDetailsViewModel.swift */; };
 		975EDF942915CE7500680AAD /* TestTripDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975EDF932915CE7500680AAD /* TestTripDetailsView.swift */; };
 		975EDF962915CE8800680AAD /* TestTripDetailsRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975EDF952915CE8800680AAD /* TestTripDetailsRowView.swift */; };
 		975EDF992915D10200680AAD /* Dashboard-deprecated1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975EDF982915D10200680AAD /* Dashboard-deprecated1.swift */; };
 		975EDF9B2915D74700680AAD /* TestTripDetailsRowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975EDF9A2915D74700680AAD /* TestTripDetailsRowModel.swift */; };
 		9766F5B9292467390052D38E /* TestSampleListExpansion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9766F5B8292467390052D38E /* TestSampleListExpansion.swift */; };
 		9766F5BB29246A800052D38E /* TestTripAccordion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9766F5BA29246A800052D38E /* TestTripAccordion.swift */; };
+		976AA4162936E719001A9657 /* ReviewDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976AA4152936E719001A9657 /* ReviewDetails.swift */; };
 		9784D507291C99B4000A4708 /* CreateProposalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9784D506291C99B4000A4708 /* CreateProposalView.swift */; };
 		97A005F4291B468800F0FE26 /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = 97A005F3291B468800F0FE26 /* FirebaseAppCheck */; };
 		97A005F6291B468800F0FE26 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 97A005F5291B468800F0FE26 /* FirebaseAuth */; };
@@ -70,7 +70,6 @@
 		97AD45102914367A000678E0 /* TripDetailCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AD450F2914367A000678E0 /* TripDetailCard.swift */; };
 		97AD4512291440AE000678E0 /* Experiment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AD4511291440AE000678E0 /* Experiment.swift */; };
 		97AD45142914644C000678E0 /* TestDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AD45132914644C000678E0 /* TestDashboardView.swift */; };
-		97AD451629146475000678E0 /* TestDashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AD451529146475000678E0 /* TestDashboardViewModel.swift */; };
 		97AD451829146482000678E0 /* TestDashboardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AD451729146482000678E0 /* TestDashboardModel.swift */; };
 		97C793B0291AB1230009BCF6 /* ProposalCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C793AF291AB1230009BCF6 /* ProposalCard.swift */; };
 		97C793B2291AB13E0009BCF6 /* TestUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C793B1291AB13E0009BCF6 /* TestUI.swift */; };
@@ -123,7 +122,6 @@
 		972A2E05291AD9DE00B30260 /* BarNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarNavigation.swift; sourceTree = "<group>"; };
 		972A2E07291ADD7700B30260 /* UserTrips.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTrips.swift; sourceTree = "<group>"; };
 		975EDF8F2915CE5900680AAD /* TestTripDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTripDetailsModel.swift; sourceTree = "<group>"; };
-		975EDF912915CE6A00680AAD /* TestTripDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTripDetailsViewModel.swift; sourceTree = "<group>"; };
 		975EDF932915CE7500680AAD /* TestTripDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTripDetailsView.swift; sourceTree = "<group>"; };
 		975EDF952915CE8800680AAD /* TestTripDetailsRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTripDetailsRowView.swift; sourceTree = "<group>"; };
 		975EDF972915CEA800680AAD /* lisa-dev-2-branch-docs.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "lisa-dev-2-branch-docs.md"; sourceTree = "<group>"; };
@@ -131,6 +129,7 @@
 		975EDF9A2915D74700680AAD /* TestTripDetailsRowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTripDetailsRowModel.swift; sourceTree = "<group>"; };
 		9766F5B8292467390052D38E /* TestSampleListExpansion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSampleListExpansion.swift; sourceTree = "<group>"; };
 		9766F5BA29246A800052D38E /* TestTripAccordion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTripAccordion.swift; sourceTree = "<group>"; };
+		976AA4152936E719001A9657 /* ReviewDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewDetails.swift; sourceTree = "<group>"; };
 		9784D506291C99B4000A4708 /* CreateProposalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProposalView.swift; sourceTree = "<group>"; };
 		97A00601291C3FC800F0FE26 /* YourTripsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourTripsView.swift; sourceTree = "<group>"; };
 		97A00603291C461600F0FE26 /* YourProposalsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourProposalsView.swift; sourceTree = "<group>"; };
@@ -144,7 +143,6 @@
 		97AD450F2914367A000678E0 /* TripDetailCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetailCard.swift; sourceTree = "<group>"; };
 		97AD4511291440AE000678E0 /* Experiment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Experiment.swift; sourceTree = "<group>"; };
 		97AD45132914644C000678E0 /* TestDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDashboardView.swift; sourceTree = "<group>"; };
-		97AD451529146475000678E0 /* TestDashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDashboardViewModel.swift; sourceTree = "<group>"; };
 		97AD451729146482000678E0 /* TestDashboardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDashboardModel.swift; sourceTree = "<group>"; };
 		97C793AF291AB1230009BCF6 /* ProposalCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProposalCard.swift; sourceTree = "<group>"; };
 		97C793B1291AB13E0009BCF6 /* TestUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUI.swift; sourceTree = "<group>"; };
@@ -153,7 +151,7 @@
 		97CDD502292694EB00222CC6 /* TestProposalCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestProposalCardView.swift; sourceTree = "<group>"; };
 		97CDD504292694F300222CC6 /* TestProposalCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestProposalCard.swift; sourceTree = "<group>"; };
 		97CDD5062926958A00222CC6 /* NewProposalCardDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProposalCardDetailsView.swift; sourceTree = "<group>"; };
-		97F09B8D293691760059E48B /* TestMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TestMessages.swift; path = ToGather/TestMessages.swift; sourceTree = SOURCE_ROOT; };
+		97F09B8D293691760059E48B /* TestMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TestMessages.swift; path = ToGather/Views/Archive/TestMessages.swift; sourceTree = SOURCE_ROOT; };
 		97F09B8F2936925B0059E48B /* TestMessagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMessagesView.swift; sourceTree = "<group>"; };
 		97FD6C47292453960045A208 /* TestTripSwitchDropdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTripSwitchDropdown.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -196,8 +194,6 @@
 			isa = PBXGroup;
 			children = (
 				975EDF972915CEA800680AAD /* lisa-dev-2-branch-docs.md */,
-				97F09B8F2936925B0059E48B /* TestMessagesView.swift */,
-				97F09B8D293691760059E48B /* TestMessages.swift */,
 				97AD44BF290EFC18000678E0 /* Models */,
 				97AD44C1290EFC30000678E0 /* ViewModels */,
 				97AD44C0290EFC24000678E0 /* Views */,
@@ -224,15 +220,10 @@
 		972A2DFB291ACA3100B30260 /* Pages-In-Development */ = {
 			isa = PBXGroup;
 			children = (
-				97FD6C47292453960045A208 /* TestTripSwitchDropdown.swift */,
-				972A2DFE291ACA5000B30260 /* Home.swift */,
-				9766F5B8292467390052D38E /* TestSampleListExpansion.swift */,
-				9766F5BA29246A800052D38E /* TestTripAccordion.swift */,
 				97CDD500292693C200222CC6 /* NewProposalCard.swift */,
 				97CDD4FE2926936C00222CC6 /* NewProposalCardView.swift */,
+				976AA4152936E719001A9657 /* ReviewDetails.swift */,
 				97CDD5062926958A00222CC6 /* NewProposalCardDetailsView.swift */,
-				97CDD502292694EB00222CC6 /* TestProposalCardView.swift */,
-				97CDD504292694F300222CC6 /* TestProposalCard.swift */,
 			);
 			path = "Pages-In-Development";
 			sourceTree = "<group>";
@@ -240,6 +231,13 @@
 		972A2E09291ADDF300B30260 /* Archive */ = {
 			isa = PBXGroup;
 			children = (
+				97CDD502292694EB00222CC6 /* TestProposalCardView.swift */,
+				97CDD504292694F300222CC6 /* TestProposalCard.swift */,
+				9766F5B8292467390052D38E /* TestSampleListExpansion.swift */,
+				9766F5BA29246A800052D38E /* TestTripAccordion.swift */,
+				97FD6C47292453960045A208 /* TestTripSwitchDropdown.swift */,
+				97F09B8D293691760059E48B /* TestMessages.swift */,
+				97F09B8F2936925B0059E48B /* TestMessagesView.swift */,
 				975EDF982915D10200680AAD /* Dashboard-deprecated1.swift */,
 				97AD450D291435D5000678E0 /* DesignSystemComponents.swift */,
 				97AD4511291440AE000678E0 /* Experiment.swift */,
@@ -247,6 +245,18 @@
 				97AD450F2914367A000678E0 /* TripDetailCard.swift */,
 				975EDF932915CE7500680AAD /* TestTripDetailsView.swift */,
 				975EDF952915CE8800680AAD /* TestTripDetailsRowView.swift */,
+				34B4777B291CBA2B00EAEC7C /* ProposalCardView.swift */,
+				972A2DFE291ACA5000B30260 /* Home.swift */,
+			);
+			path = Archive;
+			sourceTree = "<group>";
+		};
+		976AA4142936E3C2001A9657 /* Archive */ = {
+			isa = PBXGroup;
+			children = (
+				97AD451729146482000678E0 /* TestDashboardModel.swift */,
+				975EDF8F2915CE5900680AAD /* TestTripDetailsModel.swift */,
+				975EDF9A2915D74700680AAD /* TestTripDetailsRowModel.swift */,
 			);
 			path = Archive;
 			sourceTree = "<group>";
@@ -261,9 +271,7 @@
 				344B92802911D72F0030547F /* Event.swift */,
 				344B92822911D7390030547F /* Task.swift */,
 				344B92842911D73F0030547F /* Reply.swift */,
-				97AD451729146482000678E0 /* TestDashboardModel.swift */,
-				975EDF8F2915CE5900680AAD /* TestTripDetailsModel.swift */,
-				975EDF9A2915D74700680AAD /* TestTripDetailsRowModel.swift */,
+				976AA4142936E3C2001A9657 /* Archive */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -293,7 +301,6 @@
 				97A00603291C461600F0FE26 /* YourProposalsView.swift */,
 				97A00605291C464500F0FE26 /* YourChecklists.swift */,
 				9784D506291C99B4000A4708 /* CreateProposalView.swift */,
-				34B4777B291CBA2B00EAEC7C /* ProposalCardView.swift */,
 				34B4777D291CBA5D00EAEC7C /* ReplyCardView.swift */,
 				34B4777F291CBC1900EAEC7C /* TripView.swift */,
 				34B47783291CD97A00EAEC7C /* CreateReplyView.swift */,
@@ -307,8 +314,6 @@
 			children = (
 				34B9C469290A67BA00015341 /* UserRepository.swift */,
 				97AD44C2290EFD8C000678E0 /* ViewModel.swift */,
-				97AD451529146475000678E0 /* TestDashboardViewModel.swift */,
-				975EDF912915CE6A00680AAD /* TestTripDetailsViewModel.swift */,
 				34B47781291CD11C00EAEC7C /* CustomDateFormatter.swift */,
 			);
 			path = ViewModels;
@@ -424,7 +429,6 @@
 				975EDF9B2915D74700680AAD /* TestTripDetailsRowModel.swift in Sources */,
 				344B92812911D72F0030547F /* Event.swift in Sources */,
 				344B927F2911D7290030547F /* TripDay.swift in Sources */,
-				97AD451629146475000678E0 /* TestDashboardViewModel.swift in Sources */,
 				97AD451829146482000678E0 /* TestDashboardModel.swift in Sources */,
 				344B92852911D73F0030547F /* Reply.swift in Sources */,
 				972A2DFF291ACA5000B30260 /* Home.swift in Sources */,
@@ -449,6 +453,7 @@
 				34B4777C291CBA2B00EAEC7C /* ProposalCardView.swift in Sources */,
 				34B9C46C290AF06900015341 /* AppView.swift in Sources */,
 				97CDD4FF2926936C00222CC6 /* NewProposalCardView.swift in Sources */,
+				976AA4162936E719001A9657 /* ReviewDetails.swift in Sources */,
 				191FC37029183DC00083C4E7 /* OnboardingThree.swift in Sources */,
 				34B47782291CD11C00EAEC7C /* CustomDateFormatter.swift in Sources */,
 				9766F5B9292467390052D38E /* TestSampleListExpansion.swift in Sources */,
@@ -465,7 +470,6 @@
 				3436241229197BF1007A8FC6 /* TestDashboardIntegratedView.swift in Sources */,
 				9784D507291C99B4000A4708 /* CreateProposalView.swift in Sources */,
 				34B47786291CFF4F00EAEC7C /* EventCard.swift in Sources */,
-				975EDF922915CE6A00680AAD /* TestTripDetailsViewModel.swift in Sources */,
 				97AD4512291440AE000678E0 /* Experiment.swift in Sources */,
 				97AD45142914644C000678E0 /* TestDashboardView.swift in Sources */,
 				972A2E08291ADD7700B30260 /* UserTrips.swift in Sources */,

@@ -5,6 +5,7 @@
 //  Created by Xinda Zhou on 11/9/22.
 //
 
+// deprecated by Lisa Leung, see NewProposalCardView.swift
 import SwiftUI
 import Foundation
 

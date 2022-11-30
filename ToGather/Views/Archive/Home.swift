@@ -3,7 +3,7 @@
 //  ToGather
 //
 //  Created by Lisa Leung on 11/8/22.
-//
+//  page for demo testing
 import SwiftUI
 
 struct Home: View {
