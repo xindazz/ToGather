@@ -13,31 +13,31 @@ import FirebaseFirestore
 import FirebaseFirestoreSwift
 
 class UserRepository: ObservableObject {
-
+  
   private let db = Firestore.firestore()
-//  private var userId: String = "pESlIAYYx09zWkaNcySl" // Demo only, user Xinda
+  //  private var userId: String = "pESlIAYYx09zWkaNcySl" // Demo only, user Xinda
   private var userId: String = "MTbSP44irsQ9Kt2GPJRI" // Demo only, user Tester2
-
+  
   @Published var user: User = User(name: "")
   @Published var trips: [Trip] = []
   private var errorMessage: String = ""
   private var cancellables: Set<AnyCancellable> = []
   private var randInt: Int = 0
-
+  
   @MainActor
   init() {
-//    userId = setUser(name: "Tester2", handle: "@12345")
+    //    userId = setUser(name: "Tester2", handle: "@12345")
     load()
     addUserListener()
-//    deleteTestTrips()
+    //    deleteTestTrips()
   }
   
   func addUserListener() {
     db.collection("User").document(self.userId)
       .addSnapshotListener { documentSnapshot, error in
         guard let document = documentSnapshot else {
-            print("Error fetching document: \(error!)")
-            return
+          print("Error fetching document: \(error!)")
+          return
         }
         do {
           let user = try document.data(as: User.self)
@@ -58,7 +58,7 @@ class UserRepository: ObservableObject {
           print("Error getting books: \(error.localizedDescription)")
           return
         }
-
+        
         self.trips = querySnapshot?.documents.compactMap { document in
           try? document.data(as: Trip.self)
         } ?? []
@@ -119,7 +119,7 @@ class UserRepository: ObservableObject {
       }
     }
   }
-
+  
   func fetchTrip(tripDocId: String) async -> Trip? {
     let document = try? await db.collection("Trip").document(tripDocId).getDocument()
     return try? document?.data(as: Trip.self)
@@ -167,7 +167,7 @@ class UserRepository: ObservableObject {
       catch {
         print("Error adding new trip \(error)")
       }
-//      self.load()
+      //      self.load()
     }
   }
   
@@ -203,7 +203,7 @@ class UserRepository: ObservableObject {
           print("Error: \(filtered.count) trips with unique code \(code)")
         }
       }
-//      self.load()
+      //      self.load()
     }
   }
   
@@ -226,28 +226,4 @@ class UserRepository: ObservableObject {
       }
     }
   }
-//  MARK: drafts for polling functions - DO NOT RUN THIS
-//  based off of Xinda's code - Lisa
-//  func voteYes(){
-//    async {
-//      if let proposals = try? await fetchAllTrips() {
-//        print("Total \(proposals.count) proposals")
-//        let filtered = proposals.filter { proposals in proposals.name != nil && proposals.category != nil}
-////        let filtered = trips.filter { trip in trip.destination != nil && trip.destination! != "LA" && trip.destination! != "NY" }
-////        print("Got \(filtered.count) test trips to delete")
-//        for proposal in filtered {
-////          not sure what to do here, just wanted to increment the vote by 1
-////          db.collection("Trips").document(trip.id!).delete() { err in
-////            if let err = err {
-////              print("Error removing document: \(err)")
-////            } else {
-////              print("Document successfully removed!")
-////            }
-////          }
-//        }
-//      }
-//    }
-//  }
-  
 }
-
