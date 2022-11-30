@@ -12,6 +12,7 @@ struct YourTripsView: View {
   @ObservedObject var repo: UserRepository
 //  code by and provided by Helena Spencer, 67-443 TA
   func sendMessage(){
+//    replace something with a typical string interpolation\(trip.unique code) and whatnot
     let sms: String = "sms:&body=Join this event with me! \n Event: something \n Date: something"
     let strURL: String = sms.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
     UIApplication.shared.open(URL.init(string: strURL)!, options: [:], completionHandler: nil)
@@ -61,7 +62,7 @@ struct YourTripsView: View {
           VStack {
             Button(action: {sendMessage()}) {
                Spacer()
-              Label("Message Me", systemImage: "plus.circle")
+              Label("Invite Friends", systemImage: "message.fill")
                    .font(.headline)
                    .padding()
                    .foregroundColor(.white)
