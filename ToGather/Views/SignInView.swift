@@ -51,32 +51,46 @@ struct SignInView: View {
   @ViewBuilder
   var body: some View {
     
-    ZStack {
+    VStack {
       
       VStack(alignment: .leading, spacing: 40) {
         Text("Welcome to ToGather")
           .fontWeight(.heavy)
           .multilineTextAlignment(.center)
           .font(.title)
+          .padding(EdgeInsets(top: 60, leading: 40, bottom: 0, trailing: 10))
+
+          
+          
+          
         Text("Let's go on a trip together")
-        
+              .padding(EdgeInsets(top: 5, leading: 80, bottom: 0, trailing: 10))
+
+          
+          
         VStack {
           Text("Email")
             .font(.body)
             .fontWeight(.bold)
             .frame(maxWidth: .infinity, alignment: .leading)
-          
+            .padding(EdgeInsets(top: 20, leading: 20, bottom: 0, trailing: 10))
+
+            
           TextField("123@gmail.com", text: $email)
             .textContentType(.givenName).border(Color.gray.opacity(0.5))
-          
+            .padding(EdgeInsets(top: 10, leading: 20, bottom: 0, trailing: 10))
+
           Text("Password")
             .font(.body)
             .fontWeight(.bold)
             .frame(maxWidth: .infinity, alignment: .leading)
-          
+            .padding(EdgeInsets(top: 20, leading: 20, bottom: 0, trailing: 10))
+
+            
           SecureField("Password", text: $password)
             .border(Color.gray.opacity(0.5))
-          
+            .padding(EdgeInsets(top: 10, leading: 20, bottom: 0, trailing: 10))
+
         }
         
         Button {
