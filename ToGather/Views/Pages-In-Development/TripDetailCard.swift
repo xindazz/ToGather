@@ -25,34 +25,6 @@ struct TripDetailCard: View {
             Text("Nov 20, 2022 12:59pm")
         } // end inner vstack
         .foregroundColor(.black)
-      
-      HStack{ //yes/no hstack
-        Button(action: {}) {
-           Spacer()
-          Label("Yes", systemImage: "hand.thumbsup")
-               .font(.headline)
-               .padding()
-               .foregroundColor(.white)
-           Spacer()
-        }
-        .frame(width: 120)
-         .background(Color(UIColor.systemBlue))
-         .clipShape(RoundedRectangle(cornerRadius: 12))
-         .padding()
-        Button(action: {}) {
-           Spacer()
-          Label("No", systemImage: "hand.thumbsdown")
-               .font(.headline)
-               .padding()
-               .foregroundColor(.white)
-           Spacer()
-        }
-         .frame(width: 120)
-         .background(Color(UIColor.systemBlue))
-         .clipShape(RoundedRectangle(cornerRadius: 12))
-         .padding()
-      } // end hstack
-      
         
     } //end outer vstack
     .padding(EdgeInsets(top: 20, leading: 20, bottom: 0, trailing: 20))

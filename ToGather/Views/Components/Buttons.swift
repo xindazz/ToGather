@@ -16,6 +16,33 @@ struct Buttons: View {
 
 
     ScrollView {
+//      MARK: for trip proposal card: yes/no hstack
+      HStack{ //yes/no hstack
+        Button(action: {}) {
+           Spacer()
+          Label("Yes", systemImage: "hand.thumbsup")
+               .font(.headline)
+               .padding()
+               .foregroundColor(.white)
+           Spacer()
+        }
+        .frame(width: 120)
+         .background(Color(UIColor.systemBlue))
+         .clipShape(RoundedRectangle(cornerRadius: 12))
+         .padding()
+        Button(action: {}) {
+           Spacer()
+          Label("No", systemImage: "hand.thumbsdown")
+               .font(.headline)
+               .padding()
+               .foregroundColor(.white)
+           Spacer()
+        }
+         .frame(width: 120)
+         .background(Color(UIColor.systemBlue))
+         .clipShape(RoundedRectangle(cornerRadius: 12))
+         .padding()
+      } // end hstack
       VStack {
 //        MARK: small poll buttons
         // half-sized button
