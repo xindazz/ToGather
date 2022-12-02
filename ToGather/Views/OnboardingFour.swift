@@ -29,55 +29,70 @@ struct OnboardingFour: View {
                 
                     ZStack {
         
-                        VStack (spacing: 20){
+                        VStack {
         
         
                             Text("Invite Your Trip Members")
-                                .fontWeight(.heavy)
+                                .font(.title)
+                                .fontWeight(.medium)
                                 .multilineTextAlignment(.center)
                                 .font(.body).padding(20)
-        
+                                .padding(EdgeInsets(top: 40, leading: 0, bottom: 0, trailing: 10))
+
         
         
         
         
                             Text("Unique Code").padding(40)
-        
+                                .foregroundColor(.white)
+
         
                             Text("1 3 6 9 12 15")
                                 .font(.title)
                                 .fontWeight(.bold)
                                 .frame(maxWidth: .infinity, alignment: .center).padding(40)
-        
+                                .foregroundColor(.white)
+
         
         
                             Button {
                             } label: {
                                 Text("Share Link With Friends")
+                                
                                     .font(.title)
                                     .padding()
                                     .foregroundColor(.white)
-                                    .background(Color.blue)
-                                    .cornerRadius(30)
+                                    .frame(width: 350, height: 80)
+                                
+                                    .background(Color("darkblue"))
+                                
+                                    .clipShape(RoundedRectangle(cornerRadius: 12))
+                                
+                                    .padding(EdgeInsets(top: 45, leading: 20, bottom: 0, trailing: 10))
+                                
+                                
                             }
         
         
                             Text("Friends added!")
+                                .padding(EdgeInsets(top: 30, leading: 20, bottom: 0, trailing: 10))
+
                             Button {
                             } label: {
                                 Text("Start Planning")
-                                    .font(.title)
-                                    .padding()
+                                    .frame(width: 350, height:50)
+                                    .font(.headline)
                                     .foregroundColor(.white)
-                                    .background(Color.blue)
-                                    .cornerRadius(30)
+                                    .background(Color("buttoncolor"))                                    .clipShape(RoundedRectangle(cornerRadius: 12))
+                                    .padding(5)
+                                    .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 10))
+                                
                             }
                         }
                     }
                 
-                
-                
-                Divider()
+     
+        
                 Spacer()
                 // Bleeds into TabView
              
@@ -89,3 +104,10 @@ struct OnboardingFour: View {
             }
         }
     }
+
+
+struct OnboardingFour_Previews: PreviewProvider {
+  static var previews: some View {
+    OnboardingFour(repo: UserRepository())
+  }
+}

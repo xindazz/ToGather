@@ -17,78 +17,84 @@ struct JoinTripView: View {
         
         
         
-        
         TabView {
             VStack {
-                Text("Hello, World!")
-                Divider()
+        
+             VStack{
+                    Text("Join a trip")
+                        .fontWeight(.bold)
+                        .font(.title)
+                        .padding()
+                        .padding(EdgeInsets(top: 30, leading: 20, bottom: 0, trailing: 30))
+
+                } // end inner vstack
+
+                
+                
+                VStack (alignment: .leading){
+                    
+                    
+                    Text("Enter Unique Code")
+                        .padding(EdgeInsets(top: 40, leading: 20, bottom: 0, trailing: 10))
+
+                        .font(.title2)
+                        .foregroundColor(.white)
+
+
+                    
+                    
+                    TextField("123456", text: $code)
+                    
+                        .textContentType(.givenName).border(Color.gray.opacity(0.5))
+                        .background(Color(.white))
+                        .padding(EdgeInsets(top: 20, leading: 20, bottom: 0, trailing: 10))
+                }
+                
+                
+                
+                
+                Button {
+                       repo.joinTrip(code: code)
+                   } label: {
+                       Text("Join Trip")
+                           .frame(width: 350, height:50)
+                           .font(.headline)
+                           .foregroundColor(.white)
+                           .background(Color("buttoncolor"))
+                           .clipShape(RoundedRectangle(cornerRadius: 12))
+
+                           .padding(EdgeInsets(top: 20, leading: 20, bottom: 0, trailing: 10))
+
+   
+                   }
+                
+                
+                
+                
                 Spacer()
                 // Bleeds into TabView
+            
+                
+                
                 Rectangle()
                     .frame(height: 0)
-                    .background(.thinMaterial)
+                
             }
-            .background(Color.purple)
-            .tabItem {
-                Text("Tab 1")
-                Image(systemName: "wifi")
+            .background(Color("blue"))
+            
+            
+            
             }
         }
     }
-}
 
-//
-//
-//        TabView {
-//            VStack {
-//
-//                VStack{
-//                    Text("Join a trip")
-//                        .font(.title)
-//                        .padding()
-//                } // end inner vstack
-//
-//                Spacer()
-//                VStack (alignment: .leading){
-//                    Text("Enter Unique Code")
-//                        .font(.title2)
-//
-//                    TextField("123456", text: $code)
-//                        .textContentType(.givenName).border(Color.gray.opacity(0.5))
-//                        .frame(width: 350, height: 50)
-//
-//                } //end inner vstack
-//                .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 30))
-//
-//                Spacer()
-//                Button {
-//                    repo.joinTrip(code: code)
-//                } label: {
-//                    Text("Join Trip")
-//                        .frame(width: 350, height:50)
-//                        .font(.headline)
-//                        .foregroundColor(.white)
-//                        .background(Color(UIColor.systemBlue))
-//                        .clipShape(RoundedRectangle(cornerRadius: 12))
-//                        .padding(5)
-//
-//
-//                } // end VStack
-//
-//                Divider()
-//                Spacer()
-//                // Bleeds into TabView
-//                Rectangle()
-//                    .frame(height: 0)
-//                    .background(.thinMaterial)
-//            }
-//
-//
-//
-//
-//
-//        }
-//    }
-//
-//
-//}
+
+
+
+
+
+struct JoinTripView_Previews: PreviewProvider {
+  static var previews: some View {
+    JoinTripView(repo: UserRepository())
+  }
+}

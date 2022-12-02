@@ -92,10 +92,10 @@ struct OnboardingOne: View {
     }
 
 
-struct Onboarding_Previews: PreviewProvider {
-    static var previews: some View {
-      OnboardingOne()
-    }
-}
+//struct Onboarding_Previews: PreviewProvider {
+//    static var previews: some View {
+//      OnboardingOne()
+//    }
+//}
 
 

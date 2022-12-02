@@ -3,8 +3,6 @@
 //  ToGather
 //
 //  Created by Yi  on 11/6/22.
-//
-
 
 
 import Foundation
@@ -21,55 +19,74 @@ struct OnboardingThree: View {
     @State private var endDate = Date()
     
     var body: some View {
-        
-        
+    
         
         TabView {
             
-            
             VStack {
-                
                 VStack{
                     VStack {
                         Text("Create a trip")
                             .font(.title)
-                        //            .fontWeight(.heavy)
-                        //            .multilineTextAlignment(.center)
-                        //            .font(.headline)
-                        
+                                    .fontWeight(.heavy)
+                                    .multilineTextAlignment(.center)
+                                    .font(.headline)
+                                    .padding(EdgeInsets(top: 40, leading: 20, bottom: 0, trailing: 10))
+
                         Text("Add whatever details you've figured out (you can go back and change this later).")
                             .font(.body)
+                            .multilineTextAlignment(.center)
+                            .padding(EdgeInsets(top: 10, leading: 20, bottom: 0, trailing: 10))
+                        
+                        
                     }
                     
+                    
                     VStack (alignment: .leading){
+                       
+                        
                         Text("Trip Name")
-                            .font(.title)
                             .fontWeight(.bold)
                             .frame(maxWidth: .infinity, alignment: .leading)
+                            .foregroundColor(.white)
+                        
                         
                         TextField("Graduation!", text: $name)
                             .textContentType(.givenName).border(Color.gray.opacity(0.5))
+                            .background(Color(.white))
+                        
                         
                         Text("Destination")
-                            .font(.title)
                             .fontWeight(.bold)
                             .frame(maxWidth: .infinity, alignment: .leading)
+                            .foregroundColor(.white)
+                            .padding(EdgeInsets(top: 20, leading: 0, bottom: 0, trailing: 10))
+
+                        
+                        
                         
                         TextField("New York", text: $destination)
                             .textContentType(.givenName).border(Color.gray.opacity(0.5))
+                            .background(Color(.white))
+
+                        
                         
                         Text("Dates")
                             .frame(maxWidth: .infinity, alignment: .leading)
+                            .padding(EdgeInsets(top: 30, leading: 0, bottom: 0, trailing: 10))
+                            .foregroundColor(.white)
                         
+                    
                         DatePicker(selection: $startDate, label: { Text("Start Date") })
+                            .foregroundColor(.white)
                         
                         DatePicker(selection: $endDate, label: { Text("End Date") })
+                            .foregroundColor(.white)
+                        
                     } // end VStack
                     .padding(EdgeInsets(top: 10, leading: 30, bottom: 10, trailing: 15))
-                    
-                    
-                    
-                } // end VStack
+                
+                }
                 
                 Button {
                     //        let uniqueCode = repo.getUniqueCode()
@@ -84,9 +101,11 @@ struct OnboardingThree: View {
                         .frame(width: 350, height:50)
                         .font(.headline)
                         .foregroundColor(.white)
-                        .background(Color(UIColor.systemBlue))
-                        .clipShape(RoundedRectangle(cornerRadius: 12))
+                        .background(Color("buttoncolor"))                        .clipShape(RoundedRectangle(cornerRadius: 12))
                         .padding(5)
+                        .padding(EdgeInsets(top: 30, leading: 20, bottom: 0, trailing: 10))
+                    
+
                 }
             
                 
@@ -98,16 +117,14 @@ struct OnboardingThree: View {
                     .foregroundColor(.white)
                     .frame(width: 350, height: 80)
                 
-                    .background(Color.blue)
+                    .background(Color("darkblue"))
                 
                     .clipShape(RoundedRectangle(cornerRadius: 12))
                 
-                
+                    .padding(EdgeInsets(top: 35, leading: 20, bottom: 0, trailing: 10))
                 
                 
 
-                
-                Divider()
                 Spacer()
                 // Bleeds into TabView
                 Rectangle()
@@ -122,11 +139,19 @@ struct OnboardingThree: View {
     }
     
 }
-//
-//
-//struct SignInView_Previews: PreviewProvider {
-//    static var previews: some View {
-//      OnboardingThree(repo: UserRepository())
-//    }
-//}
+
+
+
+struct OnboardingThree_Previews: PreviewProvider {
+  static var previews: some View {
+    OnboardingThree(repo: UserRepository())
+  }
+}
+
+
+
+
+
+
+
 

@@ -8,13 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		191FC36C29183D910083C4E7 /* OnboardingOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191FC36B29183D910083C4E7 /* OnboardingOne.swift */; };
-		191FC36E29183DAE0083C4E7 /* OnboardingTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191FC36D29183DAE0083C4E7 /* OnboardingTwo.swift */; };
 		191FC37029183DC00083C4E7 /* OnboardingThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191FC36F29183DC00083C4E7 /* OnboardingThree.swift */; };
 		191FC37229183E650083C4E7 /* OnboardingFour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191FC37129183E650083C4E7 /* OnboardingFour.swift */; };
-		191FC37429183E730083C4E7 /* ChecklistOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191FC37329183E730083C4E7 /* ChecklistOne.swift */; };
-		191FC37629183E870083C4E7 /* ChecklistTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191FC37529183E870083C4E7 /* ChecklistTwo.swift */; };
-		191FC37829183E9C0083C4E7 /* ChecklistThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191FC37729183E9C0083C4E7 /* ChecklistThree.swift */; };
-		191FC37A29183EAB0083C4E7 /* ChecklistFour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191FC37929183EAB0083C4E7 /* ChecklistFour.swift */; };
 		3421D3A62936A52000C38464 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3421D3A52936A52000C38464 /* SignUpView.swift */; };
 		3421D3AA2936C76300C38464 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3421D3A92936C76300C38464 /* SignInView.swift */; };
 		3421D3AC2936C92F00C38464 /* PreSignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3421D3AB2936C92F00C38464 /* PreSignInView.swift */; };
@@ -79,13 +74,8 @@
 
 /* Begin PBXFileReference section */
 		191FC36B29183D910083C4E7 /* OnboardingOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingOne.swift; sourceTree = "<group>"; };
-		191FC36D29183DAE0083C4E7 /* OnboardingTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingTwo.swift; sourceTree = "<group>"; };
 		191FC36F29183DC00083C4E7 /* OnboardingThree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingThree.swift; sourceTree = "<group>"; tabWidth = 2; };
 		191FC37129183E650083C4E7 /* OnboardingFour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingFour.swift; sourceTree = "<group>"; };
-		191FC37329183E730083C4E7 /* ChecklistOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistOne.swift; sourceTree = "<group>"; };
-		191FC37529183E870083C4E7 /* ChecklistTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistTwo.swift; sourceTree = "<group>"; };
-		191FC37729183E9C0083C4E7 /* ChecklistThree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistThree.swift; sourceTree = "<group>"; };
-		191FC37929183EAB0083C4E7 /* ChecklistFour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistFour.swift; sourceTree = "<group>"; };
 		3421D3A52936A52000C38464 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		3421D3A92936C76300C38464 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		3421D3AB2936C92F00C38464 /* PreSignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreSignInView.swift; sourceTree = "<group>"; };
@@ -258,12 +248,7 @@
 				3436241129197BF1007A8FC6 /* TestDashboardIntegratedView.swift */,
 				191FC37129183E650083C4E7 /* OnboardingFour.swift */,
 				191FC36F29183DC00083C4E7 /* OnboardingThree.swift */,
-				191FC36D29183DAE0083C4E7 /* OnboardingTwo.swift */,
 				191FC36B29183D910083C4E7 /* OnboardingOne.swift */,
-				191FC37329183E730083C4E7 /* ChecklistOne.swift */,
-				191FC37529183E870083C4E7 /* ChecklistTwo.swift */,
-				191FC37729183E9C0083C4E7 /* ChecklistThree.swift */,
-				191FC37929183EAB0083C4E7 /* ChecklistFour.swift */,
 				345BEF1F291A1A640093BE5B /* JoinTripView.swift */,
 				972A2E05291AD9DE00B30260 /* BarNavigation.swift */,
 				97A00601291C3FC800F0FE26 /* YourTripsView.swift */,
@@ -407,11 +392,9 @@
 				34B47784291CD97A00EAEC7C /* CreateReplyView.swift in Sources */,
 				97AD4509291427CC000678E0 /* Dashboard.swift in Sources */,
 				34B47780291CBC1900EAEC7C /* TripView.swift in Sources */,
-				191FC37429183E730083C4E7 /* ChecklistOne.swift in Sources */,
 				3421D3A62936A52000C38464 /* SignUpView.swift in Sources */,
 				344B92812911D72F0030547F /* Event.swift in Sources */,
 				344B927F2911D7290030547F /* TripDay.swift in Sources */,
-				191FC37A29183EAB0083C4E7 /* ChecklistFour.swift in Sources */,
 				97A00606291C464500F0FE26 /* YourChecklists.swift in Sources */,
 				344B92852911D73F0030547F /* Reply.swift in Sources */,
 				191FC36C29183D910083C4E7 /* OnboardingOne.swift in Sources */,
@@ -426,13 +409,10 @@
 				34B47782291CD11C00EAEC7C /* CustomDateFormatter.swift in Sources */,
 				344B92832911D7390030547F /* Task.swift in Sources */,
 				972A2E04291ACF9400B30260 /* NavigationLinks.swift in Sources */,
-				191FC36E29183DAE0083C4E7 /* OnboardingTwo.swift in Sources */,
-				191FC37829183E9C0083C4E7 /* ChecklistThree.swift in Sources */,
 				34B9C444290A65D000015341 /* ToGatherApp.swift in Sources */,
 				34B9C468290A66FF00015341 /* User.swift in Sources */,
 				975EDF992915D10200680AAD /* Dashboard-deprecated1.swift in Sources */,
 				97AD450B29142DFC000678E0 /* TripDetail.swift in Sources */,
-				191FC37629183E870083C4E7 /* ChecklistTwo.swift in Sources */,
 				3421D3AC2936C92F00C38464 /* PreSignInView.swift in Sources */,
 				34B9C450290A65D100015341 /* ToGather.xcdatamodeld in Sources */,
 				3436241229197BF1007A8FC6 /* TestDashboardIntegratedView.swift in Sources */,
