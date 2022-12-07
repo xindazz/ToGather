@@ -17,7 +17,6 @@ struct Reply: Codable, Identifiable {
   var event: Event?
   var comment: String
   
-  
   // To conform to Codable protocol
   enum CodingKeys: String, CodingKey {
     case id

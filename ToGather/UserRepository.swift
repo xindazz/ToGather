@@ -235,6 +235,15 @@ class UserRepository: ObservableObject {
     }
   }
   
+  func addVote(user: User, trip: Trip, proposal: Proposal, voteStatus: VoteStatus) {
+    let newVote = Vote(voter: user, vote: voteStatus)
+    var newProposal = Proposal(id: proposal.id, day: proposal.day, newEvent: proposal.newEvent, proposer: proposal.proposer, votes: proposal.votes, replies: proposal.replies)
+    newProposal.addVote(vote: newVote)
+    var newTrip = Trip(id: trip.id, name: trip.name, uniqueCode: trip.uniqueCode, owner: trip.owner, members: trip.members, memberIds: trip.memberIds, destination: trip.destination, from: trip.from, to: trip.to, itinerary: trip.itinerary, proposals: trip.proposals, tasks: trip.tasks)
+    newTrip.updateProposal(proposal: newProposal)
+    self.updateTrip(trip: newTrip)
+  }
+  
   @MainActor
   func deleteTestTrips() {
     async {

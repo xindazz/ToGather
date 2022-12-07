@@ -75,7 +75,7 @@ struct Trip: Codable, Identifiable {
     
     existingDates = itinerary.compactMap { tripDay in formatter.toDate(tripDay.date) }
     let dayIndex = existingDates.firstIndex(of: formatter.toDate(proposal.newEvent.from))!
-    let newProposal = Proposal(id: proposal.id, day: itinerary[dayIndex], newEvent: proposal.newEvent, proposer: proposal.proposer, replies: proposal.replies)
+    let newProposal = Proposal(id: proposal.id, day: itinerary[dayIndex], newEvent: proposal.newEvent, proposer: proposal.proposer, votes: proposal.votes, replies: proposal.replies)
     proposals.append(newProposal)
   }
   
@@ -86,7 +86,7 @@ struct Trip: Codable, Identifiable {
       print("Error: proposal to update does not exist in trip")
       return
     }
-    proposals[idx!] = Proposal(id: proposal.id, day: proposal.day, newEvent: proposal.newEvent, proposer: proposal.proposer, replies: proposal.replies)
+    proposals[idx!] = Proposal(id: proposal.id, day: proposal.day, newEvent: proposal.newEvent, proposer: proposal.proposer, votes: proposal.votes, replies: proposal.replies)
   }
   
   mutating func approveProposal(proposal: Proposal) {
