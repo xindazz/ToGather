@@ -3,7 +3,6 @@
 //  ToGather
 //
 //  Created by Yi  on 11/6/22.
-//
 
 
 import Foundation
@@ -11,118 +10,148 @@ import SwiftUI
 
 
 struct OnboardingThree: View {
-  
-  @ObservedObject var repo: UserRepository
-  
-  @State private var name = ""
-  @State private var destination = ""
-  @State private var startDate = Date()
-  @State private var endDate = Date()
-  
-  var body: some View {
     
-    VStack {
-      
-      VStack{
-        VStack {
-          Text("Create a trip")
-            .font(.title)
-//            .fontWeight(.heavy)
-//            .multilineTextAlignment(.center)
-//            .font(.headline)
-          
-          Text("Add whatever details you've figured out (you can go back and change this later).")
-            .font(.body)
+    @ObservedObject var repo: UserRepository
+    
+    @State private var name = ""
+    @State private var destination = ""
+    @State private var startDate = Date()
+    @State private var endDate = Date()
+    
+    var body: some View {
+    
+        
+        TabView {
+            
+            VStack {
+                VStack{
+                    VStack {
+                        Text("Create a trip")
+                            .font(.title)
+                                    .fontWeight(.heavy)
+                                    .multilineTextAlignment(.center)
+                                    .font(.headline)
+                                    .padding(EdgeInsets(top: 40, leading: 20, bottom: 0, trailing: 10))
+
+                        Text("Add whatever details you've figured out (you can go back and change this later).")
+                            .font(.body)
+                            .multilineTextAlignment(.center)
+                            .padding(EdgeInsets(top: 10, leading: 20, bottom: 0, trailing: 10))
+                        
+                        
+                    }
+                    
+                    
+                    VStack (alignment: .leading){
+                       
+                        
+                        Text("Trip Name")
+                            .fontWeight(.bold)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .foregroundColor(.white)
+                        
+                        
+                        TextField("Graduation!", text: $name)
+                            .textContentType(.givenName).border(Color.gray.opacity(0.5))
+                            .background(Color(.white))
+                        
+                        
+                        Text("Destination")
+                            .fontWeight(.bold)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .foregroundColor(.white)
+                            .padding(EdgeInsets(top: 20, leading: 0, bottom: 0, trailing: 10))
+
+                        
+                        
+                        
+                        TextField("New York", text: $destination)
+                            .textContentType(.givenName).border(Color.gray.opacity(0.5))
+                            .background(Color(.white))
+
+                        
+                        
+                        Text("Dates")
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .padding(EdgeInsets(top: 30, leading: 0, bottom: 0, trailing: 10))
+                            .foregroundColor(.white)
+                        
+                    
+                        DatePicker(selection: $startDate, label: { Text("Start Date") })
+                            .foregroundColor(.white)
+                        
+                        DatePicker(selection: $endDate, label: { Text("End Date") })
+                            .foregroundColor(.white)
+                        
+                    } // end VStack
+                    .padding(EdgeInsets(top: 10, leading: 30, bottom: 10, trailing: 15))
+                
+                }
+                
+                Button {
+                    //        let uniqueCode = repo.getUniqueCode()
+                    var newTrip = Trip(name: name, uniqueCode: "", owner: repo.user, destination: destination, from: startDate, to: endDate)
+                    newTrip.addMember(user: repo.user)
+                    repo.createTrip(trip: newTrip)
+                    
+                    
+                    
+                } label: {
+                    Text("Create Trip")
+                        .frame(width: 350, height:50)
+                        .font(.headline)
+                        .foregroundColor(.white)
+                        .background(Color("buttoncolor"))                        .clipShape(RoundedRectangle(cornerRadius: 12))
+                        .padding(5)
+                        .padding(EdgeInsets(top: 30, leading: 20, bottom: 0, trailing: 10))
+                    
+
+                }
+            
+                
+                
+                NavigationLink("Invite Friends", destination: OnboardingFour(repo: repo))
+                
+                    .font(.title)
+                    .padding()
+                    .foregroundColor(.white)
+                    .frame(width: 350, height: 80)
+                
+                    .background(Color("darkblue"))
+                
+                    .clipShape(RoundedRectangle(cornerRadius: 12))
+                
+                    .padding(EdgeInsets(top: 35, leading: 20, bottom: 0, trailing: 10))
+                
+                
+
+                Spacer()
+                // Bleeds into TabView
+                Rectangle()
+                    .frame(height: 0)
+                
+                
+            }
+            
+            .background(Color("blue"))
+            
         }
-        
-        VStack (alignment: .leading){
-          Text("Trip Name")
-            .font(.title)
-            .fontWeight(.bold)
-            .frame(maxWidth: .infinity, alignment: .leading)
-          
-          TextField("Graduation!", text: $name)
-            .textContentType(.givenName).border(Color.gray.opacity(0.5))
-          
-          Text("Destination")
-            .font(.title)
-            .fontWeight(.bold)
-            .frame(maxWidth: .infinity, alignment: .leading)
-          
-          TextField("New York", text: $destination)
-            .textContentType(.givenName).border(Color.gray.opacity(0.5))
-          
-          Text("Dates")
-            .frame(maxWidth: .infinity, alignment: .leading)
-          
-          DatePicker(selection: $startDate, label: { Text("Start Date") })
-          
-          DatePicker(selection: $endDate, label: { Text("End Date") })
-        } // end VStack
-        .padding(EdgeInsets(top: 10, leading: 30, bottom: 10, trailing: 15))
-
-        
-        
-      } // end VStack
-      
-      Button {
-//        let uniqueCode = repo.getUniqueCode()
-        var newTrip = Trip(name: name, uniqueCode: "", owner: repo.user, destination: destination, from: startDate, to: endDate)
-        newTrip.addMember(user: repo.user)
-        repo.createTrip(trip: newTrip)
-      } label: {
-        Text("Create Trip")
-          .frame(width: 350, height:50)
-          .font(.headline)
-          .foregroundColor(.white)
-          .background(Color(UIColor.systemBlue))
-          .clipShape(RoundedRectangle(cornerRadius: 12))
-          .padding(5)
-      }
-//      NavigationLink(destination: JoinTripView(repo: repo)) {
-//        Button(action: {}) {
-//            Text("Join Trip")
-//               .font(.headline)
-//               .foregroundColor(.white)
-//        }
-//         .frame(width: 310, height:50)
-//         .background(Color(UIColor.systemMint))
-//         .clipShape(RoundedRectangle(cornerRadius: 12))
-//         .padding(5)
-//      } //end navlink
-      Spacer()
-      
-      Button {
-        print("Invite friends button clicked")
-
-//        let uniqueCode = repo.getUniqueCode()
-        repo.createTrip(trip: Trip(name: name, uniqueCode: "", owner: repo.user, destination: destination, from: startDate, to: endDate))
-      } label: {
-        Text("Invite Friends")
-          .frame(width: 350, height:50)
-          .font(.headline)
-          .foregroundColor(.white)
-          .background(Color(UIColor.systemBlue))
-          .clipShape(RoundedRectangle(cornerRadius: 12))
-          .padding(5)
-      }
-      
-//      Button {
-//        print("Invite friends button clicked")
-//      } label: {
-//        Text("Invite Friends")
-//          .font(.title)
-//          .padding()
-//          .foregroundColor(.white)
-//          .background(Color.blue)
-//          .cornerRadius(30)
-//      }
-//      
-    } // end VStack
+    }
     
-    Spacer()
-    
-  } // end body
-  
 }
+
+
+
+struct OnboardingThree_Previews: PreviewProvider {
+  static var previews: some View {
+    OnboardingThree(repo: UserRepository())
+  }
+}
+
+
+
+
+
+
+
 
