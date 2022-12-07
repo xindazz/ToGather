@@ -21,7 +21,7 @@ struct NavigationLinks: View {
 
          VStack {
 //           MARK: normal chill button
-           NavigationLink(destination: OnboardingThree(repo: repo)) {
+           NavigationLink(destination: JoinTripView(repo: repo)) {
              Button(action: {}) {
                  Text("Create Trip")
                     .font(.headline)

@@ -13,6 +13,8 @@ struct CreateReplyView: View {
   
   @State private var detail = ""
   
+  @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+  
   var body: some View {
     
     VStack {
@@ -35,15 +37,14 @@ struct CreateReplyView: View {
       } // end VStack
             
       Button {
-//        let newEvent = Event(name: name, category: category, location: location, from: startDate, to: endDate, detail: detail, link: link)
         let newReply = Reply(replier: repo.user, comment: detail)
         var newProposal = Proposal(id: proposal.id, day: proposal.day, newEvent: proposal.newEvent, proposer: proposal.proposer, votes: proposal.votes, replies: proposal.replies)
         newProposal.addReply(reply: newReply)
-//        var newTrip = Trip(id: trip.id, name: trip.name, uniqueCode: trip.uniqueCode, owner: trip.owner, members: trip.members, memberIds: trip.memberIds, destination: trip.destination, from: trip.from, to: trip.to, itinerary: trip.itinerary, proposals: trip.proposals, tasks: trip.tasks)
-//        newTrip.updateProposal(proposal: newProposal)
         repo.trips[repo.currTripIdx].updateProposal(proposal: newProposal)
         repo.updateTrip(trip: repo.trips[repo.currTripIdx])
 //        repo.load()
+        repo.tabSelection = 2
+        self.presentationMode.wrappedValue.dismiss()
       } label: {
         Text("Add Reply")
           .font(.subheadline)

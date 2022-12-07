@@ -60,7 +60,7 @@ struct YourTripsView: View {
           } //end ScrollView
           
           VStack {
-            NavigationLink(destination: OnboardingThree(repo: repo)) {
+            NavigationLink(destination: CreateTripView(repo: repo)) {
               Button(action: {}) {
                   Text("Create Trip")
                      .font(.headline)
