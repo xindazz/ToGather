@@ -15,6 +15,7 @@ import FirebaseFirestoreSwift
 class UserRepository: ObservableObject {
 
   private let db = Firestore.firestore()
+
 //  private var userId: String = "MTbSP44irsQ9Kt2GPJRI" // Demo only, user Xinda
 //  private var userId: String = "HCI9cWMaboZPolLTtBmZ" // Demo only, user Tester2
 

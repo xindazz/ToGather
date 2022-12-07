@@ -18,11 +18,13 @@ struct YourTripsView: View {
         VStack (alignment: .leading, spacing:10) {
           Text("Welcome, \(repo.user.name)!")
             .font(.headline)
-          NavigationLink(destination: OnboardingOne()) {
-              Text("Create an Account [demo]")
-                .font(.title)
-                .foregroundColor(.blue)
-          } //end navlink
+            .font(.title)
+
+//            NavigationLink(destination: OnboardingOne()) {
+//              Text("Create an Account [demo]")
+//                .font(.title)
+//                .foregroundColor(.blue)
+//          } //end navlink
                           
           Text("Your Trips")
             .font(.title)
