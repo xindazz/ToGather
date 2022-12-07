@@ -108,7 +108,7 @@ struct Home: View {
 //                .padding(10)
 //             } // end navlink
              // MARK: PLACEHOLDER
-             NavigationLink(destination: DashboardView()) {
+             NavigationLink(destination: Dashboard()) {
                Button(action: {}) {
                   Spacer()
                  Text("SHORTCUT: View a Pre-Existing Trip (Proposal Feature)")

@@ -21,6 +21,8 @@ class UserRepository: ObservableObject {
   @Published var userId: String = ""
   @Published var user: User = User(name: "", email: "")
   @Published var trips: [Trip] = []
+  @Published var currTripIdx: Int = 0
+  @Published var tabSelection: Int = 1
   private var errorMessage: String = ""
   private var cancellables: Set<AnyCancellable> = []
   private var randInt: Int = 0
@@ -65,7 +67,7 @@ class UserRepository: ObservableObject {
     db.collection("Trip").whereField("memberIds", arrayContains: userId.uuidString)
       .addSnapshotListener { querySnapshot, error in
         if let error = error {
-          print("Error getting books: \(error.localizedDescription)")
+          print("Error getting trips: \(error.localizedDescription)")
           return
         }
 
@@ -85,19 +87,44 @@ class UserRepository: ObservableObject {
       } else {
         print("Cannot get user with id \(userId)")
       }
-      self.trips = []
-      for tripDocId in self.user.trips {
-        async {
+//      self.trips = []
+      async {
+        var newTrips: [Trip] = []
+        for tripDocId in self.user.trips {
           let trip = await fetchTrip(tripDocId: tripDocId)
           if trip != nil {
-            self.trips.append(trip!)
+            newTrips.append(trip!)
           } else {
             print("Cannot get trip with id \(tripDocId)")
           }
         }
+        self.trips = newTrips
       }
     }
   }
+  
+//  @MainActor
+//  func load() {
+//    async {
+//      let user = await fetchUser(userId: userId)
+//      if user != nil {
+//        self.user = user!
+//      } else {
+//        print("Cannot get user with id \(userId)")
+//      }
+//      self.trips = []
+//      for tripDocId in self.user.trips {
+//        async {
+//          let trip = await fetchTrip(tripDocId: tripDocId)
+//          if trip != nil {
+//            self.trips.append(trip!)
+//          } else {
+//            print("Cannot get trip with id \(tripDocId)")
+//          }
+//        }
+//      }
+//    }
+//  }
   
   func fetchUser(userId: String) async -> User? {
     let document = try? await db.collection("User").document(userId).getDocument()
@@ -206,7 +233,7 @@ class UserRepository: ObservableObject {
         try ref.setData(from: trip)
       }
       catch {
-        print(error)
+        print("Update trip error: \(error)")
       }
     }
   }

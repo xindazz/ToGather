@@ -8,28 +8,28 @@
 import SwiftUI
 
 struct TripView: View {
+  @ObservedObject var repo: UserRepository
   var trip: Trip
-  var repo: UserRepository
-  
+    
   var body: some View {
-    TabView {
+    TabView(selection: $repo.tabSelection) {
     
     // MARK: this dashboardview is a placeholder => it is not yet connected to the database
-      TestDashboardIntegratedView(repo: repo, trip: trip)
+      DashboardView(repo: repo)
       .tabItem {
           Image(systemName: "airplane.departure")
           Text("Dashboard")
-      }
-      YourProposalsView(repo: repo, trip: trip)
+      }.tag(1)
+      YourProposalsView(repo: repo)
       .tabItem {
           Image(systemName: "text.bubble.fill")
           Text("Your Proposals")
-      }
+      }.tag(2)
       YourChecklistsView()
       .tabItem {
           Image(systemName: "list.bullet.rectangle")
           Text("Your Checklists")
-      }
+      }.tag(3)
       
     } // end TabView
   }
@@ -37,6 +37,6 @@ struct TripView: View {
 
 struct TripView_Previews: PreviewProvider {
   static var previews: some View {
-    TripView(trip: Trip.example, repo: UserRepository())
+    TripView(repo: UserRepository(), trip: Trip.example)
   }
 }

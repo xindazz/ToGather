@@ -33,11 +33,21 @@ struct Proposal: Codable, Identifiable {
   }
   
   func alreadyVoted(user: User) -> Bool {
-    let filtered = votes.filter { vote in vote.voter.docId == user.docId }
+    let filtered = votes.filter { vote in vote.voter.id == user.id }
     if filtered.count >= 1 {
       return true
     }
     return false
+  }
+  
+  func numYesVotes() -> Int {
+    let filtered = votes.filter { vote in vote.vote == VoteStatus.Yes }
+    return filtered.count
+  }
+  
+  func numNoVotes() -> Int {
+    let filtered = votes.filter { vote in vote.vote == VoteStatus.No }
+    return filtered.count
   }
   
   mutating func addReply(reply: Reply) {

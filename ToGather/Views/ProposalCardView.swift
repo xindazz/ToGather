@@ -9,10 +9,12 @@ import SwiftUI
 import Foundation
 
 struct ProposalCardView: View {
-  var repo: UserRepository
-  var trip: Trip
+  @ObservedObject var repo: UserRepository
   var proposal: Proposal
   var formatter = CustomDateFormatter()
+  
+  @State var approveClicked = false
+  
   
   @ViewBuilder
   var body: some View {
@@ -34,10 +36,6 @@ struct ProposalCardView: View {
       .foregroundColor(.white)
       
       VStack (alignment: .leading, spacing: 10){
-        //        Text("New York City Trip - September 2022")
-        //          .foregroundColor(.white)
-        //          .font(.subheadline)
-        //        Divider()
         Text("WHAT: \(proposal.newEvent.name ?? "No name")")
           .font(.headline)
         Text("CATEGORY: \(proposal.newEvent.category ?? "No category")")
@@ -68,7 +66,50 @@ struct ProposalCardView: View {
         }
         .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 10))
         
-        NavigationLink(destination: CreateReplyView(repo: repo, trip: trip, proposal: proposal)) {
+        HStack {
+          Spacer()
+          Button {
+            let newVote = Vote(voter: repo.user, vote: VoteStatus.Yes)
+            var newProposal = Proposal(id: proposal.id, day: proposal.day, newEvent: proposal.newEvent, proposer: proposal.proposer, votes: proposal.votes, replies: proposal.replies)
+            newProposal.addVote(vote: newVote)
+//            var newTrip = Trip(id: trip.id, name: trip.name, uniqueCode: trip.uniqueCode, owner: trip.owner, members: trip.members, memberIds: trip.memberIds, destination: trip.destination, from: trip.from, to: trip.to, itinerary: trip.itinerary, proposals: trip.proposals, tasks: trip.tasks)
+            repo.trips[repo.currTripIdx].updateProposal(proposal: newProposal)
+            repo.updateTrip(trip: repo.trips[repo.currTripIdx])
+          } label: {
+            Text("Yes (\(proposal.numYesVotes()))")
+              .font(.headline)
+              .padding()
+              .foregroundColor(.white)
+              .frame(width: 150, height: 50)
+              .background(proposal.alreadyVoted(user: repo.user) ? .gray : .blue)
+              .clipShape(RoundedRectangle(cornerRadius: 12))
+          }
+          .padding()
+          .disabled(proposal.alreadyVoted(user: repo.user) ? true : false)
+          Spacer()
+          Button {
+            let newVote = Vote(voter: repo.user, vote: VoteStatus.No)
+            var newProposal = Proposal(id: proposal.id, day: proposal.day, newEvent: proposal.newEvent, proposer: proposal.proposer, votes: proposal.votes, replies: proposal.replies)
+            newProposal.addVote(vote: newVote)
+//            var newTrip = Trip(id: trip.id, name: trip.name, uniqueCode: trip.uniqueCode, owner: trip.owner, members: trip.members, memberIds: trip.memberIds, destination: trip.destination, from: trip.from, to: trip.to, itinerary: trip.itinerary, proposals: trip.proposals, tasks: trip.tasks)
+            repo.trips[repo.currTripIdx].updateProposal(proposal: newProposal)
+            repo.updateTrip(trip: repo.trips[repo.currTripIdx])
+          } label: {
+            Text("No (\(proposal.numNoVotes()))")
+              .font(.headline)
+              .padding()
+              .foregroundColor(.white)
+              .frame(width: 150, height: 50)
+              .background(proposal.alreadyVoted(user: repo.user) ? .gray : .blue)
+              .clipShape(RoundedRectangle(cornerRadius: 12))
+          }
+          .padding()
+          .disabled(proposal.alreadyVoted(user: repo.user) ? true : false)
+          
+          Spacer()
+        }
+        
+        NavigationLink(destination: CreateReplyView(repo: repo, proposal: proposal)) {
           Label("Add Reply", systemImage: "arrowshape.turn.up.left")
             .font(.headline)
             .padding()
@@ -78,12 +119,14 @@ struct ProposalCardView: View {
             .clipShape(RoundedRectangle(cornerRadius: 12))
         }.padding()
         
-        if trip.owner.id == repo.user.id {
+        
+        if repo.trips[repo.currTripIdx].owner.id == repo.user.id {
           Button {
-            var newTrip = Trip(id: trip.id, name: trip.name, uniqueCode: trip.uniqueCode, owner: trip.owner, members: trip.members, destination: trip.destination, from: trip.from, to: trip.to, itinerary: trip.itinerary, proposals: trip.proposals, tasks: trip.tasks)
-            newTrip.approveProposal(proposal: proposal)
-            repo.updateTrip(trip: newTrip)
-            repo.load()
+            repo.tabSelection = 1
+//            var newTrip = Trip(id: trip.id, name: trip.name, uniqueCode: trip.uniqueCode, owner: trip.owner, members: trip.members, destination: trip.destination, from: trip.from, to: trip.to, itinerary: trip.itinerary, proposals: trip.proposals, tasks: trip.tasks)
+            repo.trips[repo.currTripIdx].approveProposal(proposal: proposal)
+            repo.updateTrip(trip: repo.trips[repo.currTripIdx])
+//            repo.load()
           } label: {
             Text("Approve")
               .foregroundColor(.white)
@@ -113,6 +156,6 @@ struct ProposalCardView: View {
 
 struct ProposalCardView_Previews: PreviewProvider {
   static var previews: some View {
-    ProposalCardView(repo: UserRepository(), trip: Trip.example, proposal: Proposal.example)
+    ProposalCardView(repo: UserRepository(), proposal: Proposal.example)
   }
 }

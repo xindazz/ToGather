@@ -29,9 +29,10 @@ struct YourTripsView: View {
             .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 0))
           ScrollView {
             VStack{
-              ForEach(repo.trips) { trip in
-                NavigationLink(destination: TripView(trip: trip, repo: repo)) {
-                  Button(action: {}) {
+//              ForEach(repo.trips) { trip in
+              ForEach(Array(repo.trips.enumerated()), id: \.offset) { index, trip in
+                NavigationLink(destination: TripView(repo: repo, trip: repo.trips[index])) {
+                  Button {} label: {
                     VStack (spacing: 10){
                       Text(trip.name)
                         .font(.headline)
@@ -39,7 +40,7 @@ struct YourTripsView: View {
                       Text(trip.from ?? Date(), style: .date)
                         .font(.subheadline)
                         .foregroundColor(.white)
-                    }//end vstack
+                    }
                   } // end button
                   .frame(width: 300, height:150)
                   .background(Color(UIColor.systemBlue))
@@ -47,6 +48,11 @@ struct YourTripsView: View {
                   .padding(10)
                   
                 } //end navlink
+                .simultaneousGesture(TapGesture().onEnded{
+                  print("Clicked trip index \(index)")
+                  repo.currTripIdx = index
+                  repo.tabSelection = 1
+                })
               } // end ForEach
             } //end vstack
           } //end ScrollView

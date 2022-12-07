@@ -7,34 +7,28 @@
 
 import SwiftUI
 
-struct TestDashboardIntegratedView: View {
-//  using code from SwiftRepos - 443 lab - to start
-//  @ObservedObject var repo: UserRepository
+struct DashboardView: View {
 
-//  var trip: Trip
-  var repo: UserRepository
-  var trip: Trip
+  @ObservedObject var repo: UserRepository
   
   var dateFormatter = DateFormatter()
   
   var body: some View {
-//    trip header and nav
-//    MARK: this uses older dashboard ui for the sake of example
     
-// MARK: trip header
+    // MARK: trip header
     ScrollView {
       VStack (alignment: .leading) {
         Spacer()
-        Text(trip.name)
+        Text(repo.trips[repo.currTripIdx].name)
           .font(.largeTitle)
           .padding(EdgeInsets(top: 10, leading: 20, bottom: 0, trailing: 0))
         HStack {
-          Text(trip.from ?? Date(), style: .date)
+          Text(repo.trips[repo.currTripIdx].from ?? Date(), style: .date)
           Text(" - ")
-          Text(trip.to ?? Date(), style: .date)
+          Text(repo.trips[repo.currTripIdx].to ?? Date(), style: .date)
         }.padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 0))
         
-        Text("Unique code: \(trip.uniqueCode)")
+        Text("Unique code: \(repo.trips[repo.currTripIdx].uniqueCode)")
           .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 0))
         
         Divider()
@@ -43,7 +37,7 @@ struct TestDashboardIntegratedView: View {
           Text("Members").font(.headline)
             .padding(EdgeInsets(top: 10, leading: 20, bottom: 0, trailing: 0))
           HStack {
-            ForEach(trip.members) { member in
+            ForEach(repo.trips[repo.currTripIdx].members) { member in
               VStack {
                 Image("ben-den-engelsen-unsplash")
                   .resizable()
@@ -65,7 +59,7 @@ struct TestDashboardIntegratedView: View {
           Text("Trip Details").font(.title)
             .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 0))
           
-          NavigationLink(destination: CreateProposalView(repo: repo, trip: trip)) {
+          NavigationLink(destination: CreateProposalView(repo: repo)) {
             Button(action: {}) {
               Text("Create Proposal").font(.headline)
                 .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
@@ -77,40 +71,13 @@ struct TestDashboardIntegratedView: View {
             .padding()
           } //end navlink
           
-//          NavigationLink(destination: CreateProposalView(repo: repo, trip: trip)) {
-//            Button(action: {}) {
-//              Spacer()
-//              Label("Add Trip Details", systemImage: "plus.circle")
-//                .font(.headline)
-//                .padding()
-//                .foregroundColor(.white)
-//              Spacer()
-//            }
-//            .background(Color(UIColor.systemBlue))
-//            .clipShape(RoundedRectangle(cornerRadius: 12))
-//            .padding()
-//          } //end navlink
-          
-          
-//          Button(action: {}) {
-//            Spacer()
-//            Label("Add Trip Details", systemImage: "plus.circle")
-//              .font(.headline)
-//              .padding()
-//              .foregroundColor(.white)
-//            Spacer()
-//          }
-//          .background(Color(UIColor.systemBlue))
-//          .clipShape(RoundedRectangle(cornerRadius: 12))
-//          .padding()
-//          
           
           Text("Category").font(.title2)
             .padding(EdgeInsets(top: 10, leading: 20, bottom: 0, trailing: 0))
           Spacer()
           Spacer()
             VStack (alignment: .leading){
-              ForEach(trip.itinerary) { day in
+              ForEach(repo.trips[repo.currTripIdx].itinerary) { day in
                 VStack (alignment: .leading, spacing: 20) {
                   Text("Day \(day.dayNum!)").font(.headline)
                   
@@ -136,11 +103,4 @@ struct TestDashboardIntegratedView: View {
   
  
 } //end struct
-
-//
-//struct TestDashboardIntegratedView_Previews: PreviewProvider {
-//  static var previews: some View {
-//    TestDashboardIntegratedView(repo:UserRepository())
-//  }
-//}
 

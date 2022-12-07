@@ -14,7 +14,6 @@ import SwiftUI
 struct CreateProposalView: View {
   
   @ObservedObject var repo: UserRepository
-  var trip: Trip
   
   @State private var name = ""
   @State private var category = ""
@@ -32,9 +31,9 @@ struct CreateProposalView: View {
       ScrollView{
         //        MARK: Trip header
         VStack (alignment: .leading){
-          Text(trip.name)
+          Text(repo.trips[repo.currTripIdx].name)
             .font(.largeTitle)
-          Text(trip.from ?? Date(), style: .date)
+          Text(repo.trips[repo.currTripIdx].from ?? Date(), style: .date)
           
           Divider()
         } //end Vstack
@@ -114,9 +113,12 @@ struct CreateProposalView: View {
             
       Button {
         let newProposal = Proposal(newEvent: Event(name: name, category: category, location: location, from: startDate, to: endDate, detail: detail, link: link), proposer: repo.user)
-        var newTrip = Trip(id: trip.id, name: trip.name, uniqueCode: trip.uniqueCode, owner: trip.owner, members: trip.members, memberIds: trip.memberIds, destination: trip.destination, from: trip.from, to: trip.to, itinerary: trip.itinerary, proposals: trip.proposals, tasks: trip.tasks)
-        newTrip.addProposal(proposal: newProposal)
-        repo.updateTrip(trip: newTrip)
+//        var newTrip = Trip(id: trip.id, name: trip.name, uniqueCode: trip.uniqueCode, owner: trip.owner, members: trip.members, memberIds: trip.memberIds, destination: trip.destination, from: trip.from, to: trip.to, itinerary: trip.itinerary, proposals: trip.proposals, tasks: trip.tasks)
+//        newTrip.addProposal(proposal: newProposal)
+//        repo.updateTrip(trip: newTrip)
+        
+        repo.trips[repo.currTripIdx].addProposal(proposal: newProposal)
+        repo.updateTrip(trip: repo.trips[repo.currTripIdx])
 //        repo.load()
       } label: {
         Text("Create Proposal")
@@ -137,7 +139,7 @@ struct CreateProposalView: View {
 
 struct CreateProposalView_Previews: PreviewProvider {
   static var previews: some View {
-    CreateProposalView(repo: UserRepository(), trip: Trip.example)
+    CreateProposalView(repo: UserRepository())
   }
 }
 

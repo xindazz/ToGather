@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct DashboardView: View {
+struct Dashboard: View {
 //  using code from SwiftRepos - 443 lab - to start
   
   var body: some View {
@@ -132,8 +132,8 @@ struct DashboardView: View {
  
 } //end struct
 
-struct DashboardView_Previews: PreviewProvider {
-  static var previews: some View {
-    DashboardView()
-  }
-}
+//struct DashboardView_Previews: PreviewProvider {
+//  static var previews: some View {
+//    DashboardView()
+//  }
+//}

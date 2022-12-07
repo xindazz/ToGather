@@ -12,9 +12,8 @@ import SwiftUI
 struct YourProposalsView: View {
   //  using code from SwiftRepos - 443 lab - to start
   
-  var repo: UserRepository
-  var trip: Trip
-  
+  @ObservedObject var repo: UserRepository
+    
   var body: some View {
     //    trip header and nav
     //    MARK: UI-SPECIFIC: use this
@@ -25,34 +24,24 @@ struct YourProposalsView: View {
       
       VStack {
         VStack (alignment: .leading){
-          Text("Your Proposals for \(trip.name ?? "Some Trip")")
+          Text("Your Proposals for \(repo.trips[repo.currTripIdx].name ?? "Some Trip")")
             .font(.title)
-//          Text("September 10-14, 2022")
           Divider()
         }
                 
         ScrollView{
           
           VStack (alignment: .leading) {
-            //      MARK: Trip header
             
-            //        VStack {
-            //          // MARK: this page should be the buttons for trips
-            //          Text("Your Proposals")
-            //            .font(.largeTitle)
-            //            .padding()
-            //          Divider()
-            //        } // end vstack
-            
-            ForEach(trip.proposals) {proposal in
-              ProposalCardView(repo: repo, trip: trip, proposal: proposal)
+            ForEach(repo.trips[repo.currTripIdx].proposals) {proposal in
+              ProposalCardView(repo: repo, proposal: proposal)
             }
             
           } // end VStack
           
         } //end scrollview
         
-        NavigationLink(destination: CreateProposalView(repo: repo, trip: trip)) {
+        NavigationLink(destination: CreateProposalView(repo: repo)) {
           Button(action: {}) {
             Text("Create Proposal").font(.headline)
               .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
@@ -76,6 +65,6 @@ struct YourProposalsView: View {
 
 struct YourProposalsView_Previews: PreviewProvider {
   static var previews: some View {
-    YourProposalsView(repo: UserRepository(), trip: Trip.example)
+    YourProposalsView(repo: UserRepository())
   }
 }
