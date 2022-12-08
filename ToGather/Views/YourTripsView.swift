@@ -10,7 +10,13 @@ import SwiftUI
 struct YourTripsView: View {
 //  using code from SwiftRepos - 443 lab - to start
   @ObservedObject var repo: UserRepository
-  
+//  code by and provided by Helena Spencer, 67-443 TA
+  func sendMessage(){
+//    replace something with a typical string interpolation\(trip.unique code) and whatnot
+    let sms: String = "sms:&body=Join this event with me! \n Event: something \n Date: something"
+    let strURL: String = sms.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+    UIApplication.shared.open(URL.init(string: strURL)!, options: [:], completionHandler: nil)
+   }
   var body: some View {
     VStack (alignment: .leading) {
 
@@ -26,6 +32,7 @@ struct YourTripsView: View {
 //                .foregroundColor(.blue)
 //          } //end navlink
                           
+
           Text("Your Trips")
             .font(.title)
             .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 0))
@@ -60,6 +67,18 @@ struct YourTripsView: View {
           } //end ScrollView
           
           VStack {
+            Button(action: {sendMessage()}) {
+               Spacer()
+              Label("Invite Friends", systemImage: "message.fill")
+                   .font(.headline)
+                   .padding()
+                   .foregroundColor(.white)
+               Spacer()
+            }
+            .frame(width: 310, height:50)
+            .background(Color(UIColor.systemMint))
+            .clipShape(RoundedRectangle(cornerRadius: 12))
+            .padding(5)
             NavigationLink(destination: CreateTripView(repo: repo)) {
               Button(action: {}) {
                   Text("Create Trip")

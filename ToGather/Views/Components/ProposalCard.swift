@@ -6,12 +6,160 @@
 //
 
 import SwiftUI
-
+//MARK: used code from: https://www.hackingwithswift.com/quick-start/swiftui/how-to-render-a-gradient and https://www.hackingwithswift.com/books/ios-swiftui/gradients
 struct ProposalCard: View {
 //  using code from SwiftRepos - 443 lab - to start
 //  MARK: colors have not been configured to the design system
   var body: some View {
     ScrollView {
+      //    MARK: working on incorporating color and contrast
+      VStack(alignment: .leading, spacing: 32) {
+        VStack(alignment: .leading) {
+              Text("Fly to LAX from LGA")
+                  .font(.largeTitle.bold())
+              Text("Travel")
+                  .font(.subheadline)
+                  .padding(EdgeInsets(top: 0, leading: 0, bottom: 20, trailing: 20))
+
+              Text("Nov 19, 2022 12:59pm to")
+              Text("Nov 20, 2022 12:59pm")
+          } // end inner vstack
+          .foregroundColor(.black)
+      } //end outer vstack
+      .padding(EdgeInsets(top: 20, leading: 20, bottom: 20, trailing: 20))
+      .background(
+              Rectangle()
+                  .fill(
+                    LinearGradient(gradient: Gradient(colors: [.white, .black]), startPoint: .top, endPoint: .bottom)
+                  )
+                  .frame(width: 375)
+                  .cornerRadius(12)
+                  .shadow(
+                      color: Color.gray.opacity(0.7),
+                      radius: 8,
+                      x: 0,
+                      y: 0
+                  )
+        )
+      //    MARK: template
+      VStack(alignment: .leading, spacing: 32) {
+        VStack(alignment: .leading) {
+              Text("Fly to LAX from LGA")
+                  .font(.largeTitle.bold())
+              Text("Travel")
+                  .font(.subheadline)
+                  .padding(EdgeInsets(top: 0, leading: 0, bottom: 20, trailing: 20))
+
+              Text("Nov 19, 2022 12:59pm to")
+              Text("Nov 20, 2022 12:59pm")
+          } // end inner vstack
+          .foregroundColor(.black)
+      } //end outer vstack
+      .padding(EdgeInsets(top: 20, leading: 20, bottom: 20, trailing: 20))
+      .background(
+              Rectangle()
+                  .fill(Color.gray)
+                  .frame(width: 375)
+                  .cornerRadius(12)
+                  .shadow(
+                      color: Color.gray.opacity(0.7),
+                      radius: 8,
+                      x: 0,
+                      y: 0
+                  )
+        )
+//      .background(
+//              Image("[london]marcin-nowak-iXqTqC-f6jI-unsplash")
+//                .resizable()
+//                .frame(width: 375)
+//                .cornerRadius(12)
+//                .shadow(
+//                    color: Color.gray.opacity(0.7),
+//                    radius: 8,
+//                    x: 0,
+//                    y: 0
+//                )
+//        )
+      
+  //    .background(
+  //            Rectangle()
+  //                .fill(Color.gray)
+  //                .frame(width: 375)
+  //                .cornerRadius(12)
+  //                .shadow(
+  //                    color: Color.gray.opacity(0.7),
+  //                    radius: 8,
+  //                    x: 0,
+  //                    y: 0
+  //                )
+  //      )
+      
+      //    template
+      VStack(alignment: .leading, spacing: 32) {
+        VStack(alignment: .leading) {
+              Text("Fly to LAX from LGA")
+                  .font(.largeTitle.bold())
+              Text("Travel")
+                  .font(.subheadline)
+              Text("Nov 19, 2022 12:59pm to")
+              Text("Nov 20, 2022 12:59pm")
+          } // end inner vstack
+          .foregroundColor(.black)
+        
+        HStack{ //yes/no hstack
+          Button(action: {}) {
+             Spacer()
+            Label("Yes", systemImage: "hand.thumbsup")
+                 .font(.headline)
+                 .padding()
+                 .foregroundColor(.white)
+             Spacer()
+          }
+          .frame(width: 120)
+           .background(Color(UIColor.systemBlue))
+           .clipShape(RoundedRectangle(cornerRadius: 12))
+           .padding()
+          Button(action: {}) {
+             Spacer()
+            Label("No", systemImage: "hand.thumbsdown")
+                 .font(.headline)
+                 .padding()
+                 .foregroundColor(.white)
+             Spacer()
+          }
+           .frame(width: 120)
+           .background(Color(UIColor.systemBlue))
+           .clipShape(RoundedRectangle(cornerRadius: 12))
+           .padding()
+        } // end hstack
+        
+          
+      } //end outer vstack
+      .padding(EdgeInsets(top: 20, leading: 20, bottom: 0, trailing: 20))
+      .background(
+              Image("[london]marcin-nowak-iXqTqC-f6jI-unsplash")
+                .resizable()
+                .frame(width: 375)
+                .cornerRadius(12)
+                .shadow(
+                    color: Color.gray.opacity(0.7),
+                    radius: 8,
+                    x: 0,
+                    y: 0
+                )
+        )
+  //    .background(
+  //            Rectangle()
+  //                .fill(Color.gray)
+  //                .frame(width: 375)
+  //                .cornerRadius(12)
+  //                .shadow(
+  //                    color: Color.gray.opacity(0.7),
+  //                    radius: 8,
+  //                    x: 0,
+  //                    y: 0
+  //                )
+  //      )
 // MARK: replies [in-development]
       VStack (alignment: .leading){
         VStack (alignment: .leading){

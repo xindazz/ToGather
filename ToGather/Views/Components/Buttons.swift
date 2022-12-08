@@ -16,7 +16,75 @@ struct Buttons: View {
 
 
     ScrollView {
+//      MARK: for trip proposal card: yes/no hstack
+      HStack{ //yes/no hstack
+        Button(action: {}) {
+           Spacer()
+          Label("Yes", systemImage: "hand.thumbsup")
+               .font(.headline)
+               .padding()
+               .foregroundColor(.white)
+           Spacer()
+        }
+        .frame(width: 120)
+         .background(Color(UIColor.systemBlue))
+         .clipShape(RoundedRectangle(cornerRadius: 12))
+         .padding()
+        Button(action: {}) {
+           Spacer()
+          Label("No", systemImage: "hand.thumbsdown")
+               .font(.headline)
+               .padding()
+               .foregroundColor(.white)
+           Spacer()
+        }
+         .frame(width: 120)
+         .background(Color(UIColor.systemBlue))
+         .clipShape(RoundedRectangle(cornerRadius: 12))
+         .padding()
+      } // end hstack
       VStack {
+//        MARK: small poll buttons
+        // half-sized button
+        Button(action: {}) {
+           Spacer()
+          Label("Add Trip Details", systemImage: "plus.circle")
+               .font(.headline)
+               .padding()
+               .foregroundColor(.white)
+           Spacer()
+        }
+//        .frame(width: 300, height:200)
+         .background(Color(UIColor.systemBlue))
+         .clipShape(RoundedRectangle(cornerRadius: 12))
+         .padding()
+        HStack{ //yes/no hstack
+          Button(action: {}) {
+             Spacer()
+            Label("Yes", systemImage: "plus.circle")
+                 .font(.headline)
+                 .padding()
+                 .foregroundColor(.white)
+             Spacer()
+          }
+          .frame(width: 160)
+           .background(Color(UIColor.systemBlue))
+           .clipShape(RoundedRectangle(cornerRadius: 12))
+           .padding()
+          Button(action: {}) {
+             Spacer()
+            Label("No", systemImage: "plus.circle")
+                 .font(.headline)
+                 .padding()
+                 .foregroundColor(.white)
+             Spacer()
+          }
+          .frame(width: 160)
+           .background(Color(UIColor.systemBlue))
+           .clipShape(RoundedRectangle(cornerRadius: 12))
+           .padding()
+        } // end hstack
+        
         // MARK: trip selection button
         Button(action: {}) {
 //          Spacer()
