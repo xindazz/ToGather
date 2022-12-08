@@ -21,7 +21,7 @@ class UserRepository: ObservableObject {
 
   @Published var userId: String = ""
   @Published var user: User = User(name: "", email: "")
-  @Published var trips: [Trip] = []
+  @Published var trips: [Trip] = [Trip.example]
   @Published var currTripIdx: Int = 0
   @Published var tabSelection: Int = 1
   private var errorMessage: String = ""

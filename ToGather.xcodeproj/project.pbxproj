@@ -22,6 +22,7 @@
 		344B92832911D7390030547F /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344B92822911D7390030547F /* Task.swift */; };
 		344B92852911D73F0030547F /* Reply.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344B92842911D73F0030547F /* Reply.swift */; };
 		345BEF20291A1A640093BE5B /* JoinTripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345BEF1F291A1A640093BE5B /* JoinTripView.swift */; };
+		3473885429426B5D00E03F28 /* UpdateProposalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3473885329426B5D00E03F28 /* UpdateProposalView.swift */; };
 		34B4777C291CBA2B00EAEC7C /* ProposalCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B4777B291CBA2B00EAEC7C /* ProposalCardView.swift */; };
 		34B4777E291CBA5D00EAEC7C /* ReplyCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B4777D291CBA5D00EAEC7C /* ReplyCardView.swift */; };
 		34B47780291CBC1900EAEC7C /* TripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B4777F291CBC1900EAEC7C /* TripView.swift */; };
@@ -89,6 +90,7 @@
 		344B92822911D7390030547F /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		344B92842911D73F0030547F /* Reply.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reply.swift; sourceTree = "<group>"; };
 		345BEF1F291A1A640093BE5B /* JoinTripView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinTripView.swift; sourceTree = "<group>"; };
+		3473885329426B5D00E03F28 /* UpdateProposalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProposalView.swift; sourceTree = "<group>"; };
 		34B4777B291CBA2B00EAEC7C /* ProposalCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProposalCardView.swift; sourceTree = "<group>"; };
 		34B4777D291CBA5D00EAEC7C /* ReplyCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplyCardView.swift; sourceTree = "<group>"; };
 		34B4777F291CBC1900EAEC7C /* TripView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripView.swift; sourceTree = "<group>"; };
@@ -266,6 +268,7 @@
 				3421D3A52936A52000C38464 /* SignUpView.swift */,
 				3421D3A92936C76300C38464 /* SignInView.swift */,
 				3421D3AB2936C92F00C38464 /* PreSignInView.swift */,
+				3473885329426B5D00E03F28 /* UpdateProposalView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -388,6 +391,7 @@
 				975EDF9B2915D74700680AAD /* TestTripDetailsRowModel.swift in Sources */,
 				344B92812911D72F0030547F /* Event.swift in Sources */,
 				344B927F2911D7290030547F /* TripDay.swift in Sources */,
+				3473885429426B5D00E03F28 /* UpdateProposalView.swift in Sources */,
 				97AD451629146475000678E0 /* TestDashboardViewModel.swift in Sources */,
 				97AD451829146482000678E0 /* TestDashboardModel.swift in Sources */,
 				344B92852911D73F0030547F /* Reply.swift in Sources */,
