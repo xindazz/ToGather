@@ -12,32 +12,20 @@ struct AppView: View {
   
   @ViewBuilder
   var body: some View {
-//    VStack {
-//      Text(repo.user.name)
-//      Text(repo.user.handle ?? "")
-//      Text(repo.user.phone ?? "")
-    //      List {
-    //        ForEach(repo.trips) { trip in
-    //          Text(trip.name)
-//        }
-//      }
-//      TextField("Enter trip name", text: $name)
-//      TextField("Enter trip destination", text: $destination)
-//      Button(action: {
-//        let trip = Trip(name: name, owner: repo.user, destination: destination)
-//        repo.createTrip(trip: trip)
-//        }) {
-//        Text("Create trip")
-//      }
-//    }
+
 //    MARK: Changed this a default log-in page with shortcuts :)
     ZStack {
 
-       VStack {
-         
-         YourTripsView(repo: repo)
-         
-       } //  end Vstack
+      VStack {
+        switch repo.signedIn {
+        case true:
+          YourTripsView(repo: repo)
+            .transition(.scale)
+        case false:
+          PreSignInView(repo: repo)
+        }
+        
+      } //  end Vstack
    } //end ZStack
       
   }

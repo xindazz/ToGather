@@ -110,7 +110,7 @@ struct NewProposalCardView: View {
              .padding()
           } // end hstack
           
-          NavigationLink(destination: CreateReplyView(repo: repo, trip: trip, proposal: proposal)) {
+          NavigationLink(destination: CreateReplyView(repo: repo, proposal: proposal)) {
             Label("Add Reply", systemImage: "arrowshape.turn.up.left")
               .font(.headline)
               .padding()
