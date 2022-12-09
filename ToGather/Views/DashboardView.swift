@@ -66,7 +66,7 @@ struct DashboardView: View {
                 .foregroundColor(.white)
             } // end button
             .frame(width: 300, height:50)
-            .background(Color(UIColor.systemBlue))
+            .background(Color("primary"))
             .clipShape(RoundedRectangle(cornerRadius: 12))
             .padding()
           } //end navlink
