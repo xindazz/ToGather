@@ -9,15 +9,36 @@ import SwiftUI
 
 struct BackgroundColor: View {
 //  using code from SwiftRepos - 443 lab - to start
-  
+
   var body: some View {
-    ZStack {
-            Rectangle()
-                .fill(Gradient(colors: [.indigo, .purple]))
-                .ignoresSafeArea()
-            Text("four").font(.system(size: 100))
-                .foregroundColor(.white)
+    //  MARK: example from https://sarunw.com/posts/how-to-set-screen-background-color-in-swiftui/
+//      ZStack { // 1
+//        Color.pink.ignoresSafeArea() // 2
+//        VStack {
+//            Text("Hello, SwiftUI!")
+//                .font(.largeTitle)
+//                .bold()
+//            Button("Getting Started") {
+//
+//            }
+//        }
+//      }
+//      .accentColor(Color.black)
+//      .background(.teal)
+    
+    ZStack { // 1
+      Color("primary").ignoresSafeArea()
+//      Color.pink.ignoresSafeArea() // 2
+      VStack {
+          Text("Hello, SwiftUI!")
+              .font(.largeTitle)
+              .bold()
+          Button("Getting Started") {
+              
+          }
+      }
     }
+    .accentColor(Color.black)
     
   } //end body
   
