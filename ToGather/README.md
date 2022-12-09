@@ -1,12 +1,28 @@
 #  ToGather App Documentation
 
-## Design System
+## Overview
+ToGather is a group travel-planning app meant to facilitate group coordination quickly and asynchronously. While users are unable to directly make reservations through the app, they will be able to make key trip decisions together, reducing their stress. 
 
-## Front-End Documentation
+## Sprint 6 Features
+** one of the group members accountable for some changes was sick from December 3 - December 8, so not everything has been completed. **
 
-### Dashboard
+1. Add group members: 
+-   members can send a unique code to potential group members by messaging them 
+2. Account creation:
+-   users can create an account with email and a password
+3. Poll Voting: 
+-  users can vote for a proposal and see if they have voted (and see how many yes/no votes there have been)
+4. App UI: 
+- the app should have consistent colors and styles with the wireframes
+5. Dashboard Experience: 
+-  users can access proposals through the dashboard (remove tab view), and excess information is abstracted
 
-#### Structure
+### Sprint 6 Fixes from Sprint 4 & 5
+- Auto-refresh: changes are automatically pushed to the database
+- Button Bug: users can click on the entire button
+- Keyboard Bug: keyboard pushes content up half of the screen
+- Form UI for onboarding
+- Database Bug: permissions for authentication
 
 
 # Sources
@@ -21,7 +37,3 @@ https://docs.google.com/document/d/1MSC3ohwyhoP7UA60HNafGGNbxkWARWxPVxSwAKaybRw/
 
 **PriceCheck_Solution **
 
-
-## Custom View Components
-** Ricard Montemayor **
-https://github.com/ricardomongza99/Cities/blob/main/Cities/Views/CityCard.swift
