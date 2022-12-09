@@ -34,7 +34,7 @@ struct YourProposalsView: View {
           VStack (alignment: .leading) {
             
             ForEach(repo.trips[repo.currTripIdx].proposals) {proposal in
-              ProposalCardView(repo: repo, proposal: proposal)
+              IntegratedProposalCardView(repo: repo, proposal: proposal)
             }
             
           } // end VStack
@@ -48,7 +48,7 @@ struct YourProposalsView: View {
               .foregroundColor(.white)
           } // end button
           .frame(width: 200.0, height:50)
-          .background(Color(UIColor.systemGreen))
+          .background(Color("secondary"))
           .clipShape(RoundedRectangle(cornerRadius: 12))
           .padding(10.0)
         } //end navlink

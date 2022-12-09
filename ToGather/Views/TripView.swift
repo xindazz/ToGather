@@ -25,11 +25,12 @@ struct TripView: View {
           Image(systemName: "text.bubble.fill")
           Text("Your Proposals")
       }.tag(2)
-      YourChecklistsView()
-      .tabItem {
-          Image(systemName: "list.bullet.rectangle")
-          Text("Your Checklists")
-      }.tag(3)
+//      MARK: the checklist feature is out-of-scope
+//      YourChecklistsView()
+//      .tabItem {
+//          Image(systemName: "list.bullet.rectangle")
+//          Text("Your Checklists")
+//      }.tag(3)
       
     } // end TabView
   }

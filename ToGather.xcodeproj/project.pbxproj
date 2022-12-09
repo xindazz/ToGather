@@ -38,6 +38,7 @@
 		34B9C468290A66FF00015341 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B9C467290A66FF00015341 /* User.swift */; };
 		34B9C46A290A67BA00015341 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B9C469290A67BA00015341 /* UserRepository.swift */; };
 		34B9C46C290AF06900015341 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B9C46B290AF06900015341 /* AppView.swift */; };
+		97156F732942C636008A57E9 /* IntegratedProposalCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97156F722942C636008A57E9 /* IntegratedProposalCardView.swift */; };
 		972A2DFF291ACA5000B30260 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972A2DFE291ACA5000B30260 /* Home.swift */; };
 		972A2E02291ACBF800B30260 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972A2E01291ACBF800B30260 /* Buttons.swift */; };
 		972A2E04291ACF9400B30260 /* NavigationLinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972A2E03291ACF9400B30260 /* NavigationLinks.swift */; };
@@ -117,6 +118,7 @@
 		34B9C467290A66FF00015341 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = User.swift; path = ../User.swift; sourceTree = "<group>"; };
 		34B9C469290A67BA00015341 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		34B9C46B290AF06900015341 /* AppView.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; name = AppView.swift; path = ../AppView.swift; sourceTree = "<group>"; tabWidth = 2; usesTabs = 0; };
+		97156F722942C636008A57E9 /* IntegratedProposalCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegratedProposalCardView.swift; sourceTree = "<group>"; };
 		972A2DFE291ACA5000B30260 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		972A2E01291ACBF800B30260 /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
 		972A2E03291ACF9400B30260 /* NavigationLinks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationLinks.swift; sourceTree = "<group>"; };
@@ -227,6 +229,7 @@
 				97CDD4FE2926936C00222CC6 /* NewProposalCardView.swift */,
 				976AA4152936E719001A9657 /* ReviewDetails.swift */,
 				97CDD5062926958A00222CC6 /* NewProposalCardDetailsView.swift */,
+				97156F722942C636008A57E9 /* IntegratedProposalCardView.swift */,
 			);
 			path = "Pages-In-Development";
 			sourceTree = "<group>";
@@ -248,7 +251,6 @@
 				97AD45132914644C000678E0 /* TestDashboardView.swift */,
 				975EDF932915CE7500680AAD /* TestTripDetailsView.swift */,
 				975EDF952915CE8800680AAD /* TestTripDetailsRowView.swift */,
-				34B4777B291CBA2B00EAEC7C /* ProposalCardView.swift */,
 				972A2DFE291ACA5000B30260 /* Home.swift */,
 			);
 			path = Archive;
@@ -290,6 +292,7 @@
 				972A2E07291ADD7700B30260 /* UserTrips.swift */,
 				34B9C46B290AF06900015341 /* AppView.swift */,
 				97AD450A29142DFC000678E0 /* TripDetail.swift */,
+				34B4777B291CBA2B00EAEC7C /* ProposalCardView.swift */,
 				3436241129197BF1007A8FC6 /* DashboardView.swift */,
 				191FC37129183E650083C4E7 /* OnboardingFour.swift */,
 				191FC36F29183DC00083C4E7 /* CreateTripView.swift */,
@@ -424,6 +427,7 @@
 				344B927D2911D7240030547F /* Proposal.swift in Sources */,
 				34B9C46A290A67BA00015341 /* UserRepository.swift in Sources */,
 				9766F5BB29246A800052D38E /* TestTripAccordion.swift in Sources */,
+				97156F732942C636008A57E9 /* IntegratedProposalCardView.swift in Sources */,
 				97C793B0291AB1230009BCF6 /* ProposalCard.swift in Sources */,
 				97CDD505292694F300222CC6 /* TestProposalCard.swift in Sources */,
 				97AD44C5290EFD9D000678E0 /* ContentView.swift in Sources */,

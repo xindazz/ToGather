@@ -52,7 +52,7 @@ struct YourTripsView: View {
                     }
                   } // end button
                   .frame(width: 300, height:150)
-                  .background(Color(UIColor.systemBlue))
+                  .background(Color("primary"))
                   .clipShape(RoundedRectangle(cornerRadius: 12))
                   .padding(10)
                   
@@ -76,7 +76,7 @@ struct YourTripsView: View {
                Spacer()
             }
             .frame(width: 310, height:50)
-            .background(Color(UIColor.systemMint))
+            .background(Color("secondary"))
             .clipShape(RoundedRectangle(cornerRadius: 12))
             .padding(5)
             NavigationLink(destination: CreateTripView(repo: repo)) {
@@ -86,7 +86,7 @@ struct YourTripsView: View {
                      .foregroundColor(.white)
               }
                .frame(width: 310, height:50)
-               .background(Color(UIColor.systemMint))
+               .background(Color("secondary"))
                .clipShape(RoundedRectangle(cornerRadius: 12))
                .padding(5)
             } //end navlink
@@ -97,7 +97,7 @@ struct YourTripsView: View {
                      .foregroundColor(.white)
               }
                .frame(width: 310, height:50)
-               .background(Color(UIColor.systemMint))
+               .background(Color("secondary"))
                .clipShape(RoundedRectangle(cornerRadius: 12))
                .padding(5)
             } //end navlink

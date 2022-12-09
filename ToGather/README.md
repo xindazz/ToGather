@@ -16,6 +16,8 @@ ToGather is a group travel-planning app meant to facilitate group coordination q
 - the app should have consistent colors and styles with the wireframes
 5. Dashboard Experience: 
 -  users can access proposals through the dashboard (remove tab view), and excess information is abstracted
+6. Proposal Functionality:
+-  edit proposals
 
 ### Sprint 6 Fixes from Sprint 4 & 5
 - Auto-refresh: changes are automatically pushed to the database
