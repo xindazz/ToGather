@@ -71,6 +71,7 @@
 		97AD4512291440AE000678E0 /* Experiment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AD4511291440AE000678E0 /* Experiment.swift */; };
 		97AD45142914644C000678E0 /* TestDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AD45132914644C000678E0 /* TestDashboardView.swift */; };
 		97AD451829146482000678E0 /* TestDashboardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AD451729146482000678E0 /* TestDashboardModel.swift */; };
+		97B4B0AF2942B8FD00E9D689 /* BackgroundColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B4B0AE2942B8FD00E9D689 /* BackgroundColor.swift */; };
 		97C793B0291AB1230009BCF6 /* ProposalCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C793AF291AB1230009BCF6 /* ProposalCard.swift */; };
 		97C793B2291AB13E0009BCF6 /* TestUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C793B1291AB13E0009BCF6 /* TestUI.swift */; };
 		97CDD4FF2926936C00222CC6 /* NewProposalCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CDD4FE2926936C00222CC6 /* NewProposalCardView.swift */; };
@@ -144,6 +145,7 @@
 		97AD4511291440AE000678E0 /* Experiment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Experiment.swift; sourceTree = "<group>"; };
 		97AD45132914644C000678E0 /* TestDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDashboardView.swift; sourceTree = "<group>"; };
 		97AD451729146482000678E0 /* TestDashboardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDashboardModel.swift; sourceTree = "<group>"; };
+		97B4B0AE2942B8FD00E9D689 /* BackgroundColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundColor.swift; sourceTree = "<group>"; };
 		97C793AF291AB1230009BCF6 /* ProposalCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProposalCard.swift; sourceTree = "<group>"; };
 		97C793B1291AB13E0009BCF6 /* TestUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUI.swift; sourceTree = "<group>"; };
 		97CDD4FE2926936C00222CC6 /* NewProposalCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProposalCardView.swift; sourceTree = "<group>"; };
@@ -326,6 +328,7 @@
 				97C793B1291AB13E0009BCF6 /* TestUI.swift */,
 				972A2E01291ACBF800B30260 /* Buttons.swift */,
 				972A2E03291ACF9400B30260 /* NavigationLinks.swift */,
+				97B4B0AE2942B8FD00E9D689 /* BackgroundColor.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -429,6 +432,7 @@
 				975EDF9B2915D74700680AAD /* TestTripDetailsRowModel.swift in Sources */,
 				344B92812911D72F0030547F /* Event.swift in Sources */,
 				344B927F2911D7290030547F /* TripDay.swift in Sources */,
+				97B4B0AF2942B8FD00E9D689 /* BackgroundColor.swift in Sources */,
 				3473885429426B5D00E03F28 /* UpdateProposalView.swift in Sources */,
 				97AD451829146482000678E0 /* TestDashboardModel.swift in Sources */,
 				344B92852911D73F0030547F /* Reply.swift in Sources */,

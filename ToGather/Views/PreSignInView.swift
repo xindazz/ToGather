@@ -10,6 +10,7 @@ import SwiftUI
 struct PreSignInView: View {
   @ObservedObject var repo: UserRepository
   var body: some View {
+    
     VStack{
       Text("Welcome to ToGather")
         .font(.title)
@@ -38,9 +39,11 @@ struct PreSignInView: View {
             .clipShape(RoundedRectangle(cornerRadius: 12))
             .padding(5)
           } //end navlink
-        }
-      }
-    }
+        } //end vstack
+       
+      } // end navview
+      
+    } //end vstack
   }
 }
 
