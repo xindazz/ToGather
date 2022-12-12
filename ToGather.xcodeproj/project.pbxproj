@@ -52,6 +52,13 @@
 		9766F5B9292467390052D38E /* TestSampleListExpansion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9766F5B8292467390052D38E /* TestSampleListExpansion.swift */; };
 		9766F5BB29246A800052D38E /* TestTripAccordion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9766F5BA29246A800052D38E /* TestTripAccordion.swift */; };
 		976AA4162936E719001A9657 /* ReviewDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976AA4152936E719001A9657 /* ReviewDetails.swift */; };
+		9779559A29479B3E00CBC7A8 /* MockCreateProposal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9779559929479B3E00CBC7A8 /* MockCreateProposal.swift */; };
+		9779559C29479B5100CBC7A8 /* MockProposalVote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9779559B29479B5100CBC7A8 /* MockProposalVote.swift */; };
+		9779559E29479FD700CBC7A8 /* YourProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9779559D29479FD700CBC7A8 /* YourProfileView.swift */; };
+		977955B12947A31E00CBC7A8 /* NunitoSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 977955AE2947A31D00CBC7A8 /* NunitoSans-Regular.ttf */; };
+		977955B22947A31E00CBC7A8 /* NunitoSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 977955AF2947A31D00CBC7A8 /* NunitoSans-SemiBold.ttf */; };
+		977955B32947A31E00CBC7A8 /* NunitoSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 977955B02947A31E00CBC7A8 /* NunitoSans-Light.ttf */; };
+		977955B52947A63400CBC7A8 /* NunitoSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 977955B42947A63400CBC7A8 /* NunitoSans-Bold.ttf */; };
 		9784D507291C99B4000A4708 /* CreateProposalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9784D506291C99B4000A4708 /* CreateProposalView.swift */; };
 		97A005F4291B468800F0FE26 /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = 97A005F3291B468800F0FE26 /* FirebaseAppCheck */; };
 		97A005F6291B468800F0FE26 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 97A005F5291B468800F0FE26 /* FirebaseAuth */; };
@@ -133,6 +140,14 @@
 		9766F5B8292467390052D38E /* TestSampleListExpansion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSampleListExpansion.swift; sourceTree = "<group>"; };
 		9766F5BA29246A800052D38E /* TestTripAccordion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTripAccordion.swift; sourceTree = "<group>"; };
 		976AA4152936E719001A9657 /* ReviewDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewDetails.swift; sourceTree = "<group>"; };
+		9779559929479B3E00CBC7A8 /* MockCreateProposal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCreateProposal.swift; sourceTree = "<group>"; };
+		9779559B29479B5100CBC7A8 /* MockProposalVote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockProposalVote.swift; sourceTree = "<group>"; };
+		9779559D29479FD700CBC7A8 /* YourProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourProfileView.swift; sourceTree = "<group>"; };
+		977955AD2947A2D900CBC7A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		977955AE2947A31D00CBC7A8 /* NunitoSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-Regular.ttf"; sourceTree = "<group>"; };
+		977955AF2947A31D00CBC7A8 /* NunitoSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		977955B02947A31E00CBC7A8 /* NunitoSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-Light.ttf"; sourceTree = "<group>"; };
+		977955B42947A63400CBC7A8 /* NunitoSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-Bold.ttf"; sourceTree = "<group>"; };
 		9784D506291C99B4000A4708 /* CreateProposalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProposalView.swift; sourceTree = "<group>"; };
 		97A00601291C3FC800F0FE26 /* YourTripsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourTripsView.swift; sourceTree = "<group>"; };
 		97A00603291C461600F0FE26 /* YourProposalsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourProposalsView.swift; sourceTree = "<group>"; };
@@ -197,12 +212,17 @@
 		34B9C442290A65D000015341 /* ToGather */ = {
 			isa = PBXGroup;
 			children = (
+				977955AD2947A2D900CBC7A8 /* Info.plist */,
 				975EDF972915CEA800680AAD /* lisa-dev-2-branch-docs.md */,
 				97AD44BF290EFC18000678E0 /* Models */,
 				97AD44C1290EFC30000678E0 /* ViewModels */,
 				97AD44C0290EFC24000678E0 /* Views */,
 				34B9C443290A65D000015341 /* ToGatherApp.swift */,
 				34B9C447290A65D100015341 /* Assets.xcassets */,
+				977955B02947A31E00CBC7A8 /* NunitoSans-Light.ttf */,
+				977955AE2947A31D00CBC7A8 /* NunitoSans-Regular.ttf */,
+				977955AF2947A31D00CBC7A8 /* NunitoSans-SemiBold.ttf */,
+				977955B42947A63400CBC7A8 /* NunitoSans-Bold.ttf */,
 				34B9C44C290A65D100015341 /* Persistence.swift */,
 				34B9C44E290A65D100015341 /* ToGather.xcdatamodeld */,
 				34B9C456290A662800015341 /* GoogleService-Info.plist */,
@@ -230,6 +250,8 @@
 				976AA4152936E719001A9657 /* ReviewDetails.swift */,
 				97CDD5062926958A00222CC6 /* NewProposalCardDetailsView.swift */,
 				97156F722942C636008A57E9 /* IntegratedProposalCardView.swift */,
+				9779559929479B3E00CBC7A8 /* MockCreateProposal.swift */,
+				9779559B29479B5100CBC7A8 /* MockProposalVote.swift */,
 			);
 			path = "Pages-In-Development";
 			sourceTree = "<group>";
@@ -305,6 +327,7 @@
 				9784D506291C99B4000A4708 /* CreateProposalView.swift */,
 				34B4777D291CBA5D00EAEC7C /* ReplyCardView.swift */,
 				34B4777F291CBC1900EAEC7C /* TripView.swift */,
+				9779559D29479FD700CBC7A8 /* YourProfileView.swift */,
 				34B47783291CD97A00EAEC7C /* CreateReplyView.swift */,
 				34B47785291CFF4F00EAEC7C /* EventCard.swift */,
 				3421D3A52936A52000C38464 /* SignUpView.swift */,
@@ -406,9 +429,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				977955B22947A31E00CBC7A8 /* NunitoSans-SemiBold.ttf in Resources */,
+				977955B52947A63400CBC7A8 /* NunitoSans-Bold.ttf in Resources */,
 				34B9C44B290A65D100015341 /* Preview Assets.xcassets in Resources */,
 				34B9C448290A65D100015341 /* Assets.xcassets in Resources */,
+				977955B32947A31E00CBC7A8 /* NunitoSans-Light.ttf in Resources */,
 				34B9C457290A662800015341 /* GoogleService-Info.plist in Resources */,
+				977955B12947A31E00CBC7A8 /* NunitoSans-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,6 +447,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				972A2E02291ACBF800B30260 /* Buttons.swift in Sources */,
+				9779559C29479B5100CBC7A8 /* MockProposalVote.swift in Sources */,
 				97AD450E291435D5000678E0 /* DesignSystemComponents.swift in Sources */,
 				972A2E06291AD9DE00B30260 /* BarNavigation.swift in Sources */,
 				191FC37229183E650083C4E7 /* OnboardingFour.swift in Sources */,
@@ -438,6 +466,7 @@
 				344B927F2911D7290030547F /* TripDay.swift in Sources */,
 				97B4B0AF2942B8FD00E9D689 /* BackgroundColor.swift in Sources */,
 				3473885429426B5D00E03F28 /* UpdateProposalView.swift in Sources */,
+				9779559E29479FD700CBC7A8 /* YourProfileView.swift in Sources */,
 				97AD451829146482000678E0 /* TestDashboardModel.swift in Sources */,
 				344B92852911D73F0030547F /* Reply.swift in Sources */,
 				972A2DFF291ACA5000B30260 /* Home.swift in Sources */,
@@ -450,6 +479,7 @@
 				344B92812911D72F0030547F /* Event.swift in Sources */,
 				344B927F2911D7290030547F /* TripDay.swift in Sources */,
 				97A00606291C464500F0FE26 /* YourChecklists.swift in Sources */,
+				9779559A29479B3E00CBC7A8 /* MockCreateProposal.swift in Sources */,
 				344B92852911D73F0030547F /* Reply.swift in Sources */,
 				191FC36C29183D910083C4E7 /* OnboardingOne.swift in Sources */,
 				97CDD5072926958A00222CC6 /* NewProposalCardDetailsView.swift in Sources */,
@@ -621,6 +651,7 @@
 				DEVELOPMENT_TEAM = 5G8R6PBA75;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ToGather/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -652,6 +683,7 @@
 				DEVELOPMENT_TEAM = 5G8R6PBA75;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ToGather/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
