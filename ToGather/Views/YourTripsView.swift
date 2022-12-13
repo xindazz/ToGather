@@ -23,15 +23,17 @@ struct YourTripsView: View {
    }
   
   var body: some View {
-    var tripBg = tripArray.randomElement()
+    let tripBg = tripArray.randomElement()
 
     VStack (alignment: .leading) {
 
       NavigationView {
         VStack (alignment: .leading, spacing:10) {
           Text("Welcome, \(repo.user.name)!")
-            .font(.headline)
-            .font(.title)
+            .font(.custom("NunitoSans-Light", size: 18))
+
+//            .font(.headline)
+//            .font(.title)
 
 //            NavigationLink(destination: OnboardingOne()) {
 //              Text("Create an Account [demo]")
@@ -40,8 +42,8 @@ struct YourTripsView: View {
 //          } //end navlink
                           
           Text("Your Trips")
-            .font(.title)
-            .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 0))
+            .font(.custom("NunitoSans-SemiBold", size: 24))
+            .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
           ScrollView {
             VStack{
 //              ForEach(repo.trips) { trip in
@@ -53,20 +55,37 @@ struct YourTripsView: View {
                   Button {} label: {
                     VStack (spacing: 10){
                       Text(trip.name)
-                        .font(.headline)
+//                        .font(.headline)
+                        .font(.custom("NunitoSans-Bold", size: 22))
                         .foregroundColor(.white)
                       Text(trip.from ?? Date(), style: .date)
-                        .font(.subheadline)
+//                        .font(.subheadline)
+                        .font(.custom("NunitoSans-Regular", size: 18))
                         .foregroundColor(.white)
                     }
                   } // end button
-                  .frame(width: 300, height:150)
-                  .background(Image(tripBg ?? "")
+
+                  .background(
+                    Image("bg2")
 //                    .resizable()
 //                    .scaledToFit()
                   )
+                  .frame(width: 300, height:150)
                   .clipShape(RoundedRectangle(cornerRadius: 12))
+                  .padding(5)
 //                  .padding(10)
+//                  background(
+//                    Image(tripBg ?? "")
+//                      .frame(width: 300)
+//                      .clipShape(RoundedRectangle(cornerRadius: 12))
+//                      .shadow(
+//                        color: Color.gray.opacity(0.7),
+//                        radius: 8,
+//                        x: 0,
+//                        y: 0
+//                      )
+//                  )
+
                   
                 } //end navlink
                 .simultaneousGesture(TapGesture().onEnded{
@@ -82,7 +101,7 @@ struct YourTripsView: View {
             Button(action: {sendMessage()}) {
                Spacer()
               Label("Invite Friends", systemImage: "message.fill")
-                   .font(.headline)
+                   .font(.custom("NunitoSans-Bold", size: 18))
                    .padding()
                    .foregroundColor(.white)
                Spacer()
@@ -93,8 +112,8 @@ struct YourTripsView: View {
             .padding(5)
             NavigationLink(destination: CreateTripView(repo: repo)) {
               Button(action: {}) {
-                  Text("Create Trip")
-                     .font(.headline)
+                Label("Create Trip", systemImage: "plus.circle")
+                     .font(.custom("NunitoSans-Bold", size: 18))
                      .foregroundColor(.white)
               }
                .frame(width: 310, height:50)
@@ -104,8 +123,8 @@ struct YourTripsView: View {
             } //end navlink
             NavigationLink(destination: JoinTripView(repo: repo)) {
               Button(action: {}) {
-                  Text("Join Trip")
-                     .font(.headline)
+                Label("Join Trip", systemImage: "person.badge.plus")
+                     .font(.custom("NunitoSans-Bold", size: 18))
                      .foregroundColor(.white)
               }
                .frame(width: 310, height:50)
