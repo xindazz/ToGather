@@ -24,10 +24,12 @@ struct IntegratedProposalCardView: View {
     VStack (alignment: .leading) {
       VStack (alignment: .leading, spacing: 20) {
         Text("\(formatter.toDateTimeDay(proposal.newEvent.from)) to")
-          .font(.subheadline)
+//          .font(.subheadline)
+          .font(.custom("NunitoSans-Regular", size: 16))
           .padding(EdgeInsets(top: 20, leading: 20, bottom: 0, trailing: 0))
         Text("\(formatter.toDateTimeDay(proposal.newEvent.to))")
-          .font(.subheadline)
+//          .font(.subheadline)
+          .font(.custom("NunitoSans-Regular", size: 16))
           .padding(EdgeInsets(top: -10, leading: 20, bottom: 0, trailing: 0))
 //            Divider()
       } // end vstack
@@ -35,15 +37,26 @@ struct IntegratedProposalCardView: View {
 //          removed ?? "" from lines 61 and 63 (following two text lines) to deal with compilation error raised)
       VStack (alignment: .leading, spacing: 10){
         Text("\(proposal.newEvent.name)")
-          .font(.headline)
+//          .font(.headline)
+          .font(.custom("NunitoSans-SemiBold", size: 24))
+
         Text("\(proposal.newEvent.category)")
-          .font(.subheadline)
-        
+//          .font(.subheadline)
+          .font(.custom("NunitoSans-Light", size: 18))
+
         Text("\(proposal.newEvent.location ?? "")")
+          .font(.custom("NunitoSans-Regular", size: 18))
+          .padding(EdgeInsets(top: 20, leading: 0, bottom: 0, trailing: 0))
         Text("\(proposal.newEvent.detail ?? "")")
+          .font(.custom("NunitoSans-Regular", size: 18))
+
         Text("\(proposal.newEvent.link ?? "")")
+          .font(.custom("NunitoSans-Regular", size: 18))
+
         Text("Proposed by: \(proposal.proposer.name)")
-          .fontWeight(.light)
+          .font(.custom("NunitoSans-Light", size: 18))
+
+//          .fontWeight(.light)
       }
       .padding(EdgeInsets(top: 30, leading: 20, bottom: 0, trailing: 10))
       HStack {
@@ -74,7 +87,8 @@ struct IntegratedProposalCardView: View {
           repo.updateTrip(trip: repo.trips[repo.currTripIdx])
         } label: {
           Text("No (\(proposal.numNoVotes()))")
-            .font(.headline)
+//            .font(.headline)
+            .font(.custom("NunitoSans-Bold", size: 18))
             .padding()
             .foregroundColor(.white)
             .frame(width: 150, height: 50)
@@ -89,7 +103,8 @@ struct IntegratedProposalCardView: View {
       
       NavigationLink(destination: CreateReplyView(repo: repo, proposal: proposal)) {
         Label("Add Reply", systemImage: "arrowshape.turn.up.left")
-          .font(.headline)
+//          .font(.headline)
+          .font(.custom("NunitoSans-Bold", size: 18))
           .padding()
           .foregroundColor(.white)
           .frame(width: 350, height: 50)
@@ -107,7 +122,8 @@ struct IntegratedProposalCardView: View {
         } label: {
           Text("Approve")
             .foregroundColor(.white)
-            .font(.headline)
+            .font(.custom("NunitoSans-Bold", size: 18))
+//            .font(.headline)
         }
         .frame(width: 350, height: 50)
         .background(Color("tertiary"))
@@ -118,7 +134,7 @@ struct IntegratedProposalCardView: View {
     } //end vstack
 //        .background(Color(UIColor.lightGray))
 //        .clipShape(RoundedRectangle(cornerRadius: 12))
-    .padding(EdgeInsets(top: 10, leading: 50, bottom: 0, trailing: 50))
+    .padding(EdgeInsets(top: 0, leading: 50, bottom: 0, trailing: 50))
     .background(
             Rectangle()
                 .fill(Color.white)

@@ -69,12 +69,14 @@ struct DashboardView: View {
         Divider()
         //    MARK: members block
         VStack (alignment: .leading){
-          Text("Members").font(.headline)
+          Text("Members")
+//            .font(.headline)
+            .font(.custom("NunitoSans-SemiBold", size: 18))
             .padding(EdgeInsets(top: 10, leading: 20, bottom: 0, trailing: 0))
           HStack {
             ForEach(repo.trips[repo.currTripIdx].members) { member in
               VStack {
-                Image("ben-den-engelsen-unsplash")
+                Image("woman1")
                   .resizable()
                   .scaledToFit()
                   .clipShape(Circle())
@@ -91,31 +93,41 @@ struct DashboardView: View {
         
         //    MARK: trip details block
         VStack (alignment: .leading){
-          Text("Trip Details").font(.title)
+          Text("Trip Details")
+            .font(.custom("NunitoSans-Light", size: 30))
+//            .font(.title)
             .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 0))
           
           NavigationLink(destination: CreateProposalView(repo: repo)) {
             Button(action: {}) {
               Label("Create a Proposal", systemImage: "plus.circle")
-                .font(.headline)
+//                .font(.headline)
+                .font(.custom("NunitoSans-Bold", size: 18))
                 .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                 .foregroundColor(.white)
             } // end button
             .frame(width: 300, height:50)
             .background(Color("primary"))
             .clipShape(RoundedRectangle(cornerRadius: 12))
-            .padding()
+            .padding(EdgeInsets(top: -10, leading: 20, bottom: 0, trailing: 0))
+
+//            .padding()
           } //end navlink
           
           
-          Text("Category").font(.title2)
+          Text("Category")
+//            .font(.title2)
+            .font(.custom("NunitoSans-Regular", size: 24))
             .padding(EdgeInsets(top: 10, leading: 20, bottom: 0, trailing: 0))
           Spacer()
           Spacer()
             VStack (alignment: .leading){
               ForEach(repo.trips[repo.currTripIdx].itinerary) { day in
                 VStack (alignment: .leading, spacing: 20) {
-                  Text("Day \(day.dayNum!)").font(.headline)
+                  Text("Day \(day.dayNum!)")
+                    .font(.custom("NunitoSans-Bold", size: 18))
+                    .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 0))
+//                    .font(.headline)
                   
                   Text(dateFormatter.string(from: day.date)).font(.subheadline)
                   VStack {

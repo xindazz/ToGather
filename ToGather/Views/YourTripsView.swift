@@ -10,6 +10,10 @@ import SwiftUI
 struct YourTripsView: View {
 //  using code from SwiftRepos - 443 lab - to start
   @ObservedObject var repo: UserRepository
+  
+  let tripArray = [
+                    "bg1", "bg2", "bg3", "bg4"
+                  ]
 //  code by and provided by Helena Spencer, 67-443 TA
   func sendMessage(){
 //    replace something with a typical string interpolation\(trip.unique code) and whatnot
@@ -17,7 +21,10 @@ struct YourTripsView: View {
     let strURL: String = sms.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
     UIApplication.shared.open(URL.init(string: strURL)!, options: [:], completionHandler: nil)
    }
+  
   var body: some View {
+    var tripBg = tripArray.randomElement()
+
     VStack (alignment: .leading) {
 
       NavigationView {
@@ -32,7 +39,6 @@ struct YourTripsView: View {
 //                .foregroundColor(.blue)
 //          } //end navlink
                           
-
           Text("Your Trips")
             .font(.title)
             .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 0))
@@ -41,6 +47,9 @@ struct YourTripsView: View {
 //              ForEach(repo.trips) { trip in
               ForEach(Array(repo.trips.enumerated()), id: \.offset) { index, trip in
                 NavigationLink(destination: TripView(repo: repo, trip: repo.trips[index])) {
+                  
+                  
+                  
                   Button {} label: {
                     VStack (spacing: 10){
                       Text(trip.name)
@@ -52,9 +61,12 @@ struct YourTripsView: View {
                     }
                   } // end button
                   .frame(width: 300, height:150)
-                  .background(Color("primary"))
+                  .background(Image(tripBg ?? "")
+//                    .resizable()
+//                    .scaledToFit()
+                  )
                   .clipShape(RoundedRectangle(cornerRadius: 12))
-                  .padding(10)
+//                  .padding(10)
                   
                 } //end navlink
                 .simultaneousGesture(TapGesture().onEnded{

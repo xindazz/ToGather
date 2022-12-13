@@ -25,7 +25,8 @@ struct YourProposalsView: View {
       VStack {
         VStack (alignment: .leading){
           Text("Your Proposals for \(repo.trips[repo.currTripIdx].name ?? "Some Trip")")
-            .font(.title)
+            .font(.custom("NunitoSans-SemiBold", size: 24))
+            .padding(EdgeInsets(top: 10, leading: 20, bottom: 0, trailing: 0))
           Divider()
         }
                 

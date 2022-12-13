@@ -23,6 +23,7 @@ struct NewProposalCardView: View {
 
     var body: some View {
       ScrollView{
+
 //MARK: used in integrated card view
         VStack (alignment: .leading) {
           VStack (alignment: .leading, spacing: 20) {
