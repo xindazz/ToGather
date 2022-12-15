@@ -68,12 +68,13 @@ struct CreateProposalView: View {
           // signifies that this is the create trip proposal page
           VStack {
             Text("Add Trip Proposal")
-              .font(.custom("NunitoSans-SemiBold", size: 30))
+              .font(.custom("NunitoSans-Bold", size: 30))
               .padding(EdgeInsets(top: 20, leading: 0, bottom: 0, trailing: 0))
 
             Text("Add an item on your trip's itinerary! Input what you can for now–you can build on it later with your group.")
+              .multilineTextAlignment(.center)
               .font(.custom("NunitoSans-Regular", size: 18))
-              .padding(EdgeInsets(top: 5, leading: 10, bottom: 0, trailing: 10))
+              .padding(EdgeInsets(top: 2, leading: 10, bottom: 0, trailing: 10))
           } // end Vstack
           .padding(EdgeInsets(top: 50, leading: 10, bottom: 20, trailing: 0))
 
@@ -82,78 +83,115 @@ struct CreateProposalView: View {
             //        MARK: text input for now, should *DEFINITELY* be a dropdown later for data integrity
             VStack {
               Text("Category")
-                .font(.title)
-                .fontWeight(.bold)
+                .font(.custom("NunitoSans-SemiBold", size: 24))
                 .frame(maxWidth: .infinity, alignment: .leading)
-              TextField("Food/Drink", text: $category)
+              TextField(" Food/Drink", text: $category)
                 .textContentType(.givenName).border(Color.gray.opacity(0.5))
+                .background(Color.white)
             }
+            .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
+
             
             VStack {
               Text("What")
-                .font(.title)
-                .fontWeight(.bold)
+                .font(.custom("NunitoSans-SemiBold", size: 24))
                 .frame(maxWidth: .infinity, alignment: .leading)
               Text("Example: Street food from Queen's Night Market")
-                .font(.subheadline)
-              TextField("Event name", text: $name)
+                .font(.custom("NunitoSans-Regular", size: 16))
+                .frame(maxWidth: .infinity, alignment: .leading)
+
+              TextField(" Event name", text: $name)
                 .textContentType(.givenName).border(Color.gray.opacity(0.5))
+                .background(Color.white)
+
             }
+            .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
+
             
             VStack {
               Text("Location")
-                .font(.title)
-                .fontWeight(.bold)
+                .font(.custom("NunitoSans-SemiBold", size: 24))
                 .frame(maxWidth: .infinity, alignment: .leading)
-              TextField("123 Main St.", text: $location)
+              TextField(" 123 Main St.", text: $location)
                 .textContentType(.givenName).border(Color.gray.opacity(0.5))
+                .background(Color.white)
+
             }
+            .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
+
             
             VStack {
               Text("Dates")
+                .font(.custom("NunitoSans-SemiBold", size: 24))
                 .frame(maxWidth: .infinity, alignment: .leading)
               //                  MARK: @Xinda, replace $startData & $endDate the field names (i think it's from and to)
               DatePicker(selection: $startDate, label: { Text("Start Date") })
               DatePicker(selection: $endDate, label: { Text("End Date") })
             }
+            .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
+
             
             VStack {
               Text("Comment")
-                .font(.title)
-                .fontWeight(.bold)
+                .font(.custom("NunitoSans-SemiBold", size: 24))
                 .frame(maxWidth: .infinity, alignment: .leading)
               TextField("Details", text: $detail)
                 .textContentType(.givenName).border(Color.gray.opacity(0.5))
+                .background(Color.white)
             }
+            .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
+
             
             VStack {
               Text("Link")
-                .font(.title)
-                .fontWeight(.bold)
+                .font(.custom("NunitoSans-SemiBold", size: 24))
                 .frame(maxWidth: .infinity, alignment: .leading)
+
               TextField("http://", text: $link)
                 .textContentType(.givenName).border(Color.gray.opacity(0.5))
+                .background(Color.white)
             }
+            .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
+
             
           }
           
         } // end VStack
-              
-        Button {
+
+        Button(action: {
           let newProposal = Proposal(newEvent: Event(name: name, category: category, location: location, from: startDate, to: endDate, detail: detail, link: link), proposer: repo.user)
           repo.trips[repo.currTripIdx].addProposal(proposal: newProposal)
           repo.updateTrip(trip: repo.trips[repo.currTripIdx])
   //        repo.load()
           repo.tabSelection = 2
           self.presentationMode.wrappedValue.dismiss()
-        } label: {
-          Text("Create Proposal")
-            .font(.title)
+        }) {
+          Label("Create a Proposal", systemImage: "plus.circle")
+//                .font(.headline)
+            .font(.custom("NunitoSans-Bold", size: 18))
             .padding()
             .foregroundColor(.white)
-            .background(Color.blue)
-            .cornerRadius(30)
-        }
+        } // end button
+        .frame(width: 300, height:50)
+        .background(Color("primary"))
+        .clipShape(RoundedRectangle(cornerRadius: 12))
+        .padding(EdgeInsets(top: 0, leading: 50, bottom: 0, trailing: 0))
+//
+//        Button {
+//          let newProposal = Proposal(newEvent: Event(name: name, category: category, location: location, from: startDate, to: endDate, detail: detail, link: link), proposer: repo.user)
+//          repo.trips[repo.currTripIdx].addProposal(proposal: newProposal)
+//          repo.updateTrip(trip: repo.trips[repo.currTripIdx])
+//  //        repo.load()
+//          repo.tabSelection = 2
+//          self.presentationMode.wrappedValue.dismiss()
+//        } label: {
+//          Text("Create Proposal")
+//            .font(.title)
+//            .padding()
+//            .foregroundColor(.white)
+//            .background(Color.blue)
+//            .cornerRadius(30)
+//        }
         
       } // end VStack
     } //end ZStack

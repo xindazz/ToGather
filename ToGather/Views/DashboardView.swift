@@ -68,7 +68,7 @@ struct DashboardView: View {
           .padding(EdgeInsets(top: 5, leading: 10, bottom: 5, trailing: 5))
         } // end inner vstack
         .background(
-          Image("bg4")
+          Image("banner1")
 //                    .resizable()
                     .scaledToFit()
         )

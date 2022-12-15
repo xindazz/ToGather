@@ -12,7 +12,7 @@ struct YourTripsView: View {
   @ObservedObject var repo: UserRepository
   
   let tripArray = [
-                    "bg1", "bg2", "bg3", "bg4"
+                    "bg10", "bg20", "bg30", "bg4"
                   ]
 //  code by and provided by Helena Spencer, 67-443 TA
   func sendMessage(){
@@ -23,8 +23,7 @@ struct YourTripsView: View {
    }
   
   var body: some View {
-    let tripBg = tripArray.randomElement()
-
+    var tripBg = tripArray[0]
     VStack (alignment: .leading) {
 
       NavigationView {
@@ -50,7 +49,7 @@ struct YourTripsView: View {
               ForEach(Array(repo.trips.enumerated()), id: \.offset) { index, trip in
                 NavigationLink(destination: TripView(repo: repo, trip: repo.trips[index])) {
                   
-                  
+//                  tripBg = tripArray[index % 4]
                   
                   Button {} label: {
                     VStack (spacing: 10){
@@ -66,13 +65,18 @@ struct YourTripsView: View {
                   } // end button
 
                   .background(
-                    Image("bg2")
+//                      Image("bg4")
+                    Image(tripArray[index % 4])
+//                      .resizable()
+                      .aspectRatio(contentMode: .fill)
 //                    .resizable()
 //                    .scaledToFit()
                   )
                   .frame(width: 300, height:150)
-                  .clipShape(RoundedRectangle(cornerRadius: 12))
-                  .padding(5)
+                  .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
+                  .padding(EdgeInsets(top: 15, leading: 5, bottom: 15, trailing: 5))
+
+//                  .padding(5)
 //                  .padding(10)
 //                  background(
 //                    Image(tripBg ?? "")
@@ -85,7 +89,6 @@ struct YourTripsView: View {
 //                        y: 0
 //                      )
 //                  )
-
                   
                 } //end navlink
                 .simultaneousGesture(TapGesture().onEnded{
