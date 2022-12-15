@@ -73,6 +73,8 @@ struct SignUpView: View {
                  Text("Name")
                      .font(.custom("NunitoSans-SemiBold", size: 24))
                      .frame(maxWidth: .infinity, alignment: .leading)
+                     .foregroundColor(.white)
+
 //                     .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
 //                     .foregroundColor(.white)
 
@@ -91,8 +93,9 @@ struct SignUpView: View {
                  
                  Text("Email")
                      .font(.custom("NunitoSans-SemiBold", size: 24))
-
                      .frame(maxWidth: .infinity, alignment: .leading)
+                     .foregroundColor(.white)
+
 //                     .padding(EdgeInsets(top: 20, leading: 20, bottom: 0, trailing: 10))
 //                     .foregroundColor(.white)
 
@@ -107,6 +110,8 @@ struct SignUpView: View {
                  Text("Password")
                      .font(.custom("NunitoSans-SemiBold", size: 24))
                      .frame(maxWidth: .infinity, alignment: .leading)
+                     .foregroundColor(.white)
+
 //                     .padding(EdgeInsets(top: 30, leading: 20, bottom: 0, trailing: 10))
 //                     .foregroundColor(.white)
 

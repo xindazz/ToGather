@@ -70,11 +70,15 @@ struct CreateProposalView: View {
             Text("Add Trip Proposal")
               .font(.custom("NunitoSans-Bold", size: 30))
               .padding(EdgeInsets(top: 20, leading: 0, bottom: 0, trailing: 0))
+              .foregroundColor(.white)
 
-            Text("Add an item on your trip's itinerary! Input what you can for now–you can build on it later with your group.")
+
+            Text("Propose an item for your trip's itinerary! Input what you can for now–you can decide on all the details later.")
               .multilineTextAlignment(.center)
               .font(.custom("NunitoSans-Regular", size: 18))
-              .padding(EdgeInsets(top: 2, leading: 10, bottom: 0, trailing: 10))
+              .padding(EdgeInsets(top: 1, leading: 10, bottom: 0, trailing: 10))
+              .foregroundColor(.white)
+
           } // end Vstack
           .padding(EdgeInsets(top: 50, leading: 10, bottom: 20, trailing: 0))
 
@@ -85,9 +89,13 @@ struct CreateProposalView: View {
               Text("Category")
                 .font(.custom("NunitoSans-SemiBold", size: 24))
                 .frame(maxWidth: .infinity, alignment: .leading)
+                .foregroundColor(.white)
+
               TextField(" Food/Drink", text: $category)
                 .textContentType(.givenName).border(Color.gray.opacity(0.5))
                 .background(Color.white)
+                .padding(EdgeInsets(top: 0, leading: 0, bottom: 20, trailing: 0))
+
             }
             .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
 
@@ -96,14 +104,12 @@ struct CreateProposalView: View {
               Text("What")
                 .font(.custom("NunitoSans-SemiBold", size: 24))
                 .frame(maxWidth: .infinity, alignment: .leading)
-              Text("Example: Street food from Queen's Night Market")
-                .font(.custom("NunitoSans-Regular", size: 16))
-                .frame(maxWidth: .infinity, alignment: .leading)
+                .foregroundColor(.white)
 
-              TextField(" Event name", text: $name)
+              TextField(" Street food from Queen's Night Market", text: $name)
                 .textContentType(.givenName).border(Color.gray.opacity(0.5))
                 .background(Color.white)
-
+                .padding(EdgeInsets(top: 0, leading: 0, bottom: 20, trailing: 0))
             }
             .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
 
@@ -112,9 +118,13 @@ struct CreateProposalView: View {
               Text("Location")
                 .font(.custom("NunitoSans-SemiBold", size: 24))
                 .frame(maxWidth: .infinity, alignment: .leading)
+                .foregroundColor(.white)
+
               TextField(" 123 Main St.", text: $location)
                 .textContentType(.givenName).border(Color.gray.opacity(0.5))
                 .background(Color.white)
+                .padding(EdgeInsets(top: 0, leading: 0, bottom: 20, trailing: 0))
+
 
             }
             .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
@@ -124,9 +134,17 @@ struct CreateProposalView: View {
               Text("Dates")
                 .font(.custom("NunitoSans-SemiBold", size: 24))
                 .frame(maxWidth: .infinity, alignment: .leading)
+                .foregroundColor(.white)
+
               //                  MARK: @Xinda, replace $startData & $endDate the field names (i think it's from and to)
               DatePicker(selection: $startDate, label: { Text("Start Date") })
+                .foregroundColor(.white)
+
               DatePicker(selection: $endDate, label: { Text("End Date") })
+                .foregroundColor(.white)
+                .padding(EdgeInsets(top: 0, leading: 0, bottom: 20, trailing: 0))
+
+
             }
             .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
 
@@ -135,9 +153,13 @@ struct CreateProposalView: View {
               Text("Comment")
                 .font(.custom("NunitoSans-SemiBold", size: 24))
                 .frame(maxWidth: .infinity, alignment: .leading)
-              TextField("Details", text: $detail)
+                .foregroundColor(.white)
+
+              TextField(" Details", text: $detail)
                 .textContentType(.givenName).border(Color.gray.opacity(0.5))
                 .background(Color.white)
+                .padding(EdgeInsets(top: 0, leading: 0, bottom: 20, trailing: 0))
+
             }
             .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
 
@@ -146,10 +168,14 @@ struct CreateProposalView: View {
               Text("Link")
                 .font(.custom("NunitoSans-SemiBold", size: 24))
                 .frame(maxWidth: .infinity, alignment: .leading)
+                .foregroundColor(.white)
 
-              TextField("http://", text: $link)
+
+              TextField(" http://", text: $link)
                 .textContentType(.givenName).border(Color.gray.opacity(0.5))
                 .background(Color.white)
+                .padding(EdgeInsets(top: 0, leading: 0, bottom: 20, trailing: 0))
+
             }
             .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
 
