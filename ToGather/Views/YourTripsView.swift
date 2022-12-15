@@ -119,7 +119,7 @@ struct YourTripsView: View {
                      .foregroundColor(.white)
               }
                .frame(width: 310, height:50)
-               .background(Color("secondary"))
+               .background(Color("primary"))
                .clipShape(RoundedRectangle(cornerRadius: 12))
                .padding(3)
             } //end navlink
@@ -130,7 +130,7 @@ struct YourTripsView: View {
                      .foregroundColor(.white)
               }
                .frame(width: 310, height:50)
-               .background(Color("secondary"))
+               .background(Color("tertiary"))
                .clipShape(RoundedRectangle(cornerRadius: 12))
                .padding(3)
             } //end navlink
