@@ -23,14 +23,19 @@ struct YourProposalsView: View {
         LinearGradient(gradient: Gradient(colors: [.white, Color("reply"), Color("secondary")]), startPoint: .top, endPoint: .bottom).ignoresSafeArea()
 
         VStack {
-          VStack (alignment: .leading){
-            Text("Proposals for \(repo.trips[repo.currTripIdx].name ?? "Some Trip")")
+          VStack (alignment: .leading, spacing: 5){
+            Text("Proposals for \(repo.trips[repo.currTripIdx].name)")
               .font(.custom("NunitoSans-SemiBold", size: 24))
-              .padding(EdgeInsets(top: 10, leading: 20, bottom: 0, trailing: 20))
-            Divider()
+              .frame(maxWidth: .infinity, alignment: .leading)
+              .padding(EdgeInsets(top: 10, leading: 75, bottom: 0, trailing: 20))
+//            Divider()
           }
                   
           ScrollView{
+//            Text("Proposals for \(repo.trips[repo.currTripIdx].name)")
+//              .font(.custom("NunitoSans-SemiBold", size: 24))
+//              .frame(maxWidth: .infinity, alignment: .leading)
+//              .padding(EdgeInsets(top: 10, leading: 75, bottom: 0, trailing: 50))
             
             VStack (alignment: .leading) {
               
