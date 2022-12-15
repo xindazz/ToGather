@@ -15,7 +15,7 @@ struct DashboardView: View {
   
   func sendMessage(){
 //    replace something with a typical string interpolation\(trip.unique code) and whatnot
-    let sms: String = "sms:&body=Join this event with me! \n Event: something \n Date: something"
+    let sms: String = "sms:&body=Join this trip with me on ToGather! \n Trip: \(repo.trips[repo.currTripIdx].name) \n Date(s): \(String(describing: repo.trips[repo.currTripIdx].from!) ) to \(String(describing: repo.trips[repo.currTripIdx].to!) ) \n Unique Code: \(repo.trips[repo.currTripIdx].uniqueCode)"
     let strURL: String = sms.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
     UIApplication.shared.open(URL.init(string: strURL)!, options: [:], completionHandler: nil)
    }
@@ -68,7 +68,7 @@ struct DashboardView: View {
           .padding(EdgeInsets(top: 5, leading: 10, bottom: 5, trailing: 5))
         } // end inner vstack
         .background(
-          Image("banner1")
+          Image("bg4")
 //                    .resizable()
                     .scaledToFit()
         )
