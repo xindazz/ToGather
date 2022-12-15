@@ -1,13 +1,13 @@
 //
-//  IntegratedProposalCardView.swift
+//  MockCard.swift
 //  ToGather
 //
-//  Created by Lisa Leung on 12/8/22.
+//  Created by Lisa Leung on 12/15/22.
 //
 
 import SwiftUI
 
-struct IntegratedProposalCardView: View {
+struct MockCardView: View {
   @ObservedObject var repo: UserRepository
   var proposal: Proposal
   var formatter = CustomDateFormatter()
@@ -22,26 +22,49 @@ struct IntegratedProposalCardView: View {
   @ViewBuilder
   var body: some View {
     VStack (alignment: .leading) {
-      VStack (alignment: .leading) {
-        VStack (alignment: .leading) {
+      Text("Proposed by: \(proposal.proposer.name)")
+        .font(.headline)
+        .padding(EdgeInsets(top: 20, leading: 20, bottom: 0, trailing: 0))
+      
+      VStack (alignment: .leading, spacing: 20) {
+        Text("\(formatter.toDateTimeDay(proposal.newEvent.from)) to")
+          .font(.subheadline)
+          .padding(EdgeInsets(top: 20, leading: 20, bottom: 0, trailing: 0))
+        Text("\(formatter.toDateTimeDay(proposal.newEvent.to))")
+          .font(.subheadline)
+          .padding(EdgeInsets(top: -10, leading: 20, bottom: 0, trailing: 0))
+        Divider()
+      } // end vstack
+      .background(Color(UIColor.systemBlue))
+      .foregroundColor(.white)
+      
+      VStack (alignment: .leading, spacing: 10){
+        HStack {
+          VStack (alignment: .leading, spacing: 10) {
+            Text("WHAT: \(proposal.newEvent.name ?? "No name")")
+              .font(.headline)
+            Text("CATEGORY: \(proposal.newEvent.category ?? "No category")")
+              .font(.subheadline)
+            Text("WHERE: \(proposal.newEvent.location ?? "")")
+          }
+          Spacer()
           if repo.trips[repo.currTripIdx].owner.id == repo.user.id {
             NavigationLink(destination: UpdateProposalView(repo: repo, proposal: proposal)) {
               Label("Edit", systemImage: "pencil")
-                .font(.custom("NunitoSans-Regular", size: 18))
                 .foregroundColor(.yellow)
-                .padding(EdgeInsets(top: 10, leading: 300, bottom: 0, trailing: 10))
-
             }.onTapGesture {
               generateEditableProposal()
             }
           } // end edit
-        } //end vstack
-        .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
-
+        }
+      } // end vstack
+    } // end card vstack
+    VStack (alignment: .leading) {
+      VStack (alignment: .leading, spacing: 20) {
         Text("\(formatter.toDateTimeDay(proposal.newEvent.from)) to")
 //          .font(.subheadline)
           .font(.custom("NunitoSans-Regular", size: 16))
-          .padding(EdgeInsets(top: 10, leading: 30, bottom: 0, trailing: 0))
+          .padding(EdgeInsets(top: 20, leading: 30, bottom: 0, trailing: 0))
         Text("\(formatter.toDateTimeDay(proposal.newEvent.to))")
 //          .font(.subheadline)
           .font(.custom("NunitoSans-Regular", size: 16))
@@ -51,7 +74,6 @@ struct IntegratedProposalCardView: View {
       
 //          removed ?? "" from lines 61 and 63 (following two text lines) to deal with compilation error raised)
       VStack (alignment: .leading, spacing: 10){
-        
         Text("\(proposal.newEvent.name)")
 //          .font(.headline)
           .font(.custom("NunitoSans-SemiBold", size: 24))
@@ -71,7 +93,15 @@ struct IntegratedProposalCardView: View {
 
         Text("Proposed by: \(proposal.proposer.name)")
           .font(.custom("NunitoSans-Light", size: 18))
-
+        Spacer()
+        if repo.trips[repo.currTripIdx].owner.id == repo.user.id {
+          NavigationLink(destination: UpdateProposalView(repo: repo, proposal: proposal)) {
+            Label("Edit", systemImage: "pencil")
+              .foregroundColor(.yellow)
+          }.onTapGesture {
+            generateEditableProposal()
+          }
+        }
 //          .fontWeight(.light)
       }
       .padding(EdgeInsets(top: 10, leading: 30, bottom: 0, trailing: 10))
@@ -314,8 +344,8 @@ struct IntegratedProposalCardView: View {
   } // end body
 }
 
-struct IntegratedProposalCardView_Previews: PreviewProvider {
+struct MockCardView_Previews: PreviewProvider {
   static var previews: some View {
-    IntegratedProposalCardView(repo: UserRepository(), proposal: Proposal.example)
+    MockCardView(repo: UserRepository(), proposal: Proposal.example)
   }
 }
