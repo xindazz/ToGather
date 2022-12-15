@@ -43,7 +43,6 @@ struct CreateReplyView: View {
             newProposal.addReply(reply: newReply)
             repo.trips[repo.currTripIdx].updateProposal(proposal: newProposal)
             repo.updateTrip(trip: repo.trips[repo.currTripIdx])
-    //        repo.load()
             repo.tabSelection = 2
             self.presentationMode.wrappedValue.dismiss()
           } label: {

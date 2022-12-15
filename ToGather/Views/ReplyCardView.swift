@@ -23,38 +23,7 @@ struct ReplyCardView: View {
       }
       .padding(EdgeInsets(top: 10, leading: 15, bottom: 0, trailing: 15))
       VStack (alignment: .leading){
-//        if reply.event.name != nil {
-//          Text("WHAT")
-//            .font(.headline)
-//          Text("\(reply.event.name!)")
-//        }
-//        if reply.event.category != nil {
-//          Text("CATEGORY")
-//            .font(.headline)
-//          Text("\(reply.event.category!)")
-//        }
-//        if reply.event.location != nil {
-//          Text("WHERE")
-//            .font(.headline)
-//          Text("\(reply.event.location!)")
-//        }
-//        if reply.event.from != nil {
-//          Text("FROM")
-//            .font(.headline)
-//          Text("\(formatter.toDateTime(reply.event.from!))")
-//        }
-//        if reply.event.to != nil {
-//          Text("TO")
-//            .font(.headline)
-//          Text("\(formatter.toDateTime(reply.event.to!))")
-//        }
-//        if reply.event.detail != nil {
-//          Text("Comment")
-//            .font(.headline)
-//          Text("\(reply.event.detail!)")
-//        }
-//        Text("Comment")
-//          .font(.custom("NunitoSans-SemiBold", size: 18))
+        
         Text("\(reply.comment)")
           .font(.custom("NunitoSans-SemiBold", size: 18))
           .padding(EdgeInsets(top: 0, leading: 5, bottom: 0, trailing: 5))

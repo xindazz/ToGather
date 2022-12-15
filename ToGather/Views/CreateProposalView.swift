@@ -35,7 +35,6 @@ struct CreateProposalView: View {
         ScrollView{
           VStack (alignment: .leading) {
             Text(repo.trips[repo.currTripIdx].name)
-    //          .font(.largeTitle)
               .font(.custom("NunitoSans-SemiBold", size: 36))
               .foregroundColor(Color("primary"))
               .padding(EdgeInsets(top: 50, leading: 10, bottom: 0, trailing: 0))
@@ -58,11 +57,9 @@ struct CreateProposalView: View {
           } // end inner vstack
           .background(
             Image("banner1")
-  //                    .resizable()
                       .scaledToFit()
           )
           .frame(width: 400, height: 30)
-  //        .clipShape(RoundedRectangle(cornerRadius: 12))
           .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
 
           // signifies that this is the create trip proposal page
@@ -178,7 +175,6 @@ struct CreateProposalView: View {
 
             }
             .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
-
             
           }
           
@@ -188,12 +184,10 @@ struct CreateProposalView: View {
           let newProposal = Proposal(newEvent: Event(name: name, category: category, location: location, from: startDate, to: endDate, detail: detail, link: link), proposer: repo.user)
           repo.trips[repo.currTripIdx].addProposal(proposal: newProposal)
           repo.updateTrip(trip: repo.trips[repo.currTripIdx])
-  //        repo.load()
           repo.tabSelection = 2
           self.presentationMode.wrappedValue.dismiss()
         }) {
           Label("Create a Proposal", systemImage: "plus.circle")
-//                .font(.headline)
             .font(.custom("NunitoSans-Bold", size: 18))
             .padding()
             .foregroundColor(.white)
@@ -202,22 +196,6 @@ struct CreateProposalView: View {
         .background(Color("primary"))
         .clipShape(RoundedRectangle(cornerRadius: 12))
         .padding(EdgeInsets(top: 0, leading: 50, bottom: 0, trailing: 0))
-//
-//        Button {
-//          let newProposal = Proposal(newEvent: Event(name: name, category: category, location: location, from: startDate, to: endDate, detail: detail, link: link), proposer: repo.user)
-//          repo.trips[repo.currTripIdx].addProposal(proposal: newProposal)
-//          repo.updateTrip(trip: repo.trips[repo.currTripIdx])
-//  //        repo.load()
-//          repo.tabSelection = 2
-//          self.presentationMode.wrappedValue.dismiss()
-//        } label: {
-//          Text("Create Proposal")
-//            .font(.title)
-//            .padding()
-//            .foregroundColor(.white)
-//            .background(Color.blue)
-//            .cornerRadius(30)
-//        }
         
       } // end VStack
     } //end ZStack

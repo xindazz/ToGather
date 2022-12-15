@@ -30,14 +30,9 @@ struct TripView: View {
             Image(systemName: "person.circle")
             Text("Profile")
         }.tag(3)
-//      MARK: the checklist feature is out-of-scope
-//      YourChecklistsView()
-//      .tabItem {
-//          Image(systemName: "list.bullet.rectangle")
-//          Text("Your Checklists")
-//      }.tag(3)
       
     } // end TabView
+    
   }
 }
 

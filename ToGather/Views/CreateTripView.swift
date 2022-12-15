@@ -78,7 +78,6 @@ struct CreateTripView: View {
             } // end VStack
             .padding(EdgeInsets(top: 10, leading: 20, bottom: 10, trailing: 20))
             Button {
-              //        let uniqueCode = repo.getUniqueCode()
               var newTrip = Trip(name: name, uniqueCode: "", owner: repo.user, destination: destination, from: startDate, to: endDate)
               newTrip.addMember(user: repo.user)
               repo.createTrip(trip: newTrip)

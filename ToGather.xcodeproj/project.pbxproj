@@ -72,7 +72,6 @@
 		97A00604291C461600F0FE26 /* YourProposalsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A00603291C461600F0FE26 /* YourProposalsView.swift */; };
 		97A00606291C464500F0FE26 /* YourChecklists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A00605291C464500F0FE26 /* YourChecklists.swift */; };
 		97AD44C3290EFD8C000678E0 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AD44C2290EFD8C000678E0 /* ViewModel.swift */; };
-		97AD44C5290EFD9D000678E0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AD44C4290EFD9D000678E0 /* ContentView.swift */; };
 		97AD4509291427CC000678E0 /* Dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AD4508291427CC000678E0 /* Dashboard.swift */; };
 		97AD450B29142DFC000678E0 /* TripDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AD450A29142DFC000678E0 /* TripDetail.swift */; };
 		97AD450E291435D5000678E0 /* DesignSystemComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AD450D291435D5000678E0 /* DesignSystemComponents.swift */; };
@@ -156,7 +155,6 @@
 		97A00605291C464500F0FE26 /* YourChecklists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourChecklists.swift; sourceTree = "<group>"; };
 		97AD44BE290EF735000678E0 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		97AD44C2290EFD8C000678E0 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
-		97AD44C4290EFD9D000678E0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		97AD4508291427CC000678E0 /* Dashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dashboard.swift; sourceTree = "<group>"; };
 		97AD450A29142DFC000678E0 /* TripDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetail.swift; sourceTree = "<group>"; };
 		97AD450D291435D5000678E0 /* DesignSystemComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystemComponents.swift; sourceTree = "<group>"; };
@@ -262,6 +260,10 @@
 		972A2E09291ADDF300B30260 /* Archive */ = {
 			isa = PBXGroup;
 			children = (
+				972A2E05291AD9DE00B30260 /* BarNavigation.swift */,
+				97AD450A29142DFC000678E0 /* TripDetail.swift */,
+				191FC37129183E650083C4E7 /* OnboardingFour.swift */,
+				191FC36B29183D910083C4E7 /* OnboardingOne.swift */,
 				97AD4508291427CC000678E0 /* Dashboard.swift */,
 				97CDD502292694EB00222CC6 /* TestProposalCardView.swift */,
 				97CDD504292694F300222CC6 /* TestProposalCard.swift */,
@@ -313,17 +315,12 @@
 				972A2E09291ADDF300B30260 /* Archive */,
 				972A2DFB291ACA3100B30260 /* Pages-In-Development */,
 				97C793AE291AB10F0009BCF6 /* Components */,
-				97AD44C4290EFD9D000678E0 /* ContentView.swift */,
 				972A2E07291ADD7700B30260 /* UserTrips.swift */,
 				34B9C46B290AF06900015341 /* AppView.swift */,
-				97AD450A29142DFC000678E0 /* TripDetail.swift */,
 				34B4777B291CBA2B00EAEC7C /* ProposalCardView.swift */,
 				3436241129197BF1007A8FC6 /* DashboardView.swift */,
-				191FC37129183E650083C4E7 /* OnboardingFour.swift */,
 				191FC36F29183DC00083C4E7 /* CreateTripView.swift */,
-				191FC36B29183D910083C4E7 /* OnboardingOne.swift */,
 				345BEF1F291A1A640093BE5B /* JoinTripView.swift */,
-				972A2E05291AD9DE00B30260 /* BarNavigation.swift */,
 				97A00601291C3FC800F0FE26 /* YourTripsView.swift */,
 				97A00603291C461600F0FE26 /* YourProposalsView.swift */,
 				97A00605291C464500F0FE26 /* YourChecklists.swift */,
@@ -461,7 +458,6 @@
 				97156F732942C636008A57E9 /* IntegratedProposalCardView.swift in Sources */,
 				97C793B0291AB1230009BCF6 /* ProposalCard.swift in Sources */,
 				97CDD505292694F300222CC6 /* TestProposalCard.swift in Sources */,
-				97AD44C5290EFD9D000678E0 /* ContentView.swift in Sources */,
 				975EDF942915CE7500680AAD /* TestTripDetailsView.swift in Sources */,
 				97F09B902936925B0059E48B /* TestMessagesView.swift in Sources */,
 				975EDF9B2915D74700680AAD /* TestTripDetailsRowModel.swift in Sources */,

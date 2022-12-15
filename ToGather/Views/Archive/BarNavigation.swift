@@ -24,17 +24,6 @@ struct BarNavigation: View {
           Image(systemName: "airplane.departure")
           Text("Your Trips")
       }
-
-//      YourProposalsView(repo: UserRepository())
-//      .tabItem {
-//          Image(systemName: "text.bubble.fill")
-//          Text("Your Proposals")
-//      }
-//      YourChecklistsView()
-//      .tabItem {
-//          Image(systemName: "list.bullet.rectangle")
-//          Text("Your Checklists")
-//      }
       
     } // end TabView
         

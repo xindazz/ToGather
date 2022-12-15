@@ -16,9 +16,6 @@ class UserRepository: ObservableObject {
   
   private let db = Firestore.firestore()
 
-//  private var userId: String = "MTbSP44irsQ9Kt2GPJRI" // Demo only, user Xinda
-//  private var userId: String = "HCI9cWMaboZPolLTtBmZ" // Demo only, user Tester2
-
   @Published var userId: String = ""
   @Published var user: User = User(name: "", email: "")
   @Published var trips: [Trip] = [Trip.example]
@@ -32,10 +29,8 @@ class UserRepository: ObservableObject {
 
   @MainActor
   init() {
-//    userId = setUser(name: "Tester2", handle: "@12345")
     if signedIn {
       loadUser()
-      //    deleteTestTrips()
     }
   }
   
@@ -43,6 +38,7 @@ class UserRepository: ObservableObject {
   func loadUser() {
     load()
     addUserListener()
+    print("User name hash \(user.name.hashValue % 4)")
   }
   
   func addUserListener() {

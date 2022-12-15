@@ -10,6 +10,7 @@ import SwiftUI
 struct YourProfileView: View {
 
   @ObservedObject var repo: UserRepository
+  var profilePics = ["man1", "man2", "woman1", "woman2"]
   
   var body: some View {
     
@@ -27,7 +28,7 @@ struct YourProfileView: View {
           
           VStack (alignment: .leading){
             
-            Image("woman2")
+            Image(profilePics[abs(repo.user.name.hashValue) % 4])
               .resizable()
               .scaledToFit()
               .clipShape(Circle())
@@ -89,23 +90,6 @@ struct YourProfileView: View {
                 .padding(EdgeInsets(top: 10, leading: 20, bottom: 0, trailing: 20))
             }
           }
-          
-//          MARK: original refresh and signout shortcut stack
-//          HStack {
-//            Button {
-//              repo.load()
-//            } label: {
-//              Text("Refresh")
-//            }.frame(maxWidth: .infinity, alignment: .center)
-//
-//            Button {
-//              repo.signOut()
-//            } label: {
-//              Text("Sign Out")
-//            }.frame(maxWidth: .infinity, alignment: .center)
-//          } // end hstack
-//          .padding(EdgeInsets(top: 20, leading: 20, bottom: 20, trailing: 20))
-
           
         } // end outermost vstack
       } // end scrollview
