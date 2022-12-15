@@ -26,6 +26,12 @@ ToGather is a group travel-planning app meant to facilitate group coordination q
 - Form UI for onboarding
 - Database Bug: permissions for authentication
 
+### Considerations (given more time...)
+- implemented more streamlined navigation with the dashboard (eliminate the proposal view and abstract all proposal details onto the trip dashboard page)
+- staged cards before form submission (creating a trip, creating a proposal, etc. to confirm details with the user), as it was highly desired from user testing
+- implemented checklist feature to allow groups to easily coordinate and complete tasks
+- document storage/Apple Wallet integration
+- Google maps integration for location entry and access
 
 # Sources
 
