@@ -17,11 +17,12 @@ struct ReplyCardView: View {
       VStack (alignment: .leading){
         //          Text("Sender: Brandon Woo")
         Label("Sender: \(reply.replier.name)", systemImage: "arrowshape.turn.up.left")
+          .font(.custom("NunitoSans-Regular", size: 18))
         
         Divider()
       }
       .padding(EdgeInsets(top: 10, leading: 15, bottom: 0, trailing: 15))
-      VStack (alignment: .leading, spacing: 10){
+      VStack (alignment: .leading){
 //        if reply.event.name != nil {
 //          Text("WHAT")
 //            .font(.headline)
@@ -52,14 +53,16 @@ struct ReplyCardView: View {
 //            .font(.headline)
 //          Text("\(reply.event.detail!)")
 //        }
-        Text("Comment")
-          .font(.headline)
+//        Text("Comment")
+//          .font(.custom("NunitoSans-SemiBold", size: 18))
         Text("\(reply.comment)")
+          .font(.custom("NunitoSans-SemiBold", size: 18))
+
       }
       .padding(EdgeInsets(top: 10, leading: 15, bottom: 20, trailing: 15))
       
     }
-    .background(Color(UIColor.systemGreen))
+    .background(Color("reply"))
     .clipShape(RoundedRectangle(cornerRadius: 12))
     .padding(EdgeInsets(top: 10, leading: 90, bottom: 20, trailing: 15))
   }

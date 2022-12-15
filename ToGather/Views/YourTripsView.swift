@@ -23,7 +23,7 @@ struct YourTripsView: View {
    }
   
   var body: some View {
-    var tripBg = tripArray[0]
+//    var tripBg = tripArray[0]
     VStack (alignment: .leading) {
 
       NavigationView {

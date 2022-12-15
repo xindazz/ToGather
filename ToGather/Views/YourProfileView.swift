@@ -39,7 +39,7 @@ struct YourProfileView: View {
               .padding(EdgeInsets(top: 30, leading: 0, bottom: 0, trailing: 10))
               .foregroundColor(.white)
             
-            Text("name")
+            Text("\(repo.user.name ?? "Your Name")")
               .font(.custom("NunitoSans-Regular", size: 18))
               .frame(maxWidth: .infinity, alignment: .leading)
               .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
@@ -51,7 +51,7 @@ struct YourProfileView: View {
               .padding(EdgeInsets(top: 30, leading: 0, bottom: 0, trailing: 10))
               .foregroundColor(.white)
             
-            Text("email")
+            Text("\(repo.user.email ?? "Your Email")")
               .font(.custom("NunitoSans-Regular", size: 18))
               .frame(maxWidth: .infinity, alignment: .leading)
               .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
