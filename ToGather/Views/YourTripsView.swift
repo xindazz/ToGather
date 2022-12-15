@@ -153,19 +153,19 @@ struct YourTripsView: View {
         
       } //end NavView
       
-      HStack {
-        Button {
-          repo.load()
-        } label: {
-          Text("Refresh")
-        }.frame(maxWidth: .infinity, alignment: .center)
-        
-        Button {
-          repo.signOut()
-        } label: {
-          Text("Sign Out")
-        }.frame(maxWidth: .infinity, alignment: .center)
-      }
+//      HStack {
+//        Button {
+//          repo.load()
+//        } label: {
+//          Text("Refresh")
+//        }.frame(maxWidth: .infinity, alignment: .center)
+//        
+//        Button {
+//          repo.signOut()
+//        } label: {
+//          Text("Sign Out")
+//        }.frame(maxWidth: .infinity, alignment: .center)
+//      } // end hstack
       
     } //end vstack
     

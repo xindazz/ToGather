@@ -57,8 +57,54 @@ struct YourProfileView: View {
               .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
               .foregroundColor(.white)
             
+            
           } // end vstack
           .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
+          
+          
+          VStack {
+            
+            Button {
+              repo.load()
+            } label: {
+              Text("Refresh")
+                .frame(width: 350, height:50)
+                .font(.custom("NunitoSans-Bold", size: 18))
+                .foregroundColor(.white)
+                .background(Color("primary"))
+                .clipShape(RoundedRectangle(cornerRadius: 12))
+                .padding(5)
+                .padding(EdgeInsets(top: 100, leading: 20, bottom: 0, trailing: 20))
+            }
+            Button {
+              repo.signOut()
+            } label: {
+              Text("Sign Out")
+                .frame(width: 350, height:50)
+                .font(.custom("NunitoSans-Bold", size: 18))
+                .foregroundColor(.white)
+                .background(Color("primary"))
+                .clipShape(RoundedRectangle(cornerRadius: 12))
+                .padding(5)
+                .padding(EdgeInsets(top: 10, leading: 20, bottom: 0, trailing: 20))
+            }
+          }
+          
+//          MARK: original refresh and signout shortcut stack
+//          HStack {
+//            Button {
+//              repo.load()
+//            } label: {
+//              Text("Refresh")
+//            }.frame(maxWidth: .infinity, alignment: .center)
+//
+//            Button {
+//              repo.signOut()
+//            } label: {
+//              Text("Sign Out")
+//            }.frame(maxWidth: .infinity, alignment: .center)
+//          } // end hstack
+//          .padding(EdgeInsets(top: 20, leading: 20, bottom: 20, trailing: 20))
 
           
         } // end outermost vstack
