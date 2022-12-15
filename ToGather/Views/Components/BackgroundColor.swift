@@ -27,7 +27,11 @@ struct BackgroundColor: View {
 //      .background(.teal)
     
     ZStack { // 1
-      Color("primary").ignoresSafeArea()
+//      MARK: linear gradient background from https://www.hackingwithswift.com/quick-start/swiftui/how-to-render-a-gradient
+      LinearGradient(gradient: Gradient(colors: [.white, Color("reply"), Color("secondary")]), startPoint: .top, endPoint: .bottom).ignoresSafeArea()
+
+//      MARK: solid background
+//      Color("primary").ignoresSafeArea()
 //      Color.pink.ignoresSafeArea() // 2
       VStack {
           Text("Hello, SwiftUI!")

@@ -15,50 +15,66 @@ struct YourProposalsView: View {
   @ObservedObject var repo: UserRepository
     
   var body: some View {
-    //    trip header and nav
-    //    MARK: UI-SPECIFIC: use this
-    //    MARK: break down everything below into sub-files later
     
     // MARK: trip header
+   
     NavigationView {
-      
-      VStack {
-        VStack (alignment: .leading){
-          Text("Your Proposals for \(repo.trips[repo.currTripIdx].name ?? "Some Trip")")
-            .font(.custom("NunitoSans-SemiBold", size: 24))
-            .padding(EdgeInsets(top: 10, leading: 20, bottom: 0, trailing: 0))
-          Divider()
-        }
-                
-        ScrollView{
-          
-          VStack (alignment: .leading) {
+      ZStack {
+        LinearGradient(gradient: Gradient(colors: [.white, Color("reply"), Color("secondary")]), startPoint: .top, endPoint: .bottom).ignoresSafeArea()
+
+        VStack {
+          VStack (alignment: .leading){
+            Text("Your Proposals for \(repo.trips[repo.currTripIdx].name ?? "Some Trip")")
+              .font(.custom("NunitoSans-SemiBold", size: 24))
+              .padding(EdgeInsets(top: 10, leading: 20, bottom: 0, trailing: 0))
+            Divider()
+          }
+                  
+          ScrollView{
             
-            ForEach(repo.trips[repo.currTripIdx].proposals) {proposal in
-              IntegratedProposalCardView(repo: repo, proposal: proposal)
-            }
+            VStack (alignment: .leading) {
+              
+              ForEach(repo.trips[repo.currTripIdx].proposals) {proposal in
+                IntegratedProposalCardView(repo: repo, proposal: proposal)
+              }
+              
+            } // end VStack
             
-          } // end VStack
+          } //end scrollview
+          NavigationLink(destination: CreateProposalView(repo: repo)) {
+            Button(action: {}) {
+              Label("Create a Proposal", systemImage: "plus.circle")
+//                .font(.headline)
+                .font(.custom("NunitoSans-Bold", size: 18))
+                .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+                .foregroundColor(.white)
+            } // end button
+            .frame(width: 300, height:50)
+            .background(Color("primary"))
+            .clipShape(RoundedRectangle(cornerRadius: 12))
+            .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
+          } //end navlink
           
-        } //end scrollview
+//          MARK: old button
+//          NavigationLink(destination: CreateProposalView(repo: repo)) {
+//            Button(action: {}) {
+//              Text("Create Proposal").font(.headline)
+//                .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+//                .foregroundColor(.white)
+//            } // end button
+//            .frame(width: 200.0, height:50)
+//            .background(Color("secondary"))
+//            .clipShape(RoundedRectangle(cornerRadius: 12))
+//            .padding(10.0)
+//          } //end navlink
+          
+        } //end VStack
         
-        NavigationLink(destination: CreateProposalView(repo: repo)) {
-          Button(action: {}) {
-            Text("Create Proposal").font(.headline)
-              .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
-              .foregroundColor(.white)
-          } // end button
-          .frame(width: 200.0, height:50)
-          .background(Color("secondary"))
-          .clipShape(RoundedRectangle(cornerRadius: 12))
-          .padding(10.0)
-        } //end navlink
         
-      } //end VStack
+      } //end zstack
       
       
     } //end NavView
-    
   } //end body
   
   

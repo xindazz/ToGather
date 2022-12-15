@@ -26,11 +26,11 @@ struct IntegratedProposalCardView: View {
         Text("\(formatter.toDateTimeDay(proposal.newEvent.from)) to")
 //          .font(.subheadline)
           .font(.custom("NunitoSans-Regular", size: 16))
-          .padding(EdgeInsets(top: 20, leading: 20, bottom: 0, trailing: 0))
+          .padding(EdgeInsets(top: 20, leading: 30, bottom: 0, trailing: 0))
         Text("\(formatter.toDateTimeDay(proposal.newEvent.to))")
 //          .font(.subheadline)
           .font(.custom("NunitoSans-Regular", size: 16))
-          .padding(EdgeInsets(top: -10, leading: 20, bottom: 0, trailing: 0))
+          .padding(EdgeInsets(top: -10, leading: 30, bottom: 0, trailing: 0))
 //            Divider()
       } // end vstack
       
@@ -46,7 +46,7 @@ struct IntegratedProposalCardView: View {
 
         Text("\(proposal.newEvent.location ?? "")")
           .font(.custom("NunitoSans-Regular", size: 18))
-          .padding(EdgeInsets(top: 20, leading: 0, bottom: 0, trailing: 0))
+          .padding(EdgeInsets(top: 10, leading: 0, bottom: 0, trailing: 0))
         Text("\(proposal.newEvent.detail ?? "")")
           .font(.custom("NunitoSans-Regular", size: 18))
 
@@ -58,7 +58,7 @@ struct IntegratedProposalCardView: View {
 
 //          .fontWeight(.light)
       }
-      .padding(EdgeInsets(top: 30, leading: 20, bottom: 0, trailing: 10))
+      .padding(EdgeInsets(top: 10, leading: 30, bottom: 0, trailing: 10))
       HStack {
         Spacer()
         Button {
@@ -69,14 +69,14 @@ struct IntegratedProposalCardView: View {
           repo.updateTrip(trip: repo.trips[repo.currTripIdx])
         } label: {
           Text("Yes (\(proposal.numYesVotes()))")
-            .font(.headline)
-            .padding()
+            .font(.custom("NunitoSans-Bold", size: 18))
             .foregroundColor(.white)
+            .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
             .frame(width: 150, height: 50)
             .background(proposal.alreadyVoted(user: repo.user) ? .gray : Color("primary"))
             .clipShape(RoundedRectangle(cornerRadius: 12))
         }
-        .padding()
+        .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
         .disabled(proposal.alreadyVoted(user: repo.user) ? true : false)
         Spacer()
         Button {
@@ -87,15 +87,14 @@ struct IntegratedProposalCardView: View {
           repo.updateTrip(trip: repo.trips[repo.currTripIdx])
         } label: {
           Text("No (\(proposal.numNoVotes()))")
-//            .font(.headline)
             .font(.custom("NunitoSans-Bold", size: 18))
-            .padding()
             .foregroundColor(.white)
+            .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
             .frame(width: 150, height: 50)
             .background(proposal.alreadyVoted(user: repo.user) ? .gray : Color("primary"))
             .clipShape(RoundedRectangle(cornerRadius: 12))
         }
-        .padding()
+        .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
         .disabled(proposal.alreadyVoted(user: repo.user) ? true : false)
         
         Spacer()
@@ -103,15 +102,15 @@ struct IntegratedProposalCardView: View {
       
       NavigationLink(destination: CreateReplyView(repo: repo, proposal: proposal)) {
         Label("Add Reply", systemImage: "arrowshape.turn.up.left")
-//          .font(.headline)
           .font(.custom("NunitoSans-Bold", size: 18))
-          .padding()
           .foregroundColor(.white)
+          .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
           .frame(width: 350, height: 50)
           .background(Color("secondary"))
           .clipShape(RoundedRectangle(cornerRadius: 12))
-      }.padding()
-      
+      }
+      .padding(EdgeInsets(top: 10, leading: 30, bottom: 10, trailing: 30))
+
       
       if repo.trips[repo.currTripIdx].owner.id == repo.user.id {
         Button {
@@ -128,7 +127,7 @@ struct IntegratedProposalCardView: View {
         .frame(width: 350, height: 50)
         .background(Color("tertiary"))
         .clipShape(RoundedRectangle(cornerRadius: 12))
-        .padding()
+        .padding(EdgeInsets(top: 0, leading: 30, bottom: 0, trailing: 30))
       }
       
     } //end vstack

@@ -15,8 +15,8 @@ struct YourProfileView: View {
     
     ZStack {
       
-      Color("secondary").ignoresSafeArea()
-
+//      Color("secondary").ignoresSafeArea()
+      LinearGradient(gradient: Gradient(colors: [.white, Color("reply"), Color("secondary")]), startPoint: .top, endPoint: .bottom).ignoresSafeArea()
       
       ScrollView {
         VStack {
