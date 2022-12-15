@@ -15,7 +15,7 @@ struct DashboardView: View {
   
   func sendMessage(){
 //    replace something with a typical string interpolation\(trip.unique code) and whatnot
-    let sms: String = "sms:&body=Join this trip with me on ToGather! \n Trip: \(repo.trips[repo.currTripIdx].name) \n Date(s): \(String(describing: repo.trips[repo.currTripIdx].from!) ) to \(String(describing: repo.trips[repo.currTripIdx].to!) ) \n Unique Code: \(repo.trips[repo.currTripIdx].uniqueCode)"
+    let sms: String = "sms:&body=Join this trip with me on ToGather! \n \n Log into the app and join our trip with the unique code. Here are the details! \nTrip: \(repo.trips[repo.currTripIdx].name) \nDate(s): \(String(describing: repo.trips[repo.currTripIdx].from!) ) to \(String(describing: repo.trips[repo.currTripIdx].to!) ) \nUnique Code: \(repo.trips[repo.currTripIdx].uniqueCode)"
     let strURL: String = sms.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
     UIApplication.shared.open(URL.init(string: strURL)!, options: [:], completionHandler: nil)
    }
