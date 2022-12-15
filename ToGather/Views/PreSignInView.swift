@@ -17,7 +17,12 @@ struct PreSignInView: View {
           .font(.custom("NunitoSans-Bold", size: 30))
           .foregroundColor(Color.white)
           .multilineTextAlignment(.center)
-          .padding()
+          .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))
+        Text("Let's go on a trip together!")
+          .font(.custom("NunitoSans-Light", size: 20))
+          .foregroundColor(Color.white)
+          .multilineTextAlignment(.center)
+          .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))
         NavigationView {
           ZStack {
             Color("primary").ignoresSafeArea()
@@ -37,7 +42,7 @@ struct PreSignInView: View {
                 .frame(width: 310, height:50)
                 .background(Color("secondary"))
                 .clipShape(RoundedRectangle(cornerRadius: 12))
-                .padding(5)
+                .padding(10)
               } //end navlink
               NavigationLink(destination: SignInView(repo: repo)) {
                 Button(action: {}) {
@@ -48,7 +53,7 @@ struct PreSignInView: View {
                 .frame(width: 310, height:50)
                 .background(Color("secondary"))
                 .clipShape(RoundedRectangle(cornerRadius: 12))
-                .padding(5)
+                .padding(10)
               } //end navlink
             } //end vstack
           } //end Zstack
