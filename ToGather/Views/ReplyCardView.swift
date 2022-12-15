@@ -57,6 +57,7 @@ struct ReplyCardView: View {
 //          .font(.custom("NunitoSans-SemiBold", size: 18))
         Text("\(reply.comment)")
           .font(.custom("NunitoSans-SemiBold", size: 18))
+          .padding(EdgeInsets(top: 0, leading: 5, bottom: 0, trailing: 5))
 
       }
       .padding(EdgeInsets(top: 10, leading: 15, bottom: 20, trailing: 15))
