@@ -127,7 +127,7 @@ struct IntegratedProposalCardView: View {
         .frame(width: 350, height: 50)
         .background(Color("tertiary"))
         .clipShape(RoundedRectangle(cornerRadius: 12))
-        .padding(EdgeInsets(top: 0, leading: 30, bottom: 0, trailing: 30))
+        .padding(EdgeInsets(top: 0, leading: 30, bottom: 20, trailing: 30))
       }
       
     } //end vstack

@@ -97,26 +97,47 @@ struct SignInView: View {
 
                 } // end vstack
                 .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
-
-              Button(action: { signInUser()}) {
+              Button {
+                signInUser()
+              } label: {
                 Text("Sign In")
+                  .frame(width: 350, height:50)
                   .font(.custom("NunitoSans-Bold", size: 18))
                   .foregroundColor(.white)
+                  .background(Color("primary"))
+                  .clipShape(RoundedRectangle(cornerRadius: 12))
+                  .padding(EdgeInsets(top: 20, leading: 20, bottom: 0, trailing: 20))
+                  .disabled(!signInProcessing && !email.isEmpty && !password.isEmpty ? false : true)
+                  
+                  if signInProcessing {
+                      ProgressView()
+                  }
+                  
+                  if !signInErrorMessage.isEmpty {
+                      Text(signInErrorMessage)
+                          .foregroundColor(.red)
+                  }
               }
-              .frame(width: 350, height:50)
-              .background(Color("primary"))
-              .clipShape(RoundedRectangle(cornerRadius: 12))
-              .padding(EdgeInsets(top: 20, leading: 20, bottom: 0, trailing: 20))
-              .disabled(!signInProcessing && !email.isEmpty && !password.isEmpty ? false : true)
               
-              if signInProcessing {
-                  ProgressView()
-              }
-              
-              if !signInErrorMessage.isEmpty {
-                  Text(signInErrorMessage)
-                      .foregroundColor(.red)
-              }
+//              Button(action: { signInUser()}) {
+//                Text("Sign In")
+//                  .font(.custom("NunitoSans-Bold", size: 18))
+//                  .foregroundColor(.white)
+//              }
+//              .frame(width: 350, height:50)
+//              .background(Color("primary"))
+//              .clipShape(RoundedRectangle(cornerRadius: 12))
+//              .padding(EdgeInsets(top: 20, leading: 20, bottom: 0, trailing: 20))
+//              .disabled(!signInProcessing && !email.isEmpty && !password.isEmpty ? false : true)
+//
+//              if signInProcessing {
+//                  ProgressView()
+//              }
+//
+//              if !signInErrorMessage.isEmpty {
+//                  Text(signInErrorMessage)
+//                      .foregroundColor(.red)
+//              }
               
 //                MARK: old button
 //                Button {
