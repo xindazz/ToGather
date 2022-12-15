@@ -59,102 +59,127 @@ struct SignUpView: View {
     var body: some View {
         TabView {
             VStack(alignment: .leading) {
-                   Text("Welcome to ToGather")
-                       .fontWeight(.heavy)
-                       .multilineTextAlignment(.center)
-                       .font(.title)
-                       .padding(EdgeInsets(top: 60, leading: 40, bottom: 0, trailing: 10))
-   
-   
-           
-                       Text("Let's go on a trip together")
-                           .padding(EdgeInsets(top: 50, leading: 80, bottom: 0, trailing: 10))
+//                   Text("Welcome to ToGather")
+//                       .fontWeight(.heavy)
+//                       .multilineTextAlignment(.center)
+//                       .font(.title)
+//                       .padding(EdgeInsets(top: 60, leading: 40, bottom: 0, trailing: 10))
+//
+//                       Text("Let's go on a trip together")
+//                           .padding(EdgeInsets(top: 50, leading: 80, bottom: 0, trailing: 10))
        
        
-                       VStack {
-                           Text("Name")
-                               .font(.body)
-                               .fontWeight(.bold)
-                               .frame(maxWidth: .infinity, alignment: .leading)
-                               .padding(EdgeInsets(top: 20, leading: 20, bottom: 0, trailing: 10))
-                               .foregroundColor(.white)
-
-       
-                           TextField("User name", text: $username)
-                           
-                               .textContentType(.givenName).border(Color.gray.opacity(0.5))
-                               .background(Color(.white))
-                               .padding(EdgeInsets(top: 10, leading: 20, bottom: 0, trailing: 10))
+             VStack {
+                 Text("Name")
+                     .font(.custom("NunitoSans-SemiBold", size: 24))
+                     .frame(maxWidth: .infinity, alignment: .leading)
+//                     .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+//                     .foregroundColor(.white)
 
 
-                           
-                           
-                           
-                           Text("Email")
-                               .font(.body)
-                               .fontWeight(.bold)
-                               .frame(maxWidth: .infinity, alignment: .leading)
-                               .padding(EdgeInsets(top: 20, leading: 20, bottom: 0, trailing: 10))
-                               .foregroundColor(.white)
+                 TextField(" Username", text: $username)
+                 
+                     .textContentType(.givenName).border(Color.gray.opacity(0.5))
+                     .background(Color(.white))
+                     .padding(EdgeInsets(top: 0, leading: 0, bottom: 20, trailing: 0))
 
-                           TextField("123@gmail.com", text: $email)
-                               .textContentType(.givenName).border(Color.gray.opacity(0.5))
-                               .background(Color(.white))
-                               .padding(EdgeInsets(top: 10, leading: 20, bottom: 0, trailing: 10))
-
-       
-                           Text("Password")
-                               .font(.body)
-                               .fontWeight(.bold)
-                               .frame(maxWidth: .infinity, alignment: .leading)
-                               .padding(EdgeInsets(top: 30, leading: 20, bottom: 0, trailing: 10))
-                               .foregroundColor(.white)
-
-       
-                           SecureField("Password", text: $password)
-                               .textContentType(.givenName).border(Color.gray.opacity(0.5))
-                               .background(Color(.white))
-                               .padding(EdgeInsets(top: 10, leading: 20, bottom: 0, trailing: 10))
-
-       
-                           SecureField("Confirm Password", text: $passwordConfirmation)
-                               .textContentType(.givenName).border(Color.gray.opacity(0.5))
-                               .background(Color(.white))
-                               .padding(EdgeInsets(top: 10, leading: 20, bottom: 0, trailing: 10))
-
-       
-       
-                       }
-       
-           
-                           Button {
-                               signUpUser()
-                           } label: {
-                               Spacer()
-                               Text("Get Started")
-                                   .font(.headline)
-                                   .padding()
-                                   .foregroundColor(.white)
-                               Spacer()
-                                   .padding(EdgeInsets(top: 50, leading: 20, bottom: 0, trailing: 10))
-           
-                           } // end button
-                           .background(Color("buttoncolor"))                           .clipShape(RoundedRectangle(cornerRadius: 12))
-                           .padding()
-                           .disabled(!signUpProcessing && !email.isEmpty && !password.isEmpty && !passwordConfirmation.isEmpty && password == passwordConfirmation ? false : true)
-           
-                           if signUpProcessing {
-                               ProgressView()
-                           }
-           
-                           if !errorText.isEmpty {
-                               Text(errorText)
-                                   .foregroundColor(.red)
-                           }
-           
+//                     .padding(EdgeInsets(top: 10, leading: 20, bottom: 0, trailing: 10))
 
 
-                Divider()
+                 
+                 
+                 
+                 Text("Email")
+                     .font(.custom("NunitoSans-SemiBold", size: 24))
+
+                     .frame(maxWidth: .infinity, alignment: .leading)
+//                     .padding(EdgeInsets(top: 20, leading: 20, bottom: 0, trailing: 10))
+//                     .foregroundColor(.white)
+
+                 TextField(" 123@gmail.com", text: $email)
+                     .textContentType(.givenName).border(Color.gray.opacity(0.5))
+                     .background(Color(.white))
+                     .padding(EdgeInsets(top: 0, leading: 0, bottom: 20, trailing: 0))
+
+//                     .padding(EdgeInsets(top: 10, leading: 20, bottom: 0, trailing: 10))
+
+
+                 Text("Password")
+                     .font(.custom("NunitoSans-SemiBold", size: 24))
+                     .frame(maxWidth: .infinity, alignment: .leading)
+//                     .padding(EdgeInsets(top: 30, leading: 20, bottom: 0, trailing: 10))
+//                     .foregroundColor(.white)
+
+
+                 SecureField(" Password", text: $password)
+                     .textContentType(.givenName).border(Color.gray.opacity(0.5))
+                     .background(Color(.white))
+                     .padding(EdgeInsets(top: 0, leading: 0, bottom: 10, trailing: 0))
+
+//                     .padding(EdgeInsets(top: 10, leading: 20, bottom: 0, trailing: 10))
+
+
+                 SecureField(" Confirm Password", text: $passwordConfirmation)
+                     .textContentType(.givenName).border(Color.gray.opacity(0.5))
+                     .background(Color(.white))
+                     .padding(EdgeInsets(top: 0, leading: 0, bottom: 20, trailing: 0))
+
+//                     .padding(EdgeInsets(top: 10, leading: 20, bottom: 0, trailing: 10))
+
+
+
+             } // end vstack
+             .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
+
+              Button(action: {signUpUser()}) {
+                Text("Get Started")
+                  .font(.custom("NunitoSans-Bold", size: 18))
+                  .foregroundColor(.white)
+              }
+              .frame(width: 350, height:50)
+              .background(Color("primary"))
+              .clipShape(RoundedRectangle(cornerRadius: 12))
+              .padding(EdgeInsets(top: 20, leading: 20, bottom: 0, trailing: 20))
+              .disabled(!signUpProcessing && !email.isEmpty && !password.isEmpty && !passwordConfirmation.isEmpty && password == passwordConfirmation ? false : true)
+
+              if signUpProcessing {
+                  ProgressView()
+              }
+
+              if !errorText.isEmpty {
+                  Text(errorText)
+                      .foregroundColor(.red)
+              }
+// MARK: old button
+//                 Button {
+//                     signUpUser()
+//                 } label: {
+//                     Spacer()
+//                     Text("Get Started")
+//                         .font(.custom("NunitoSans-Bold", size: 18))
+//                         .foregroundColor(.white)
+//                         .padding()
+//                     Spacer()
+//                         .padding(EdgeInsets(top: 50, leading: 20, bottom: 0, trailing: 10))
+// 
+//                 } // end button
+//                 .background(Color("primary"))
+//                 .clipShape(RoundedRectangle(cornerRadius: 12))
+//                 .padding()
+//                 .disabled(!signUpProcessing && !email.isEmpty && !password.isEmpty && !passwordConfirmation.isEmpty && password == passwordConfirmation ? false : true)
+// 
+//                 if signUpProcessing {
+//                     ProgressView()
+//                 }
+// 
+//                 if !errorText.isEmpty {
+//                     Text(errorText)
+//                         .foregroundColor(.red)
+//                 }
+ 
+
+
+//                Divider()
                 Spacer()
                 // Bleeds into TabView
                 Rectangle()

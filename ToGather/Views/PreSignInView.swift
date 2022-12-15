@@ -17,7 +17,7 @@ struct PreSignInView: View {
           .font(.custom("NunitoSans-Bold", size: 30))
           .foregroundColor(Color.white)
           .multilineTextAlignment(.center)
-          .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))
+          .padding(EdgeInsets(top: 10, leading: 10, bottom: 0, trailing: 10))
         Text("Let's go on a trip together!")
           .font(.custom("NunitoSans-Light", size: 20))
           .foregroundColor(Color.white)
