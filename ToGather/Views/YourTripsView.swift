@@ -17,7 +17,7 @@ struct YourTripsView: View {
 //  code by and provided by Helena Spencer, 67-443 TA
   func sendMessage(){
 //    replace something with a typical string interpolation\(trip.unique code) and whatnot
-    let sms: String = "sms:&body=Join this event with me! \n Event: something \n Date: something"
+    let sms: String = "sms:&body=Let's plan a trip together on ToGather!"
     let strURL: String = sms.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
     UIApplication.shared.open(URL.init(string: strURL)!, options: [:], completionHandler: nil)
    }
@@ -105,14 +105,13 @@ struct YourTripsView: View {
                Spacer()
               Label("Invite Friends", systemImage: "message.fill")
                    .font(.custom("NunitoSans-Bold", size: 18))
-                   .padding()
                    .foregroundColor(.white)
                Spacer()
             }
             .frame(width: 310, height:50)
             .background(Color("secondary"))
             .clipShape(RoundedRectangle(cornerRadius: 12))
-            .padding(5)
+            .padding(3)
             NavigationLink(destination: CreateTripView(repo: repo)) {
               Button(action: {}) {
                 Label("Create Trip", systemImage: "plus.circle")
@@ -122,7 +121,7 @@ struct YourTripsView: View {
                .frame(width: 310, height:50)
                .background(Color("secondary"))
                .clipShape(RoundedRectangle(cornerRadius: 12))
-               .padding(5)
+               .padding(3)
             } //end navlink
             NavigationLink(destination: JoinTripView(repo: repo)) {
               Button(action: {}) {
@@ -133,7 +132,7 @@ struct YourTripsView: View {
                .frame(width: 310, height:50)
                .background(Color("secondary"))
                .clipShape(RoundedRectangle(cornerRadius: 12))
-               .padding(5)
+               .padding(3)
             } //end navlink
           } // hstack
 //          MARK: button in case the cheat link doesn't work

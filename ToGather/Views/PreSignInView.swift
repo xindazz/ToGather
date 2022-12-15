@@ -14,17 +14,24 @@ struct PreSignInView: View {
       Color("primary").ignoresSafeArea()
       VStack{
         Text("Welcome to ToGather")
-          .font(.title)
+          .font(.custom("NunitoSans-Bold", size: 30))
+          .foregroundColor(Color.white)
+          .multilineTextAlignment(.center)
           .padding()
         NavigationView {
           ZStack {
             Color("primary").ignoresSafeArea()
 
             VStack {
+              Image("togather-logo")
+                .resizable()
+                .scaledToFit()
+                .padding(EdgeInsets(top: -100, leading: 10, bottom: 30, trailing: 10))
+
               NavigationLink(destination: SignUpView(repo: repo)) {
                 Button(action: {}) {
                   Text("Sign Up")
-                    .font(.headline)
+                    .font(.custom("NunitoSans-Bold", size: 18))
                     .foregroundColor(.white)
                 }
                 .frame(width: 310, height:50)
@@ -35,7 +42,7 @@ struct PreSignInView: View {
               NavigationLink(destination: SignInView(repo: repo)) {
                 Button(action: {}) {
                   Text("Sign In")
-                    .font(.headline)
+                    .font(.custom("NunitoSans-Bold", size: 18))
                     .foregroundColor(.white)
                 }
                 .frame(width: 310, height:50)
