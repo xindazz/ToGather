@@ -101,17 +101,18 @@ struct YourTripsView: View {
           } //end ScrollView
           
           VStack {
-            Button(action: {sendMessage()}) {
-               Spacer()
-              Label("Invite Friends", systemImage: "message.fill")
-                   .font(.custom("NunitoSans-Bold", size: 18))
-                   .foregroundColor(.white)
-               Spacer()
-            }
-            .frame(width: 310, height:50)
-            .background(Color("secondary"))
-            .clipShape(RoundedRectangle(cornerRadius: 12))
-            .padding(3)
+//            MARK: default text message to tell people to join the app
+//            Button(action: {sendMessage()}) {
+//               Spacer()
+//              Label("Invite Friends", systemImage: "message.fill")
+//                   .font(.custom("NunitoSans-Bold", size: 18))
+//                   .foregroundColor(.white)
+//               Spacer()
+//            }
+//            .frame(width: 310, height:50)
+//            .background(Color("secondary"))
+//            .clipShape(RoundedRectangle(cornerRadius: 12))
+//            .padding(3)
             NavigationLink(destination: CreateTripView(repo: repo)) {
               Button(action: {}) {
                 Label("Create Trip", systemImage: "plus.circle")
