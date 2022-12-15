@@ -42,7 +42,7 @@ struct CreateTripView: View {
                 .foregroundColor(.white)
               
             } // end Vstack
-            .padding(EdgeInsets(top: 50, leading: 10, bottom: 20, trailing: 0))
+            .padding(EdgeInsets(top: 30, leading: 20, bottom: 20, trailing: 20))
             VStack (alignment: .leading){
               Text("Trip Name")
                 .font(.custom("NunitoSans-SemiBold", size: 24))
@@ -76,7 +76,7 @@ struct CreateTripView: View {
                 .foregroundColor(.white)
               
             } // end VStack
-            .padding(EdgeInsets(top: 10, leading: 30, bottom: 10, trailing: 15))
+            .padding(EdgeInsets(top: 10, leading: 20, bottom: 10, trailing: 20))
             Button {
               //        let uniqueCode = repo.getUniqueCode()
               var newTrip = Trip(name: name, uniqueCode: "", owner: repo.user, destination: destination, from: startDate, to: endDate)
@@ -91,7 +91,7 @@ struct CreateTripView: View {
                 .background(Color("primary"))
                 .clipShape(RoundedRectangle(cornerRadius: 12))
                 .padding(5)
-                .padding(EdgeInsets(top: 30, leading: 20, bottom: 0, trailing: 10))
+                .padding(EdgeInsets(top: 30, leading: 20, bottom: 0, trailing: 20))
             }
           }
         } // end outer-most vstack

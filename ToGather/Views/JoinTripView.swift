@@ -22,6 +22,8 @@ struct JoinTripView: View {
           Text("Join a Trip")
             .font(.custom("NunitoSans-Bold", size: 32))
             .padding(EdgeInsets(top: 30, leading: 20, bottom: 0, trailing: 30))
+            .font(.custom("NunitoSans-SemiBold", size: 24))
+
         } // end inner vstack
         Spacer()
         VStack (alignment: .leading){

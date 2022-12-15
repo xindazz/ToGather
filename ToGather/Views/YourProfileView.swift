@@ -5,61 +5,70 @@
 //  Created by Lisa Leung on 12/12/22.
 //
 
-import Foundation
 import SwiftUI
 
 struct YourProfileView: View {
-  //  using code from SwiftRepos - 443 lab - to start
-  
+
   @ObservedObject var repo: UserRepository
-    
+  
   var body: some View {
-    //    trip header and nav
-    //    MARK: UI-SPECIFIC: use this
-    //    MARK: break down everything below into sub-files later
     
-    // MARK: trip header
-    NavigationView {
+    ZStack {
       
-      VStack {
-        VStack (alignment: .leading){
-          Text("Your Profile for \(repo.trips[repo.currTripIdx].name ?? "Some Trip")")
-            .font(.title)
-          Divider()
-        }
-                
-        ScrollView{
+      Color("secondary").ignoresSafeArea()
+
+      
+      ScrollView {
+        VStack {
+          Text("Your Profile")
+            .font(.custom("NunitoSans-Bold", size: 30))
+            .padding(EdgeInsets(top: 20, leading: 0, bottom: 0, trailing: 0))
+            .foregroundColor(.white)
           
-          VStack (alignment: .leading) {
+          VStack (alignment: .leading){
             
-            ForEach(repo.trips[repo.currTripIdx].proposals) {proposal in
-              IntegratedProposalCardView(repo: repo, proposal: proposal)
-            }
+            Image("woman2")
+              .resizable()
+              .scaledToFit()
+              .clipShape(Circle())
+              .frame(width: 150, height: 150)
             
-          } // end VStack
-          
-        } //end scrollview
-        
-        NavigationLink(destination: CreateProposalView(repo: repo)) {
-          Button(action: {}) {
-            Text("Create Proposal").font(.headline)
+            Text("Username")
+              .font(.custom("NunitoSans-SemiBold", size: 24))
+              .frame(maxWidth: .infinity, alignment: .leading)
+              .padding(EdgeInsets(top: 30, leading: 0, bottom: 0, trailing: 10))
+              .foregroundColor(.white)
+            
+            Text("name")
+              .font(.custom("NunitoSans-Regular", size: 18))
+              .frame(maxWidth: .infinity, alignment: .leading)
               .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
               .foregroundColor(.white)
-          } // end button
-          .frame(width: 200.0, height:50)
-          .background(Color("secondary"))
-          .clipShape(RoundedRectangle(cornerRadius: 12))
-          .padding(10.0)
-        } //end navlink
-        
-      } //end VStack
+            
+            Text("Email")
+              .font(.custom("NunitoSans-SemiBold", size: 24))
+              .frame(maxWidth: .infinity, alignment: .leading)
+              .padding(EdgeInsets(top: 30, leading: 0, bottom: 0, trailing: 10))
+              .foregroundColor(.white)
+            
+            Text("email")
+              .font(.custom("NunitoSans-Regular", size: 18))
+              .frame(maxWidth: .infinity, alignment: .leading)
+              .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+              .foregroundColor(.white)
+            
+          } // end vstack
+          .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
+
+          
+        } // end outermost vstack
+      } // end scrollview
       
-      
-    } //end NavView
+    } // end zstack
     
   } //end body
   
-  
+ 
 } //end struct
 
 struct YourProfileView_Previews: PreviewProvider {

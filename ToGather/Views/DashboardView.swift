@@ -86,11 +86,11 @@ struct DashboardView: View {
           HStack {
             ForEach(repo.trips[repo.currTripIdx].members) { member in
               VStack {
-                Image("woman1")
+                Image("woman2")
                   .resizable()
                   .scaledToFit()
                   .clipShape(Circle())
-                  .frame(width: 100, height: 100)
+                  .frame(width: 75, height: 75)
                 VStack(alignment: .trailing) {
                   Text(member.name)
                     .font(.caption)

@@ -29,7 +29,7 @@ struct EventCard: View {
       } // end vstack
       
       //          removed ?? "" from lines 61 and 63 (following two text lines) to deal with compilation error raised)
-      VStack (alignment: .leading, spacing: 10){
+      VStack (alignment: .leading){
         Text("\(event.name)")
 //          .font(.headline)
           .font(.custom("NunitoSans-SemiBold", size: 24))
@@ -59,7 +59,7 @@ struct EventCard: View {
     } //end vstack
     //        .background(Color(UIColor.lightGray))
     //        .clipShape(RoundedRectangle(cornerRadius: 12))
-    .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 160))
+    .padding(EdgeInsets(top: 0, leading: 0, bottom: 10, trailing: 160))
     .background(
       Rectangle()
         .fill(Color.white)
